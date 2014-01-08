@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="I haven&rsquo;t updated my old blog for long time, one of the reason is because it&rsquo;s not easy to post a blog with code snippets on blospot. Few &hellip;">
+  <meta name="description" content="Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&rsquo;t have the guide on how &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,79 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/08/blog-using-octopress-on-multiple-computer/">Blog Using Octopress on Multiple Computer</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-08T14:29:20+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&rsquo;t have the guide on how to setup Octopress on multiple computer. After search online, there are quite a lot people have seen the same problem. And I did found a very nice guide by Robert Anderson at <a href="http://blog.zerosharp.com/clone-your-octopress-to-blog-from-two-places/">here</a>. Here I will just list down the steps for my later on reference.</p>
+
+<p>clone <code>source</code> branch to local folder</p>
+
+<pre><code>$ git clone -b source https://github.com/yongzhy/yongzhy.github.io octopress
+</code></pre>
+
+<p>clone <code>master</code> branch to <em>_deploy</em> subfolder</p>
+
+<pre><code>$ cd octopress
+$ git clone https://github.com/yongzhy/yongzhy.github.io _deploy
+</code></pre>
+
+<p>configuration</p>
+
+<pre><code>$ gem install bundler
+$ bundle install
+$ rake setup_github_pages
+</code></pre>
+
+<h3>To push changes from two different computers</h3>
+
+<p>Push everything on working computer before switch computer, using commands below:</p>
+
+<pre><code>$ rake generate
+$ git add .
+$ git commit -am "commit message"
+$ git push origin source
+$ rake deploy
+</code></pre>
+
+<p>Then on the new computer, run commands below to sync.</p>
+
+<pre><code>$ cd octopress
+$ git pull origin source
+$ cd ./_deploy
+$ git pull origin master
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -127,6 +200,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/08/blog-using-octopress-on-multiple-computer/">Blog Using Octopress on Multiple Computer</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/12/11/shift-my-personal-blog-to-github/">Shift My Personal Blog to Github</a>
       </li>
     
@@ -172,7 +249,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Zhu Yong -
+  Copyright &copy; 2014 - Zhu Yong -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

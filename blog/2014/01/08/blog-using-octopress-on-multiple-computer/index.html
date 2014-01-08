@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Zhu Yong</title>
+  <title>Blog Using Octopress on Multiple Computer - Zhu Yong</title>
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="Blog Archive 2014 Blog Using Octopress on Multiple Computer
-Jan 08 2014 posted in Octopress 2013 Shift My Personal Blog to Github
-Dec 11 2013 posted &hellip;">
+  <meta name="description" content="Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&rsquo;t have the guide on how &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Dec 11 2013 posted &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yongzhy.github.io/blog/archives">
+  <link rel="canonical" href="http://yongzhy.github.io/blog/2014/01/08/blog-using-octopress-on-multiple-computer">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Zhu Yong" type="application/atom+xml">
@@ -66,52 +64,121 @@ Dec 11 2013 posted &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Blog Using Octopress on Multiple Computer</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-08T14:29:20+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&rsquo;t have the guide on how to setup Octopress on multiple computer. After search online, there are quite a lot people have seen the same problem. And I did found a very nice guide by Robert Anderson at <a href="http://blog.zerosharp.com/clone-your-octopress-to-blog-from-two-places/">here</a>. Here I will just list down the steps for my later on reference.</p>
 
-  
-  <h2>2014</h2>
+<p>clone <code>source</code> branch to local folder</p>
 
-<article>
-  
-<h1><a href="/blog/2014/01/08/blog-using-octopress-on-multiple-computer/">Blog Using Octopress on Multiple Computer</a></h1>
-<time datetime="2014-01-08T14:29:20+08:00" pubdate><span class='month'>Jan</span> <span class='day'>08</span> <span class='year'>2014</span></time>
+<pre><code>$ git clone -b source https://github.com/yongzhy/yongzhy.github.io octopress
+</code></pre>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/octopress/'>Octopress</a></span>
-</footer>
+<p>clone <code>master</code> branch to <em>_deploy</em> subfolder</p>
 
+<pre><code>$ cd octopress
+$ git clone https://github.com/yongzhy/yongzhy.github.io _deploy
+</code></pre>
 
-</article>
+<p>configuration</p>
 
+<pre><code>$ gem install bundler
+$ bundle install
+$ rake setup_github_pages
+</code></pre>
 
+<h3>To push changes from two different computers</h3>
 
-  
-  <h2>2013</h2>
+<p>Push everything on working computer before switch computer, using commands below:</p>
 
-<article>
-  
-<h1><a href="/blog/2013/12/11/shift-my-personal-blog-to-github/">Shift My Personal Blog to Github</a></h1>
-<time datetime="2013-12-11T12:35:42+08:00" pubdate><span class='month'>Dec</span> <span class='day'>11</span> <span class='year'>2013</span></time>
+<pre><code>$ rake generate
+$ git add .
+$ git commit -am "commit message"
+$ git push origin source
+$ rake deploy
+</code></pre>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/misc/'>misc</a></span>
-</footer>
+<p>Then on the new computer, run commands below to sync.</p>
 
-
-</article>
-
+<pre><code>$ cd octopress
+$ git pull origin source
+$ cd ./_deploy
+$ git pull origin master
+</code></pre>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">yongzhy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-08T14:29:20+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>Octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://yongzhy.github.io/blog/2014/01/08/blog-using-octopress-on-multiple-computer/" data-via="" data-counturl="http://yongzhy.github.io/blog/2014/01/08/blog-using-octopress-on-multiple-computer/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/12/11/shift-my-personal-blog-to-github/" title="Previous Post: Shift My Personal Blog To Github">&laquo; Shift My Personal Blog To Github</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
