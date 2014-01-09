@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Using Octopress on Multiple Computer - Zhu Yong</title>
+  <title>Setup Acer C720 Chromebook as Development Computer - Zhu Yong</title>
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&rsquo;t have the guide on how &hellip;">
+  <meta name="description" content="Today is my second day with Acer C720 chromebook. After two days usage, my impression on chromebook is totally impressive. My initial intension was &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yongzhy.github.io/blog/2014/01/08/blog-using-octopress-on-multiple-computer">
+  <link rel="canonical" href="http://yongzhy.github.io/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Zhu Yong" type="application/atom+xml">
@@ -68,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">Blog Using Octopress on Multiple Computer</h1>
+      <h1 class="entry-title">Setup Acer C720 Chromebook as Development Computer</h1>
     
     
       <p class="meta">
@@ -84,51 +84,41 @@
   
 
 
-<time datetime="2014-01-08T14:29:20+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2014</time>
+<time datetime="2014-01-08T22:27:33+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&rsquo;t have the guide on how to setup Octopress on multiple computer. After search online, there are quite a lot people have seen the same problem. And I did found a very nice guide by Robert Anderson at <a href="http://blog.zerosharp.com/clone-your-octopress-to-blog-from-two-places/">here</a>. Here I will just list down the steps for my later on reference.</p>
+<div class="entry-content"><p>Today is my second day with Acer C720 chromebook. After two days usage, my impression on chromebook is totally impressive. My initial intension was to buy a Macbook Pro 13 retina display. But while waiting for the Apple &ldquo;Red Friday&rdquo; discount before Chinese New Year, I was thinking again and again &ldquo;do I really need to buy a powerful Macbook Pro that cost over S$2000?&rdquo;</p>
 
-<p>clone <code>source</code> branch to local folder</p>
+<p>I have a powerful laptop at home now, but because of its bad battery life, everytime I use it, I need to plug in the power adapter. I can only use laptop after the two kids went to sleep, and I want to use it when on the bed.  The requirement to connect to power adapter just keep me away from use that laptop. What I need is a device with very good battery life and meet the requirements below:</p>
 
-<pre><code>$ git clone -b source https://github.com/yongzhy/yongzhy.github.io octopress
-</code></pre>
+<ul>
+<li>Battery must be last at least 5-7 hours</li>
+<li>Must have keyboard, one of the main task of this device is for me to write blog or code on bed before sleep.</li>
+<li>Can run vim, I use it as my primary code editor</li>
+<li>x86 CPU, no need to be very powerful</li>
+<li>Hard disc space no hard requirement, as long as there are few GB left for me to install some development tools</li>
+<li>Memory at least 4GB</li>
+</ul>
 
-<p>clone <code>master</code> branch to <em>_deploy</em> subfolder</p>
 
-<pre><code>$ cd octopress
-$ git clone https://github.com/yongzhy/yongzhy.github.io _deploy
-</code></pre>
+<p>Acer C720 meet all requirement except the 4GB RAM, it&rsquo;s because 4GB version is out of stock on Amazon. And because of Singapore telco Starthub promotion, someone was selling cheap of C720 after they got this as free when sign broadband contract with Starhub. So I just contact one guy in a forum and offer S$300 for this 2GB version C720.</p>
 
-<p>configuration</p>
+<p>I got it yesterday after work. After dinner, I started the process to install Ubuntu 13.10 using crouton. The process was very smooth. Below are what I have done to setup my chromebook.</p>
 
-<pre><code>$ gem install bundler
-$ bundle install
-$ rake setup_github_pages
-</code></pre>
+<ul>
+<li>enable developer mode</li>
+<li>install Ubuntu 13.10 using crouton</li>
+<li>install vim, git, build_essential, cmake, golang1.2, llvm3.4</li>
+<li>build the_silver_searcher, YouCompletme for vim</li>
+<li>install ruby and necessary setup for blog system Octopress</li>
+</ul>
 
-<h3>To push changes from two different computers</h3>
 
-<p>Push everything on working computer before switch computer, using commands below:</p>
-
-<pre><code>$ rake generate
-$ git add .
-$ git commit -am "commit message"
-$ git push origin source
-$ rake deploy
-</code></pre>
-
-<p>Then on the new computer, run commands below to sync.</p>
-
-<pre><code>$ cd octopress
-$ git pull origin source
-$ cd ./_deploy
-$ git pull origin master
-</code></pre>
+<p>After all of those setup, I still have over 7GB space left, that&rsquo;s far better than my expection. My overall experience on this chromebook is excellet. But if there are other choices of chrombook available, I would want a configuration with 4GB RAM, 32GB SSD. Current 2GB RAM is just not enough for serious development.</p>
 </div>
 
 
@@ -151,12 +141,12 @@ $ git pull origin master
   
 
 
-<time datetime="2014-01-08T14:29:20+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2014</time>
+<time datetime="2014-01-08T22:27:33+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/octopress/'>Octopress</a>
+    <a class='category' href='/blog/categories/chromebook/'>chromebook,</a>, <a class='category' href='/blog/categories/crouton/'>crouton</a>
   
 </span>
 
@@ -165,7 +155,7 @@ $ git pull origin master
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://yongzhy.github.io/blog/2014/01/08/blog-using-octopress-on-multiple-computer/" data-via="" data-counturl="http://yongzhy.github.io/blog/2014/01/08/blog-using-octopress-on-multiple-computer/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://yongzhy.github.io/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/" data-via="" data-counturl="http://yongzhy.github.io/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/" >Tweet</a>
   
   
   
@@ -174,10 +164,8 @@ $ git pull origin master
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/12/11/shift-my-personal-blog-to-github/" title="Previous Post: Shift My Personal Blog To Github">&laquo; Shift My Personal Blog To Github</a>
+        <a class="basic-alignment left" href="/blog/2014/01/08/blog-using-octopress-on-multiple-computer/" title="Previous Post: Blog Using Octopress On Multiple Computer">&laquo; Blog Using Octopress On Multiple Computer</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/" title="Next Post: Setup Acer C720 Chromebook As Development Computer">Setup Acer C720 Chromebook As Development Computer &raquo;</a>
       
     </p>
   </footer>
