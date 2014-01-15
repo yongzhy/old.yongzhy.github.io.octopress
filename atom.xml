@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://yongzhy.github.io/atom.xml" rel="self"/>
   <link href="http://yongzhy.github.io/"/>
-  <updated>2014-01-10T17:20:44+08:00</updated>
+  <updated>2014-01-15T22:24:11+08:00</updated>
   <id>http://yongzhy.github.io/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Map Search Key to Control Key on Acer C720 Chromebook]]></title>
+    <link href="http://yongzhy.github.io/blog/2014/01/15/map-search-key-to-control-key-on-acer-c720-chromebook/"/>
+    <updated>2014-01-15T20:00:46+08:00</updated>
+    <id>http://yongzhy.github.io/blog/2014/01/15/map-search-key-to-control-key-on-acer-c720-chromebook</id>
+    <content type="html"><![CDATA[<p>I am a vim user, and for all my home and office computers, I map the CapLock key to Ctrl key. So after installed Ubuntu 13.10 using crouton on my new Acer C720 Chromebook, I was thinking to map the search key to control key. I did some search online as well as some experiments and finally found the solution.</p>
+
+<p>I choosed xfce4 as my window manager because of the rather low 2GB RAM. By default, the search key is mapped to Super_L after install Ubuntu using crouton. If you want to know the keycode for each key on the keyboard, you can use `xev&#8217; to check.</p>
+
+<p>I use <code>xmodmap</code> to do the key mapping.</p>
+
+<p>First, create file <code>.Xmodmap</code> at your <code>$HOME</code> directory with content below</p>
+
+<pre><code>clear control
+clear mod4
+keycode 133 = Super_L
+add control  = Control_L Control_R Super_L
+add mod4 = Hyper_L Super_R
+</code></pre>
+
+<p>Next, need to make sure <code>xmodmap</code> load <code>~/.Xmodmap</code> file when you start you linux using <code>sudo startxfce4</code> in chromebook terminal. Create file <code>~/.xinitrc</code> with content below</p>
+
+<pre><code>if [-s ~/.Xmodmap]; then
+    xmodmap ~/.Xmodmap
+fi
+</code></pre>
+
+<p>Last step is to logout your xfce environment and restart it from chromebook terminal.</p>
+
+<h4>References Websites</h4>
+
+<ul>
+<li><a href="http://cs.gmu.edu/~sean/stuff/n800/keyboard/old.html">http://cs.gmu.edu/~sean/stuff/n800/keyboard/old.html</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Xmodmap">https://wiki.archlinux.org/index.php/Xmodmap</a></li>
+<li><a href="https://github.com/dnschneid/crouton/wiki/Keyboard">https://github.com/dnschneid/crouton/wiki/Keyboard</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Bought Domain for My Github Pages]]></title>
