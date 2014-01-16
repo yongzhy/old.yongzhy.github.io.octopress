@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://yongzhy.github.io/atom.xml" rel="self"/>
   <link href="http://yongzhy.github.io/"/>
-  <updated>2014-01-15T22:24:11+08:00</updated>
+  <updated>2014-01-16T13:22:31+08:00</updated>
   <id>http://yongzhy.github.io/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Create Favicon for My Blog]]></title>
+    <link href="http://yongzhy.github.io/blog/2014/01/16/create-favicon-for-my-blog/"/>
+    <updated>2014-01-16T12:52:37+08:00</updated>
+    <id>http://yongzhy.github.io/blog/2014/01/16/create-favicon-for-my-blog</id>
+    <content type="html"><![CDATA[<p>Last night I was thinking to create a favicon for this octopress blog. Just now, after lunch, I spent some time search on google and finally created my own favicon.</p>
+
+<p>My first idea was to create a icon using my own face cropped from picture, but the result of 16x16 pixel image was just too small to hold the details. Then I decided to go a simple wway, do a favicon just with text <code>zy</code>. Then I come cross this website called <a href="http://faviconist.com">faviconist</a>. This website make the process to create text favicon so easy. I set the background color same as <code>base03</code> in the famous <a href="http://ethanschoonover.com/solarized">solarized color theme</a>, the
+text color to <code>#CCCCCC</code>, and the font I chose bold <code>Redressed</code>.</p>
+
+<p>Below is the screen when I created my favicon.</p>
+
+<p><img src="http://yongzhy.github.io/images/blogimg/2014-01-16_125346_favicon.png" width="612" height="347" title="'Screen to create favicon'" ></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Map Search Key to Control Key on Acer C720 Chromebook]]></title>
