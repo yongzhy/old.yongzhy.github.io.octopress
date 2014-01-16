@@ -9,7 +9,7 @@ categories: chromebook
 
 I am a vim user, and for all my home and office computers, I map the CapLock key to Ctrl key. So after installed Ubuntu 13.10 using crouton on my new Acer C720 Chromebook, I was thinking to map the search key to control key. I did some search online as well as some experiments and finally found the solution.
 
-I choosed xfce4 as my window manager because of the rather low 2GB RAM. By default, the search key is mapped to Super_L after install Ubuntu using crouton. If you want to know the keycode for each key on the keyboard, you can use `xev' to check.
+I choosed xfce4 as my window manager because of the rather low 2GB RAM. By default, the search key is mapped to Super_L after install Ubuntu using crouton. If you want to know the keycode for each key on the keyboard, you can use `xev` to check.
 
 I use `xmodmap` to do the key mapping.
 
