@@ -3,7 +3,7 @@ layout: post
 title: "Setup Acer C720 Chromebook As Development Computer"
 date: 2014-01-08 22:27:33 +0800
 comments: true
-categories: chromebook, crouton
+categories: [chromebook, crouton]
 author: yongzhy
 ---
 

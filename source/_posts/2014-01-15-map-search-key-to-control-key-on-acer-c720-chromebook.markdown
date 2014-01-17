@@ -4,7 +4,7 @@ title: "Map Search Key To Control Key On Acer C720 Chromebook"
 date: 2014-01-15 20:00:46 +0800
 comments: true
 author: yongzhy
-categories: chromebook 
+categories: chromebook
 ---
 
 I am a vim user, and for all my home and office computers, I map the CapLock key to Ctrl key. So after installed Ubuntu 13.10 using crouton on my new Acer C720 Chromebook, I was thinking to map the search key to control key. I did some search online as well as some experiments and finally found the solution.
