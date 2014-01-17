@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://yongzhy.github.io/atom.xml" rel="self"/>
   <link href="http://yongzhy.github.io/"/>
-  <updated>2014-01-16T13:29:41+08:00</updated>
+  <updated>2014-01-17T14:53:15+08:00</updated>
   <id>http://yongzhy.github.io/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Linux Is Always the Number 1?]]></title>
+    <link href="http://yongzhy.github.io/blog/2014/01/17/linux-is-always-the-number-1/"/>
+    <updated>2014-01-17T13:59:00+08:00</updated>
+    <id>http://yongzhy.github.io/blog/2014/01/17/linux-is-always-the-number-1</id>
+    <content type="html"><![CDATA[<p>Yesterday I read an article <a href="http://arjunsreedharan.org/post/71403510912/c-language-and-the-linux-macro-proof-that-linux-is">C language and the linux macro &ndash; proof that linux is always Number 1</a>. It shows a simple C code which just define variable <code>linux</code> and assign with a value, but <code>gcc</code> produce error when compile it.</p>
+
+<p>Code of the simple program:</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int linux = 701;
+    printf("%d", linux);
+    return 0;
+}
+</code></pre>
+
+<p>Error message from <code>gcc</code> :</p>
+
+<pre><code>code.c: In function ‘main’:
+code.c:4:6: error: expected identifier or ‘(’ before numeric constant
+int linux = 701;
+    ^
+</code></pre>
+
+<p>If preprocess the program using <code>gcc -E code.c</code>, the output programe code is:</p>
+
+<pre><code>int main() {
+    int 1 = 701;
+    printf("%d\n", 1);
+    return 0;
+}
+</code></pre>
+
+<p>It&rsquo;s very obvious that <code>linux</code> is <code>#define</code> somewhere with value <code>1</code>. But the code only included <code>stdio.h</code> file and there is no such define in this header file. After search Google, I have found the explanantion from stackoverflow.</p>
+
+<p>Word such as <code>unix</code> or <code>vax</code> was defined in the pre-ANSI days to detect the system at compile time. To make the compile process pass, just pass parameter <code>-std=c89</code> or <code>-std=c99</code> to <code>gcc</code> will do.</p>
+
+<h4>Related Questions From Stackoverflow:</h4>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/19210935/why-does-the-c-preprocessor-interpret-the-word-linux-as-the-constant-1">Stackoverflow Question 1</a></li>
+<li><a href="http://stackoverflow.com/questions/3770322/is-unix-restricted-keyword-in-c">Stackoverflow Question 2</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Create Favicon for My Blog]]></title>
