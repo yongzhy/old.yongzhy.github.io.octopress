@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | Zhu Yong]]></title>
+  <link href="http://zhuyong.me/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://zhuyong.me/"/>
+  <updated>2014-01-19T15:51:31+08:00</updated>
+  <id>http://zhuyong.me/</id>
+  <author>
+    <name><![CDATA[Zhu Yong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Create Favicon for My Blog]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/16/create-favicon-for-my-blog/"/>
+    <updated>2014-01-16T12:52:37+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/16/create-favicon-for-my-blog</id>
+    <content type="html"><![CDATA[<p>Last night I was thinking to create a favicon for this octopress blog. Just now, after lunch, I spent some time search on google and finally created my own favicon.</p>
+
+<p>My first idea was to create a icon using my own face cropped from picture, but the result of 16x16 pixel image was just too small to hold the details. Then I decided to go a simple wway, do a favicon just with text <code>zy</code>. Then I come cross this website called <a href="http://faviconist.com">faviconist</a>. This website make the process to create text favicon so easy. I set the background color same as <code>base03</code> in the famous <a href="http://ethanschoonover.com/solarized">solarized color theme</a>, the
+text color to <code>#CCCCCC</code>, and the font I chose bold <code>Redressed</code>.</p>
+
+<p>Below is the screen when I created my favicon.</p>
+
+<p><img src="/images/blogimg/2014-01-16_125346_favicon.png" width="612" height="347" title="&lsquo;Screen to create favicon&rsquo;" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bought Domain for My Github Pages]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/09/bought-domain-for-my-github-pages/"/>
+    <updated>2014-01-09T14:18:26+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/09/bought-domain-for-my-github-pages</id>
+    <content type="html"><![CDATA[<p>Today I bought my first personal domain <a href="http://zhuyong.me">zhuyong.me</a> and pointed to <a href="http://yongzhy.github.io">my github pages</a>.</p>
+
+<p>The reason why I bought domain is to push myself, to encourage myself to continously update this blog. Plus, the domain + 1 year pravacy protection only cost US$8.99 under current promotion.</p>
+
+<p>The setup is pretty easy:</p>
+
+<ol>
+<li>create <code>CNAME</code> file under <code>source/</code> folder. In this file, just input my newly bought domain: <strong>zhuyong.me</strong></li>
+<li>run <code>rake generate</code> to put <code>CNAME</code> in <code>master</code></li>
+<li>setup DNS, I bought my domain from <a href="http://www.namecheap.com">namecheap</a>. So just point <code>zhuyong.me</code> to <code>192.30.252.153</code>, and <code>192.30.252.154</code>, then point <code>www.zhuyong.me</code> to <code>yongzhy.github.io.</code></li>
+<li>that&rsquo;s all, just wait for less than 30mins, the domain is updated and I have <code>zhuyong.me</code> now pointed to my github pages.</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Blog Using Octopress on Multiple Computer]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/08/blog-using-octopress-on-multiple-computer/"/>
+    <updated>2014-01-08T14:29:20+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/08/blog-using-octopress-on-multiple-computer</id>
+    <content type="html"><![CDATA[<p>Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&rsquo;t have the guide on how to setup Octopress on multiple computer. After search online, there are quite a lot people have seen the same problem. And I did found a very nice guide by Robert Anderson at <a href="http://blog.zerosharp.com/clone-your-octopress-to-blog-from-two-places/">here</a>. Here I will just list down the steps for my later on reference.</p>
+
+<p>clone <code>source</code> branch to local folder</p>
+
+<pre><code>$ git clone -b source https://github.com/yongzhy/yongzhy.github.io octopress
+</code></pre>
+
+<p>clone <code>master</code> branch to <em>_deploy</em> subfolder</p>
+
+<pre><code>$ cd octopress
+$ git clone https://github.com/yongzhy/yongzhy.github.io _deploy
+</code></pre>
+
+<p>configuration</p>
+
+<pre><code>$ gem install bundler
+$ bundle install
+$ rake setup_github_pages
+</code></pre>
+
+<h3>To push changes from two different computers</h3>
+
+<p>Push everything on working computer before switch computer, using commands below:</p>
+
+<pre><code>$ rake generate
+$ git add .
+$ git commit -am "commit message"
+$ git push origin source
+$ rake deploy
+</code></pre>
+
+<p>Then on the new computer, run commands below to sync.</p>
+
+<pre><code>$ cd octopress
+$ git pull origin source
+$ cd ./_deploy
+$ git pull origin master
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
