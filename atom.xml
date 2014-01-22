@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://zhuyong.me/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-01-22T17:40:57+08:00</updated>
+  <updated>2014-01-22T23:03:00+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,63 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Turn C720 Into Development Machine: Step by Step Guide]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/"/>
+    <updated>2014-01-22T22:52:54+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide</id>
+    <content type="html"><![CDATA[<p>From Google Analytic report of my blog,  I saw there are two visitors, one from Germany and the other from US. Both of them viewed my blog post about <a href="http://zhuyong.me/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/">setup C720 development environment</a>.  But in that post, I didn&rsquo;t record down step by step how to setup the development environment. Since people are interested in this topic, I think I should write a formal and detail post about this. So, here come this step by step guide of turn your C720 as development machine by install Ubuntu using <a href="https://github.com/dnschneid/crouton">crouton</a>.</p>
+
+<p>The reason I choose <code>crouton</code> over <code>chrubuntu</code> is because of the super convenient way to switch between ChromeOS and Ubuntu with <code>Ctrl + Alt + Shift + Back</code> keys. There is no need to reboot machine to switch between the OSs.</p>
+
+<h4>Step 1: Enable Developer Mode</h4>
+
+<p>Enable the developer mode will wipe all your data, so backup any important data before enable developer mode.</p>
+
+<p>To enable developer mode:</p>
+
+<ul>
+<li>Press <code>Esc + Refresh (F3)</code> keys then press <code>Power</code> button</li>
+<li>Press <code>Ctrl + D</code>, ignore the warning/error message on screen.</li>
+<li>Press <code>Ctrl + D</code> again, you entered the developer mode.</li>
+</ul>
+
+
+<p>After enable developer mode, evertime you cold start your computer, you need to press <code>Ctr + D</code> or just wait for 30 second.</p>
+
+<h4>Step 2: Install Ubuntu 13.10 Using crouton</h4>
+
+<p><code>crouton</code> is a powerful script that will do all the download and installation job for you. Download latest version of <code>crouton</code> from <a href="http://goo.gl/fd3zc">http://goo.gl/fd3zc</a>. For details of crouton usage, refer to it&rsquo;s <a href="https://github.com/dnschneid/crouton">github repo</a>.</p>
+
+<p>I use <code>crouton</code> to install Ubuntu 13.10, and I choose <code>xfce4</code> as the windows manager. Below are the steps I prerformed:</p>
+
+<ul>
+<li>Download <code>crouton</code></li>
+<li>Open shell by <code>Ctrl + Alt + T</code>, then type <code>shell</code></li>
+<li>Run <code>sudo sh -e ~/Downloads/crouton -r saucy -t xfce</code>. This will start the downloading and installation process for Ubuntu 13.10</li>
+<li>Wait untill the installation done.</li>
+<li>Run <code>sudo startxfce4</code> to start the <code>Xfce</code></li>
+<li>Anytime you want to switch between ChromeOs and Ubuntu, just use <code>Ctrl + Alt + Shift + Back</code> or <code>Ctrl + Alt + Shift + Forward</code></li>
+<li>log out <code>xfce</code> will end the <code>xfce</code> session</li>
+</ul>
+
+
+<h4>Step 3: Install Development Tools</h4>
+
+<p>There is no much to talk about this step, it&rsquo;s the same as install development tools in Ubuntu. Just run <code>sudo apt-get update</code>, <code>sudo apt-get install</code> to install whatever tools you needed.</p>
+
+<p>For me, I installed <code>git</code>, <code>vim</code>, <code>build_essential</code>, <code>cmake</code>, <code>golang1.2</code>, <code>llvm3.4</code>, <code>the_silver_searcher</code> as well as <code>ruby</code> and necessory packages for <code>Octopress</code>.</p>
+
+<p>If you followed all the steps above, your C720 will become a nice Linux development machine. I haven&rsquo;t tried to run any IDE like <code>eclipse</code> or <code>android studio</code>, I think my 2GB RAM may not sufficient for RAM hunger tools like that. If you have the 4GB version of C720, I think there is no problem to run those IDEs.</p>
+
+<h4>Step 4: Key Map Modification (Optional)</h4>
+
+<p>If you are like me, always use <code>CapLock</code> as <code>Ctrl</code>, you can follow the instruction in my another <a href="http://zhuyong.me/blog/2014/01/15/map-search-key-to-control-key-on-acer-c720-chromebook/">post</a> to map the search key to ctrl.</p>
+
+<p><strong>Next</strong>, I will write another post to talk about development on C720 using cloud based development environment. If you are interested, please stay tuned.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[My First Google App Engine in Golang : Hello World!]]></title>
