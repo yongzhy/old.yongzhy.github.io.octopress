@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Golang | Zhu Yong]]></title>
+  <link href="http://zhuyong.me/blog/categories/golang/atom.xml" rel="self"/>
+  <link href="http://zhuyong.me/"/>
+  <updated>2014-01-22T17:40:57+08:00</updated>
+  <id>http://zhuyong.me/</id>
+  <author>
+    <name><![CDATA[Zhu Yong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My First Google App Engine in Golang : Hello World!]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/"/>
+    <updated>2014-01-22T17:34:05+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world</id>
+    <content type="html"><![CDATA[<p>Long time ago, I was thinking to build something using Google App Engine. But I didn&rsquo;t start coding after created the app in GAE. So the apps remain there with a <code>None Deployed</code> status.</p>
+
+<p>Yesterday I downloaded the GAE Golang SDK, the reason for choosing experimental golang SDK is that, I want to be more familar with Golang though the process of GAE development.</p>
+
+<p>So the process started with the the <a href="https://developers.google.com/appengine/docs/go/gettingstarted/helloworld"><code>Hello World</code></a> example. I created the folder and files, then when I issue <code>goapp serve</code> command, I saw error about the <code>app.yaml</code> file. It&rsquo;s because the indent of line</p>
+
+<pre><code>- url: /.*
+</code></pre>
+
+<p>After corrected the indent problem, the server started successfully. I need to mention that I ssh remote login my Ubuntu server to do the development. So after the <code>HelloWorld</code> app server started, I tested on my laptop with <code>http://1.2.3.4:8080</code> (assume my Ubuntu server IP is <code>1.2.3.4</code>). Chrome reported page can&rsquo;t found. That&rsquo;s strange, there is no error message from GAE, but there must be something wrong.</p>
+
+<p>So I use <code>goapp help serve</code>, then I found there is a <code>--host=</code> option, then I tried to set the host to ip <code>1.2.3.4</code>, bingo, I saw <code>hello world!</code>.</p>
+
+<p>After that I still wondering why I can&rsquo;t access the server using IP if I didn&rsquo;t append the <code>--host=</code> options. Then I found someone asked the same question on <a href="http://stackoverflow.com/questions/7534967/is-there-any-way-to-access-gae-dev-app-server-in-the-local-network">StackOverflow</a> in Year 2011. I confirmed the answer of <code>--host=0.0.0.0</code> works same as <code>--host=1.2.3.4</code>.</p>
+
+<p>Next step I will finish the app I should finish long time ago.</p>
+]]></content>
+  </entry>
+  
+</feed>
