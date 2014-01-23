@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Reading | Zhu Yong]]></title>
+  <link href="http://zhuyong.me/blog/categories/reading/atom.xml" rel="self"/>
+  <link href="http://zhuyong.me/"/>
+  <updated>2014-01-23T22:01:34+08:00</updated>
+  <id>http://zhuyong.me/</id>
+  <author>
+    <name><![CDATA[Zhu Yong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Intel's Recommended Reading List]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/23/intels-recommended-reading-list/"/>
+    <updated>2014-01-23T21:49:38+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/23/intels-recommended-reading-list</id>
+    <content type="html"><![CDATA[<p>Intel published a 10 pages recommanded reading list for 1st half year of 2014, you can go to <a href="https://noggin.intel.com/recommended-reading">here</a> for details or directly download the list in <a href="https://noggin.intel.com/sites/default/files/Intel-Recommended-Reading-List_1H14_0.pdf">PDF</a></p>
+
+<p><blockquote><p>The Recommended Reading List is a valuable resource for technical professionals who want to thoroughly explore topics such as multi-core programming, embedded security, and more. These books are produced by leading publishers around the world.</p></blockquote></p>
+
+<p>This is a very good reference list for developers who want to expand their knowledges. In the list, Intel also gives retailer hyperlink for each book item.</p>
+]]></content>
+  </entry>
+  
+</feed>
