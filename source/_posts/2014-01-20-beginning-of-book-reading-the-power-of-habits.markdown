@@ -7,7 +7,7 @@ author: yongzhy
 categories: life
 ---
 
-Today I read someone's article about how the book ["The Power Of Habit"](http://www.amazon.com/dp/081298160X) changed his life in the past one year. After read the article, I was thinking that maybe I should read it also. Long time ago, I already bought the kindle edition of ["The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change"](http://www.amazon.com/The-Habits-Highly-Effective-People/dp/1455892823) from Amazon, but I didn't actually finished it. Both of the two books are very good book about self improvement; both of them have excellent customer reviews from thousands of customers on Amazon. 
+Today I read someone's article about how the book ["The Power Of Habit"](http://www.amazon.com/gp/product/081298160X/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=081298160X&linkCode=as2&tag=zhuyong.me-20) changed his life in the past one year. After read the article, I was thinking that maybe I should read it also. Long time ago, I already bought the kindle edition of ["The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change"](http://www.amazon.com/gp/product/1455892823/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1455892823&linkCode=as2&tag=zhuyong.me-20) from Amazon, but I didn't actually finished it. Both of the two books are very good book about self improvement; both of them have excellent customer reviews from thousands of customers on Amazon. 
 
 So after dinner when I carried my son to national library to return his books, I searched the library catalogs. Although the records shown that both the book and the audio CDs are available, I only managed to find the audio CDs at the end. That's good enough.
 
