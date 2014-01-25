@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="Today is my second day with Acer C720 chromebook. After two days usage, my impression on chromebook is totally impressive. My initial intension was &hellip;">
+  <meta name="description" content="I am a vim user, and for all my home and office computers, I map the CapLock key to Ctrl key. So after installed Ubuntu 13.10 using crouton on my new &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,121 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/15/map-search-key-to-control-key-on-acer-c720-chromebook/">Map Search Key to Control Key on Acer C720 Chromebook</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-15T20:00:46+08:00" pubdate data-updated="true">Jan 15<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am a vim user, and for all my home and office computers, I map the CapLock key to Ctrl key. So after installed Ubuntu 13.10 using crouton on my new Acer C720 Chromebook, I was thinking to map the search key to control key. I did some search online as well as some experiments and finally found the solution.</p>
+
+<p>I choosed xfce4 as my window manager because of the rather low 2GB RAM. By default, the search key is mapped to Super_L after install Ubuntu using crouton. If you want to know the keycode for each key on the keyboard, you can use <code>xev</code> to check.</p>
+
+<p>I use <code>xmodmap</code> to do the key mapping.</p>
+
+<p>First, create file <code>.Xmodmap</code> at your <code>$HOME</code> directory with content below</p>
+
+<pre><code>clear control
+clear mod4
+keycode 133 = Super_L
+add control  = Control_L Control_R Super_L
+add mod4 = Hyper_L Super_R
+</code></pre>
+
+<p>Next, need to make sure <code>xmodmap</code> load <code>~/.Xmodmap</code> file when you start you linux using <code>sudo startxfce4</code> in chromebook terminal. Create file <code>~/.xinitrc</code> with content below</p>
+
+<pre><code>if [-s ~/.Xmodmap]; then
+    xmodmap ~/.Xmodmap
+fi
+</code></pre>
+
+<p>Last step is to logout your xfce environment and restart it from chromebook terminal.</p>
+
+<h4>References Websites</h4>
+
+<ul>
+<li><a href="http://cs.gmu.edu/~sean/stuff/n800/keyboard/old.html">http://cs.gmu.edu/~sean/stuff/n800/keyboard/old.html</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Xmodmap">https://wiki.archlinux.org/index.php/Xmodmap</a></li>
+<li><a href="https://github.com/dnschneid/crouton/wiki/Keyboard">https://github.com/dnschneid/crouton/wiki/Keyboard</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/09/bought-domain-for-my-github-pages/">Bought Domain for My Github Pages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-09T14:18:26+08:00" pubdate data-updated="true">Jan 9<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I bought my first personal domain <a href="http://zhuyong.me">zhuyong.me</a> and pointed to <a href="http://yongzhy.github.io">my github pages</a>.</p>
+
+<p>The reason why I bought domain is to push myself, to encourage myself to continously update this blog. Plus, the domain + 1 year pravacy protection only cost US$8.99 under current promotion.</p>
+
+<p>The setup is pretty easy:</p>
+
+<ol>
+<li>create <code>CNAME</code> file under <code>source/</code> folder. In this file, just input my newly bought domain: <strong>zhuyong.me</strong></li>
+<li>run <code>rake generate</code> to put <code>CNAME</code> in <code>master</code></li>
+<li>setup DNS, I bought my domain from <a href="http://www.namecheap.com">namecheap</a>. So just point <code>zhuyong.me</code> to <code>192.30.252.153</code>, and <code>192.30.252.154</code>, then point <code>www.zhuyong.me</code> to <code>yongzhy.github.io.</code></li>
+<li>that&rsquo;s all, just wait for less than 30mins, the domain is updated and I have <code>zhuyong.me</code> now pointed to my github pages.</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -282,6 +397,14 @@ $ git pull origin master
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/25/how-i-use-google-keep-to-manage-todo-list/">How I Use Google Keep to Manage Todo List</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/25/i-received-my-chromecast/">I Received My Chromecast</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/23/intels-recommended-reading-list/">Intel&#8217;s Recommended Reading List</a>
       </li>
     
@@ -291,14 +414,6 @@ $ git pull origin master
     
       <li class="post">
         <a href="/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/">Turn C720 Into Development Machine: Step by Step Guide</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/">My First Google App Engine in Golang : Hello World!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/20/beginning-of-book-reading-the-power-of-habits/">Beginning of Book Reading: The Power of Habits</a>
       </li>
     
   </ul>
