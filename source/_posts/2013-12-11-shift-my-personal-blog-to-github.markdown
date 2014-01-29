@@ -2,7 +2,7 @@
 layout: post
 title: "Shift My Personal Blog To Github"
 date: 2013-12-11 12:35:42 +0800
-authoer: yongzhy
+authoer: Zhu Yong
 comments: true
 categories: misc 
 ---

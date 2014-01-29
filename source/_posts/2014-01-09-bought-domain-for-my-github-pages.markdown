@@ -4,7 +4,7 @@ title: "Bought Domain For My Github Pages"
 date: 2014-01-09 14:18:26 +0800
 comments: true
 categories: Octopress
-author: yongzhy
+author:  Zhu Yong
 ---
 
 Today I bought my first personal domain [zhuyong.me](http://zhuyong.me) and pointed to [my github pages](http://yongzhy.github.io).

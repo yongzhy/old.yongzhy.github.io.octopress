@@ -3,7 +3,7 @@ layout: post
 title: "Sold My Old P4 Computer For S$2"
 date: 2014-01-19 15:53:50 +0800
 comments: true
-author: yongzhy
+author: Zhu Yong
 categories: life
 ---
 

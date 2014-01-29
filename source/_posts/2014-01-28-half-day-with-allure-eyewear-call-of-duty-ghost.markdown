@@ -3,7 +3,7 @@ layout: post
 title: "Half Day With Allure Eyewear \"Call Of Duty : Ghost\""
 date: 2014-01-28 17:42:29 +0800
 comments: true
-author: yongzhy
+author: Zhu Yong
 categories: gadget
 ---
 

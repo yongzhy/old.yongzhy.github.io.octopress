@@ -3,7 +3,7 @@ layout: post
 title: "My First Google App Engine In Golang : Hello World!"
 date: 2014-01-22 17:34:05 +0800
 comments: true
-author: yongzhy
+author: Zhu Yong
 categories: [GAE, golang]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Turn C720 Into Development Machine: Step By Step Guide"
 date: 2014-01-22 22:52:54 +0800
 comments: true
-author: yongzhy
+author: Zhu Yong
 categories: [chromebook, ubuntu, crouton]
 ---
 

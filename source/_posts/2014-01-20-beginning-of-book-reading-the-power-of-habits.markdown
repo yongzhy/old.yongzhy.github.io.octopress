@@ -3,7 +3,7 @@ layout: post
 title: "Beginning Of Book Reading: The Power Of Habits"
 date: 2014-01-20 22:56:26 +0800
 comments: true
-author: yongzhy
+author: Zhu Yong
 categories: life
 ---
 

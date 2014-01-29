@@ -3,7 +3,7 @@ layout: post
 title: "Linux Is Always The Number 1?"
 date: 2014-01-17 13:59:00 +0800
 comments: true
-author: yongzhy
+author: Zhu Yong
 categories: [linux, gcc, c]
 ---
 

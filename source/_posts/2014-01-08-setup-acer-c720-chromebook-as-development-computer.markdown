@@ -4,7 +4,7 @@ title: "Setup Acer C720 Chromebook As Development Computer"
 date: 2014-01-08 22:27:33 +0800
 comments: true
 categories: [chromebook, crouton]
-author: yongzhy
+author:  Zhu Yong
 ---
 
 Today is my second day with Acer C720 chromebook. After two days usage, my impression on chromebook is totally impressive. My initial intension was to buy a Macbook Pro 13 retina display. But while waiting for the Apple "Red Friday" discount before Chinese New Year, I was thinking again and again "do I really need to buy a powerful Macbook Pro that cost over S$2000?"

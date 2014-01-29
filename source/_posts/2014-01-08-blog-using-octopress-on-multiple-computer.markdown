@@ -3,7 +3,7 @@ layout: post
 title: "Blog Using Octopress On Multiple Computer"
 date: 2014-01-08 14:29:20 +0800
 comments: true
-author: yongzhy
+author:  Zhu Yong
 categories: Octopress
 ---
 

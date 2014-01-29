@@ -3,7 +3,7 @@ layout: post
 title: "Create favicon For My Blog"
 date: 2014-01-16 12:52:37 +0800
 comments: true
-author: yongzhy
+author: Zhu Yong
 categories: Octopress 
 ---
 

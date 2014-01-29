@@ -3,7 +3,7 @@ layout: post
 title: "I Received My Chromecast"
 date: 2014-01-25 10:13:48 +0800
 comments: true
-authoer: yongzhy
+authoer: Zhu Yong
 categories: gadget
 ---
 

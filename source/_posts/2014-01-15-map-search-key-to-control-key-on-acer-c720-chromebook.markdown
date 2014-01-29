@@ -3,7 +3,7 @@ layout: post
 title: "Map Search Key To Control Key On Acer C720 Chromebook"
 date: 2014-01-15 20:00:46 +0800
 comments: true
-author: yongzhy
+author:  Zhu Yong
 categories: chromebook
 ---
 

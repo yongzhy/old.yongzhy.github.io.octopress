@@ -3,7 +3,7 @@ layout: post
 title: "How I Use Google Keep To Manage Todo List"
 date: 2014-01-25 10:18:34 +0800
 comments: true
-authoer: yongzhy
+authoer: Zhu Yong
 categories: applications
 ---
 

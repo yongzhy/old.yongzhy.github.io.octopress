@@ -3,7 +3,7 @@ layout: post
 title: "Intel's Recommended Reading List"
 date: 2014-01-23 21:49:38 +0800
 comments: true
-author: yongzhy
+author: Zhu Yong
 categories: reading
 ---
 
