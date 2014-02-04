@@ -29,3 +29,5 @@ I got it yesterday after work. After dinner, I started the process to install Ub
 * install ruby and necessary setup for blog system Octopress
 
 After all of those setup, I still have over 7GB space left, that's far better than my expection. My overall experience on this chromebook is excellet. But if there are other choices of chrombook available, I would want a configuration with 4GB RAM, 32GB SSD. Current 2GB RAM is just not enough for serious development.
+
+`Update 2014-02-04` : For step to step guide, please refer to my new post [**Turn C720 Into Development Machine: Step By Step Guide**](http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/)

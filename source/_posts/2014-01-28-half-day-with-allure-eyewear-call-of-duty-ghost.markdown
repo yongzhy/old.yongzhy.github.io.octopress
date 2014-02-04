@@ -19,3 +19,5 @@ After lunch time, I clipped the eyewear onto my glass and used it for the whole 
 * It's troublesome to take off the eyewear when I left my cubicle to pantry or toilet, then put on again.
 
 Basically, this product worth the US$25 price, I would suggest this for anyone who work on computer for long hours. Of course, if you already wear glass and have the budget, I strongly suggest go to the `gunnar` customization option. 
+
+`Update 2014-02-04` : I contacted `Allure` on 28 Jan, and they processed another shipment for the 3rd eyewear at U.S locat time `01/29/2014	 5:19 P.M`. I must say their action and response was really fast. For this reason, I would recommend `Allure` to anyone that interested to buy eyeware to protect their eyes. 

@@ -4,7 +4,7 @@ title: "I Received My Chromecast"
 date: 2014-01-25 10:13:48 +0800
 comments: true
 authoer: Zhu Yong
-categories: gadget
+categories: [chromecast, gadget]
 ---
 
 [{% img left /images/blogimg/2014-01-25-Chromecast.jpg "Chromecast On Amazon" %}](http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_il?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00DR0PDNE&linkCode=as2&tag=zhuyong.me-20)
