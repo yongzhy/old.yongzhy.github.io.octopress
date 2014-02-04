@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="Last night I was thinking to create a favicon for this octopress blog. Just now, after lunch, I spent some time search on google and finally created &hellip;">
+  <meta name="description" content="Yesterday I read an article C language and the linux macro &ndash; proof that linux is always Number 1. It shows a simple C code which just define &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,82 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/17/linux-is-always-the-number-1/">Linux Is Always the Number 1?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-17T13:59:00+08:00" pubdate data-updated="true">Jan 17<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yesterday I read an article <a href="http://arjunsreedharan.org/post/71403510912/c-language-and-the-linux-macro-proof-that-linux-is">C language and the linux macro &ndash; proof that linux is always Number 1</a>. It shows a simple C code which just define variable <code>linux</code> and assign with a value, but <code>gcc</code> produce error when compile it.</p>
+
+<p>Code of the simple program:</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int linux = 701;
+    printf("%d", linux);
+    return 0;
+}
+</code></pre>
+
+<p>Error message from <code>gcc</code> :</p>
+
+<pre><code>code.c: In function ‘main’:
+code.c:4:6: error: expected identifier or ‘(’ before numeric constant
+int linux = 701;
+    ^
+</code></pre>
+
+<p>If preprocess the program using <code>gcc -E code.c</code>, the output programe code is:</p>
+
+<pre><code>int main() {
+    int 1 = 701;
+    printf("%d\n", 1);
+    return 0;
+}
+</code></pre>
+
+<p>It&rsquo;s very obvious that <code>linux</code> is <code>#define</code> somewhere with value <code>1</code>. But the code only included <code>stdio.h</code> file and there is no such define in this header file. After search Google, I have found the explanantion from stackoverflow.</p>
+
+<p>Word such as <code>unix</code> or <code>vax</code> was defined in the pre-ANSI days to detect the system at compile time. To make the compile process pass, just pass parameter <code>-std=c89</code> or <code>-std=c99</code> to <code>gcc</code> will do.</p>
+
+<h4>Related Questions From Stackoverflow:</h4>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/19210935/why-does-the-c-preprocessor-interpret-the-word-linux-as-the-constant-1">Stackoverflow Question 1</a></li>
+<li><a href="http://stackoverflow.com/questions/3770322/is-unix-restricted-keyword-in-c">Stackoverflow Question 2</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -292,6 +368,8 @@ fi
 
 
 <p>After all of those setup, I still have over 7GB space left, that&rsquo;s far better than my expection. My overall experience on this chromebook is excellet. But if there are other choices of chrombook available, I would want a configuration with 4GB RAM, 32GB SSD. Current 2GB RAM is just not enough for serious development.</p>
+
+<p><code>Update 2014-02-04</code> : For step to step guide, please refer to my new post <a href="http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/"><strong>Turn C720 Into Development Machine: Step By Step Guide</strong></a></p>
 </div>
   
   
@@ -440,6 +518,10 @@ $ git pull origin master
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/02/04/google-released-chromecast-sdk/">Google Released Chromecast SDK : Countless Apps Coming</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/28/half-day-with-allure-eyewear-call-of-duty-ghost/">Half Day With Allure Eyewear &#8220;Call of Duty : Ghost&#8221;</a>
       </li>
     
@@ -455,15 +537,11 @@ $ git pull origin master
         <a href="/blog/2014/01/23/intels-recommended-reading-list/">Intel&#8217;s Recommended Reading List</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear/">I Ordered &#8220;Call of Duty: Ghosts Eyewear&#8221;</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/applications/'>applications (1)</a></li><li><a href='/blog/categories/c/'>c (1)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/gadget/'>gadget (3)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (1)</a></li><li><a href='/blog/categories/misc/'>misc (1)</a></li><li><a href='/blog/categories/octopress/'>Octopress (3)</a></li><li><a href='/blog/categories/reading/'>reading (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/applications/'>applications (1)</a></li><li><a href='/blog/categories/c/'>c (1)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/gadget/'>gadget (4)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (1)</a></li><li><a href='/blog/categories/misc/'>misc (1)</a></li><li><a href='/blog/categories/octopress/'>Octopress (3)</a></li><li><a href='/blog/categories/reading/'>reading (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li></ul>
 </section>
 
 <section class="googleplus">

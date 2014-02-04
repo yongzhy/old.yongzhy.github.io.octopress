@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gadget | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/gadget/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-01-29T13:38:00+08:00</updated>
+  <updated>2014-02-04T12:24:09+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Google Released Chromecast SDK : Countless Apps Coming]]></title>
+    <link href="http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk/"/>
+    <updated>2014-02-04T09:39:48+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk</id>
+    <content type="html"><![CDATA[<p>After <a href="http://10.36.134.34:4000/blog/2014/01/25/i-received-my-chromecast/">received my Chromecast</a> for 10 days, I received good news from Google. Google finally <a href="http://chrome.blogspot.sg/2014/02/chromecast-is-now-open-to-developers.html">opened chromecast SDK to all developers</a>. This is what Chromecast users and developers waiting for long time. Developers now must be busy coding to integrate the SDK into their apps, so countless Chromecast-compatible apps would show-up any day now.</p>
+
+<p>Media player apps will be the first batch to support Chromecast, especially for local media streaming. I think this is the most desired feature for most of Chromecast users including me. I use MX Player a lot, I can&rsquo;t wait to see it with Chromecast support.</p>
+
+<p>I don&rsquo;t play games on phone, but I think there will be plenty of games with Chromecast support. People likes to play games on large screen, supporting for Chromecast would be a must have feature for any android games from now on.</p>
+
+<p>For developers, check the two links below to start your development.</p>
+
+<ul>
+<li><a href="https://developers.google.com/cast/docs/downloads">Chromecast SDK Download</a></li>
+<li><a href="https://developers.google.com/cast/docs/developers">Chromecast Developer Guide</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Half Day With Allure Eyewear "Call of Duty : Ghost"]]></title>
@@ -33,6 +54,8 @@
 
 
 <p>Basically, this product worth the US$25 price, I would suggest this for anyone who work on computer for long hours. Of course, if you already wear glass and have the budget, I strongly suggest go to the <code>gunnar</code> customization option.</p>
+
+<p><code>Update 2014-02-04</code> : I contacted <code>Allure</code> on 28 Jan, and they processed another shipment for the 3rd eyewear at U.S locat time <code>01/29/2014  5:19 P.M</code>. I must say their action and response was really fast. For this reason, I would recommend <code>Allure</code> to anyone that interested to buy eyeware to protect their eyes.</p>
 ]]></content>
   </entry>
   

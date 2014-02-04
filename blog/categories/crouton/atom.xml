@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Crouton | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/crouton/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-01-29T13:38:00+08:00</updated>
+  <updated>2014-02-04T12:24:09+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -103,6 +103,8 @@
 
 
 <p>After all of those setup, I still have over 7GB space left, that&rsquo;s far better than my expection. My overall experience on this chromebook is excellet. But if there are other choices of chrombook available, I would want a configuration with 4GB RAM, 32GB SSD. Current 2GB RAM is just not enough for serious development.</p>
+
+<p><code>Update 2014-02-04</code> : For step to step guide, please refer to my new post <a href="http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/"><strong>Turn C720 Into Development Machine: Step By Step Guide</strong></a></p>
 ]]></content>
   </entry>
   
