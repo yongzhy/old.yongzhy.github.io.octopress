@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gadget | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/gadget/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-02-04T12:24:09+08:00</updated>
+  <updated>2014-02-05T12:36:20+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -64,7 +64,7 @@
     <link href="http://zhuyong.me/blog/2014/01/25/i-received-my-chromecast/"/>
     <updated>2014-01-25T10:13:48+08:00</updated>
     <id>http://zhuyong.me/blog/2014/01/25/i-received-my-chromecast</id>
-    <content type="html"><![CDATA[<p><a href="http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_il?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DR0PDNE&amp;linkCode=as2&amp;tag=zhuyong.me-20"><img class="left" src="/images/blogimg/2014-01-25-Chromecast.jpg" title="&ldquo;Chromecast On Amazon&rdquo;" ></a></p>
+    <content type="html"><![CDATA[<p><a href="http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_il?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DR0PDNE&amp;linkCode=as2&amp;tag=zhuyong.me-20">{% img left /images/blogimg/2014-01-25-Chromecast.jpg &ldquo;Chromecast On Amazon&rdquo; %}</a></p>
 
 <p>I ordered Chromecast from <a href="http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DR0PDNE&amp;linkCode=as2&amp;tag=zhuyong.me-20" title="">Amazon</a> one week back when it has promotional price of US$29.99 only.</p>
 
@@ -89,7 +89,7 @@
     <id>http://zhuyong.me/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear</id>
     <content type="html"><![CDATA[<p>This afternoon I placed an order for 3 pieces of <a href="http://call-of-duty-ghosts.allure-eyewear.com/">Call Of Duty Ghosts By Allure Eyewear</a>. One for myself and the other two for my colleagues.</p>
 
-<p><img src="/images/blogimg/2014-01-23-codg5-k.jpeg" title="&ldquo;Call Of Duy Ghosts By Allure Eyewear&rdquo;" ></p>
+<p>{% img /images/blogimg/2014-01-23-codg5-k.jpeg &ldquo;Call Of Duy Ghosts By Allure Eyewear&rdquo; %}</p>
 
 <p>One week ago, I didn&rsquo;t even know there are glasses specially designed for heavy computer user and gamers. One day, one of my colleagues said he was going to buy a glass from Amazon, ask me to search word <code>gunnar</code> to have a look. Then he said the glass can give eyes some relief for full day computer user like us, almost all professional gamer wear this kind of glass to protect their eyes. So I did some google about this eyewear. From reviews on various websites, the feedbacks are quite possitive and effective. So I decided to invest one to protect my precious eyes.</p>
 
