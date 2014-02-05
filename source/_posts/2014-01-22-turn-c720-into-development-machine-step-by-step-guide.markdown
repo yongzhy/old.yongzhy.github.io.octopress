@@ -23,6 +23,8 @@ To enable developer mode:
 
 After enable developer mode, evertime you cold start your computer, you need to press `Ctr + D` or just wait for 30 second.
 
+<!-- more -->
+
 #### Step 2: Install Ubuntu 13.10 Using crouton
 
 `crouton` is a powerful script that will do all the download and installation job for you. Download latest version of `crouton` from [http://goo.gl/fd3zc](http://goo.gl/fd3zc). For details of crouton usage, refer to it's [github repo](https://github.com/dnschneid/crouton). 

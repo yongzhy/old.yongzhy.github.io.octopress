@@ -13,6 +13,8 @@ So after dinner when I carried my son to national library to return his books, I
 
 At the beginning of `The Power Of Habit` book, the author mentioned that people will change when they focus on one particular change for long time and that change could be the keystone habit; this keystone habit will radially change other habits. This perspective is interesting, and I totally agree on that. 
 
+<!-- more -->
+
 By the time I decided to start my new blog in pure English on Github Pages, I haven't read this book yet, but I think my initiative goal was to make achievement through the process of writing blog. By written purely in English, I can improve my English; by written some technique stuff, I would and can learn some new tech or programming skills; by written blog, attract some audiences, build my reputation. :)
 
 So far, almost one month passed since I seriously start blogging using Octpress on Github page, I did gain something. First, very obversious, my skills with git and Markdown improved a lot; second, I knew more about Chromebook. I didn't tried Chromebook before, even as virtual machine. But after use Chromebook for few days, I feel I love it.

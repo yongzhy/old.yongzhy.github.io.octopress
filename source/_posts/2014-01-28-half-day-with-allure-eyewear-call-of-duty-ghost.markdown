@@ -13,6 +13,8 @@ My excutement and happiness didn't last long until I opened the box and only see
 
 After lunch time, I clipped the eyewear onto my glass and used it for the whole afternoon. So here is how I feel about this eyewear with one afternoon experience: 
 
+<!-- more -->
+
 * I felt a little giddy at first, guess is due to the 0.2 diopter. But my eyes soon get used to it.
 * It's a little bit heavy for this clip-on eyewear + my glass
 * When the time I left company, my eyes didn't have strong dry feeling as usual. I can confirm this is not due to phychological factor. I can really feel it. Tomorrow I will use it for whole day, I think the feel will be clearer.

@@ -13,6 +13,8 @@ Just as other Google product, Google Keep interface is clean and minimal, they h
 
 Below is my practice to use Google Keep as my todo list.
 
+<!-- more -->
+
 * For everyday todo list, I create a Googe Keep entry, titled with the date. 
 * I only keep recent few days' todo list, older entries will be archived
 * Every night, I will review today's todo list, copy those items that not finished and need to continue tomorrow to a new Keep entry, titled as tomorrow's date. Then add new list items if there are.

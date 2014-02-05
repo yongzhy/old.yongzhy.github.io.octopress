@@ -17,6 +17,8 @@ One week earlier, I saw my colleage shopping on Amazon, and he always use Comega
 
 Yesterday afternoon, DHL delivered to our office, I pay my colleague total S$46 (S$40 for the Chromecast and S$6 for the shared shipping fee), that's very cheap. 
 
+<!-- more -->
+
 After went back home, I plugged Chromecast in to the HDMI slot on my TV, connected the USB power, then run [Chromecast](https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app) app from my Android phone, the setup process was very easy, then wait for Chromecast to finish firmware updating. After that, everything was ready, so I run Youtube app from my phone and cast the famous `"London Bridge is Falling Down"` animation for my son. The video streaming was very smooth, no legging, not buffering, overall experience was nice.
 
 But, there are only limited android apps that have Chromecast support, and most of the supported apps can't be used in Singapore. The function I want most is to cast the photos and video on my phone to TV. I took a lot of pictures and video for my two boys, I want to let them see themselves on photo and video, and the phone screen is way too small. 

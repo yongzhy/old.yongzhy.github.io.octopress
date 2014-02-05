@@ -28,6 +28,8 @@ Second, create file `source/_includes/post/related_posts.html` with content belo
     {% endif %}
 {% endraw %}
 
+<!-- more -->
+
 Next, add this footer section to the post. modify `source/_layouts/post.html` to add line 
 
 {% raw %}

@@ -15,6 +15,8 @@ So the process started with the the [`Hello World`](https://developers.google.co
 
     - url: /.*
     
+<!-- more -->
+    
 After corrected the indent problem, the server started successfully. I need to mention that I ssh remote login my Ubuntu server to do the development. So after the `HelloWorld` app server started, I tested on my laptop with `http://1.2.3.4:8080` (assume my Ubuntu server IP is `1.2.3.4`). Chrome reported page can't found. That's strange, there is no error message from GAE, but there must be something wrong. 
 
 So I use `goapp help serve`, then I found there is a `--host=` option, then I tried to set the host to ip `1.2.3.4`, bingo, I saw `hello world!`. 
