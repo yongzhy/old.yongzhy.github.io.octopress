@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My First Google App Engine in Golang : Hello World! - Zhu Yong</title>
+  <title>Add "Related Posts" Section to Octopress - Zhu Yong</title>
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="Long time ago, I was thinking to build something using Google App Engine. But I didn&rsquo;t start coding after created the app in GAE. So the apps &hellip;">
+  <meta name="description" content="When reading someone&rsquo;s article, it&rsquo;s good to have a section to show the releated posts. Today I searched online and found to add Related &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world">
+  <link rel="canonical" href="http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Zhu Yong" type="application/atom+xml">
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">My First Google App Engine in Golang : Hello World!</h1>
+      <h1 class="entry-title">Add "Related Posts" Section to Octopress</h1>
     
     
       <p class="meta">
@@ -96,29 +96,92 @@
   
 
 
-<time datetime="2014-01-22T17:34:05+08:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
+<time datetime="2014-02-05T12:39:53+08:00" pubdate data-updated="true">Feb 5<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Long time ago, I was thinking to build something using Google App Engine. But I didn&rsquo;t start coding after created the app in GAE. So the apps remain there with a <code>None Deployed</code> status.</p>
+<div class="entry-content"><p>When reading someone&rsquo;s article, it&rsquo;s good to have a section to show the releated posts. Today I searched online and found to add <code>Related Posts</code> section to Octopress is quite easy.</p>
 
-<p>Yesterday I downloaded the GAE Golang SDK, the reason for choosing experimental golang SDK is that, I want to be more familar with Golang though the process of GAE development.</p>
+<p>First, edit config file <code>_config.yml</code> to add line</p>
 
-<p>So the process started with the the <a href="https://developers.google.com/appengine/docs/go/gettingstarted/helloworld"><code>Hello World</code></a> example. I created the folder and files, then when I issue <code>goapp serve</code> command, I saw error about the <code>app.yaml</code> file. It&rsquo;s because the indent of line</p>
-
-<pre><code>- url: /.*
+<pre><code>lsi: true
 </code></pre>
 
-<p>After corrected the indent problem, the server started successfully. I need to mention that I ssh remote login my Ubuntu server to do the development. So after the <code>HelloWorld</code> app server started, I tested on my laptop with <code>http://1.2.3.4:8080</code> (assume my Ubuntu server IP is <code>1.2.3.4</code>). Chrome reported page can&rsquo;t found. That&rsquo;s strange, there is no error message from GAE, but there must be something wrong.</p>
+<p>Second, create file <code>source/_includes/post/related_posts.html</code> with content below</p>
 
-<p>So I use <code>goapp help serve</code>, then I found there is a <code>--host=</code> option, then I tried to set the host to ip <code>1.2.3.4</code>, bingo, I saw <code>hello world!</code>.</p>
+<pre><code>{% if site.related_posts %}
+  &lt;h3&gt;Related posts&lt;/h3&gt;
+  &lt;ul class="posts"&gt;
+  {% for post in site.related_posts limit:3 %}
+    &lt;li class="related"&gt;
+      &lt;a href="{{ root_url }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
+    &lt;/li&gt;
+  {% endfor %}
+  &lt;/ul&gt;
+{% endif %}
+</code></pre>
 
-<p>After that I still wondering why I can&rsquo;t access the server using IP if I didn&rsquo;t append the <code>--host=</code> options. Then I found someone asked the same question on <a href="http://stackoverflow.com/questions/7534967/is-there-any-way-to-access-gae-dev-app-server-in-the-local-network">StackOverflow</a> in Year 2011. I confirmed the answer of <code>--host=0.0.0.0</code> works same as <code>--host=1.2.3.4</code>.</p>
+<p>Next, add this footer section to the post. modify <code>source/_layouts/post.html</code> to add line</p>
 
-<p>Next step I will finish the app I should finish long time ago.</p>
+<pre><code>{% include post/related_posts.html %}
+</code></pre>
+
+<p>under</p>
+
+<pre><code>{% include post/author.html %}
+{% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+{% include post/categories.html %}
+</code></pre>
+
+<p>OK. Now you can run <code>rake generate</code> and <code>rake preview</code> to see the effects.</p>
+
+<p>There is one problem with the solution above, it&rsquo;s slow to run <code>rake generate</code> when your have lots of articles. To speed up the process, you need to install <code>rb-gsl</code>. If you directly issue <code>gem install gsl</code>, your most probablly will see error message</p>
+
+<pre><code>Building native extensions.  This could take a while...
+ERROR:  Error installing gsl:
+    ERROR: Failed to build gem native extension.
+
+...
+</code></pre>
+
+<p>It&rsquo;s because <code>gsl</code> gem requires <code>gsl 1.14</code>. Follow the steps below to install <code>gsl 1.14</code> and <code>rb-gsl</code>:</p>
+
+<pre><code>$ curl -O http://mirror.aarnet.edu.au/pub/gnu/gsl/gsl-1.14.tar.gz
+$ tar xfz gsl-1.14.tar.gz
+$ cd gsl-1.14
+$ ./configure
+$ make clean
+$ make                              # can take a while, be patient
+$ sudo make install
+$ sudo gem install gsl
+</code></pre>
+
+<p>Now run <code>rake generate</code> again and feel the acceleration for the classification process. If you are unlucky and see the message below:</p>
+
+<pre><code>Notice: for 10x faster LSI support, please install http://rb-gsl.rubyforge.org/
+</code></pre>
+
+<p>This means your <code>rb-gsl</code> installation got problem. To resolve that, first uninstall <code>gsl</code> by</p>
+
+<pre><code>$ sudo gem uninstall gsl
+</code></pre>
+
+<p>Then edit file <code>Gemfile</code> in your Octopress folder to add line</p>
+
+<pre><code>gem 'gsl', '~&gt;1.14.7'
+</code></pre>
+
+<p>Then use <code>bundle</code> to install <code>gsl</code></p>
+
+<pre><code>$ sudo bundle install
+</code></pre>
+
+<p>Again, run <code>rake generate</code> to feel the fly speed. :)</p>
+
+<p>Good Luck!!!</p>
 </div>
 
 
@@ -141,12 +204,12 @@
   
 
 
-<time datetime="2014-01-22T17:34:05+08:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
+<time datetime="2014-02-05T12:39:53+08:00" pubdate data-updated="true">Feb 5<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/gae/'>GAE</a>, <a class='category' href='/blog/categories/golang/'>golang</a>
+    <a class='category' href='/blog/categories/octopress/'>Octopress</a>
   
 </span>
 
@@ -160,11 +223,11 @@
     </li>
     
     <li class="related">
-    <a href="/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/">Setup Acer C720 Chromebook As Development Computer</a>
+    <a href="/blog/2014/01/08/blog-using-octopress-on-multiple-computer/">Blog Using Octopress On Multiple Computer</a>
     </li>
     
     <li class="related">
-    <a href="/blog/2014/01/20/beginning-of-book-reading-the-power-of-habits/">Beginning Of Book Reading: The Power Of Habits</a>
+    <a href="/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/">Setup Acer C720 Chromebook As Development Computer</a>
     </li>
     
 </ul>
@@ -174,7 +237,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/" data-via="" data-counturl="http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress/" data-via="" data-counturl="http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -187,10 +250,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/01/20/beginning-of-book-reading-the-power-of-habits/" title="Previous Post: Beginning Of Book Reading: The Power Of Habits">&laquo; Beginning Of Book Reading: The Power Of Habits</a>
+        <a class="basic-alignment left" href="/blog/2014/02/04/google-released-chromecast-sdk/" title="Previous Post: Google Released Chromecast SDK : Countless Apps Coming">&laquo; Google Released Chromecast SDK : Countless Apps Coming</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/" title="Next Post: Turn C720 Into Development Machine: Step By Step Guide">Turn C720 Into Development Machine: Step By Step Guide &raquo;</a>
       
     </p>
   </footer>
@@ -290,8 +351,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/';
-        var disqus_url = 'http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/';
+        var disqus_identifier = 'http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress/';
+        var disqus_url = 'http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress/';
         var disqus_script = 'embed.js';
       
     (function () {
