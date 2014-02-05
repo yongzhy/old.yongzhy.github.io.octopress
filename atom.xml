@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://zhuyong.me/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-02-05T16:31:10+08:00</updated>
+  <updated>2014-02-05T17:35:50+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -38,6 +38,9 @@
   &lt;/ul&gt;
 {% endif %}
 </code></pre>
+
+<!-- more -->
+
 
 <p>Next, add this footer section to the post. modify <code>source/_layouts/post.html</code> to add line</p>
 
@@ -132,6 +135,9 @@ $ sudo gem install gsl
 
 <p>After lunch time, I clipped the eyewear onto my glass and used it for the whole afternoon. So here is how I feel about this eyewear with one afternoon experience:</p>
 
+<!-- more -->
+
+
 <ul>
 <li>I felt a little giddy at first, guess is due to the 0.2 diopter. But my eyes soon get used to it.</li>
 <li>It&rsquo;s a little bit heavy for this clip-on eyewear + my glass</li>
@@ -156,6 +162,9 @@ $ sudo gem install gsl
 <p>Just as other Google product, Google Keep interface is clean and minimal, they have Chrome App and Android App. And the best part of Google Keep is its sync function, you can modify your Google Keep on multiple devices and they all sync to your Google account.</p>
 
 <p>Below is my practice to use Google Keep as my todo list.</p>
+
+<!-- more -->
+
 
 <ul>
 <li>For everyday todo list, I create a Googe Keep entry, titled with the date.</li>
@@ -186,6 +195,9 @@ $ sudo gem install gsl
 <p>One week earlier, I saw my colleage shopping on Amazon, and he always use Comegateway service to ship product from US to Singapore. So I ask if he can buy the Chromecast and ship together with his purchases. He happily agreed.</p>
 
 <p>Yesterday afternoon, DHL delivered to our office, I pay my colleague total S$46 (S$40 for the Chromecast and S$6 for the shared shipping fee), that&rsquo;s very cheap.</p>
+
+<!-- more -->
+
 
 <p>After went back home, I plugged Chromecast in to the HDMI slot on my TV, connected the USB power, then run <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app">Chromecast</a> app from my Android phone, the setup process was very easy, then wait for Chromecast to finish firmware updating. After that, everything was ready, so I run Youtube app from my phone and cast the famous <code>"London Bridge is Falling Down"</code> animation for my son. The video streaming was very smooth, no legging, not buffering, overall experience was nice.</p>
 
@@ -220,6 +232,9 @@ $ sudo gem install gsl
 
 <p>One week ago, I didn&rsquo;t even know there are glasses specially designed for heavy computer user and gamers. One day, one of my colleagues said he was going to buy a glass from Amazon, ask me to search word <code>gunnar</code> to have a look. Then he said the glass can give eyes some relief for full day computer user like us, almost all professional gamer wear this kind of glass to protect their eyes. So I did some google about this eyewear. From reviews on various websites, the feedbacks are quite possitive and effective. So I decided to invest one to protect my precious eyes.</p>
 
+<!-- more -->
+
+
 <p>I can&rsquo;t buy those widely available eyewear from <code>gunnar</code> because I am a shortsighted person, and I already wear a pair of glass. I need to find the clip-on type of eyewear, and I only found <a href="http://www.amazon.com/gp/product/B009OZSMEI/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B009OZSMEI&amp;linkCode=as2&amp;tag=zhuyong.me-20">this</a> from Amazon, and it was out of stock, some unknown sellers sell it over US$60 at that time. Then I visited homepage of <code>gunnar</code>, I can&rsquo;t find the clip-on type, but shortsighted people can order customized glasses with a much higher prices. We haven&rsquo;t tried this kind of glasses before, invest over US$250 for a customized glass without known its effect is kind of risky. So we decided to wait for the stock come back for the clip-on type.</p>
 
 <p>This afternoon, I visited amazon again and found they got stock and the price is only US$33.99, that&rsquo;s much cheaper compare to US$60. Although we need to pay over S$50 shipping fee for 3 pieces of the eyewear, my colleagues and I decided to place the order. Only by then, I noticed this eyewear is from <code>Allure Eyewear</code> instead of <code>gunnar</code>, no wonder I can&rsquo;t find this type from <code>gunnar</code> official website. So I googled again for reviews on <code>Allure Eyewear</code>, again, the reviews are good. And one comments over a review article mentioned the official website of <code>Allure Eyewear</code> sell <code>Call Of Duty Ghosts</code> cheaper than this older <code>Call of Duty Black Ops II</code>. That&rsquo;s good information before I place order.</p>
@@ -251,6 +266,9 @@ $ sudo gem install gsl
 
 
 <p>After enable developer mode, evertime you cold start your computer, you need to press <code>Ctr + D</code> or just wait for 30 second.</p>
+
+<!-- more -->
+
 
 <h4>Step 2: Install Ubuntu 13.10 Using crouton</h4>
 
@@ -299,6 +317,9 @@ $ sudo gem install gsl
 <pre><code>- url: /.*
 </code></pre>
 
+<!-- more -->
+
+
 <p>After corrected the indent problem, the server started successfully. I need to mention that I ssh remote login my Ubuntu server to do the development. So after the <code>HelloWorld</code> app server started, I tested on my laptop with <code>http://1.2.3.4:8080</code> (assume my Ubuntu server IP is <code>1.2.3.4</code>). Chrome reported page can&rsquo;t found. That&rsquo;s strange, there is no error message from GAE, but there must be something wrong.</p>
 
 <p>So I use <code>goapp help serve</code>, then I found there is a <code>--host=</code> option, then I tried to set the host to ip <code>1.2.3.4</code>, bingo, I saw <code>hello world!</code>.</p>
@@ -319,6 +340,9 @@ $ sudo gem install gsl
 <p>So after dinner when I carried my son to national library to return his books, I searched the library catalogs. Although the records shown that both the book and the audio CDs are available, I only managed to find the audio CDs at the end. That&rsquo;s good enough.</p>
 
 <p>At the beginning of <code>The Power Of Habit</code> book, the author mentioned that people will change when they focus on one particular change for long time and that change could be the keystone habit; this keystone habit will radially change other habits. This perspective is interesting, and I totally agree on that.</p>
+
+<!-- more -->
+
 
 <p>By the time I decided to start my new blog in pure English on Github Pages, I haven&rsquo;t read this book yet, but I think my initiative goal was to make achievement through the process of writing blog. By written purely in English, I can improve my English; by written some technique stuff, I would and can learn some new tech or programming skills; by written blog, attract some audiences, build my reputation. :)</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Applications | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/applications/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-02-05T16:31:10+08:00</updated>
+  <updated>2014-02-05T17:35:50+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -23,6 +23,9 @@
 <p>Just as other Google product, Google Keep interface is clean and minimal, they have Chrome App and Android App. And the best part of Google Keep is its sync function, you can modify your Google Keep on multiple devices and they all sync to your Google account.</p>
 
 <p>Below is my practice to use Google Keep as my todo list.</p>
+
+<!-- more -->
+
 
 <ul>
 <li>For everyday todo list, I create a Googe Keep entry, titled with the date.</li>

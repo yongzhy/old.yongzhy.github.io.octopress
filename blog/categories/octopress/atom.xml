@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-02-05T16:31:10+08:00</updated>
+  <updated>2014-02-05T17:35:50+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -42,6 +42,9 @@
 </code></pre>
 
 <p></p>
+
+<!-- more -->
+
 
 <p>Next, add this footer section to the post. modify <code>source/_layouts/post.html</code> to add line</p>
 

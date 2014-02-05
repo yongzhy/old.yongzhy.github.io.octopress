@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chromecast | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/chromecast/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-02-05T16:31:10+08:00</updated>
+  <updated>2014-02-05T17:35:50+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -48,6 +48,9 @@
 <p>One week earlier, I saw my colleage shopping on Amazon, and he always use Comegateway service to ship product from US to Singapore. So I ask if he can buy the Chromecast and ship together with his purchases. He happily agreed.</p>
 
 <p>Yesterday afternoon, DHL delivered to our office, I pay my colleague total S$46 (S$40 for the Chromecast and S$6 for the shared shipping fee), that&rsquo;s very cheap.</p>
+
+<!-- more -->
+
 
 <p>After went back home, I plugged Chromecast in to the HDMI slot on my TV, connected the USB power, then run <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app">Chromecast</a> app from my Android phone, the setup process was very easy, then wait for Chromecast to finish firmware updating. After that, everything was ready, so I run Youtube app from my phone and cast the famous <code>"London Bridge is Falling Down"</code> animation for my son. The video streaming was very smooth, no legging, not buffering, overall experience was nice.</p>
 

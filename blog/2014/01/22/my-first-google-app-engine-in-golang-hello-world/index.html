@@ -112,6 +112,9 @@
 <pre><code>- url: /.*
 </code></pre>
 
+<!-- more -->
+
+
 <p>After corrected the indent problem, the server started successfully. I need to mention that I ssh remote login my Ubuntu server to do the development. So after the <code>HelloWorld</code> app server started, I tested on my laptop with <code>http://1.2.3.4:8080</code> (assume my Ubuntu server IP is <code>1.2.3.4</code>). Chrome reported page can&rsquo;t found. That&rsquo;s strange, there is no error message from GAE, but there must be something wrong.</p>
 
 <p>So I use <code>goapp help serve</code>, then I found there is a <code>--host=</code> option, then I tried to set the host to ip <code>1.2.3.4</code>, bingo, I saw <code>hello world!</code>.</p>

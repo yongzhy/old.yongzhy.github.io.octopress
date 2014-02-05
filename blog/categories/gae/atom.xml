@@ -4,7 +4,7 @@
   <title><![CDATA[Category: GAE | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/gae/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-02-05T16:31:10+08:00</updated>
+  <updated>2014-02-05T17:35:50+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -26,6 +26,9 @@
 
 <pre><code>- url: /.*
 </code></pre>
+
+<!-- more -->
+
 
 <p>After corrected the indent problem, the server started successfully. I need to mention that I ssh remote login my Ubuntu server to do the development. So after the <code>HelloWorld</code> app server started, I tested on my laptop with <code>http://1.2.3.4:8080</code> (assume my Ubuntu server IP is <code>1.2.3.4</code>). Chrome reported page can&rsquo;t found. That&rsquo;s strange, there is no error message from GAE, but there must be something wrong.</p>
 

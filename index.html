@@ -127,66 +127,12 @@
 {% endif %}
 </code></pre>
 
-<p>Next, add this footer section to the post. modify <code>source/_layouts/post.html</code> to add line</p>
-
-<pre><code>{% include post/related_posts.html %}
-</code></pre>
-
-<p>under</p>
-
-<pre><code>{% include post/author.html %}
-{% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-{% include post/categories.html %}
-</code></pre>
-
-<p>OK. Now you can run <code>rake generate</code> and <code>rake preview</code> to see the effects.</p>
-
-<p>There is one problem with the solution above, it&rsquo;s slow to run <code>rake generate</code> when your have lots of articles. To speed up the process, you need to install <code>rb-gsl</code>. If you directly issue <code>gem install gsl</code>, your most probablly will see error message</p>
-
-<pre><code>Building native extensions.  This could take a while...
-ERROR:  Error installing gsl:
-    ERROR: Failed to build gem native extension.
-
-...
-</code></pre>
-
-<p>It&rsquo;s because <code>gsl</code> gem requires <code>gsl 1.14</code>. Follow the steps below to install <code>gsl 1.14</code> and <code>rb-gsl</code>:</p>
-
-<pre><code>$ curl -O http://mirror.aarnet.edu.au/pub/gnu/gsl/gsl-1.14.tar.gz
-$ tar xfz gsl-1.14.tar.gz
-$ cd gsl-1.14
-$ ./configure
-$ make clean
-$ make                              # can take a while, be patient
-$ sudo make install
-$ sudo gem install gsl
-</code></pre>
-
-<p>Now run <code>rake generate</code> again and feel the acceleration for the classification process. If you are unlucky and see the message below:</p>
-
-<pre><code>Notice: for 10x faster LSI support, please install http://rb-gsl.rubyforge.org/
-</code></pre>
-
-<p>This means your <code>rb-gsl</code> installation got problem. To resolve that, first uninstall <code>gsl</code> by</p>
-
-<pre><code>$ sudo gem uninstall gsl
-</code></pre>
-
-<p>Then edit file <code>Gemfile</code> in your Octopress folder to add line</p>
-
-<pre><code>gem 'gsl', '~&gt;1.14.7'
-</code></pre>
-
-<p>Then use <code>bundle</code> to install <code>gsl</code></p>
-
-<pre><code>$ sudo bundle install
-</code></pre>
-
-<p>Again, run <code>rake generate</code> to feel the fly speed. :)</p>
-
-<p>Good Luck!!!</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/02/05/add-related-posts-section-to-octopress/">Continue &rarr;</a>
+    </footer>
   
 
 
@@ -274,19 +220,12 @@ $ sudo gem install gsl
 
 <p>After lunch time, I clipped the eyewear onto my glass and used it for the whole afternoon. So here is how I feel about this eyewear with one afternoon experience:</p>
 
-<ul>
-<li>I felt a little giddy at first, guess is due to the 0.2 diopter. But my eyes soon get used to it.</li>
-<li>It&rsquo;s a little bit heavy for this clip-on eyewear + my glass</li>
-<li>When the time I left company, my eyes didn&rsquo;t have strong dry feeling as usual. I can confirm this is not due to phychological factor. I can really feel it. Tomorrow I will use it for whole day, I think the feel will be clearer.</li>
-<li>It&rsquo;s troublesome to take off the eyewear when I left my cubicle to pantry or toilet, then put on again.</li>
-</ul>
-
-
-<p>Basically, this product worth the US$25 price, I would suggest this for anyone who work on computer for long hours. Of course, if you already wear glass and have the budget, I strongly suggest go to the <code>gunnar</code> customization option.</p>
-
-<p><code>Update 2014-02-04</code> : I contacted <code>Allure</code> on 28 Jan, and they processed another shipment for the 3rd eyewear at U.S locat time <code>01/29/2014  5:19 P.M</code>. I must say their action and response was really fast. For this reason, I would recommend <code>Allure</code> to anyone that interested to buy eyeware to protect their eyes.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/01/28/half-day-with-allure-eyewear-call-of-duty-ghost/">Continue &rarr;</a>
+    </footer>
   
 
 
@@ -326,20 +265,12 @@ $ sudo gem install gsl
 
 <p>Below is my practice to use Google Keep as my todo list.</p>
 
-<ul>
-<li>For everyday todo list, I create a Googe Keep entry, titled with the date.</li>
-<li>I only keep recent few days&#8217; todo list, older entries will be archived</li>
-<li>Every night, I will review today&rsquo;s todo list, copy those items that not finished and need to continue tomorrow to a new Keep entry, titled as tomorrow&rsquo;s date. Then add new list items if there are.</li>
-<li>Then I will arrange those items in priority order</li>
-<li>Next day, I will try to follow the order to finish the tasks.</li>
-<li>Once a task is done, after marking as done, I will move it to the bottom of the list, then start work on the next item.</li>
-<li>There is also a special Keep entry function as the pool to keep <code>Todo Items Later</code>. I constantly review and upate items in this entry.</li>
-</ul>
-
-
-<p>There are many note taking or todo list softwares, I also use <code>Evernote</code> and <code>Microsoft OneNote</code> for other purpose. So far, I am quite happy with the way I use Google Keep. You may use any note takeing software in whatever style, as long as it helps for your life or work.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/01/25/how-i-use-google-keep-to-manage-todo-list/">Continue &rarr;</a>
+    </footer>
   
 
 
@@ -383,13 +314,12 @@ $ sudo gem install gsl
 
 <p>Yesterday afternoon, DHL delivered to our office, I pay my colleague total S$46 (S$40 for the Chromecast and S$6 for the shared shipping fee), that&rsquo;s very cheap.</p>
 
-<p>After went back home, I plugged Chromecast in to the HDMI slot on my TV, connected the USB power, then run <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app">Chromecast</a> app from my Android phone, the setup process was very easy, then wait for Chromecast to finish firmware updating. After that, everything was ready, so I run Youtube app from my phone and cast the famous <code>"London Bridge is Falling Down"</code> animation for my son. The video streaming was very smooth, no legging, not buffering, overall experience was nice.</p>
-
-<p>But, there are only limited android apps that have Chromecast support, and most of the supported apps can&rsquo;t be used in Singapore. The function I want most is to cast the photos and video on my phone to TV. I took a lot of pictures and video for my two boys, I want to let them see themselves on photo and video, and the phone screen is way too small.</p>
-
-<p>Google, please release the full power of Chromecast!!!</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/01/25/i-received-my-chromecast/">Continue &rarr;</a>
+    </footer>
   
 
 
@@ -470,13 +400,12 @@ $ sudo gem install gsl
 
 <p>One week ago, I didn&rsquo;t even know there are glasses specially designed for heavy computer user and gamers. One day, one of my colleagues said he was going to buy a glass from Amazon, ask me to search word <code>gunnar</code> to have a look. Then he said the glass can give eyes some relief for full day computer user like us, almost all professional gamer wear this kind of glass to protect their eyes. So I did some google about this eyewear. From reviews on various websites, the feedbacks are quite possitive and effective. So I decided to invest one to protect my precious eyes.</p>
 
-<p>I can&rsquo;t buy those widely available eyewear from <code>gunnar</code> because I am a shortsighted person, and I already wear a pair of glass. I need to find the clip-on type of eyewear, and I only found <a href="http://www.amazon.com/gp/product/B009OZSMEI/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B009OZSMEI&amp;linkCode=as2&amp;tag=zhuyong.me-20">this</a> from Amazon, and it was out of stock, some unknown sellers sell it over US$60 at that time. Then I visited homepage of <code>gunnar</code>, I can&rsquo;t find the clip-on type, but shortsighted people can order customized glasses with a much higher prices. We haven&rsquo;t tried this kind of glasses before, invest over US$250 for a customized glass without known its effect is kind of risky. So we decided to wait for the stock come back for the clip-on type.</p>
-
-<p>This afternoon, I visited amazon again and found they got stock and the price is only US$33.99, that&rsquo;s much cheaper compare to US$60. Although we need to pay over S$50 shipping fee for 3 pieces of the eyewear, my colleagues and I decided to place the order. Only by then, I noticed this eyewear is from <code>Allure Eyewear</code> instead of <code>gunnar</code>, no wonder I can&rsquo;t find this type from <code>gunnar</code> official website. So I googled again for reviews on <code>Allure Eyewear</code>, again, the reviews are good. And one comments over a review article mentioned the official website of <code>Allure Eyewear</code> sell <code>Call Of Duty Ghosts</code> cheaper than this older <code>Call of Duty Black Ops II</code>. That&rsquo;s good information before I place order.</p>
-
-<p>So I visited <code>Allure Eyewear</code> website, and indeed, the new type is cheaper, only sell at US$24.99. And there international shipping is only US$20, much cheaper than Amazon. Without further waiting, I placed order. It will take 5-7 business days for the shipping. I will write one review after I receive it.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear/">Continue &rarr;</a>
+    </footer>
   
 
 
@@ -529,38 +458,12 @@ $ sudo gem install gsl
 
 <p>After enable developer mode, evertime you cold start your computer, you need to press <code>Ctr + D</code> or just wait for 30 second.</p>
 
-<h4>Step 2: Install Ubuntu 13.10 Using crouton</h4>
-
-<p><code>crouton</code> is a powerful script that will do all the download and installation job for you. Download latest version of <code>crouton</code> from <a href="http://goo.gl/fd3zc">http://goo.gl/fd3zc</a>. For details of crouton usage, refer to it&rsquo;s <a href="https://github.com/dnschneid/crouton">github repo</a>.</p>
-
-<p>I use <code>crouton</code> to install Ubuntu 13.10, and I choose <code>xfce4</code> as the windows manager. Below are the steps I prerformed:</p>
-
-<ul>
-<li>Download <code>crouton</code></li>
-<li>Open shell by <code>Ctrl + Alt + T</code>, then type <code>shell</code></li>
-<li>Run <code>sudo sh -e ~/Downloads/crouton -r saucy -t xfce</code>. This will start the downloading and installation process for Ubuntu 13.10</li>
-<li>Wait untill the installation done.</li>
-<li>Run <code>sudo startxfce4</code> to start the <code>Xfce</code></li>
-<li>Anytime you want to switch between ChromeOs and Ubuntu, just use <code>Ctrl + Alt + Shift + Back</code> or <code>Ctrl + Alt + Shift + Forward</code></li>
-<li>log out <code>xfce</code> will end the <code>xfce</code> session</li>
-</ul>
-
-
-<h4>Step 3: Install Development Tools</h4>
-
-<p>There is no much to talk about this step, it&rsquo;s the same as install development tools in Ubuntu. Just run <code>sudo apt-get update</code>, <code>sudo apt-get install</code> to install whatever tools you needed.</p>
-
-<p>For me, I installed <code>git</code>, <code>vim</code>, <code>build_essential</code>, <code>cmake</code>, <code>golang1.2</code>, <code>llvm3.4</code>, <code>the_silver_searcher</code> as well as <code>ruby</code> and necessory packages for <code>Octopress</code>.</p>
-
-<p>If you followed all the steps above, your C720 will become a nice Linux development machine. I haven&rsquo;t tried to run any IDE like <code>eclipse</code> or <code>android studio</code>, I think my 2GB RAM may not sufficient for RAM hunger tools like that. If you have the 4GB version of C720, I think there is no problem to run those IDEs.</p>
-
-<h4>Step 4: Key Map Modification (Optional)</h4>
-
-<p>If you are like me, always use <code>CapLock</code> as <code>Ctrl</code>, you can follow the instruction in my another <a href="http://zhuyong.me/blog/2014/01/15/map-search-key-to-control-key-on-acer-c720-chromebook/">post</a> to map the search key to ctrl.</p>
-
-<p><strong>Next</strong>, I will write another post to talk about development on C720 using cloud based development environment. If you are interested, please stay tuned.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/">Continue &rarr;</a>
+    </footer>
   
 
 
@@ -603,15 +506,12 @@ $ sudo gem install gsl
 <pre><code>- url: /.*
 </code></pre>
 
-<p>After corrected the indent problem, the server started successfully. I need to mention that I ssh remote login my Ubuntu server to do the development. So after the <code>HelloWorld</code> app server started, I tested on my laptop with <code>http://1.2.3.4:8080</code> (assume my Ubuntu server IP is <code>1.2.3.4</code>). Chrome reported page can&rsquo;t found. That&rsquo;s strange, there is no error message from GAE, but there must be something wrong.</p>
-
-<p>So I use <code>goapp help serve</code>, then I found there is a <code>--host=</code> option, then I tried to set the host to ip <code>1.2.3.4</code>, bingo, I saw <code>hello world!</code>.</p>
-
-<p>After that I still wondering why I can&rsquo;t access the server using IP if I didn&rsquo;t append the <code>--host=</code> options. Then I found someone asked the same question on <a href="http://stackoverflow.com/questions/7534967/is-there-any-way-to-access-gae-dev-app-server-in-the-local-network">StackOverflow</a> in Year 2011. I confirmed the answer of <code>--host=0.0.0.0</code> works same as <code>--host=1.2.3.4</code>.</p>
-
-<p>Next step I will finish the app I should finish long time ago.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/">Continue &rarr;</a>
+    </footer>
   
 
 
@@ -651,13 +551,12 @@ $ sudo gem install gsl
 
 <p>At the beginning of <code>The Power Of Habit</code> book, the author mentioned that people will change when they focus on one particular change for long time and that change could be the keystone habit; this keystone habit will radially change other habits. This perspective is interesting, and I totally agree on that.</p>
 
-<p>By the time I decided to start my new blog in pure English on Github Pages, I haven&rsquo;t read this book yet, but I think my initiative goal was to make achievement through the process of writing blog. By written purely in English, I can improve my English; by written some technique stuff, I would and can learn some new tech or programming skills; by written blog, attract some audiences, build my reputation. :)</p>
-
-<p>So far, almost one month passed since I seriously start blogging using Octpress on Github page, I did gain something. First, very obversious, my skills with git and Markdown improved a lot; second, I knew more about Chromebook. I didn&rsquo;t tried Chromebook before, even as virtual machine. But after use Chromebook for few days, I feel I love it.</p>
-
-<p>I know it&rsquo;s tough to keep updating blog, I was afraid I will quit somedays later. That&rsquo;s why I named my blog <code>Be Persistent, Be Patient</code> to encourage myself. So here today, this article mark as the beginning my book reading on <code>The Power Of Habits</code> and <code>The 7 Habits</code> is my next book to read. This is my short term goal for life change, and this time, I will finish them.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/01/20/beginning-of-book-reading-the-power-of-habits/">Continue &rarr;</a>
+    </footer>
   
 
 
