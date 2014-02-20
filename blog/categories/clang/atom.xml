@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Clang | Zhu Yong]]></title>
+  <link href="http://zhuyong.me/blog/categories/clang/atom.xml" rel="self"/>
+  <link href="http://zhuyong.me/"/>
+  <updated>2014-02-20T17:28:59+08:00</updated>
+  <id>http://zhuyong.me/</id>
+  <author>
+    <name><![CDATA[Zhu Yong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hack YouCompleteMe and Libclang for Lamely Structured Project]]></title>
+    <link href="http://zhuyong.me/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/"/>
+    <updated>2014-02-20T17:23:59+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project</id>
+    <content type="html"><![CDATA[<p>On 13 Feb 2014 I asked a question on <a href="http://stackoverflow.com/questions/21746668/configure-vim-youcompleteme-for-special-project-structure">StackOverflow</a> on how to configure / modify vim plugin <code>YouCompleteMe</code> to fit special project structure. I guess my project structure is really lame, after two days waiting, some comments were given, but my problem not realy addressed. So I think I have to <strong>DO IT MYSELF</strong>. Then I read the source code for <code>YouComeplteMe</code> as well as <code>libclang</code>, because I only need the code completion function, lucky the related code are not much. Then I done  experiments with different approaches, and today, finally, I had my hacking works. Then I think I should record this nice experience, that&rsquo;s the purpose of this blog post.</p>
+
+<h3>My Question On StackOverflow</h3>
+
+<p>My C project has following structures. This is the structure for a large project, I can&rsquo;t change the structure. I want to use YouCompleteMe for semantic code completion for this project.</p>
+
+<pre><code>main/                     // folder for C file to be compiled
+  |- module1.c            // module main C file.
+  |- module2.c
+  |- .....
+module1/
+  |- mod1_func1.c         // function file to be included in main module C file.
+  |- mod1_func2.c
+  |- mod2_func3.c
+module2/
+  |- mod2_func1.c
+  |- mod2_func2.c
+  |- mod2_func3.c
+</code></pre>
+
+<p>Content for <code>moduleX.c</code>, this will include all related header files and module related C files.</p>
+
+<pre><code>#include "header1.h"
+#include "header2.h"
+...
+#include "modX_func1.c"
+#include "modX_func2.c"
+</code></pre>
+
+<p>Content for <code>modX_funcX.c</code> has one or few function definitions. Doesn&rsquo;t have header included</p>
+
+<pre><code>// no header file included here
+int modX_funcX(void) {.....}
+</code></pre>
+
+<p>Because there is not related header included, <code>clang</code> must parse <code>moduleX.c</code> in order to do code completion on <code>modX_funcX.c</code>,  I have tried <code>clang</code> code completion from command line. Command below works</p>
+
+<pre><code>clang -cc1 -x c -fsyntax-only -code-completion-at mod1_func1.c:4:11 module1.c 
+</code></pre>
+
+<p>So my question: how to configure YouCompleteMe to do code completion when I edit the <code>modX_funcX.c</code> file?</p>
+
+<p>I guess modification to YouCompleteMe source might required to do this job. My current idea is to add a file mapping database with format:</p>
+
+<pre><code>path_of_file_to_complete:path_of_file_for_clang_to_parse
+</code></pre>
+
+<p>So before send the code completion request, get <code>path_of_file_for_clang_to_parse</code> from database based on current buffer name, pass this file name to <code>libclang</code>.</p>
+
+<p>Is my idea workable? If Yes, where is exactly place to add this file mapping function?</p>
+
+<!-- more -->
+
+
+<h3>My Analysis</h3>
+
+<p>To make job easy, I make a simple project structure to simulate my rare project structure.</p>
+
+<pre><code>$ cd ~/dev/c/clang
+$ ls
+a.c  a.h  b.c  b.h  c.c  c.h  main.c
+</code></pre>
+
+<p>content for <code>a.h</code></p>
+
+<pre><code>typedef struct A {
+    struct A * next;
+    unsigned int data;
+}A;
+</code></pre>
+
+<p>content for <code>a.c</code></p>
+
+<pre><code>int test(void)
+{
+    A *list;
+    list-&gt;
+}
+</code></pre>
+
+<p>content for <code>main.c</code></p>
+
+<pre><code>#include "a.h"
+#include "b.h"
+#include "c.h"
+
+#include "a.c"
+#include "b.c"
+#include "c.c"
+</code></pre>
+
+<p>My ultimate goal is to let <code>YouCompleteMe</code> to do code completion when I type <code>-&gt;</code> at line 4 of file <code>a.c</code>. To test with <code>clang</code> from command line</p>
+
+<pre><code>$ clang -cc1 -x c -fsyntax-only -code-completion-at a.c:4:11 main.c
+COMPLETION: data : [#unsigned int#]data
+COMPLETION: next : [#struct A *#]next
+</code></pre>
+
+<h4>Analyze clang Command Line</h4>
+
+<p>So command line code completion works for this simulation structure. To understand why <code>clang</code> CLI works while <code>YouCompleteMe</code> doesn&rsquo;t, I need to find the difference at the point of code completetion for CLI and <code>libclang</code>. So I need a debug version of <code>clang</code>. Below are the steps to download and build debug version of <code>clang</code> version 3.3.</p>
+
+<pre><code>$ mkdir -p /data/sourcecode
+$ svn co http://llvm.org/svn/llvm-project/llvm/tags/RELEASE_33/final llvm3.3
+$ cd llvm3.3/tools
+$ svn co http://llvm.org/svn/llvm-project/cfe/tags/RELEASE_33/final clang
+$ cd ../projects
+$ svn co http://llvm.org/svn/llvm-project/compiler-rt/tags/RELEASE_33/final compiler-rt
+$ cd /data/build
+$ mkdir llvm3.3-linux
+$ cd llvm3.3-linux
+$ /data/sourcecode/llvm3.3/configure --prefix=/data/software/C-C++/llvm3.3-hack/ CC=/usr/bin/gcc CXX=/usr/bin/g++
+$ make -j4
+$ make install
+</code></pre>
+
+<p>Next step is to load debug version of <code>clang</code> with the working arguments. I want to break at function <code>ASTFrontendAction::ExecuteAction()</code> to check some variables.</p>
+
+<pre><code>$ gdb --args /data/software/C-C++/llvm3.3-hack/bin/clang -cc1 -x c -fsyntax-only -code-completion-at a.c:4:11 main.c
+
+(gdb) break z:\sourcecode\llvm3.3\tools\clang\lib\frontend\frontendaction.cpp:457
+
+Breakpoint 1 at 0xd775d3: file /data/sourcecode/llvm3.3/tools/clang/lib/Frontend/FrontendAction.cpp, line 457.
+
+(gdb) run
+
+Starting program: /data/software/C-C++/llvm3.3-hack/bin/clang -cc1 -x c -fsyntax-only -code-completion-at a.c:4:11 main.c
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Breakpoint 1, clang::ASTFrontendAction::ExecuteAction (this=0x513a5d0) at /data/sourcecode/llvm3.3/tools/clang/lib/Frontend/FrontendAction.cpp:457
+457       if (hasCodeCompletionSupport() &amp;&amp;
+
+(gdb) print CI.getFrontendOpts().Inputs[0]
+
+$3 = (clang::FrontendInputFile &amp;) @0x513b600: {File = {static npos = &lt;optimized out&gt;, _M_dataplus = {&lt;std::allocator&lt;char&gt;&gt; = {&lt;__gnu_cxx::new_allocator&lt;char&gt;&gt; = {&lt;No data fields&gt;}, &lt;No data fields&gt;}, _M_p = 0x513b5e8 "main.c"}},
+Buffer = 0x0, Kind = clang::IK_C, IsSystem = false}
+
+(gdb) print CI.getFrontendOpts().CodeCompletionAt
+
+$4 = {FileName = {static npos = &lt;optimized out&gt;, _M_dataplus = {&lt;std::allocator&lt;char&gt;&gt; = {&lt;__gnu_cxx::new_allocator&lt;char&gt;&gt; = {&lt;No data fields&gt;}, &lt;No data fields&gt;}, _M_p = 0x513b568 "a.c"}}, Line = 4, Column = 11}
+</code></pre>
+
+<p>From <code>gdb</code> output, I know <code>a.c</code> is stored in <code>CI.getFrontendOpts().CodeCompletionAt</code> while <code>main.c</code> is stored in <code>CI.getFrontendOpts().Inputs[0]</code></p>
+
+<h4>Analyze YouCompleteMe with libclang</h4>
+
+<p>Entry point for code completion from <code>libclang</code> is <code>clang_codeCompleteAt</code> and eventually it call to <code>ASTUnit::CodeComplete()</code>. And at end of this function, it also call <code>ASTFrontendAction::ExecuteAction()</code> same as <code>clang</code> from command line. It also has input file defined by <code>Clang-&gt;getFrontendOpts().Inputs[0]</code>. Up to this point, my thought become clear, my target is how to make <code>Clang-&gt;getFrontendOpts().Inputs[0]</code> set to <code>main.c</code> with all the passed in parameters.</p>
+
+<h3>My Hacking</h3>
+
+<h4>The First Fail Hack</h4>
+
+<p>My first attemp is rather simple, as I stated in my <a href="http://stackoverflow.com/questions/21746668/configure-vim-youcompleteme-for-special-project-structure">StackOverflow question</a>. When call <code>clang_codeCompleteAt()</code>, pass <code>complete_filename</code> in form of <code>path_of_file_to_complete:path_of_file_for_clang_to_parse</code>. This attempt failed because it won&rsquo;t even run to the point of <code>ASTUnit::CodeComplete()</code>. Along the calling path, there are other function check and parse the input file, my hacking filename format is an invalid filename for those functions.</p>
+
+<h4>The Second Fail Hack</h4>
+
+<p>I understand that <code>Clang-&gt;getFrontendOpts()</code> is parsed from the passed flags, so my second attempt of hacking is to pass <code>main.c</code> together with flags. So I hardcode <code>.ycm_extra_conf.py</code> to append absolute path of <code>main.c</code> in <code>flags</code>, but <code>Clang-&gt;getFrontendOpts().Inputs[0]</code> was not set to <code>main.c</code> when I check at <code>ASTUnit::CodeComplete()</code>. So this attempt failed.</p>
+
+<h4>The Third Successful But Dirty Hack</h4>
+
+<p>After failed previous two attempts, I only have the option to do dirty hacking by change <code>libclang</code> API and related functions, as well as related parts in <code>YouComplteMe</code>. The idea was to pass in additional <code>input_filename</code> together with <code>complete_filename</code>. And at <code>ASTUnit::CodeComplete()</code>, if this <code>input_filename</code> is valid, use it to replace <code>Clang-&gt;getFrontendOpts().Inputs[0]</code>. This attempt works!!!</p>
+
+<h3>Conclusion</h3>
+
+<p>To solve my problem, I was forced to read source code of <code>YouCompleteMe</code> and <code>clang</code>. The hacking process takes time because of code reading, compilation and debugging, and it&rsquo;s disappointed to find out my attempt didn&rsquo;t work as expected. But I really enjoy the moment when the code worked after some days' struggling. This whole hacking process is just another proof that open source is really good, you can do any hacking to fit your own need.</p>
+]]></content>
+  </entry>
+  
+</feed>

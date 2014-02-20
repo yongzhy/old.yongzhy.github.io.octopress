@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Zhu Yong</title>
+  <title>Category: Vim - Zhu Yong</title>
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&rsquo;t have the guide on how &hellip;">
+  <meta name="description" content="Category: vim">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://zhuyong.me/blog/page/3">
+  <link rel="canonical" href="http://zhuyong.meblog/categories/vim">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Zhu Yong" type="application/atom+xml">
@@ -75,138 +75,40 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article role="article">
   
-  
-  
-    <article>
-      
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/08/blog-using-octopress-on-multiple-computer/">Blog Using Octopress on Multiple Computer</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-08T14:29:20+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2014</time>
-        
-      </p>
+    <h1 class="entry-title">Category: Vim</h1>
     
   </header>
+  
+  <div id="blog-archives" class="category">
 
 
-  <div class="entry-content"><p>Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&rsquo;t have the guide on how to setup Octopress on multiple computer. After search online, there are quite a lot people have seen the same problem. And I did found a very nice guide by Robert Anderson at <a href="http://blog.zerosharp.com/clone-your-octopress-to-blog-from-two-places/">here</a>. Here I will just list down the steps for my later on reference.</p>
 
-<p>clone <code>source</code> branch to local folder</p>
+  
+  <h2>2014</h2>
 
-<pre><code>$ git clone -b source https://github.com/yongzhy/yongzhy.github.io octopress
-</code></pre>
+<article>
+  
+<h1><a href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">Hack YouCompleteMe and Libclang for Lamely Structured Project</a></h1>
+<time datetime="2014-02-20T17:23:59+08:00" pubdate><span class='month'>Feb</span> <span class='day'>20</span> <span class='year'>2014</span></time>
 
-<p>clone <code>master</code> branch to <em>_deploy</em> subfolder</p>
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/clang/'>clang</a>, <a class='category' href='/blog/categories/vim/'>vim</a></span>
+</footer>
 
-<pre><code>$ cd octopress
-$ git clone https://github.com/yongzhy/yongzhy.github.io _deploy
-</code></pre>
 
-<p>configuration</p>
+</article>
 
-<pre><code>$ gem install bundler
-$ bundle install
-$ rake setup_github_pages
-</code></pre>
-
-<h3>To push changes from two different computers</h3>
-
-<p>Push everything on working computer before switch computer, using commands below:</p>
-
-<pre><code>$ rake generate
-$ git add .
-$ git commit -am "commit message"
-$ git push origin source
-$ rake deploy
-</code></pre>
-
-<p>Then on the new computer, run commands below to sync.</p>
-
-<pre><code>$ cd octopress
-$ git pull origin source
-$ cd ./_deploy
-$ git pull origin master
-</code></pre>
 </div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/11/shift-my-personal-blog-to-github/">Shift My Personal Blog to Github</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
 
   
+</article>
 
-
-<time datetime="2013-12-11T12:35:42+08:00" pubdate data-updated="true">Dec 11<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I haven&rsquo;t updated <a href="http://yongzhy.blogspot.com">my old blog</a> for long time, one of the reason is because it&rsquo;s not easy to post a blog with code snippets on blospot. Few days back, I came by an article mentioned blogging on Github; after read through the article, I felt that&rsquo;s the blog engine I really want. My blog is all about programming stuff, so static pages would fulfill my requriements. Blogging on Github require some initial setup, but with <a href="http://octopress.org/">Octopress</a>, the task becomes simple. Just follow the documents on Octopress website, you can have your personal blog on Github in few minutes.</p>
-
-<p>To me, I think blogging on Github has following benefits you might also want:</p>
-
-<ul>
-<li>Version control with git, not only your post been version controlled, but also, you make yourself familiar with git</li>
-<li>Very nich code snippets sharing</li>
-<li>Writting in Markdown, no need to care much about formatting and stylem. Just follow Markdown syntax, and it is easy</li>
-<li>Unlimited space to store your contents.</li>
-</ul>
-
-
-<p>Anyway, this marks my first blog on Github.</p>
 </div>
-  
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-    <a class="next" href="/blog/page/2/">Newer &rarr;</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -231,11 +133,11 @@ $ git pull origin master
       </li>
     
       <li class="post">
-        <a href="/blog/2014/02/08/thoughts-after-read-the-power-of-habit/">Thoughts After Read &#8220;the Power of Habit&#8221;</a>
+        <a href="/blog/2014/02/08/thoughts-after-read-the-power-of-habit/">Thoughts After Read "the Power of Habit"</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/02/05/add-related-posts-section-to-octopress/">Add &#8220;Related Posts&#8221; Section to Octopress</a>
+        <a href="/blog/2014/02/05/add-related-posts-section-to-octopress/">Add "Related Posts" Section to Octopress</a>
       </li>
     
   </ul>
@@ -276,6 +178,7 @@ $ git pull origin master
 
   
 </aside>
+
 
     </div>
   </div>
