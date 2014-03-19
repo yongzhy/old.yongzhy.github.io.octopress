@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="On 13 Feb 2014 I asked a question on StackOverflow on how to configure / modify vim plugin YouCompleteMe to fit special project structure. I guess my &hellip;">
+  <meta name="description" content="cmocka is a unit testing framework for C, it is developed based on Google&rsquo;s project cmockery. It was easy to use, and the author corrected some &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,105 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/19/c-code-unit-testing-using-cmocka/">C Code Unit Testing Using Cmocka</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-19T16:22:53+08:00" pubdate data-updated="true">Mar 19<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://cmocka.org/">cmocka</a> is a unit testing framework for C, it is developed based on Google&rsquo;s project <a href="https://code.google.com/p/cmockery/">cmockery</a>. It was easy to use, and the author corrected some bugs from <code>cmockery</code>.</p>
+
+<h3>Install cmocka</h3>
+
+<p>First download source code for latest version of <code>cmocka</code> from <a href="https://open.cryptomilk.org/projects/cmocka/files">https://open.cryptomilk.org/projects/cmocka/files</a>. Current latest version is 0.3.2, and the source file is <code>cmocka-0.3.2.tar.xz</code>. <code>cmake</code> is required to build <code>cmocka</code>.</p>
+
+<pre><code>$ cd ~/Downloads
+$ xz -d cmocka-0.3.2.tar.xz
+$ tar vxf cmocka-0.3.2.tar
+$ cd cmocka-0.3.2
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
+$ make
+$ sudo make install
+</code></pre>
+
+<h3>Use cmocka</h3>
+
+<p>Create source file with test cases. Simple example would be like:</p>
+
+<pre><code>#include &lt;stdarg.h&gt;
+#include &lt;stddef.h&gt;
+#include &lt;setjmp.h&gt;
+#include &lt;cmocka.h&gt;
+static void test(void **state)
+{
+    assert_int_equal(3, 3);
+    assert_int_not_equal(3, 3);
+}
+int main(void) 
+{
+    const UnitTest tests[] = 
+    {
+        unit_test(test),
+    };
+    return run_tests(tests);
+}
+</code></pre>
+
+<p>save file as `cmockatest.c</p>
+
+<pre><code>$ gcc cmockatest.c -lmocka -o cmockatest
+$ ./cmockatest
+
+[==========] Running 1 test(s).
+[ RUN      ] test
+3 == 3
+cmocka.c:8: error: Failure!
+[  FAILED  ] test
+[==========] 1 test(s) run.
+[  PASSED  ] 0 test(s).
+[  FAILED  ] 1 test(s), listed below:
+[  FAILED  ] test
+</code></pre>
+
+<h3>Reference</h3>
+
+<ul>
+<li><a href="https://blog.cryptomilk.org/2013/01/14/cmocka-a-unit-testing-framework-for-c/">cmocka author&rsquo;s blog post</a></li>
+<li><a href="https://lwn.net/Articles/558106/">Unit testing with mock objects in C</a></li>
+<li><a href="http://www.cmocka.org/api/">cmocka API Documents</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -566,47 +665,6 @@ int modX_funcX(void) {.....}
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/23/intels-recommended-reading-list/">Intel&#8217;s Recommended Reading List</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-23T21:49:38+08:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Intel published a 10 pages recommanded reading list for 1st half year of 2014, you can go to <a href="https://noggin.intel.com/recommended-reading">here</a> for details or directly download the list in <a href="https://noggin.intel.com/sites/default/files/Intel-Recommended-Reading-List_1H14_0.pdf">PDF</a></p>
-
-<blockquote><p>The Recommended Reading List is a valuable resource for technical professionals who want to thoroughly explore topics such as multi-core programming, embedded security, and more. These books are produced by leading publishers around the world.</p></blockquote>
-
-
-<p>This is a very good reference list for developers who want to expand their knowledges. In the list, Intel also gives retailer hyperlink for each book item.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -627,6 +685,10 @@ int modX_funcX(void) {.....}
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/03/19/c-code-unit-testing-using-cmocka/">C Code Unit Testing Using Cmocka</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">Hack YouCompleteMe and Libclang for Lamely Structured Project</a>
       </li>
     
@@ -642,15 +704,11 @@ int modX_funcX(void) {.....}
         <a href="/blog/2014/02/08/thoughts-after-read-the-power-of-habit/">Thoughts After Read &#8220;the Power of Habit&#8221;</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/02/05/add-related-posts-section-to-octopress/">Add &#8220;Related Posts&#8221; Section to Octopress</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/c/'>c (1)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/gadget/'>gadget (4)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (1)</a></li><li><a href='/blog/categories/misc/'>misc (1)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li><li><a href='/blog/categories/vim/'>vim (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/c/'>c (2)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/gadget/'>gadget (4)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (1)</a></li><li><a href='/blog/categories/misc/'>misc (1)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li><li><a href='/blog/categories/vim/'>vim (1)</a></li></ul>
 </section>
 
 <section class="googleplus">
@@ -743,6 +801,10 @@ int modX_funcX(void) {.....}
 
 
 
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100713351); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100713351ns.gif" /></p></noscript>
 
 
 </body>
