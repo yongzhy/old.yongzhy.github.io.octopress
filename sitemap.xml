@@ -111,15 +111,21 @@
         <lastmod>2014-03-19T16:52:41+08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://zhuyong.me/blog/2014/06/26/fix-git-connection-problem-over-https-in-mobaxterm/
+        </loc>
+        <lastmod>2014-06-26T12:22:41+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://zhuyong.me/robots.txt</loc>
         <lastmod>2014-02-05T13:48:23+08:00</lastmod>
     </url>
     <url>
         <loc>http://zhuyong.me/blog/archives/</loc>
-        <lastmod>2014-03-19T16:52:41+08:00</lastmod>
+        <lastmod>2014-06-26T12:22:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://zhuyong.me/</loc>
-        <lastmod>2014-03-19T16:52:41+08:00</lastmod>
+        <lastmod>2014-06-26T12:22:41+08:00</lastmod>
     </url>
 </urlset>
