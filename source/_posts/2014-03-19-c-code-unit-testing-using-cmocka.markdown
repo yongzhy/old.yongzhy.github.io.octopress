@@ -47,7 +47,7 @@ Create source file with test cases. Simple example would be like:
 
 save file as `cmockatest.c
 
-    $ gcc cmockatest.c -lmocka -o cmockatest
+    $ gcc cmockatest.c -lcmocka -o cmockatest
     $ ./cmockatest
 
     [==========] Running 1 test(s).
