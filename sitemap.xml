@@ -114,7 +114,13 @@
         <loc>
             http://zhuyong.me/blog/2014/06/26/fix-git-connection-problem-over-https-in-mobaxterm/
         </loc>
-        <lastmod>2014-06-26T12:22:41+08:00</lastmod>
+        <lastmod>2014-11-24T14:40:24+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://zhuyong.me/blog/2014/11/24/mobaxterm-install-package-to-persistent-root-direcotry/
+        </loc>
+        <lastmod>2014-11-24T14:53:06+08:00</lastmod>
     </url>
     <url>
         <loc>http://zhuyong.me/robots.txt</loc>
@@ -122,10 +128,10 @@
     </url>
     <url>
         <loc>http://zhuyong.me/blog/archives/</loc>
-        <lastmod>2014-11-06T10:42:07+08:00</lastmod>
+        <lastmod>2014-11-24T14:53:06+08:00</lastmod>
     </url>
     <url>
         <loc>http://zhuyong.me/</loc>
-        <lastmod>2014-11-06T10:42:07+08:00</lastmod>
+        <lastmod>2014-11-24T14:53:06+08:00</lastmod>
     </url>
 </urlset>
