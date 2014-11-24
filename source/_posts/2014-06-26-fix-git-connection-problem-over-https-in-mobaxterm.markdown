@@ -4,7 +4,7 @@ title: "Fix git connection problem over HTTPS in MobaXterm"
 date: 2014-06-26 11:12:10 +0800
 comments: true
 authoer: Zhu Yong
-categories: git
+categories: [git, MobaXterm]
 ---
 
 [MobaXterm](http://mobaxterm.mobatek.net/) is a very nice portable ssh client as well as UNIX environment on Windows system. It has a lot of useful utilities including Xserver bundled into one single exe file. Recently I use it as my primary terminal on Windows system. But when I use the git plugin to clone / push my github repository, it first give me error of cert file not found, so I follow online instruction to set the root cert file in `~/.gitconfig` file to add following lines:
