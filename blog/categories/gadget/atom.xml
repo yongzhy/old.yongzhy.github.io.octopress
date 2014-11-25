@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gadget | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/gadget/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-11-24T15:00:13+08:00</updated>
+  <updated>2014-11-25T08:41:27+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Finally, I Bought a HHKB Professional 2 Type-S]]></title>
+    <link href="http://zhuyong.me/blog/2014/11/25/finally-hhkb-professional-type-s/"/>
+    <updated>2014-11-25T08:49:10+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/11/25/finally-hhkb-professional-type-s</id>
+    <content type="html"><![CDATA[<p>Same as many programmers using Emaces or VIM, I want to own a HHKB professional for real long time, and for the same reason not many people buy it: the price. This keyboard is really expensive when compare to other mechanical keyboard. But deep in my heart, I always want to own one. So this month when I want to replace my IBM model M SSK from workplace, I decided to buy a HHKB Professional 2 Type-s. Japanese Yen has being drop for a long period, so I think it&rsquo;s a good time to buy products from Japan.</p>
+
+<p>I decided to buy from Japan <a href="http://www.amazon.co.jp/gp/product/B008GXT6SK?ref_=pe_492632_169829912_TE_M3T1_dp_1">Amazon</a>, then use <a href="http://www.jshoppers.com/forward/">JShoppers</a> to forward the package to Singapore. The process is straight forward. The reason I choose JShoppers is because of its cheaper price. The whole process is same as all other forwarding service company:</p>
+
+<ol>
+<li>Register at JShopers, you will get a unique shipping address.</li>
+<li>Shopping on Amazon, shipping address use the address provided by JShoppers.</li>
+<li>Wait for package to be delivered to JShoppers and they will send you an email to ask you to pay the forwarding fee.</li>
+<li>Pay forwarding fee.</li>
+<li>Wait for your package to be delivered to your door.</li>
+</ol>
+
+
+<p>My experience with JShopper this time was not very good, mainly because of the verification process. Only after my HHKB was shipped by Amazon then I realized JShoppers requires ID verification. But they didn&rsquo;t mention this in the registration page and the email after registration. Somehow, my account password was sent in plain text in the email. Which makes me think they store customers' password in plain text in database. This is a really bad practice, and I did express my concern about their online system security and possible leakage of my private information (including the uploaded verification document). Customer support told me I can upload verification documents with some parts covered, only name, date of birth and address must be shown, but the ID verification department rejected my uploaded document. So I forwarded the email from customer support to the ID verification department, then they passed my ID verification. Funny! There is one more detail make me more concern about my private information. The first email from the ID verification department was written in Simplified Chinese to inform me about failed verification, this make me think JShoppers outsourced the ID verification to China company. Anyway, I wrote so much, just to say JShoppers is not doing good to make customers feel safe about their private information.</p>
+
+<p>The waiting time for this forward service is long, because they are seeing large amount of package recently. My packaged delivered to JShoppers on 10 Nov, only been processed on 15 Nov, and notify me to pay forwarding fee on 17 Nov, after that, the speed was fast: shipment was on 18 Nov and delivered to me on 19 Nov.</p>
+
+<p>Ok, let&rsquo;s forget about JShoppers, here comes the exciting part, the HHKB. Amazon use a big box for the relatively small keyboard.
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-001.jpg" title="&ldquo;HHKB In Amazon&rsquo;s Huge Box&rdquo;" ></p>
+
+<p>HHKB box
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-002.jpg" title="&ldquo;HHKB In Box&rdquo;" ></p>
+
+<p>HHKB box opened
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-003.jpg" title="&ldquo;HHKB In Box&rdquo;" ></p>
+
+<p>HHKB connected to my chromebook.
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-004.jpg" title="&ldquo;HHKB Connected To Chromebook&rdquo;" ></p>
+
+<p>I will write another blog later about how I feel it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Google Released Chromecast SDK : Countless Apps Coming]]></title>
