@@ -5,12 +5,11 @@ date: 2014-11-26 14:33:34 +0800
 comments: true
 categories: [HHKB, gadget]
 author: Zhu Yong
-published: false
 ---
 
 My HHKB Pro 2 Type-S was delivered to my house on 19 Nov, so till today, I have officially owned it one week. So I think it's time to write down my feeling about this well designed keyboard.
 
-Before I purchase HHKB, I have being using old IBM Model M SSK for two years, the feel for IBM Model M is superb, it's just too noisy. I should say sorry to colleagues whose seats near me. My work platform is Windows, and I use  Total Commander as my primary file manager. So my short review for HHKB would based on my daily usage scenario. 
+Before I purchase HHKB, I have being using old IBM Model M SSK for two years, the feel for IBM Model M is superb, it's just too noisy. I should say sorry to colleagues whose seats near me. My work platform is Windows, and I use  Total Commander as my primary file manager. So my short review for HHKB would based on my daily usage scenario, with comparison to Model M. 
 
 ### Pros:
 
@@ -25,10 +24,10 @@ Before I purchase HHKB, I have being using old IBM Model M SSK for two years, th
 * USB cable location. If the USB was at left or right side of HHKB, it could be much better.
 * No dedicated function key, and arrow key, not convenient for Windows user with Total Commander like me.
 * Key press feeling not good as IBM Model M, no 'Click' feeling
+* Key layout, unless you have HHKB connected to all your desktop / laptop, you will keep press `\` on computer without HHKB. 
 
-This blog is not a HHKB review, I just write down my feeling after comparing to my old Model M. 
 
-Here is a picture of the two keyboard on my desktop now.
+Here is a picture of my two beloved keyboards.
 
 {% img /images/blogimg/2014-11-26-HHKB/HHKB-001.jpg "HHKB and IBM Model M SSK" %} 
  
