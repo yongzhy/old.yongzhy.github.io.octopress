@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Misc | Zhu Yong]]></title>
+  <link href="http://zhuyong.me/blog/categories/misc/atom.xml" rel="self"/>
+  <link href="http://zhuyong.me/"/>
+  <updated>2014-11-26T22:01:53+08:00</updated>
+  <id>http://zhuyong.me/</id>
+  <author>
+    <name><![CDATA[Zhu Yong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Shift My Personal Blog to Github]]></title>
+    <link href="http://zhuyong.me/blog/2013/12/11/shift-my-personal-blog-to-github/"/>
+    <updated>2013-12-11T12:35:42+08:00</updated>
+    <id>http://zhuyong.me/blog/2013/12/11/shift-my-personal-blog-to-github</id>
+    <content type="html"><![CDATA[<p>I haven&rsquo;t updated <a href="http://yongzhy.blogspot.com">my old blog</a> for long time, one of the reason is because it&rsquo;s not easy to post a blog with code snippets on blospot. Few days back, I came by an article mentioned blogging on Github; after read through the article, I felt that&rsquo;s the blog engine I really want. My blog is all about programming stuff, so static pages would fulfill my requriements. Blogging on Github require some initial setup, but with <a href="http://octopress.org/">Octopress</a>, the task becomes simple. Just follow the documents on Octopress website, you can have your personal blog on Github in few minutes.</p>
+
+<p>To me, I think blogging on Github has following benefits you might also want:</p>
+
+<ul>
+<li>Version control with git, not only your post been version controlled, but also, you make yourself familiar with git</li>
+<li>Very nich code snippets sharing</li>
+<li>Writting in Markdown, no need to care much about formatting and stylem. Just follow Markdown syntax, and it is easy</li>
+<li>Unlimited space to store your contents.</li>
+</ul>
+
+
+<p>Anyway, this marks my first blog on Github.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Applications | Zhu Yong]]></title>
+  <link href="http://zhuyong.me/blog/categories/applications/atom.xml" rel="self"/>
+  <link href="http://zhuyong.me/"/>
+  <updated>2014-11-26T22:01:53+08:00</updated>
+  <id>http://zhuyong.me/</id>
+  <author>
+    <name><![CDATA[Zhu Yong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Windows Data Backup Using FreeFileSync Step by Step]]></title>
+    <link href="http://zhuyong.me/blog/2014/02/10/windows-data-backup-using-freefilesync-step-by-step/"/>
+    <updated>2014-02-10T17:03:53+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/02/10/windows-data-backup-using-freefilesync-step-by-step</id>
+    <content type="html"><![CDATA[<p>This article is the step by step guide that I prepared for my colleagues to do the data backup to our newly bought server. I was assigned the task to evaluate some backup tools and find the best one that fits our requirements. After some testing, I finally choose FreeFileSync. I choose it over other tools because it has a feature I like most:</p>
+
+<p>I can mirror folders to backup server, so the backup server is always the latest copy, when I restore, I just copy this folder back to its location; while for those modified / deleted files, they will be saved in another dedicated loation with Date as version.</p>
+
+<p>OK. Here begins the step by step guide.</p>
+
+<hr />
+
+<h3>Introduction</h3>
+
+<p><code>FreeFileSync</code> is a free Open Source software that helps you synchronize files and synchronize folders for Windows, Linux and Mac OS X. It is designed to save your time setting up and running backup jobs while having nice visual feedback along the way.</p>
+
+<p><code>FreeFileSync</code> latest vesrion is 6.2. For more information about this software, can visit its <a href="http://freefilesync.sourceforge.net">homepage</a></p>
+
+<h3>Download &amp; Install FreeFileSync</h3>
+
+<p>Visit <a href="http://freefilesync.sourceforge.net/download.php">here</a> to download the latest version of <code>FreeFileSync</code></p>
+
+<p>After download finished, run the downloaded exe file to start setup. You can choose normal installation or portable installation.</p>
+
+<!-- more -->
+
+
+<h3>Setup FreeFileSync For Data Backup</h3>
+
+<p>The backup scheme that we doing to define should include:</p>
+
+<ul>
+<li>Daily backup data of selected folders.</li>
+<li>Keep the origin folder structure.</li>
+<li>Keep deleted file for up to 30 days.</li>
+<li>Keep older copy when file been modified.</li>
+<li>No compression on backup file/folder.</li>
+<li>Log file for backup status.</li>
+</ul>
+
+
+<h4>Global Setting</h4>
+
+<p>From menu, select <strong>Tools</strong>, then <strong>Global Settings</strong>. Maily to set <code>Retry count</code> and <code>Delay</code>. Recommended setting as shown below:</p>
+
+<p><img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_globalsetting.jpg" title="&ldquo;FreeFileSync Setup&rdquo;" ></p>
+
+<h4>Backup Setting</h4>
+
+<p><img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_folders.jpg" title="&ldquo;FreeFileSync Setup&rdquo;" ></p>
+
+<ol>
+<li><p>Use <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_add_button.jpg" title="&ldquo;Add Button&rdquo;" > to add folder pair or <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_del_button.jpg" title="&ldquo;Delete Button&rdquo;" > to delete folder pair.</p></li>
+<li><p>Use <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_filter_button.jpg" title="&ldquo;Local Filter&rdquo;" > to set what file to include or exclude. Example screen as shown below:</p>
+
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_filter.jpg" title="&ldquo;Filter Screen&rdquo;" ></p></li>
+<li><p>use <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_sync_setting_button.jpg" title="&ldquo;Local Sync Setting&rdquo;" > to set synchronization setting for that folder pair. Example setting screen as shown below.</p>
+
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_sync_setting.jpg" title="&ldquo;Filter Screen&rdquo;" ></p>
+
+<p> Recommened setting:</p>
+
+<p> Sync Type : <code>Mirror</code> <br/>
+ Deleted Files : <code>Versioning</code><br />
+ Deleted File Name Convension : <code>Replace</code> <br />
+ Deleted File Location : <code>\\\\backup\\location\\**\_old\_\\Path\\to\\backup\\folder\\%timestamp%**</code></p></li>
+<li><p>After done folder pair setting. Click <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_batch_button.jpg" title="&ldquo;Save Batch&rdquo;" > to save whole backup as batch job. Set the log file location and set a limit on the log entries. Then <code>Save as</code> file with extension <code>.ffs_batch</code></p>
+
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_batchjob.jpg" title="&ldquo;Batch Job&rdquo;" ></p></li>
+<li><p>Schedule the batch job. Follow the next section to schedule task step by step.</p></li>
+<li><p>(Optional) Schedule another task to delete backup folder/file that older than 30 days. A script is required, I haven&rsquo;t finished this script yet. When I finish it, I will update this blog to post the script.</p></li>
+</ol>
+
+
+<h4>Schedule Backup Task</h4>
+
+<p>Press <code>Win</code> + <code>R</code> key, then run <code>taskschd.msc</code> to start <code>Windows 7 Task Scheduler</code>. Then follow images below to schedule the backup step by step.</p>
+
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_001.jpg" title="&ldquo;Task Schedule Step 1&rdquo;" ></p>
+
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_002.jpg" title="&ldquo;Task Schedule Step 2&rdquo;" ></p>
+
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_003.jpg" title="&ldquo;Task Schedule Step 3&rdquo;" ></p>
+
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_004.jpg" title="&ldquo;Task Schedule Step 4&rdquo;" ></p>
+
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_005.jpg" title="&ldquo;Task Schedule Step 5&rdquo;" ></p>
+
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_006.jpg" title="&ldquo;Task Schedule Step 6&rdquo;" ></p>
+
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_007.jpg" title="&ldquo;Task Schedule Step 7&rdquo;" ></p>
+
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_008.jpg" title="&ldquo;Task Schedule Step 8&rdquo;" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How I Use Google Keep to Manage Todo List]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/25/how-i-use-google-keep-to-manage-todo-list/"/>
+    <updated>2014-01-25T10:18:34+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/25/how-i-use-google-keep-to-manage-todo-list</id>
+    <content type="html"><![CDATA[<p>I use <a href="http://pomodorotechnique.com">Pomodoro Technique</a> at office, although I don&rsquo;t follow it strictly, the technique did improve my productivity, and it&rsquo;s very effective. I use <a href="http://www.tomighty.org/">Tomighty</a> desktop timer, it&rsquo;s free and opensource. Then for the todo list, I use Google Keep, I don&rsquo;t really record down how many <code>pomodori</code> I spend on a task. The main reason for me to apply <code>Pomodoro Technique</code> is to make me stay focus and concentrate. Google Keep is not dedicated application for todo list, its capability to support todo list simply enought for my requirements.</p>
+
+<p>Just as other Google product, Google Keep interface is clean and minimal, they have Chrome App and Android App. And the best part of Google Keep is its sync function, you can modify your Google Keep on multiple devices and they all sync to your Google account.</p>
+
+<p>Below is my practice to use Google Keep as my todo list.</p>
+
+<!-- more -->
+
+
+<ul>
+<li>For everyday todo list, I create a Googe Keep entry, titled with the date.</li>
+<li>I only keep recent few days' todo list, older entries will be archived</li>
+<li>Every night, I will review today&rsquo;s todo list, copy those items that not finished and need to continue tomorrow to a new Keep entry, titled as tomorrow&rsquo;s date. Then add new list items if there are.</li>
+<li>Then I will arrange those items in priority order</li>
+<li>Next day, I will try to follow the order to finish the tasks.</li>
+<li>Once a task is done, after marking as done, I will move it to the bottom of the list, then start work on the next item.</li>
+<li>There is also a special Keep entry function as the pool to keep <code>Todo Items Later</code>. I constantly review and upate items in this entry.</li>
+</ul>
+
+
+<p>There are many note taking or todo list softwares, I also use <code>Evernote</code> and <code>Microsoft OneNote</code> for other purpose. So far, I am quite happy with the way I use Google Keep. You may use any note takeing software in whatever style, as long as it helps for your life or work.</p>
+]]></content>
+  </entry>
+  
+</feed>

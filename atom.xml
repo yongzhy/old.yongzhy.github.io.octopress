@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Zhu Yong]]></title>
+  <link href="http://zhuyong.me/atom.xml" rel="self"/>
+  <link href="http://zhuyong.me/"/>
+  <updated>2014-11-26T22:01:53+08:00</updated>
+  <id>http://zhuyong.me/</id>
+  <author>
+    <name><![CDATA[Zhu Yong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[HHKB Pro 2 Type-S After One Week]]></title>
+    <link href="http://zhuyong.me/blog/2014/11/26/hhkb-pro-2-type-s-after-one-week/"/>
+    <updated>2014-11-26T14:33:34+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/11/26/hhkb-pro-2-type-s-after-one-week</id>
+    <content type="html"><![CDATA[<p>My HHKB Pro 2 Type-S was delivered to my house on 19 Nov, so till today, I have officially owned it one week. So I think it&rsquo;s time to write down my feeling about this well designed keyboard.</p>
+
+<p>Before I purchase HHKB, I have being using old IBM Model M SSK for two years, the feel for IBM Model M is superb, it&rsquo;s just too noisy. I should say sorry to colleagues whose seats near me. My work platform is Windows, and I use  Total Commander as my primary file manager. So my short review for HHKB would based on my daily usage scenario, with comparison to Model M.</p>
+
+<h3>Pros:</h3>
+
+<ul>
+<li>Size, the super compact size, I love it</li>
+<li>Key layout, for people use Emacs and VIM as their editor. Now on every computer I own, I will map <code>Caps Lock</code> to <code>Ctrl</code>, I just feel it&rsquo;s so convenient compare to <code>Ctrl</code> at left bottom corner.</li>
+<li>Quite, compare to my old IBM Model M, it&rsquo;s so quite.</li>
+<li>USB Hub, I put my Logitech Performance MX receiver on one of the two USB port.</li>
+<li>Configurable, and have <code>Windows</code> key, of course, this is advantage compare to old Model M.</li>
+</ul>
+
+
+<h3>Cons:</h3>
+
+<ul>
+<li>USB cable location. If the USB was at left or right side of HHKB, it could be much better.</li>
+<li>No dedicated function key, and arrow key, not convenient for Windows user with Total Commander like me.</li>
+<li>Key press feeling not good as IBM Model M, no &lsquo;Click&rsquo; feeling</li>
+<li>Key layout, unless you have HHKB connected to all your desktop / laptop, you will keep press <code>\</code> on computer without HHKB.</li>
+</ul>
+
+
+<p>Here is a picture of my two beloved keyboards.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2014-11-26-HHKB/HHKB-001.jpg" title="&#34;HHKB and IBM Model M SSK&#34;" alt="&#34;HHKB and IBM Model M SSK&#34;"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Finally, I Bought a HHKB Professional 2 Type-S]]></title>
+    <link href="http://zhuyong.me/blog/2014/11/25/finally-hhkb-professional-type-s/"/>
+    <updated>2014-11-25T08:49:10+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/11/25/finally-hhkb-professional-type-s</id>
+    <content type="html"><![CDATA[<p>Same as many programmers using Emaces or VIM, I want to own a HHKB professional for real long time, and for the same reason not many people buy it: the price. This keyboard is really expensive when compare to other mechanical keyboard. But deep in my heart, I always want to own one. So this month when I want to replace my IBM model M SSK from workplace, I decided to buy a HHKB Professional 2 Type-s. Japanese Yen has being drop for a long period, so I think it&rsquo;s a good time to buy products from Japan.</p>
+
+<p>I decided to buy from Japan <a href="http://www.amazon.co.jp/gp/product/B008GXT6SK?ref_=pe_492632_169829912_TE_M3T1_dp_1">Amazon</a>, then use <a href="http://www.jshoppers.com/forward/">JShoppers</a> to forward the package to Singapore. The process is straight forward. The reason I choose JShoppers is because of its cheaper price. The whole process is same as all other forwarding service company:</p>
+
+<ol>
+<li>Register at JShopers, you will get a unique shipping address.</li>
+<li>Shopping on Amazon, shipping address use the address provided by JShoppers.</li>
+<li>Wait for package to be delivered to JShoppers and they will send you an email to ask you to pay the forwarding fee.</li>
+<li>Pay forwarding fee.</li>
+<li>Wait for your package to be delivered to your door.</li>
+</ol>
+
+
+<p>My experience with JShopper this time was not very good, mainly because of the verification process. Only after my HHKB was shipped by Amazon then I realized JShoppers requires ID verification. But they didn&rsquo;t mention this in the registration page and the email after registration. Somehow, my account password was sent in plain text in the email. Which makes me think they store customers&#8217; password in plain text in database. This is a really bad practice, and I did express my concern about their online system security and possible leakage of my private information (including the uploaded verification document). Customer support told me I can upload verification documents with some parts covered, only name, date of birth and address must be shown, but the ID verification department rejected my uploaded document. So I forwarded the email from customer support to the ID verification department, then they passed my ID verification. Funny! There is one more detail make me more concern about my private information. The first email from the ID verification department was written in Simplified Chinese to inform me about failed verification, this make me think JShoppers outsourced the ID verification to China company. Anyway, I wrote so much, just to say JShoppers is not doing good to make customers feel safe about their private information.</p>
+
+<p>The waiting time for this forward service is long, because they are seeing large amount of package recently. My packaged delivered to JShoppers on 10 Nov, only been processed on 15 Nov, and notify me to pay forwarding fee on 17 Nov, after that, the speed was fast: shipment was on 18 Nov and delivered to me on 19 Nov.</p>
+
+<p>Ok, let&rsquo;s forget about JShoppers, here comes the exciting part, the HHKB. Amazon use a big box for the relatively small keyboard.
+<img src="http://zhuyong.me/images/blogimg/2014-11-25-HHKB/HHKB-001.jpg" title="&#34;HHKB In Amazon's Huge Box&#34;" alt="&#34;HHKB In Amazon's Huge Box&#34;"></p>
+
+<p>HHKB box
+<img src="http://zhuyong.me/images/blogimg/2014-11-25-HHKB/HHKB-002.jpg" title="&#34;HHKB In Box&#34;" alt="&#34;HHKB In Box&#34;"></p>
+
+<p>HHKB box opened
+<img src="http://zhuyong.me/images/blogimg/2014-11-25-HHKB/HHKB-003.jpg" title="&#34;HHKB In Box&#34;" alt="&#34;HHKB In Box&#34;"></p>
+
+<p>HHKB connected to my chromebook.
+<img src="http://zhuyong.me/images/blogimg/2014-11-25-HHKB/HHKB-004.jpg" title="&#34;HHKB Connected To Chromebook&#34;" alt="&#34;HHKB Connected To Chromebook&#34;"></p>
+
+<p>I will write another blog later about how I feel it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MobaXterm Install Package to Persistent Root Direcotry]]></title>
+    <link href="http://zhuyong.me/blog/2014/11/24/mobaxterm-install-package-to-persistent-root-direcotry/"/>
+    <updated>2014-11-24T13:51:51+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/11/24/mobaxterm-install-package-to-persistent-root-direcotry</id>
+    <content type="html"><![CDATA[<p><a href="http://mobaxterm.mobatek.net">MobaXterm</a> is a very good SSH and X-Windows client. I have being use the free portable personal version for quite a while. Its built-in X-Server is very handy and convenient for people like me to run remote GUI applications occasionally. From version 7.2, they added the <code>apt-get</code> like package manager: <code>MobApt Package Manager</code>, and added the option to set <code>persistent root</code> directory, so user can install their own cygwin package to this persistent root directory. This should be the most desirable feature for all personal edition users, with this feature, package upgrading and installation is within one&rsquo;s fingertips.</p>
+
+<p>But at Version 7.2, when I tried use this <code>MobApt</code> to install <code>git</code>, after installation done, <code>git</code> command not recognized when I typed in shell. After checked the installation process, I found a lot of link to <code>git.exe</code> were not created successfully, so I manually created those links, and <code>git</code> command works, but this is a painful process.</p>
+
+<p>Today, when I setup <code>MobaXterm</code> Vesion 7.3 on my laptop, I suddenly realized that maybe I should run <code>MobaXterm</code> as Administrator for it to create those links successfully. And when I did that, result shown that I was correct, everything installed nicely. Next, I went back to my desktop PC, the process didn&rsquo;t succeed, I think I need a fresh installation, so I deleted the whole persistent root folder and persistent home folder on my desktop PC and went through the whole process again. Bingo, <code>git</code> works like a charm. Why I didn&rsquo;t realized this when I use Version 7.2??</p>
+
+<p>When I remove the persistent root folder in Windows 7, I say message that some file / folder can&rsquo;t be removed because of <code>Permission Denined</code>. After few seconds Google, solution is simple:</p>
+
+<pre><code>takeown /r /f DRIVE:\PATH
+icacls DRIVE:\PATH /grant USERNAME:F /T
+</code></pre>
+
+<p>To conclude, next time, I must run <code>MobaXterm</code> as Administrator to install any new package or upgrade existing packages.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fix Git Connection Problem Over HTTPS in MobaXterm]]></title>
+    <link href="http://zhuyong.me/blog/2014/06/26/fix-git-connection-problem-over-https-in-mobaxterm/"/>
+    <updated>2014-06-26T11:12:10+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/06/26/fix-git-connection-problem-over-https-in-mobaxterm</id>
+    <content type="html"><![CDATA[<p><a href="http://mobaxterm.mobatek.net/">MobaXterm</a> is a very nice portable ssh client as well as UNIX environment on Windows system. It has a lot of useful utilities including Xserver bundled into one single exe file. Recently I use it as my primary terminal on Windows system. But when I use the git plugin to clone / push my github repository, it first give me error of cert file not found, so I follow online instruction to set the root cert file in <code>~/.gitconfig</code> file to add following lines:</p>
+
+<pre><code>[http]
+    sslcainfo = c:/msysgit/mingw/bin/curl-ca-bundle.crt
+</code></pre>
+
+<p>This tells <code>git</code> to use the root cert file from <code>msysgit</code>, but next I saw new error messages:</p>
+
+<pre><code>*   CAfile: c:/msysgit/mingw/bin/curl-ca-bundle.crt
+CApath: none
+
+***
+
+error: The requested URL returned error: 403 Forbidden while accessing 
+</code></pre>
+
+<p>After tried with several solutions from Google search results, I found the solution provided by <a href="https://help.github.com/articles/generating-ssh-keys">GitHub</a> solved my problem. The solution is simple, use SSH to replace the HTTPS connection. Below are the steps:</p>
+
+<p>First, generate SSH key:</p>
+
+<pre><code>$ ssh-keygen -t rsa -b 2048 -N ""
+</code></pre>
+
+<p>Next copy content from <code>~/.ssh/id_rsa.pub</code>, cdd public key to github account,</p>
+
+<pre><code>$ cat ~/.ssh/id_rsa.pub
+</code></pre>
+
+<p>Next, change the repository remote:</p>
+
+<pre><code>$ git remote set-url origin git@github.com:yongzhy/vimconfig.git
+</code></pre>
+
+<p>Now it&rsquo;s DONE.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[C Code Unit Testing Using Cmocka]]></title>
+    <link href="http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka/"/>
+    <updated>2014-03-19T16:22:53+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka</id>
+    <content type="html"><![CDATA[<p><a href="http://cmocka.org/">cmocka</a> is a unit testing framework for C, it is developed based on Google&rsquo;s project <a href="https://code.google.com/p/cmockery/">cmockery</a>. It was easy to use, and the author corrected some bugs from <code>cmockery</code>.</p>
+
+<h3>Install cmocka</h3>
+
+<p>First download source code for latest version of <code>cmocka</code> from <a href="https://open.cryptomilk.org/projects/cmocka/files">https://open.cryptomilk.org/projects/cmocka/files</a>. Current latest version is 0.3.2, and the source file is <code>cmocka-0.3.2.tar.xz</code>. <code>cmake</code> is required to build <code>cmocka</code>.</p>
+
+<pre><code>$ cd ~/Downloads
+$ xz -d cmocka-0.3.2.tar.xz
+$ tar vxf cmocka-0.3.2.tar
+$ cd cmocka-0.3.2
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
+$ make
+$ sudo make install
+</code></pre>
+
+<h3>Use cmocka</h3>
+
+<p>Create source file with test cases. Simple example would be like:</p>
+
+<pre><code>#include &lt;stdarg.h&gt;
+#include &lt;stddef.h&gt;
+#include &lt;setjmp.h&gt;
+#include &lt;cmocka.h&gt;
+static void test(void **state)
+{
+    assert_int_equal(3, 3);
+    assert_int_not_equal(3, 3);
+}
+int main(void) 
+{
+    const UnitTest tests[] = 
+    {
+        unit_test(test),
+    };
+    return run_tests(tests);
+}
+</code></pre>
+
+<p>save file as `cmockatest.c</p>
+
+<pre><code>$ gcc cmockatest.c -lcmocka -o cmockatest
+$ ./cmockatest
+
+[==========] Running 1 test(s).
+[ RUN      ] test
+3 == 3
+cmocka.c:8: error: Failure!
+[  FAILED  ] test
+[==========] 1 test(s) run.
+[  PASSED  ] 0 test(s).
+[  FAILED  ] 1 test(s), listed below:
+[  FAILED  ] test
+</code></pre>
+
+<h3>Reference</h3>
+
+<ul>
+<li><a href="https://blog.cryptomilk.org/2013/01/14/cmocka-a-unit-testing-framework-for-c/">cmocka author&rsquo;s blog post</a></li>
+<li><a href="https://lwn.net/Articles/558106/">Unit testing with mock objects in C</a></li>
+<li><a href="http://www.cmocka.org/api/">cmocka API Documents</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hack YouCompleteMe and Libclang for Lamely Structured Project]]></title>
+    <link href="http://zhuyong.me/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/"/>
+    <updated>2014-02-20T17:23:59+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project</id>
+    <content type="html"><![CDATA[<p>On 13 Feb 2014 I asked a question on <a href="http://stackoverflow.com/questions/21746668/configure-vim-youcompleteme-for-special-project-structure">StackOverflow</a> on how to configure / modify vim plugin <code>YouCompleteMe</code> to fit special project structure. I guess my project structure is really lame, after two days waiting, some comments were given, but my problem not realy addressed. So I think I have to <strong>DO IT MYSELF</strong>. Then I read the source code for <code>YouComeplteMe</code> as well as <code>libclang</code>, because I only need the code completion function, lucky the related code are not much. Then I done  experiments with different approaches, and today, finally, I had my hacking works. Then I think I should record this nice experience, that&rsquo;s the purpose of this blog post.</p>
+
+<h3>My Question On StackOverflow</h3>
+
+<p>My C project has following structures. This is the structure for a large project, I can&rsquo;t change the structure. I want to use YouCompleteMe for semantic code completion for this project.</p>
+
+<pre><code>main/                     // folder for C file to be compiled
+  |- module1.c            // module main C file.
+  |- module2.c
+  |- .....
+module1/
+  |- mod1_func1.c         // function file to be included in main module C file.
+  |- mod1_func2.c
+  |- mod2_func3.c
+module2/
+  |- mod2_func1.c
+  |- mod2_func2.c
+  |- mod2_func3.c
+</code></pre>
+
+<p>Content for <code>moduleX.c</code>, this will include all related header files and module related C files.</p>
+
+<pre><code>#include "header1.h"
+#include "header2.h"
+...
+#include "modX_func1.c"
+#include "modX_func2.c"
+</code></pre>
+
+<p>Content for <code>modX_funcX.c</code> has one or few function definitions. Doesn&rsquo;t have header included</p>
+
+<pre><code>// no header file included here
+int modX_funcX(void) {.....}
+</code></pre>
+
+<p>Because there is not related header included, <code>clang</code> must parse <code>moduleX.c</code> in order to do code completion on <code>modX_funcX.c</code>,  I have tried <code>clang</code> code completion from command line. Command below works</p>
+
+<pre><code>clang -cc1 -x c -fsyntax-only -code-completion-at mod1_func1.c:4:11 module1.c 
+</code></pre>
+
+<p>So my question: how to configure YouCompleteMe to do code completion when I edit the <code>modX_funcX.c</code> file?</p>
+
+<p>I guess modification to YouCompleteMe source might required to do this job. My current idea is to add a file mapping database with format:</p>
+
+<pre><code>path_of_file_to_complete:path_of_file_for_clang_to_parse
+</code></pre>
+
+<p>So before send the code completion request, get <code>path_of_file_for_clang_to_parse</code> from database based on current buffer name, pass this file name to <code>libclang</code>.</p>
+
+<p>Is my idea workable? If Yes, where is exactly place to add this file mapping function?</p>
+
+<!-- more -->
+
+
+<h3>My Analysis</h3>
+
+<p>To make job easy, I make a simple project structure to simulate my rare project structure.</p>
+
+<pre><code>$ cd ~/dev/c/clang
+$ ls
+a.c  a.h  b.c  b.h  c.c  c.h  main.c
+</code></pre>
+
+<p>content for <code>a.h</code></p>
+
+<pre><code>typedef struct A {
+    struct A * next;
+    unsigned int data;
+}A;
+</code></pre>
+
+<p>content for <code>a.c</code></p>
+
+<pre><code>int test(void)
+{
+    A *list;
+    list-&gt;
+}
+</code></pre>
+
+<p>content for <code>main.c</code></p>
+
+<pre><code>#include "a.h"
+#include "b.h"
+#include "c.h"
+
+#include "a.c"
+#include "b.c"
+#include "c.c"
+</code></pre>
+
+<p>My ultimate goal is to let <code>YouCompleteMe</code> to do code completion when I type <code>-&gt;</code> at line 4 of file <code>a.c</code>. To test with <code>clang</code> from command line</p>
+
+<pre><code>$ clang -cc1 -x c -fsyntax-only -code-completion-at a.c:4:11 main.c
+COMPLETION: data : [#unsigned int#]data
+COMPLETION: next : [#struct A *#]next
+</code></pre>
+
+<h4>Analyze clang Command Line</h4>
+
+<p>So command line code completion works for this simulation structure. To understand why <code>clang</code> CLI works while <code>YouCompleteMe</code> doesn&rsquo;t, I need to find the difference at the point of code completetion for CLI and <code>libclang</code>. So I need a debug version of <code>clang</code>. Below are the steps to download and build debug version of <code>clang</code> version 3.3.</p>
+
+<pre><code>$ mkdir -p /data/sourcecode
+$ svn co http://llvm.org/svn/llvm-project/llvm/tags/RELEASE_33/final llvm3.3
+$ cd llvm3.3/tools
+$ svn co http://llvm.org/svn/llvm-project/cfe/tags/RELEASE_33/final clang
+$ cd ../projects
+$ svn co http://llvm.org/svn/llvm-project/compiler-rt/tags/RELEASE_33/final compiler-rt
+$ cd /data/build
+$ mkdir llvm3.3-linux
+$ cd llvm3.3-linux
+$ /data/sourcecode/llvm3.3/configure --prefix=/data/software/C-C++/llvm3.3-hack/ CC=/usr/bin/gcc CXX=/usr/bin/g++
+$ make -j4
+$ make install
+</code></pre>
+
+<p>Next step is to load debug version of <code>clang</code> with the working arguments. I want to break at function <code>ASTFrontendAction::ExecuteAction()</code> to check some variables.</p>
+
+<pre><code>$ gdb --args /data/software/C-C++/llvm3.3-hack/bin/clang -cc1 -x c -fsyntax-only -code-completion-at a.c:4:11 main.c
+
+(gdb) break z:\sourcecode\llvm3.3\tools\clang\lib\frontend\frontendaction.cpp:457
+
+Breakpoint 1 at 0xd775d3: file /data/sourcecode/llvm3.3/tools/clang/lib/Frontend/FrontendAction.cpp, line 457.
+
+(gdb) run
+
+Starting program: /data/software/C-C++/llvm3.3-hack/bin/clang -cc1 -x c -fsyntax-only -code-completion-at a.c:4:11 main.c
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Breakpoint 1, clang::ASTFrontendAction::ExecuteAction (this=0x513a5d0) at /data/sourcecode/llvm3.3/tools/clang/lib/Frontend/FrontendAction.cpp:457
+457       if (hasCodeCompletionSupport() &amp;&amp;
+
+(gdb) print CI.getFrontendOpts().Inputs[0]
+
+$3 = (clang::FrontendInputFile &amp;) @0x513b600: {File = {static npos = &lt;optimized out&gt;, _M_dataplus = {&lt;std::allocator&lt;char&gt;&gt; = {&lt;__gnu_cxx::new_allocator&lt;char&gt;&gt; = {&lt;No data fields&gt;}, &lt;No data fields&gt;}, _M_p = 0x513b5e8 "main.c"}},
+Buffer = 0x0, Kind = clang::IK_C, IsSystem = false}
+
+(gdb) print CI.getFrontendOpts().CodeCompletionAt
+
+$4 = {FileName = {static npos = &lt;optimized out&gt;, _M_dataplus = {&lt;std::allocator&lt;char&gt;&gt; = {&lt;__gnu_cxx::new_allocator&lt;char&gt;&gt; = {&lt;No data fields&gt;}, &lt;No data fields&gt;}, _M_p = 0x513b568 "a.c"}}, Line = 4, Column = 11}
+</code></pre>
+
+<p>From <code>gdb</code> output, I know <code>a.c</code> is stored in <code>CI.getFrontendOpts().CodeCompletionAt</code> while <code>main.c</code> is stored in <code>CI.getFrontendOpts().Inputs[0]</code></p>
+
+<h4>Analyze YouCompleteMe with libclang</h4>
+
+<p>Entry point for code completion from <code>libclang</code> is <code>clang_codeCompleteAt</code> and eventually it call to <code>ASTUnit::CodeComplete()</code>. And at end of this function, it also call <code>ASTFrontendAction::ExecuteAction()</code> same as <code>clang</code> from command line. It also has input file defined by <code>Clang-&gt;getFrontendOpts().Inputs[0]</code>. Up to this point, my thought become clear, my target is how to make <code>Clang-&gt;getFrontendOpts().Inputs[0]</code> set to <code>main.c</code> with all the passed in parameters.</p>
+
+<h3>My Hacking</h3>
+
+<h4>The First Fail Hack</h4>
+
+<p>My first attemp is rather simple, as I stated in my <a href="http://stackoverflow.com/questions/21746668/configure-vim-youcompleteme-for-special-project-structure">StackOverflow question</a>. When call <code>clang_codeCompleteAt()</code>, pass <code>complete_filename</code> in form of <code>path_of_file_to_complete:path_of_file_for_clang_to_parse</code>. This attempt failed because it won&rsquo;t even run to the point of <code>ASTUnit::CodeComplete()</code>. Along the calling path, there are other function check and parse the input file, my hacking filename format is an invalid filename for those functions.</p>
+
+<h4>The Second Fail Hack</h4>
+
+<p>I understand that <code>Clang-&gt;getFrontendOpts()</code> is parsed from the passed flags, so my second attempt of hacking is to pass <code>main.c</code> together with flags. So I hardcode <code>.ycm_extra_conf.py</code> to append absolute path of <code>main.c</code> in <code>flags</code>, but <code>Clang-&gt;getFrontendOpts().Inputs[0]</code> was not set to <code>main.c</code> when I check at <code>ASTUnit::CodeComplete()</code>. So this attempt failed.</p>
+
+<h4>The Third Successful But Dirty Hack</h4>
+
+<p>After failed previous two attempts, I only have the option to do dirty hacking by change <code>libclang</code> API and related functions, as well as related parts in <code>YouComplteMe</code>. The idea was to pass in additional <code>input_filename</code> together with <code>complete_filename</code>. And at <code>ASTUnit::CodeComplete()</code>, if this <code>input_filename</code> is valid, use it to replace <code>Clang-&gt;getFrontendOpts().Inputs[0]</code>. This attempt works!!!</p>
+
+<h3>Conclusion</h3>
+
+<p>To solve my problem, I was forced to read source code of <code>YouCompleteMe</code> and <code>clang</code>. The hacking process takes time because of code reading, compilation and debugging, and it&rsquo;s disappointed to find out my attempt didn&rsquo;t work as expected. But I really enjoy the moment when the code worked after some days&#8217; struggling. This whole hacking process is just another proof that open source is really good, you can do any hacking to fit your own need.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DARPA Published Over 60 Projects Source Code in One Place]]></title>
+    <link href="http://zhuyong.me/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place/"/>
+    <updated>2014-02-12T17:29:59+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place</id>
+    <content type="html"><![CDATA[<p>The Defense Advanced Research Projects Agency, or DARPA, sponsors a lot of technology through grants to universities and private lab, has published <a href="http://www.darpa.mil/OpenCatalog/index.html">DARPA Open Catalog</a> which listed over 60 opensource projects. Chris White, the DARPA program manager behind the effort, said</p>
+
+<blockquote><p>&ldquo;Making our open source catalog available increases the number of experts who can help quickly develop relevant software for the government. Our hope is that the computer science community will test and evaluate elements of our software and afterward adopt them as either standalone offerings or as components of their products.&rdquo;</p></blockquote>
+
+<p>The DARPA Open Catalog contains two tables:</p>
+
+<ul>
+<li>The Software Table lists performers with one row per piece of software. Each piece of software has a link to an external project page, as well as a link to the code repository for the project. The software categories are listed; in the case of XDATA, they are Analytics, Visualization and Infrastructure. A description of the project is followed by the applicable software license. Finally, each entry has a link to the publications from each team&rsquo;s software entry.</li>
+<li>The Publications Table contains author(s), title, and links to peer-reviewed articles related to specific DARPA programs.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Windows Data Backup Using FreeFileSync Step by Step]]></title>
+    <link href="http://zhuyong.me/blog/2014/02/10/windows-data-backup-using-freefilesync-step-by-step/"/>
+    <updated>2014-02-10T17:03:53+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/02/10/windows-data-backup-using-freefilesync-step-by-step</id>
+    <content type="html"><![CDATA[<p>This article is the step by step guide that I prepared for my colleagues to do the data backup to our newly bought server. I was assigned the task to evaluate some backup tools and find the best one that fits our requirements. After some testing, I finally choose FreeFileSync. I choose it over other tools because it has a feature I like most:</p>
+
+<p>I can mirror folders to backup server, so the backup server is always the latest copy, when I restore, I just copy this folder back to its location; while for those modified / deleted files, they will be saved in another dedicated loation with Date as version.</p>
+
+<p>OK. Here begins the step by step guide.</p>
+
+<hr />
+
+<h3>Introduction</h3>
+
+<p><code>FreeFileSync</code> is a free Open Source software that helps you synchronize files and synchronize folders for Windows, Linux and Mac OS X. It is designed to save your time setting up and running backup jobs while having nice visual feedback along the way.</p>
+
+<p><code>FreeFileSync</code> latest vesrion is 6.2. For more information about this software, can visit its <a href="http://freefilesync.sourceforge.net">homepage</a></p>
+
+<h3>Download &amp; Install FreeFileSync</h3>
+
+<p>Visit <a href="http://freefilesync.sourceforge.net/download.php">here</a> to download the latest version of <code>FreeFileSync</code></p>
+
+<p>After download finished, run the downloaded exe file to start setup. You can choose normal installation or portable installation.</p>
+
+<!-- more -->
+
+
+<h3>Setup FreeFileSync For Data Backup</h3>
+
+<p>The backup scheme that we doing to define should include:</p>
+
+<ul>
+<li>Daily backup data of selected folders.</li>
+<li>Keep the origin folder structure.</li>
+<li>Keep deleted file for up to 30 days.</li>
+<li>Keep older copy when file been modified.</li>
+<li>No compression on backup file/folder.</li>
+<li>Log file for backup status.</li>
+</ul>
+
+
+<h4>Global Setting</h4>
+
+<p>From menu, select <strong>Tools</strong>, then <strong>Global Settings</strong>. Maily to set <code>Retry count</code> and <code>Delay</code>. Recommended setting as shown below:</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_globalsetting.jpg" title="&#34;FreeFileSync Setup&#34;" alt="&#34;FreeFileSync Setup&#34;"></p>
+
+<h4>Backup Setting</h4>
+
+<p><img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_folders.jpg" title="&#34;FreeFileSync Setup&#34;" alt="&#34;FreeFileSync Setup&#34;"></p>
+
+<ol>
+<li><p>Use <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_add_button.jpg" title="&#34;Add Button&#34;" alt="&#34;Add Button&#34;"> to add folder pair or <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_del_button.jpg" title="&#34;Delete Button&#34;" alt="&#34;Delete Button&#34;"> to delete folder pair.</p></li>
+<li><p>Use <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_filter_button.jpg" title="&#34;Local Filter&#34;" alt="&#34;Local Filter&#34;"> to set what file to include or exclude. Example screen as shown below:</p>
+
+<p> <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_filter.jpg" title="&#34;Filter Screen&#34;" alt="&#34;Filter Screen&#34;"></p></li>
+<li><p>use <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_sync_setting_button.jpg" title="&#34;Local Sync Setting&#34;" alt="&#34;Local Sync Setting&#34;"> to set synchronization setting for that folder pair. Example setting screen as shown below.</p>
+
+<p> <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_sync_setting.jpg" title="&#34;Filter Screen&#34;" alt="&#34;Filter Screen&#34;"></p>
+
+<p> Recommened setting:</p>
+
+<p> Sync Type : <code>Mirror</code> <br/>
+ Deleted Files : <code>Versioning</code><br />
+ Deleted File Name Convension : <code>Replace</code> <br />
+ Deleted File Location : <code>\\\\backup\\location\\**\_old\_\\Path\\to\\backup\\folder\\%timestamp%**</code></p></li>
+<li><p>After done folder pair setting. Click <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_batch_button.jpg" title="&#34;Save Batch&#34;" alt="&#34;Save Batch&#34;"> to save whole backup as batch job. Set the log file location and set a limit on the log entries. Then <code>Save as</code> file with extension <code>.ffs_batch</code></p>
+
+<p> <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_batchjob.jpg" title="&#34;Batch Job&#34;" alt="&#34;Batch Job&#34;"></p></li>
+<li><p>Schedule the batch job. Follow the next section to schedule task step by step.</p></li>
+<li><p>(Optional) Schedule another task to delete backup folder/file that older than 30 days. A script is required, I haven&rsquo;t finished this script yet. When I finish it, I will update this blog to post the script.</p></li>
+</ol>
+
+
+<h4>Schedule Backup Task</h4>
+
+<p>Press <code>Win</code> + <code>R</code> key, then run <code>taskschd.msc</code> to start <code>Windows 7 Task Scheduler</code>. Then follow images below to schedule the backup step by step.</p>
+
+<p> <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_001.jpg" title="&#34;Task Schedule Step 1&#34;" alt="&#34;Task Schedule Step 1&#34;"></p>
+
+<p> <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_002.jpg" title="&#34;Task Schedule Step 2&#34;" alt="&#34;Task Schedule Step 2&#34;"></p>
+
+<p> <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_003.jpg" title="&#34;Task Schedule Step 3&#34;" alt="&#34;Task Schedule Step 3&#34;"></p>
+
+<p> <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_004.jpg" title="&#34;Task Schedule Step 4&#34;" alt="&#34;Task Schedule Step 4&#34;"></p>
+
+<p> <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_005.jpg" title="&#34;Task Schedule Step 5&#34;" alt="&#34;Task Schedule Step 5&#34;"></p>
+
+<p> <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_006.jpg" title="&#34;Task Schedule Step 6&#34;" alt="&#34;Task Schedule Step 6&#34;"></p>
+
+<p> <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_007.jpg" title="&#34;Task Schedule Step 7&#34;" alt="&#34;Task Schedule Step 7&#34;"></p>
+
+<p> <img src="http://zhuyong.me/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_008.jpg" title="&#34;Task Schedule Step 8&#34;" alt="&#34;Task Schedule Step 8&#34;"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Thoughts After Read "the Power of Habit"]]></title>
+    <link href="http://zhuyong.me/blog/2014/02/08/thoughts-after-read-the-power-of-habit/"/>
+    <updated>2014-02-08T13:07:10+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/02/08/thoughts-after-read-the-power-of-habit</id>
+    <content type="html"><![CDATA[<p>I have finished the book <a href="http://www.amazon.com/gp/product/B0055PGUYU/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0055PGUYU&amp;linkCode=as2&amp;tag=zhuyong.me-20">&ldquo;The Power Of Habit&rdquo;</a> one week ago. This is an interesting, easy reading and transformative book. It uses plenty of examples to explain how habits been created, changed for individuals, organization and the whole society.</p>
+
+<p>The concept of <code>habit loop</code> is simple, it consists of a cue, a routine and a reward. No matter good or bad habits, they all been created following this loop with or without our awareness.</p>
+
+<p>Habits once formed, it won&rsquo;t be forgotten, it can only be changed, and the changed part is the <code>routine</code>. The changing process at the beginning might be hard and slow, we might turn to the old routine some time, that&rsquo;s why patient and persistent is important in the process of habit changing. One tactic is to aim one keystone habit, keystone habit changing will radially change orther habits in the process.</p>
+
+<p>In the book it also mentioned willpower, there is a pool for willpower with limited quantity, and it is shared for all our mind control activities. Good news is that willpower can be trained, trained willpower has larger pool and it will not shrink later.</p>
+
+<p>I am applying the tactics in this book to change some of my &ldquo;bad&rdquo; habits, and I already see progress. That&rsquo;s wonderful to see the progress, the happiness and satisfaction is also <code>reward</code> for me.</p>
+
+<p><strong>Be Patient, Be Persistent</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Add "Related Posts" Section to Octopress]]></title>
+    <link href="http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress/"/>
+    <updated>2014-02-05T12:39:53+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress</id>
+    <content type="html"><![CDATA[<p>When reading someone&rsquo;s article, it&rsquo;s good to have a section to show the releated posts. Today I searched online and found to add <code>Related Posts</code> section to Octopress is quite easy.</p>
+
+<p>First, edit config file <code>_config.yml</code> to add line</p>
+
+<pre><code>lsi: true
+</code></pre>
+
+<p>Second, create file <code>source/_includes/post/related_posts.html</code> with content below</p>
+
+<pre><code>{% if site.related_posts %}
+  &lt;h3&gt;Related posts&lt;/h3&gt;
+  &lt;ul class="posts"&gt;
+  {% for post in site.related_posts limit:3 %}
+    &lt;li class="related"&gt;
+      &lt;a href="{{ root_url }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
+    &lt;/li&gt;
+  {% endfor %}
+  &lt;/ul&gt;
+{% endif %}
+</code></pre>
+
+<!-- more -->
+
+
+<p>Next, add this footer section to the post. modify <code>source/_layouts/post.html</code> to add line</p>
+
+<pre><code>{% include post/related_posts.html %}
+</code></pre>
+
+<p>under</p>
+
+<pre><code>{% include post/author.html %}
+{% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+{% include post/categories.html %}
+</code></pre>
+
+<p>OK. Now you can run <code>rake generate</code> and <code>rake preview</code> to see the effects.</p>
+
+<p>There is one problem with the solution above, it&rsquo;s slow to run <code>rake generate</code> when your have lots of articles. To speed up the process, you need to install <code>rb-gsl</code>. If you directly issue <code>gem install gsl</code>, your most probablly will see error message</p>
+
+<pre><code>Building native extensions.  This could take a while...
+ERROR:  Error installing gsl:
+    ERROR: Failed to build gem native extension.
+
+...
+</code></pre>
+
+<p>It&rsquo;s because <code>gsl</code> gem requires <code>gsl 1.14</code>. Follow the steps below to install <code>gsl 1.14</code> and <code>rb-gsl</code>:</p>
+
+<pre><code>$ curl -O http://mirror.aarnet.edu.au/pub/gnu/gsl/gsl-1.14.tar.gz
+$ tar xfz gsl-1.14.tar.gz
+$ cd gsl-1.14
+$ ./configure
+$ make clean
+$ make                              # can take a while, be patient
+$ sudo make install
+$ sudo gem install gsl
+</code></pre>
+
+<p>Now run <code>rake generate</code> again and feel the acceleration for the classification process. If you are unlucky and see the message below:</p>
+
+<pre><code>Notice: for 10x faster LSI support, please install http://rb-gsl.rubyforge.org/
+</code></pre>
+
+<p>This means your <code>rb-gsl</code> installation got problem. To resolve that, first uninstall <code>gsl</code> by</p>
+
+<pre><code>$ sudo gem uninstall gsl
+</code></pre>
+
+<p>Then edit file <code>Gemfile</code> in your Octopress folder to add line</p>
+
+<pre><code>gem 'gsl', '~&gt;1.14.7'
+</code></pre>
+
+<p>Then use <code>bundle</code> to install <code>gsl</code></p>
+
+<pre><code>$ sudo bundle install
+</code></pre>
+
+<p>Again, run <code>rake generate</code> to feel the fly speed. :)</p>
+
+<p>Good Luck!!!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Google Released Chromecast SDK : Countless Apps Coming]]></title>
+    <link href="http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk/"/>
+    <updated>2014-02-04T09:39:48+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk</id>
+    <content type="html"><![CDATA[<p>After <a href="http://10.36.134.34:4000/blog/2014/01/25/i-received-my-chromecast/">received my Chromecast</a> for 10 days, I received good news from Google. Google finally <a href="http://chrome.blogspot.sg/2014/02/chromecast-is-now-open-to-developers.html">opened chromecast SDK to all developers</a>. This is what Chromecast users and developers waiting for long time. Developers now must be busy coding to integrate the SDK into their apps, so countless Chromecast-compatible apps would show-up any day now.</p>
+
+<p>Media player apps will be the first batch to support Chromecast, especially for local media streaming. I think this is the most desired feature for most of Chromecast users including me. I use MX Player a lot, I can&rsquo;t wait to see it with Chromecast support.</p>
+
+<p>I don&rsquo;t play games on phone, but I think there will be plenty of games with Chromecast support. People likes to play games on large screen, supporting for Chromecast would be a must have feature for any android games from now on.</p>
+
+<p>For developers, check the two links below to start your development.</p>
+
+<ul>
+<li><a href="https://developers.google.com/cast/docs/downloads">Chromecast SDK Download</a></li>
+<li><a href="https://developers.google.com/cast/docs/developers">Chromecast Developer Guide</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Half Day With Allure Eyewear "Call of Duty : Ghost"]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/28/half-day-with-allure-eyewear-call-of-duty-ghost/"/>
+    <updated>2014-01-28T17:42:29+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/28/half-day-with-allure-eyewear-call-of-duty-ghost</id>
+    <content type="html"><![CDATA[<p>Just before lunch time, security guard at reception desk called me to collect my parcel. I knew my 3 pieces of <code>Call Of Duty : Ghost</code> have arrived. I placed order on 23 Jan and it only takes 5 days for international shipping, the speed is fast enough for a US$20 delivery.</p>
+
+<p>My excutement and happiness didn&rsquo;t last long until I opened the box and only see two pieces of eyeware inside. I immediately opened my order online and checked carefully, yes, the invoice stated clearly that I ordered 3 pieces of eyewear, but I only got 2 of them shipped. And there is only 1 shipment number, so I guess there won&rsquo;t be a second package on the way. Next I immediately sent an email through the online contact form, but I think it will take some hours before I got response due to the different timezone. Let&rsquo;s wait and see how <code>Allure</code> reply.</p>
+
+<p>After lunch time, I clipped the eyewear onto my glass and used it for the whole afternoon. So here is how I feel about this eyewear with one afternoon experience:</p>
+
+<!-- more -->
+
+
+<ul>
+<li>I felt a little giddy at first, guess is due to the 0.2 diopter. But my eyes soon get used to it.</li>
+<li>It&rsquo;s a little bit heavy for this clip-on eyewear + my glass</li>
+<li>When the time I left company, my eyes didn&rsquo;t have strong dry feeling as usual. I can confirm this is not due to phychological factor. I can really feel it. Tomorrow I will use it for whole day, I think the feel will be clearer.</li>
+<li>It&rsquo;s troublesome to take off the eyewear when I left my cubicle to pantry or toilet, then put on again.</li>
+</ul>
+
+
+<p>Basically, this product worth the US$25 price, I would suggest this for anyone who work on computer for long hours. Of course, if you already wear glass and have the budget, I strongly suggest go to the <code>gunnar</code> customization option.</p>
+
+<p><code>Update 2014-02-04</code> : I contacted <code>Allure</code> on 28 Jan, and they processed another shipment for the 3rd eyewear at U.S locat time <code>01/29/2014  5:19 P.M</code>. I must say their action and response was really fast. For this reason, I would recommend <code>Allure</code> to anyone that interested to buy eyeware to protect their eyes.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How I Use Google Keep to Manage Todo List]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/25/how-i-use-google-keep-to-manage-todo-list/"/>
+    <updated>2014-01-25T10:18:34+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/25/how-i-use-google-keep-to-manage-todo-list</id>
+    <content type="html"><![CDATA[<p>I use <a href="http://pomodorotechnique.com">Pomodoro Technique</a> at office, although I don&rsquo;t follow it strictly, the technique did improve my productivity, and it&rsquo;s very effective. I use <a href="http://www.tomighty.org/">Tomighty</a> desktop timer, it&rsquo;s free and opensource. Then for the todo list, I use Google Keep, I don&rsquo;t really record down how many <code>pomodori</code> I spend on a task. The main reason for me to apply <code>Pomodoro Technique</code> is to make me stay focus and concentrate. Google Keep is not dedicated application for todo list, its capability to support todo list simply enought for my requirements.</p>
+
+<p>Just as other Google product, Google Keep interface is clean and minimal, they have Chrome App and Android App. And the best part of Google Keep is its sync function, you can modify your Google Keep on multiple devices and they all sync to your Google account.</p>
+
+<p>Below is my practice to use Google Keep as my todo list.</p>
+
+<!-- more -->
+
+
+<ul>
+<li>For everyday todo list, I create a Googe Keep entry, titled with the date.</li>
+<li>I only keep recent few days&#8217; todo list, older entries will be archived</li>
+<li>Every night, I will review today&rsquo;s todo list, copy those items that not finished and need to continue tomorrow to a new Keep entry, titled as tomorrow&rsquo;s date. Then add new list items if there are.</li>
+<li>Then I will arrange those items in priority order</li>
+<li>Next day, I will try to follow the order to finish the tasks.</li>
+<li>Once a task is done, after marking as done, I will move it to the bottom of the list, then start work on the next item.</li>
+<li>There is also a special Keep entry function as the pool to keep <code>Todo Items Later</code>. I constantly review and upate items in this entry.</li>
+</ul>
+
+
+<p>There are many note taking or todo list softwares, I also use <code>Evernote</code> and <code>Microsoft OneNote</code> for other purpose. So far, I am quite happy with the way I use Google Keep. You may use any note takeing software in whatever style, as long as it helps for your life or work.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I Received My Chromecast]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/25/i-received-my-chromecast/"/>
+    <updated>2014-01-25T10:13:48+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/25/i-received-my-chromecast</id>
+    <content type="html"><![CDATA[<p><a href="http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_il?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DR0PDNE&amp;linkCode=as2&amp;tag=zhuyong.me-20"><img class="left" src="http://zhuyong.me/images/blogimg/2014-01-25-Chromecast.jpg" title="&#34;Chromecast On Amazon&#34;" alt="&#34;Chromecast On Amazon&#34;"></a></p>
+
+<p>I ordered Chromecast from <a href="http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DR0PDNE&amp;linkCode=as2&amp;tag=zhuyong.me-20" title="">Amazon</a> one week back when it has promotional price of US$29.99 only.</p>
+
+<p>I want to buy Chromecast even before I got my C720 Chromebook, but Chromecast is not selling in Singapore and it is not eligible for the free international shipping to Singapore for over US$125 spending, I don&rsquo;t want to spend over US$20 shipping fee to buy a product only cost US$29.99, so I wait.</p>
+
+<p>One week earlier, I saw my colleage shopping on Amazon, and he always use Comegateway service to ship product from US to Singapore. So I ask if he can buy the Chromecast and ship together with his purchases. He happily agreed.</p>
+
+<p>Yesterday afternoon, DHL delivered to our office, I pay my colleague total S$46 (S$40 for the Chromecast and S$6 for the shared shipping fee), that&rsquo;s very cheap.</p>
+
+<!-- more -->
+
+
+<p>After went back home, I plugged Chromecast in to the HDMI slot on my TV, connected the USB power, then run <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app">Chromecast</a> app from my Android phone, the setup process was very easy, then wait for Chromecast to finish firmware updating. After that, everything was ready, so I run Youtube app from my phone and cast the famous <code>"London Bridge is Falling Down"</code> animation for my son. The video streaming was very smooth, no legging, not buffering, overall experience was nice.</p>
+
+<p>But, there are only limited android apps that have Chromecast support, and most of the supported apps can&rsquo;t be used in Singapore. The function I want most is to cast the photos and video on my phone to TV. I took a lot of pictures and video for my two boys, I want to let them see themselves on photo and video, and the phone screen is way too small.</p>
+
+<p>Google, please release the full power of Chromecast!!!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Intel's Recommended Reading List]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/23/intels-recommended-reading-list/"/>
+    <updated>2014-01-23T21:49:38+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/23/intels-recommended-reading-list</id>
+    <content type="html"><![CDATA[<p>Intel published a 10 pages recommanded reading list for 1st half year of 2014, you can go to <a href="https://noggin.intel.com/recommended-reading">here</a> for details or directly download the list in <a href="https://noggin.intel.com/sites/default/files/Intel-Recommended-Reading-List_1H14_0.pdf">PDF</a></p>
+
+<blockquote><p>The Recommended Reading List is a valuable resource for technical professionals who want to thoroughly explore topics such as multi-core programming, embedded security, and more. These books are produced by leading publishers around the world.</p></blockquote>
+
+
+<p>This is a very good reference list for developers who want to expand their knowledges. In the list, Intel also gives retailer hyperlink for each book item.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I Ordered "Call of Duty: Ghosts Eyewear"]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear/"/>
+    <updated>2014-01-23T15:54:29+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear</id>
+    <content type="html"><![CDATA[<p>This afternoon I placed an order for 3 pieces of <a href="http://call-of-duty-ghosts.allure-eyewear.com/">Call Of Duty Ghosts By Allure Eyewear</a>. One for myself and the other two for my colleagues.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2014-01-23-codg5-k.jpeg" title="&#34;Call Of Duy Ghosts By Allure Eyewear&#34;" alt="&#34;Call Of Duy Ghosts By Allure Eyewear&#34;"></p>
+
+<p>One week ago, I didn&rsquo;t even know there are glasses specially designed for heavy computer user and gamers. One day, one of my colleagues said he was going to buy a glass from Amazon, ask me to search word <code>gunnar</code> to have a look. Then he said the glass can give eyes some relief for full day computer user like us, almost all professional gamer wear this kind of glass to protect their eyes. So I did some google about this eyewear. From reviews on various websites, the feedbacks are quite possitive and effective. So I decided to invest one to protect my precious eyes.</p>
+
+<!-- more -->
+
+
+<p>I can&rsquo;t buy those widely available eyewear from <code>gunnar</code> because I am a shortsighted person, and I already wear a pair of glass. I need to find the clip-on type of eyewear, and I only found <a href="http://www.amazon.com/gp/product/B009OZSMEI/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B009OZSMEI&amp;linkCode=as2&amp;tag=zhuyong.me-20">this</a> from Amazon, and it was out of stock, some unknown sellers sell it over US$60 at that time. Then I visited homepage of <code>gunnar</code>, I can&rsquo;t find the clip-on type, but shortsighted people can order customized glasses with a much higher prices. We haven&rsquo;t tried this kind of glasses before, invest over US$250 for a customized glass without known its effect is kind of risky. So we decided to wait for the stock come back for the clip-on type.</p>
+
+<p>This afternoon, I visited amazon again and found they got stock and the price is only US$33.99, that&rsquo;s much cheaper compare to US$60. Although we need to pay over S$50 shipping fee for 3 pieces of the eyewear, my colleagues and I decided to place the order. Only by then, I noticed this eyewear is from <code>Allure Eyewear</code> instead of <code>gunnar</code>, no wonder I can&rsquo;t find this type from <code>gunnar</code> official website. So I googled again for reviews on <code>Allure Eyewear</code>, again, the reviews are good. And one comments over a review article mentioned the official website of <code>Allure Eyewear</code> sell <code>Call Of Duty Ghosts</code> cheaper than this older <code>Call of Duty Black Ops II</code>. That&rsquo;s good information before I place order.</p>
+
+<p>So I visited <code>Allure Eyewear</code> website, and indeed, the new type is cheaper, only sell at US$24.99. And there international shipping is only US$20, much cheaper than Amazon. Without further waiting, I placed order. It will take 5-7 business days for the shipping. I will write one review after I receive it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Turn C720 Into Development Machine: Step by Step Guide]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/"/>
+    <updated>2014-01-22T22:52:54+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide</id>
+    <content type="html"><![CDATA[<p>From Google Analytic report of my blog,  I saw there are two visitors, one from Germany and the other from US. Both of them viewed my blog post about <a href="http://zhuyong.me/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/">setup C720 development environment</a>.  But in that post, I didn&rsquo;t record down step by step how to setup the development environment. Since people are interested in this topic, I think I should write a formal and detail post about this. So, here come this step by step guide of turn your C720 as development machine by install Ubuntu using <a href="https://github.com/dnschneid/crouton">crouton</a>.</p>
+
+<p>The reason I choose <code>crouton</code> over <code>chrubuntu</code> is because of the super convenient way to switch between ChromeOS and Ubuntu with <code>Ctrl + Alt + Shift + Back</code> keys. There is no need to reboot machine to switch between the OSs.</p>
+
+<h4>Step 1: Enable Developer Mode</h4>
+
+<p>Enable the developer mode will wipe all your data, so backup any important data before enable developer mode.</p>
+
+<p>To enable developer mode:</p>
+
+<ul>
+<li>Press <code>Esc + Refresh (F3)</code> keys then press <code>Power</code> button</li>
+<li>Press <code>Ctrl + D</code>, ignore the warning/error message on screen.</li>
+<li>Press <code>Ctrl + D</code> again, you entered the developer mode.</li>
+</ul>
+
+
+<p>After enable developer mode, evertime you cold start your computer, you need to press <code>Ctr + D</code> or just wait for 30 second.</p>
+
+<!-- more -->
+
+
+<h4>Step 2: Install Ubuntu 13.10 Using crouton</h4>
+
+<p><code>crouton</code> is a powerful script that will do all the download and installation job for you. Download latest version of <code>crouton</code> from <a href="http://goo.gl/fd3zc">http://goo.gl/fd3zc</a>. For details of crouton usage, refer to it&rsquo;s <a href="https://github.com/dnschneid/crouton">github repo</a>.</p>
+
+<p>I use <code>crouton</code> to install Ubuntu 13.10, and I choose <code>xfce4</code> as the windows manager. Below are the steps I prerformed:</p>
+
+<ul>
+<li>Download <code>crouton</code></li>
+<li>Open shell by <code>Ctrl + Alt + T</code>, then type <code>shell</code></li>
+<li>Run <code>sudo sh -e ~/Downloads/crouton -r saucy -t xfce</code>. This will start the downloading and installation process for Ubuntu 13.10</li>
+<li>Wait untill the installation done.</li>
+<li>Run <code>sudo startxfce4</code> to start the <code>Xfce</code></li>
+<li>Anytime you want to switch between ChromeOs and Ubuntu, just use <code>Ctrl + Alt + Shift + Back</code> or <code>Ctrl + Alt + Shift + Forward</code></li>
+<li>log out <code>xfce</code> will end the <code>xfce</code> session</li>
+</ul>
+
+
+<h4>Step 3: Install Development Tools</h4>
+
+<p>There is no much to talk about this step, it&rsquo;s the same as install development tools in Ubuntu. Just run <code>sudo apt-get update</code>, <code>sudo apt-get install</code> to install whatever tools you needed.</p>
+
+<p>For me, I installed <code>git</code>, <code>vim</code>, <code>build_essential</code>, <code>cmake</code>, <code>golang1.2</code>, <code>llvm3.4</code>, <code>the_silver_searcher</code> as well as <code>ruby</code> and necessory packages for <code>Octopress</code>.</p>
+
+<p>If you followed all the steps above, your C720 will become a nice Linux development machine. I haven&rsquo;t tried to run any IDE like <code>eclipse</code> or <code>android studio</code>, I think my 2GB RAM may not sufficient for RAM hunger tools like that. If you have the 4GB version of C720, I think there is no problem to run those IDEs.</p>
+
+<h4>Step 4: Key Map Modification (Optional)</h4>
+
+<p>If you are like me, always use <code>CapLock</code> as <code>Ctrl</code>, you can follow the instruction in my another <a href="http://zhuyong.me/blog/2014/01/15/map-search-key-to-control-key-on-acer-c720-chromebook/">post</a> to map the search key to ctrl.</p>
+
+<p><strong>Next</strong>, I will write another post to talk about development on C720 using cloud based development environment. If you are interested, please stay tuned.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My First Google App Engine in Golang : Hello World!]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/"/>
+    <updated>2014-01-22T17:34:05+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world</id>
+    <content type="html"><![CDATA[<p>Long time ago, I was thinking to build something using Google App Engine. But I didn&rsquo;t start coding after created the app in GAE. So the apps remain there with a <code>None Deployed</code> status.</p>
+
+<p>Yesterday I downloaded the GAE Golang SDK, the reason for choosing experimental golang SDK is that, I want to be more familar with Golang though the process of GAE development.</p>
+
+<p>So the process started with the the <a href="https://developers.google.com/appengine/docs/go/gettingstarted/helloworld"><code>Hello World</code></a> example. I created the folder and files, then when I issue <code>goapp serve</code> command, I saw error about the <code>app.yaml</code> file. It&rsquo;s because the indent of line</p>
+
+<pre><code>- url: /.*
+</code></pre>
+
+<!-- more -->
+
+
+<p>After corrected the indent problem, the server started successfully. I need to mention that I ssh remote login my Ubuntu server to do the development. So after the <code>HelloWorld</code> app server started, I tested on my laptop with <code>http://1.2.3.4:8080</code> (assume my Ubuntu server IP is <code>1.2.3.4</code>). Chrome reported page can&rsquo;t found. That&rsquo;s strange, there is no error message from GAE, but there must be something wrong.</p>
+
+<p>So I use <code>goapp help serve</code>, then I found there is a <code>--host=</code> option, then I tried to set the host to ip <code>1.2.3.4</code>, bingo, I saw <code>hello world!</code>.</p>
+
+<p>After that I still wondering why I can&rsquo;t access the server using IP if I didn&rsquo;t append the <code>--host=</code> options. Then I found someone asked the same question on <a href="http://stackoverflow.com/questions/7534967/is-there-any-way-to-access-gae-dev-app-server-in-the-local-network">StackOverflow</a> in Year 2011. I confirmed the answer of <code>--host=0.0.0.0</code> works same as <code>--host=1.2.3.4</code>.</p>
+
+<p>Next step I will finish the app I should finish long time ago.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Beginning of Book Reading: The Power of Habits]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/20/beginning-of-book-reading-the-power-of-habits/"/>
+    <updated>2014-01-20T22:56:26+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/20/beginning-of-book-reading-the-power-of-habits</id>
+    <content type="html"><![CDATA[<p>Today I read someone&rsquo;s article about how the book <a href="http://www.amazon.com/gp/product/081298160X/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=081298160X&amp;linkCode=as2&amp;tag=zhuyong.me-20">&ldquo;The Power Of Habit&rdquo;</a> changed his life in the past one year. After read the article, I was thinking that maybe I should read it also. Long time ago, I already bought the kindle edition of <a href="http://www.amazon.com/gp/product/1455892823/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1455892823&amp;linkCode=as2&amp;tag=zhuyong.me-20">&ldquo;The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change&rdquo;</a> from Amazon, but I didn&rsquo;t actually finished it. Both of the two books are very good book about self improvement; both of them have excellent customer reviews from thousands of customers on Amazon.</p>
+
+<p>So after dinner when I carried my son to national library to return his books, I searched the library catalogs. Although the records shown that both the book and the audio CDs are available, I only managed to find the audio CDs at the end. That&rsquo;s good enough.</p>
+
+<p>At the beginning of <code>The Power Of Habit</code> book, the author mentioned that people will change when they focus on one particular change for long time and that change could be the keystone habit; this keystone habit will radially change other habits. This perspective is interesting, and I totally agree on that.</p>
+
+<!-- more -->
+
+
+<p>By the time I decided to start my new blog in pure English on Github Pages, I haven&rsquo;t read this book yet, but I think my initiative goal was to make achievement through the process of writing blog. By written purely in English, I can improve my English; by written some technique stuff, I would and can learn some new tech or programming skills; by written blog, attract some audiences, build my reputation. :)</p>
+
+<p>So far, almost one month passed since I seriously start blogging using Octpress on Github page, I did gain something. First, very obversious, my skills with git and Markdown improved a lot; second, I knew more about Chromebook. I didn&rsquo;t tried Chromebook before, even as virtual machine. But after use Chromebook for few days, I feel I love it.</p>
+
+<p>I know it&rsquo;s tough to keep updating blog, I was afraid I will quit somedays later. That&rsquo;s why I named my blog <code>Be Persistent, Be Patient</code> to encourage myself. So here today, this article mark as the beginning my book reading on <code>The Power Of Habits</code> and <code>The 7 Habits</code> is my next book to read. This is my short term goal for life change, and this time, I will finish them.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sold My Old P4 Computer for S$2]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/19/sold-my-old-p4-computer-for-s/"/>
+    <updated>2014-01-19T15:53:50+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/19/sold-my-old-p4-computer-for-s</id>
+    <content type="html"><![CDATA[<p>I just sold my very old desktop computer bought in 2003 to <a href="http://en.wikipedia.org/wiki/Karung_guni">Karung Guni</a> for S$2. It&rsquo;s a Pentium 4 computer I assembled by myself when I studied my 3rd year in university after my even old desktop bought in 1999 stopped working.</p>
+
+<p>This 11 years old computer is till functional, unbelievable hah! I can&rsquo;t remember in which year I retired this computer, maybe 2007 or 2008. Since then, it was my father-in-law&rsquo;s computer during the time he occasionally visit Singapore. He uses it primarily for online novel reading. This old computer is still sufficient for his tasks.</p>
+
+<p>The old computer still works, but too noisy, and occupy large space. So one month ago, I bought him a 2nd hand T410 laptop.</p>
+
+<p>After I erased the whole hard disk, I was waiting for Karung Guni to come to my door at weekend. And finally, this afternoon, one uncle came, and his best offer was S$2. I just want to get rid of it, so I took the offer.</p>
+]]></content>
+  </entry>
+  
+</feed>

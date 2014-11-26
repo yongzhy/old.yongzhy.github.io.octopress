@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Gadget | Zhu Yong]]></title>
+  <link href="http://zhuyong.me/blog/categories/gadget/atom.xml" rel="self"/>
+  <link href="http://zhuyong.me/"/>
+  <updated>2014-11-26T22:01:53+08:00</updated>
+  <id>http://zhuyong.me/</id>
+  <author>
+    <name><![CDATA[Zhu Yong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[HHKB Pro 2 Type-S After One Week]]></title>
+    <link href="http://zhuyong.me/blog/2014/11/26/hhkb-pro-2-type-s-after-one-week/"/>
+    <updated>2014-11-26T14:33:34+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/11/26/hhkb-pro-2-type-s-after-one-week</id>
+    <content type="html"><![CDATA[<p>My HHKB Pro 2 Type-S was delivered to my house on 19 Nov, so till today, I have officially owned it one week. So I think it&rsquo;s time to write down my feeling about this well designed keyboard.</p>
+
+<p>Before I purchase HHKB, I have being using old IBM Model M SSK for two years, the feel for IBM Model M is superb, it&rsquo;s just too noisy. I should say sorry to colleagues whose seats near me. My work platform is Windows, and I use  Total Commander as my primary file manager. So my short review for HHKB would based on my daily usage scenario, with comparison to Model M.</p>
+
+<h3>Pros:</h3>
+
+<ul>
+<li>Size, the super compact size, I love it</li>
+<li>Key layout, for people use Emacs and VIM as their editor. Now on every computer I own, I will map <code>Caps Lock</code> to <code>Ctrl</code>, I just feel it&rsquo;s so convenient compare to <code>Ctrl</code> at left bottom corner.</li>
+<li>Quite, compare to my old IBM Model M, it&rsquo;s so quite.</li>
+<li>USB Hub, I put my Logitech Performance MX receiver on one of the two USB port.</li>
+<li>Configurable, and have <code>Windows</code> key, of course, this is advantage compare to old Model M.</li>
+</ul>
+
+
+<h3>Cons:</h3>
+
+<ul>
+<li>USB cable location. If the USB was at left or right side of HHKB, it could be much better.</li>
+<li>No dedicated function key, and arrow key, not convenient for Windows user with Total Commander like me.</li>
+<li>Key press feeling not good as IBM Model M, no &lsquo;Click&rsquo; feeling</li>
+<li>Key layout, unless you have HHKB connected to all your desktop / laptop, you will keep press <code>\</code> on computer without HHKB.</li>
+</ul>
+
+
+<p>Here is a picture of my two beloved keyboards.</p>
+
+<p><img src="/images/blogimg/2014-11-26-HHKB/HHKB-001.jpg" title="&ldquo;HHKB and IBM Model M SSK&rdquo;" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Finally, I Bought a HHKB Professional 2 Type-S]]></title>
+    <link href="http://zhuyong.me/blog/2014/11/25/finally-hhkb-professional-type-s/"/>
+    <updated>2014-11-25T08:49:10+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/11/25/finally-hhkb-professional-type-s</id>
+    <content type="html"><![CDATA[<p>Same as many programmers using Emaces or VIM, I want to own a HHKB professional for real long time, and for the same reason not many people buy it: the price. This keyboard is really expensive when compare to other mechanical keyboard. But deep in my heart, I always want to own one. So this month when I want to replace my IBM model M SSK from workplace, I decided to buy a HHKB Professional 2 Type-s. Japanese Yen has being drop for a long period, so I think it&rsquo;s a good time to buy products from Japan.</p>
+
+<p>I decided to buy from Japan <a href="http://www.amazon.co.jp/gp/product/B008GXT6SK?ref_=pe_492632_169829912_TE_M3T1_dp_1">Amazon</a>, then use <a href="http://www.jshoppers.com/forward/">JShoppers</a> to forward the package to Singapore. The process is straight forward. The reason I choose JShoppers is because of its cheaper price. The whole process is same as all other forwarding service company:</p>
+
+<ol>
+<li>Register at JShopers, you will get a unique shipping address.</li>
+<li>Shopping on Amazon, shipping address use the address provided by JShoppers.</li>
+<li>Wait for package to be delivered to JShoppers and they will send you an email to ask you to pay the forwarding fee.</li>
+<li>Pay forwarding fee.</li>
+<li>Wait for your package to be delivered to your door.</li>
+</ol>
+
+
+<p>My experience with JShopper this time was not very good, mainly because of the verification process. Only after my HHKB was shipped by Amazon then I realized JShoppers requires ID verification. But they didn&rsquo;t mention this in the registration page and the email after registration. Somehow, my account password was sent in plain text in the email. Which makes me think they store customers' password in plain text in database. This is a really bad practice, and I did express my concern about their online system security and possible leakage of my private information (including the uploaded verification document). Customer support told me I can upload verification documents with some parts covered, only name, date of birth and address must be shown, but the ID verification department rejected my uploaded document. So I forwarded the email from customer support to the ID verification department, then they passed my ID verification. Funny! There is one more detail make me more concern about my private information. The first email from the ID verification department was written in Simplified Chinese to inform me about failed verification, this make me think JShoppers outsourced the ID verification to China company. Anyway, I wrote so much, just to say JShoppers is not doing good to make customers feel safe about their private information.</p>
+
+<p>The waiting time for this forward service is long, because they are seeing large amount of package recently. My packaged delivered to JShoppers on 10 Nov, only been processed on 15 Nov, and notify me to pay forwarding fee on 17 Nov, after that, the speed was fast: shipment was on 18 Nov and delivered to me on 19 Nov.</p>
+
+<p>Ok, let&rsquo;s forget about JShoppers, here comes the exciting part, the HHKB. Amazon use a big box for the relatively small keyboard.
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-001.jpg" title="&ldquo;HHKB In Amazon&rsquo;s Huge Box&rdquo;" ></p>
+
+<p>HHKB box
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-002.jpg" title="&ldquo;HHKB In Box&rdquo;" ></p>
+
+<p>HHKB box opened
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-003.jpg" title="&ldquo;HHKB In Box&rdquo;" ></p>
+
+<p>HHKB connected to my chromebook.
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-004.jpg" title="&ldquo;HHKB Connected To Chromebook&rdquo;" ></p>
+
+<p>I will write another blog later about how I feel it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Google Released Chromecast SDK : Countless Apps Coming]]></title>
+    <link href="http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk/"/>
+    <updated>2014-02-04T09:39:48+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk</id>
+    <content type="html"><![CDATA[<p>After <a href="http://10.36.134.34:4000/blog/2014/01/25/i-received-my-chromecast/">received my Chromecast</a> for 10 days, I received good news from Google. Google finally <a href="http://chrome.blogspot.sg/2014/02/chromecast-is-now-open-to-developers.html">opened chromecast SDK to all developers</a>. This is what Chromecast users and developers waiting for long time. Developers now must be busy coding to integrate the SDK into their apps, so countless Chromecast-compatible apps would show-up any day now.</p>
+
+<p>Media player apps will be the first batch to support Chromecast, especially for local media streaming. I think this is the most desired feature for most of Chromecast users including me. I use MX Player a lot, I can&rsquo;t wait to see it with Chromecast support.</p>
+
+<p>I don&rsquo;t play games on phone, but I think there will be plenty of games with Chromecast support. People likes to play games on large screen, supporting for Chromecast would be a must have feature for any android games from now on.</p>
+
+<p>For developers, check the two links below to start your development.</p>
+
+<ul>
+<li><a href="https://developers.google.com/cast/docs/downloads">Chromecast SDK Download</a></li>
+<li><a href="https://developers.google.com/cast/docs/developers">Chromecast Developer Guide</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Half Day With Allure Eyewear "Call of Duty : Ghost"]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/28/half-day-with-allure-eyewear-call-of-duty-ghost/"/>
+    <updated>2014-01-28T17:42:29+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/28/half-day-with-allure-eyewear-call-of-duty-ghost</id>
+    <content type="html"><![CDATA[<p>Just before lunch time, security guard at reception desk called me to collect my parcel. I knew my 3 pieces of <code>Call Of Duty : Ghost</code> have arrived. I placed order on 23 Jan and it only takes 5 days for international shipping, the speed is fast enough for a US$20 delivery.</p>
+
+<p>My excutement and happiness didn&rsquo;t last long until I opened the box and only see two pieces of eyeware inside. I immediately opened my order online and checked carefully, yes, the invoice stated clearly that I ordered 3 pieces of eyewear, but I only got 2 of them shipped. And there is only 1 shipment number, so I guess there won&rsquo;t be a second package on the way. Next I immediately sent an email through the online contact form, but I think it will take some hours before I got response due to the different timezone. Let&rsquo;s wait and see how <code>Allure</code> reply.</p>
+
+<p>After lunch time, I clipped the eyewear onto my glass and used it for the whole afternoon. So here is how I feel about this eyewear with one afternoon experience:</p>
+
+<!-- more -->
+
+
+<ul>
+<li>I felt a little giddy at first, guess is due to the 0.2 diopter. But my eyes soon get used to it.</li>
+<li>It&rsquo;s a little bit heavy for this clip-on eyewear + my glass</li>
+<li>When the time I left company, my eyes didn&rsquo;t have strong dry feeling as usual. I can confirm this is not due to phychological factor. I can really feel it. Tomorrow I will use it for whole day, I think the feel will be clearer.</li>
+<li>It&rsquo;s troublesome to take off the eyewear when I left my cubicle to pantry or toilet, then put on again.</li>
+</ul>
+
+
+<p>Basically, this product worth the US$25 price, I would suggest this for anyone who work on computer for long hours. Of course, if you already wear glass and have the budget, I strongly suggest go to the <code>gunnar</code> customization option.</p>
+
+<p><code>Update 2014-02-04</code> : I contacted <code>Allure</code> on 28 Jan, and they processed another shipment for the 3rd eyewear at U.S locat time <code>01/29/2014  5:19 P.M</code>. I must say their action and response was really fast. For this reason, I would recommend <code>Allure</code> to anyone that interested to buy eyeware to protect their eyes.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I Received My Chromecast]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/25/i-received-my-chromecast/"/>
+    <updated>2014-01-25T10:13:48+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/25/i-received-my-chromecast</id>
+    <content type="html"><![CDATA[<p><a href="http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_il?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DR0PDNE&amp;linkCode=as2&amp;tag=zhuyong.me-20"><img class="left" src="/images/blogimg/2014-01-25-Chromecast.jpg" title="&ldquo;Chromecast On Amazon&rdquo;" ></a></p>
+
+<p>I ordered Chromecast from <a href="http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DR0PDNE&amp;linkCode=as2&amp;tag=zhuyong.me-20" title="">Amazon</a> one week back when it has promotional price of US$29.99 only.</p>
+
+<p>I want to buy Chromecast even before I got my C720 Chromebook, but Chromecast is not selling in Singapore and it is not eligible for the free international shipping to Singapore for over US$125 spending, I don&rsquo;t want to spend over US$20 shipping fee to buy a product only cost US$29.99, so I wait.</p>
+
+<p>One week earlier, I saw my colleage shopping on Amazon, and he always use Comegateway service to ship product from US to Singapore. So I ask if he can buy the Chromecast and ship together with his purchases. He happily agreed.</p>
+
+<p>Yesterday afternoon, DHL delivered to our office, I pay my colleague total S$46 (S$40 for the Chromecast and S$6 for the shared shipping fee), that&rsquo;s very cheap.</p>
+
+<!-- more -->
+
+
+<p>After went back home, I plugged Chromecast in to the HDMI slot on my TV, connected the USB power, then run <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app">Chromecast</a> app from my Android phone, the setup process was very easy, then wait for Chromecast to finish firmware updating. After that, everything was ready, so I run Youtube app from my phone and cast the famous <code>"London Bridge is Falling Down"</code> animation for my son. The video streaming was very smooth, no legging, not buffering, overall experience was nice.</p>
+
+<p>But, there are only limited android apps that have Chromecast support, and most of the supported apps can&rsquo;t be used in Singapore. The function I want most is to cast the photos and video on my phone to TV. I took a lot of pictures and video for my two boys, I want to let them see themselves on photo and video, and the phone screen is way too small.</p>
+
+<p>Google, please release the full power of Chromecast!!!</p>
+]]></content>
+  </entry>
+  
+</feed>

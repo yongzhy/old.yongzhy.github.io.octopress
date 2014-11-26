@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Chromecast | Zhu Yong]]></title>
+  <link href="http://zhuyong.me/blog/categories/chromecast/atom.xml" rel="self"/>
+  <link href="http://zhuyong.me/"/>
+  <updated>2014-11-26T22:01:53+08:00</updated>
+  <id>http://zhuyong.me/</id>
+  <author>
+    <name><![CDATA[Zhu Yong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Google Released Chromecast SDK : Countless Apps Coming]]></title>
+    <link href="http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk/"/>
+    <updated>2014-02-04T09:39:48+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk</id>
+    <content type="html"><![CDATA[<p>After <a href="http://10.36.134.34:4000/blog/2014/01/25/i-received-my-chromecast/">received my Chromecast</a> for 10 days, I received good news from Google. Google finally <a href="http://chrome.blogspot.sg/2014/02/chromecast-is-now-open-to-developers.html">opened chromecast SDK to all developers</a>. This is what Chromecast users and developers waiting for long time. Developers now must be busy coding to integrate the SDK into their apps, so countless Chromecast-compatible apps would show-up any day now.</p>
+
+<p>Media player apps will be the first batch to support Chromecast, especially for local media streaming. I think this is the most desired feature for most of Chromecast users including me. I use MX Player a lot, I can&rsquo;t wait to see it with Chromecast support.</p>
+
+<p>I don&rsquo;t play games on phone, but I think there will be plenty of games with Chromecast support. People likes to play games on large screen, supporting for Chromecast would be a must have feature for any android games from now on.</p>
+
+<p>For developers, check the two links below to start your development.</p>
+
+<ul>
+<li><a href="https://developers.google.com/cast/docs/downloads">Chromecast SDK Download</a></li>
+<li><a href="https://developers.google.com/cast/docs/developers">Chromecast Developer Guide</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I Received My Chromecast]]></title>
+    <link href="http://zhuyong.me/blog/2014/01/25/i-received-my-chromecast/"/>
+    <updated>2014-01-25T10:13:48+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/01/25/i-received-my-chromecast</id>
+    <content type="html"><![CDATA[<p><a href="http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_il?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DR0PDNE&amp;linkCode=as2&amp;tag=zhuyong.me-20"><img class="left" src="/images/blogimg/2014-01-25-Chromecast.jpg" title="&ldquo;Chromecast On Amazon&rdquo;" ></a></p>
+
+<p>I ordered Chromecast from <a href="http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DR0PDNE&amp;linkCode=as2&amp;tag=zhuyong.me-20" title="">Amazon</a> one week back when it has promotional price of US$29.99 only.</p>
+
+<p>I want to buy Chromecast even before I got my C720 Chromebook, but Chromecast is not selling in Singapore and it is not eligible for the free international shipping to Singapore for over US$125 spending, I don&rsquo;t want to spend over US$20 shipping fee to buy a product only cost US$29.99, so I wait.</p>
+
+<p>One week earlier, I saw my colleage shopping on Amazon, and he always use Comegateway service to ship product from US to Singapore. So I ask if he can buy the Chromecast and ship together with his purchases. He happily agreed.</p>
+
+<p>Yesterday afternoon, DHL delivered to our office, I pay my colleague total S$46 (S$40 for the Chromecast and S$6 for the shared shipping fee), that&rsquo;s very cheap.</p>
+
+<!-- more -->
+
+
+<p>After went back home, I plugged Chromecast in to the HDMI slot on my TV, connected the USB power, then run <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app">Chromecast</a> app from my Android phone, the setup process was very easy, then wait for Chromecast to finish firmware updating. After that, everything was ready, so I run Youtube app from my phone and cast the famous <code>"London Bridge is Falling Down"</code> animation for my son. The video streaming was very smooth, no legging, not buffering, overall experience was nice.</p>
+
+<p>But, there are only limited android apps that have Chromecast support, and most of the supported apps can&rsquo;t be used in Singapore. The function I want most is to cast the photos and video on my phone to TV. I took a lot of pictures and video for my two boys, I want to let them see themselves on photo and video, and the phone screen is way too small.</p>
+
+<p>Google, please release the full power of Chromecast!!!</p>
+]]></content>
+  </entry>
+  
+</feed>

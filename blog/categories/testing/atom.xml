@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Testing | Zhu Yong]]></title>
+  <link href="http://zhuyong.me/blog/categories/testing/atom.xml" rel="self"/>
+  <link href="http://zhuyong.me/"/>
+  <updated>2014-11-26T22:01:53+08:00</updated>
+  <id>http://zhuyong.me/</id>
+  <author>
+    <name><![CDATA[Zhu Yong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[C Code Unit Testing Using Cmocka]]></title>
+    <link href="http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka/"/>
+    <updated>2014-03-19T16:22:53+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka</id>
+    <content type="html"><![CDATA[<p><a href="http://cmocka.org/">cmocka</a> is a unit testing framework for C, it is developed based on Google&rsquo;s project <a href="https://code.google.com/p/cmockery/">cmockery</a>. It was easy to use, and the author corrected some bugs from <code>cmockery</code>.</p>
+
+<h3>Install cmocka</h3>
+
+<p>First download source code for latest version of <code>cmocka</code> from <a href="https://open.cryptomilk.org/projects/cmocka/files">https://open.cryptomilk.org/projects/cmocka/files</a>. Current latest version is 0.3.2, and the source file is <code>cmocka-0.3.2.tar.xz</code>. <code>cmake</code> is required to build <code>cmocka</code>.</p>
+
+<pre><code>$ cd ~/Downloads
+$ xz -d cmocka-0.3.2.tar.xz
+$ tar vxf cmocka-0.3.2.tar
+$ cd cmocka-0.3.2
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
+$ make
+$ sudo make install
+</code></pre>
+
+<h3>Use cmocka</h3>
+
+<p>Create source file with test cases. Simple example would be like:</p>
+
+<pre><code>#include &lt;stdarg.h&gt;
+#include &lt;stddef.h&gt;
+#include &lt;setjmp.h&gt;
+#include &lt;cmocka.h&gt;
+static void test(void **state)
+{
+    assert_int_equal(3, 3);
+    assert_int_not_equal(3, 3);
+}
+int main(void) 
+{
+    const UnitTest tests[] = 
+    {
+        unit_test(test),
+    };
+    return run_tests(tests);
+}
+</code></pre>
+
+<p>save file as `cmockatest.c</p>
+
+<pre><code>$ gcc cmockatest.c -lcmocka -o cmockatest
+$ ./cmockatest
+
+[==========] Running 1 test(s).
+[ RUN      ] test
+3 == 3
+cmocka.c:8: error: Failure!
+[  FAILED  ] test
+[==========] 1 test(s) run.
+[  PASSED  ] 0 test(s).
+[  FAILED  ] 1 test(s), listed below:
+[  FAILED  ] test
+</code></pre>
+
+<h3>Reference</h3>
+
+<ul>
+<li><a href="https://blog.cryptomilk.org/2013/01/14/cmocka-a-unit-testing-framework-for-c/">cmocka author&rsquo;s blog post</a></li>
+<li><a href="https://lwn.net/Articles/558106/">Unit testing with mock objects in C</a></li>
+<li><a href="http://www.cmocka.org/api/">cmocka API Documents</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
