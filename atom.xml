@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://zhuyong.me/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-11-26T22:01:53+08:00</updated>
+  <updated>2014-11-27T23:21:01+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Crazy Shopping Month]]></title>
+    <link href="http://zhuyong.me/blog/2014/11/27/crazy-shopping-month/"/>
+    <updated>2014-11-27T22:41:50+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/11/27/crazy-shopping-month</id>
+    <content type="html"><![CDATA[<p>This afternoon, I ordered another gadget from Amazon:
+<a href="http://www.amazon.com/gp/product/B00KHRYRLY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00KHRYRLY&linkCode=as2&tag=zhuyong.me-20&linkId=5VFWEDLJIRJOG7TM">SanDisk Extreme PRO 480GB SATA 6.0GB/s 2.5-Inch 7mm Height Solid State Drive (SSD) With 10-Year Warranty- SDSSDXPS-480G-G25</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=zhuyong.me-20&l=as2&o=1&a=B00KHRYRLY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<p><a href="http://www.amazon.com/gp/product/B00KHRYRLY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00KHRYRLY&linkCode=as2&tag=zhuyong.me-20&linkId=5VFWEDLJIRJOG7TM"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00KHRYRLY&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=zhuyong.me-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=zhuyong.me-20&l=as2&o=1&a=B00KHRYRLY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<p>When I start sourcing good SSD deal on Amazon, I was initially looking at Intel 730 480GB, few days back, it was on discount price of US$199.99. Intel SSD has 5 Years international warranty, then I found this SandDisk SSD was selling with 10 Years warranty, someone online said the warranty was international, but I can&rsquo;t find clear statement. So I contacted Amazon customer service, after confirmed the warranty is international, I asked the customer service can Amazon match the price with other online store. At the time I contact customer service, this 480GB SSD was listed around US$250, the other online store has discount of US$204. The customer service told me Amazon won&rsquo;t honor any price match. So I think I&rsquo;d better wait till Friday to see if got big discount. Then to my surprise, 3 minutes later, when I refresh the page, Amazon changed the price to US$204. So I immediately placed the order, and 2 of my colleagues also placed order on this same item.</p>
+
+<p>This month for me is really a crazy shopping month. I have spend a lot on several different online stores:</p>
+
+<ul>
+<li>Ordered over S$2000 products from TaoBao, most of the items are for my new BTO HDB house renovation. Some package has not been shipped. I think all those items can only be delivered to my new house around end of Dec.</li>
+<li>Ordered HHKB from Amazon Japan</li>
+<li>Ordered LG G Pro 2 at Singapore</li>
+<li>Ordered new house kitchen sink tap from Amazon. My purchase was US$206, when 25 Nov I received the product, I found Amazon has dropped the price to US$158, so I contacted customer service to refund the price difference. They granted the refund on the spot.</li>
+<li>Ordered this SanDisk 480GB SSD</li>
+<li>Ordered XiaoMi Power Bank, still on the way</li>
+<li>Ordered backup battery for my old LG HD 4x from Aliexpress. Still on the way</li>
+</ul>
+
+
+<p>Ordered so many items, spending so much in one month just for online shopping. I never done this before, so worth mark it here. :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[HHKB Pro 2 Type-S After One Week]]></title>
@@ -866,21 +895,6 @@ $ sudo gem install gsl
 <p>So far, almost one month passed since I seriously start blogging using Octpress on Github page, I did gain something. First, very obversious, my skills with git and Markdown improved a lot; second, I knew more about Chromebook. I didn&rsquo;t tried Chromebook before, even as virtual machine. But after use Chromebook for few days, I feel I love it.</p>
 
 <p>I know it&rsquo;s tough to keep updating blog, I was afraid I will quit somedays later. That&rsquo;s why I named my blog <code>Be Persistent, Be Patient</code> to encourage myself. So here today, this article mark as the beginning my book reading on <code>The Power Of Habits</code> and <code>The 7 Habits</code> is my next book to read. This is my short term goal for life change, and this time, I will finish them.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Sold My Old P4 Computer for S$2]]></title>
-    <link href="http://zhuyong.me/blog/2014/01/19/sold-my-old-p4-computer-for-s/"/>
-    <updated>2014-01-19T15:53:50+08:00</updated>
-    <id>http://zhuyong.me/blog/2014/01/19/sold-my-old-p4-computer-for-s</id>
-    <content type="html"><![CDATA[<p>I just sold my very old desktop computer bought in 2003 to <a href="http://en.wikipedia.org/wiki/Karung_guni">Karung Guni</a> for S$2. It&rsquo;s a Pentium 4 computer I assembled by myself when I studied my 3rd year in university after my even old desktop bought in 1999 stopped working.</p>
-
-<p>This 11 years old computer is till functional, unbelievable hah! I can&rsquo;t remember in which year I retired this computer, maybe 2007 or 2008. Since then, it was my father-in-law&rsquo;s computer during the time he occasionally visit Singapore. He uses it primarily for online novel reading. This old computer is still sufficient for his tasks.</p>
-
-<p>The old computer still works, but too noisy, and occupy large space. So one month ago, I bought him a 2nd hand T410 laptop.</p>
-
-<p>After I erased the whole hard disk, I was waiting for Karung Guni to come to my door at weekend. And finally, this afternoon, one uncle came, and his best offer was S$2. I just want to get rid of it, so I took the offer.</p>
 ]]></content>
   </entry>
   
