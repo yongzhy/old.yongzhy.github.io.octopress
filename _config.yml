@@ -4,7 +4,7 @@
 
 url: http://zhuyong.me
 title: Zhu Yong
-subtitle: Be Persistent, Be Patient
+subtitle: $ echo "Be Persistent, Be Patient" >> ~/.life
 author: Zhu Yong
 simple_search: http://google.com/search
 description: Personal blog from an embedded system programmer
@@ -102,4 +102,4 @@ facebook_like: true
 
 # Stackoverflow
 stackoverflow_user_name: yongzhy
-stackoverflow_user_id: 1002691
+_stackoverflow_user_is: 1002691
