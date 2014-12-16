@@ -4,7 +4,7 @@
   <title><![CDATA[Category: C | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/c/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-12-08T21:54:51+08:00</updated>
+  <updated>2014-12-16T21:44:39+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ARM RVCT Tips: Armcc &amp;&amp; Fromelf]]></title>
+    <link href="http://zhuyong.me/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/"/>
+    <updated>2014-12-12T15:54:19+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf</id>
+    <content type="html"><![CDATA[<p>For embedded system C projects that share same code base, one common practice is to use various feature flags to encapsulate related code. This results difficulty in code reading, especially when you have huge amounts of feature flags, especially when flags' value depend on value of other flags. This is what I am dealing with in current project. And I found <code>armcc</code> and <code>fromelf</code> have some useful feature to help developer in such situation.</p>
+
+<p>First, <code>armcc</code>, the compiler from ARM RVCT. Command line options are <code>--debug --debug_macros -E</code>, this will generate raw C file with all preprocessors been parsed, you can see how is a macro been defined.</p>
+
+<ul>
+<li><code>--debug</code> is to enable generate debug information</li>
+<li><code>--debug_macros</code> is generate debug entry for macros. You can see the expanded macro in the generated C source code. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHHDEAA.html">doc here</a></li>
+<li><code>-E</code> is to tell compiler not compile the C file, just excute the preprocess step. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHIDBBG.html">doc here</a></li>
+</ul>
+
+
+<p>Second, <code>fromelf</code>, imaging you have a complicated data structure defined, of which, some elements depends on some feature flags, to find out the difference between two different configurations, instead of load into debugger and compare, you can just use <code>fromelf</code> to dump the structure and use a diff tool to compare.</p>
+
+<p>The command line is <code>fromelf --fieldoffsets --select=the_structure.* --output=the_structure.txt final.axf</code></p>
+
+<ul>
+<li><code>--fieldoffsets</code> produce offset for each structure elements. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0477i/BABJBGBH.html">doc here</a></li>
+<li><code>--select=the_structure.*</code> to select the data structure to output</li>
+<li><code>--output</code> to specify output file contain the listing</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[C Code Unit Testing Using Cmocka]]></title>

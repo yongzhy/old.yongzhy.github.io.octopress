@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://zhuyong.me/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-12-08T21:54:51+08:00</updated>
+  <updated>2014-12-16T21:44:39+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ARM RVCT Tips: Armcc &amp;&amp; Fromelf]]></title>
+    <link href="http://zhuyong.me/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/"/>
+    <updated>2014-12-12T15:54:19+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf</id>
+    <content type="html"><![CDATA[<p>For embedded system C projects that share same code base, one common practice is to use various feature flags to encapsulate related code. This results difficulty in code reading, especially when you have huge amounts of feature flags, especially when flags&#8217; value depend on value of other flags. This is what I am dealing with in current project. And I found <code>armcc</code> and <code>fromelf</code> have some useful feature to help developer in such situation.</p>
+
+<p>First, <code>armcc</code>, the compiler from ARM RVCT. Command line options are <code>--debug --debug_macros -E</code>, this will generate raw C file with all preprocessors been parsed, you can see how is a macro been defined.</p>
+
+<ul>
+<li><code>--debug</code> is to enable generate debug information</li>
+<li><code>--debug_macros</code> is generate debug entry for macros. You can see the expanded macro in the generated C source code. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHHDEAA.html">doc here</a></li>
+<li><code>-E</code> is to tell compiler not compile the C file, just excute the preprocess step. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHIDBBG.html">doc here</a></li>
+</ul>
+
+
+<p>Second, <code>fromelf</code>, imaging you have a complicated data structure defined, of which, some elements depends on some feature flags, to find out the difference between two different configurations, instead of load into debugger and compare, you can just use <code>fromelf</code> to dump the structure and use a diff tool to compare.</p>
+
+<p>The command line is <code>fromelf --fieldoffsets --select=the_structure.* --output=the_structure.txt final.axf</code></p>
+
+<ul>
+<li><code>--fieldoffsets</code> produce offset for each structure elements. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0477i/BABJBGBH.html">doc here</a></li>
+<li><code>--select=the_structure.*</code> to select the data structure to output</li>
+<li><code>--output</code> to specify output file contain the listing</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[DIY Cut My Sim Card to Micro-Sim]]></title>
@@ -814,66 +843,6 @@ $ sudo gem install gsl
 <p>This afternoon, I visited amazon again and found they got stock and the price is only US$33.99, that&rsquo;s much cheaper compare to US$60. Although we need to pay over S$50 shipping fee for 3 pieces of the eyewear, my colleagues and I decided to place the order. Only by then, I noticed this eyewear is from <code>Allure Eyewear</code> instead of <code>gunnar</code>, no wonder I can&rsquo;t find this type from <code>gunnar</code> official website. So I googled again for reviews on <code>Allure Eyewear</code>, again, the reviews are good. And one comments over a review article mentioned the official website of <code>Allure Eyewear</code> sell <code>Call Of Duty Ghosts</code> cheaper than this older <code>Call of Duty Black Ops II</code>. That&rsquo;s good information before I place order.</p>
 
 <p>So I visited <code>Allure Eyewear</code> website, and indeed, the new type is cheaper, only sell at US$24.99. And there international shipping is only US$20, much cheaper than Amazon. Without further waiting, I placed order. It will take 5-7 business days for the shipping. I will write one review after I receive it.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Turn C720 Into Development Machine: Step by Step Guide]]></title>
-    <link href="http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/"/>
-    <updated>2014-01-22T22:52:54+08:00</updated>
-    <id>http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide</id>
-    <content type="html"><![CDATA[<p>From Google Analytic report of my blog,  I saw there are two visitors, one from Germany and the other from US. Both of them viewed my blog post about <a href="http://zhuyong.me/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/">setup C720 development environment</a>.  But in that post, I didn&rsquo;t record down step by step how to setup the development environment. Since people are interested in this topic, I think I should write a formal and detail post about this. So, here come this step by step guide of turn your C720 as development machine by install Ubuntu using <a href="https://github.com/dnschneid/crouton">crouton</a>.</p>
-
-<p>The reason I choose <code>crouton</code> over <code>chrubuntu</code> is because of the super convenient way to switch between ChromeOS and Ubuntu with <code>Ctrl + Alt + Shift + Back</code> keys. There is no need to reboot machine to switch between the OSs.</p>
-
-<h4>Step 1: Enable Developer Mode</h4>
-
-<p>Enable the developer mode will wipe all your data, so backup any important data before enable developer mode.</p>
-
-<p>To enable developer mode:</p>
-
-<ul>
-<li>Press <code>Esc + Refresh (F3)</code> keys then press <code>Power</code> button</li>
-<li>Press <code>Ctrl + D</code>, ignore the warning/error message on screen.</li>
-<li>Press <code>Ctrl + D</code> again, you entered the developer mode.</li>
-</ul>
-
-
-<p>After enable developer mode, evertime you cold start your computer, you need to press <code>Ctr + D</code> or just wait for 30 second.</p>
-
-<!-- more -->
-
-
-<h4>Step 2: Install Ubuntu 13.10 Using crouton</h4>
-
-<p><code>crouton</code> is a powerful script that will do all the download and installation job for you. Download latest version of <code>crouton</code> from <a href="http://goo.gl/fd3zc">http://goo.gl/fd3zc</a>. For details of crouton usage, refer to it&rsquo;s <a href="https://github.com/dnschneid/crouton">github repo</a>.</p>
-
-<p>I use <code>crouton</code> to install Ubuntu 13.10, and I choose <code>xfce4</code> as the windows manager. Below are the steps I prerformed:</p>
-
-<ul>
-<li>Download <code>crouton</code></li>
-<li>Open shell by <code>Ctrl + Alt + T</code>, then type <code>shell</code></li>
-<li>Run <code>sudo sh -e ~/Downloads/crouton -r saucy -t xfce</code>. This will start the downloading and installation process for Ubuntu 13.10</li>
-<li>Wait untill the installation done.</li>
-<li>Run <code>sudo startxfce4</code> to start the <code>Xfce</code></li>
-<li>Anytime you want to switch between ChromeOs and Ubuntu, just use <code>Ctrl + Alt + Shift + Back</code> or <code>Ctrl + Alt + Shift + Forward</code></li>
-<li>log out <code>xfce</code> will end the <code>xfce</code> session</li>
-</ul>
-
-
-<h4>Step 3: Install Development Tools</h4>
-
-<p>There is no much to talk about this step, it&rsquo;s the same as install development tools in Ubuntu. Just run <code>sudo apt-get update</code>, <code>sudo apt-get install</code> to install whatever tools you needed.</p>
-
-<p>For me, I installed <code>git</code>, <code>vim</code>, <code>build_essential</code>, <code>cmake</code>, <code>golang1.2</code>, <code>llvm3.4</code>, <code>the_silver_searcher</code> as well as <code>ruby</code> and necessory packages for <code>Octopress</code>.</p>
-
-<p>If you followed all the steps above, your C720 will become a nice Linux development machine. I haven&rsquo;t tried to run any IDE like <code>eclipse</code> or <code>android studio</code>, I think my 2GB RAM may not sufficient for RAM hunger tools like that. If you have the 4GB version of C720, I think there is no problem to run those IDEs.</p>
-
-<h4>Step 4: Key Map Modification (Optional)</h4>
-
-<p>If you are like me, always use <code>CapLock</code> as <code>Ctrl</code>, you can follow the instruction in my another <a href="http://zhuyong.me/blog/2014/01/15/map-search-key-to-control-key-on-acer-c720-chromebook/">post</a> to map the search key to ctrl.</p>
-
-<p><strong>Next</strong>, I will write another post to talk about development on C720 using cloud based development environment. If you are interested, please stay tuned.</p>
 ]]></content>
   </entry>
   

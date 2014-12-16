@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>DARPA Published Over 60 Projects Source Code in One Place - Zhu Yong</title>
+  <title>ARM RVCT Tips: Armcc &amp;&amp; Fromelf - Zhu Yong</title>
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="The Defense Advanced Research Projects Agency, or DARPA, sponsors a lot of technology through grants to universities and private lab, has published &hellip;">
+  <meta name="description" content="For embedded system C projects that share same code base, one common practice is to use various feature flags to encapsulate related code. This &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://zhuyong.me/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place">
+  <link rel="canonical" href="http://zhuyong.me/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Zhu Yong" type="application/atom+xml">
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">DARPA Published Over 60 Projects Source Code in One Place</h1>
+      <h1 class="entry-title">ARM RVCT Tips: Armcc &amp;&amp; Fromelf</h1>
     
     
       <p class="meta">
@@ -96,22 +96,32 @@
   
 
 
-<time datetime="2014-02-12T17:29:59+08:00" pubdate data-updated="true">Feb 12<span>th</span>, 2014</time>
+<time datetime="2014-12-12T15:54:19+08:00" pubdate data-updated="true">Dec 12<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>The Defense Advanced Research Projects Agency, or DARPA, sponsors a lot of technology through grants to universities and private lab, has published <a href="http://www.darpa.mil/OpenCatalog/index.html">DARPA Open Catalog</a> which listed over 60 opensource projects. Chris White, the DARPA program manager behind the effort, said</p>
+<div class="entry-content"><p>For embedded system C projects that share same code base, one common practice is to use various feature flags to encapsulate related code. This results difficulty in code reading, especially when you have huge amounts of feature flags, especially when flags&#8217; value depend on value of other flags. This is what I am dealing with in current project. And I found <code>armcc</code> and <code>fromelf</code> have some useful feature to help developer in such situation.</p>
 
-<blockquote><p>&ldquo;Making our open source catalog available increases the number of experts who can help quickly develop relevant software for the government. Our hope is that the computer science community will test and evaluate elements of our software and afterward adopt them as either standalone offerings or as components of their products.&rdquo;</p></blockquote>
-
-<p>The DARPA Open Catalog contains two tables:</p>
+<p>First, <code>armcc</code>, the compiler from ARM RVCT. Command line options are <code>--debug --debug_macros -E</code>, this will generate raw C file with all preprocessors been parsed, you can see how is a macro been defined.</p>
 
 <ul>
-<li>The Software Table lists performers with one row per piece of software. Each piece of software has a link to an external project page, as well as a link to the code repository for the project. The software categories are listed; in the case of XDATA, they are Analytics, Visualization and Infrastructure. A description of the project is followed by the applicable software license. Finally, each entry has a link to the publications from each team&rsquo;s software entry.</li>
-<li>The Publications Table contains author(s), title, and links to peer-reviewed articles related to specific DARPA programs.</li>
+<li><code>--debug</code> is to enable generate debug information</li>
+<li><code>--debug_macros</code> is generate debug entry for macros. You can see the expanded macro in the generated C source code. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHHDEAA.html">doc here</a></li>
+<li><code>-E</code> is to tell compiler not compile the C file, just excute the preprocess step. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHIDBBG.html">doc here</a></li>
+</ul>
+
+
+<p>Second, <code>fromelf</code>, imaging you have a complicated data structure defined, of which, some elements depends on some feature flags, to find out the difference between two different configurations, instead of load into debugger and compare, you can just use <code>fromelf</code> to dump the structure and use a diff tool to compare.</p>
+
+<p>The command line is <code>fromelf --fieldoffsets --select=the_structure.* --output=the_structure.txt final.axf</code></p>
+
+<ul>
+<li><code>--fieldoffsets</code> produce offset for each structure elements. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0477i/BABJBGBH.html">doc here</a></li>
+<li><code>--select=the_structure.*</code> to select the data structure to output</li>
+<li><code>--output</code> to specify output file contain the listing</li>
 </ul>
 
 </div>
@@ -136,12 +146,12 @@
   
 
 
-<time datetime="2014-02-12T17:29:59+08:00" pubdate data-updated="true">Feb 12<span>th</span>, 2014</time>
+<time datetime="2014-12-12T15:54:19+08:00" pubdate data-updated="true">Dec 12<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/opensource/'>opensource</a>
+    <a class='category' href='/blog/categories/armcc/'>armcc</a>, <a class='category' href='/blog/categories/c/'>c</a>, <a class='category' href='/blog/categories/fromelf/'>fromelf</a>
   
 </span>
 
@@ -151,15 +161,15 @@
 <ul class="posts">
     
     <li class="related">
-    <a href="/blog/2014/01/23/intels-recommended-reading-list/">Intel's Recommended Reading List</a>
-    </li>
-    
-    <li class="related">
-    <a href="/blog/2014/01/25/how-i-use-google-keep-to-manage-todo-list/">How I Use Google Keep To Manage Todo List</a>
-    </li>
-    
-    <li class="related">
     <a href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">Hack YouCompleteMe And libclang For Lamely Structured Project</a>
+    </li>
+    
+    <li class="related">
+    <a href="/blog/2014/01/17/linux-is-always-the-number-1/">Linux Is Always The Number 1?</a>
+    </li>
+    
+    <li class="related">
+    <a href="/blog/2014/02/10/windows-data-backup-using-freefilesync-step-by-step/">Windows Data Backup Using FreeFileSync Step By Step</a>
     </li>
     
 </ul>
@@ -169,7 +179,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://zhuyong.me/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place/" data-via="" data-counturl="http://zhuyong.me/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://zhuyong.me/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/" data-via="" data-counturl="http://zhuyong.me/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -182,10 +192,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/02/10/windows-data-backup-using-freefilesync-step-by-step/" title="Previous Post: Windows Data Backup Using FreeFileSync Step By Step">&laquo; Windows Data Backup Using FreeFileSync Step By Step</a>
+        <a class="basic-alignment left" href="/blog/2014/12/08/diy-cut-my-sim-card-to-micro-sim/" title="Previous Post: DIY Cut My Sim Card To Micro-Sim">&laquo; DIY Cut My Sim Card To Micro-Sim</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/" title="Next Post: Hack YouCompleteMe And libclang For Lamely Structured Project">Hack YouCompleteMe And libclang For Lamely Structured Project &raquo;</a>
       
     </p>
   </footer>
@@ -285,8 +293,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://zhuyong.me/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place/';
-        var disqus_url = 'http://zhuyong.me/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place/';
+        var disqus_identifier = 'http://zhuyong.me/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/';
+        var disqus_url = 'http://zhuyong.me/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/';
         var disqus_script = 'embed.js';
       
     (function () {
