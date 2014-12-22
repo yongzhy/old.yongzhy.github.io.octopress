@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://zhuyong.me/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-12-16T21:44:39+08:00</updated>
+  <updated>2014-12-23T07:36:12+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Upgraded My HP DV6-6144TX to SSD + HDD]]></title>
+    <link href="http://zhuyong.me/blog/2014/12/22/upgraded-my-hp-dv6-6144tx-to-ssd-plus-hdd/"/>
+    <updated>2014-12-22T22:18:37+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/12/22/upgraded-my-hp-dv6-6144tx-to-ssd-plus-hdd</id>
+    <content type="html"><![CDATA[<p>I received my Sandisk Extreme Pro 480GB SSD on 17 Dec, on that night, immediately after my kids slept, I went to study room and replaced the internal Toshiba SATA II HDD to this SSD. Next I partitioned the drive and installed Windows 7 Ultimate, the waiting time for Windows booting was significantly reduced.</p>
+
+<p>Next on 18 Dec night, after I installed all drivers for Windows 7, I tried to install a Debian 7.7 system to another partition to make the computer dual boot. But I failed on first try, because non-free firmware required for the WIFI hardware, but the installer can&rsquo;t load firmware from the bootable USB drive. So I prepared another USB thumbdrive dedicated for the non-free firmware on 19 Dec night, this time the installation process went smoothly and I have Debian 7.7 and Windows 7 dual booting..</p>
+
+<p>On 20 Dec, my shopping packages from Taobao were delivered, one of those packages is the SATA adapter to replace the DVD drive, this adapter only costed my RMB 27, which is very very cheap. On that night, I took out the DVD drive and replaced it with that adapter and the original Toshiba SATA II hard drive. So now my laptop has over 1TB hard drive capacity.</p>
+
+<p>This is the image of Sandisk Extreme Pro 480GB SSD
+<img src="http://zhuyong.me/images/blogimg/2014-12-22-ChangeDrive/sandisk.jpg"></p>
+
+<p>The SATA adapter with Toshiba SATA II drive mounted
+<img src="http://zhuyong.me/images/blogimg/2014-12-22-ChangeDrive/toshiba.jpg"></p>
+
+<p>SSD and SATA adapter installed on the system. The adapter doesn&rsquo;t have the hole to mount screw at location 1, and its size is smaller than the original DVD drive, so it left some part un-covered at location 2. Considering the very cheap price, I am OK with the two not perfect point.
+<img src="http://zhuyong.me/images/blogimg/2014-12-22-ChangeDrive/all.jpg"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ARM RVCT Tips: Armcc &amp;&amp; Fromelf]]></title>
@@ -821,28 +843,6 @@ $ sudo gem install gsl
 
 
 <p>This is a very good reference list for developers who want to expand their knowledges. In the list, Intel also gives retailer hyperlink for each book item.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[I Ordered "Call of Duty: Ghosts Eyewear"]]></title>
-    <link href="http://zhuyong.me/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear/"/>
-    <updated>2014-01-23T15:54:29+08:00</updated>
-    <id>http://zhuyong.me/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear</id>
-    <content type="html"><![CDATA[<p>This afternoon I placed an order for 3 pieces of <a href="http://call-of-duty-ghosts.allure-eyewear.com/">Call Of Duty Ghosts By Allure Eyewear</a>. One for myself and the other two for my colleagues.</p>
-
-<p><img src="http://zhuyong.me/images/blogimg/2014-01-23-codg5-k.jpeg" title="&#34;Call Of Duy Ghosts By Allure Eyewear&#34;" alt="&#34;Call Of Duy Ghosts By Allure Eyewear&#34;"></p>
-
-<p>One week ago, I didn&rsquo;t even know there are glasses specially designed for heavy computer user and gamers. One day, one of my colleagues said he was going to buy a glass from Amazon, ask me to search word <code>gunnar</code> to have a look. Then he said the glass can give eyes some relief for full day computer user like us, almost all professional gamer wear this kind of glass to protect their eyes. So I did some google about this eyewear. From reviews on various websites, the feedbacks are quite possitive and effective. So I decided to invest one to protect my precious eyes.</p>
-
-<!-- more -->
-
-
-<p>I can&rsquo;t buy those widely available eyewear from <code>gunnar</code> because I am a shortsighted person, and I already wear a pair of glass. I need to find the clip-on type of eyewear, and I only found <a href="http://www.amazon.com/gp/product/B009OZSMEI/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B009OZSMEI&amp;linkCode=as2&amp;tag=zhuyong.me-20">this</a> from Amazon, and it was out of stock, some unknown sellers sell it over US$60 at that time. Then I visited homepage of <code>gunnar</code>, I can&rsquo;t find the clip-on type, but shortsighted people can order customized glasses with a much higher prices. We haven&rsquo;t tried this kind of glasses before, invest over US$250 for a customized glass without known its effect is kind of risky. So we decided to wait for the stock come back for the clip-on type.</p>
-
-<p>This afternoon, I visited amazon again and found they got stock and the price is only US$33.99, that&rsquo;s much cheaper compare to US$60. Although we need to pay over S$50 shipping fee for 3 pieces of the eyewear, my colleagues and I decided to place the order. Only by then, I noticed this eyewear is from <code>Allure Eyewear</code> instead of <code>gunnar</code>, no wonder I can&rsquo;t find this type from <code>gunnar</code> official website. So I googled again for reviews on <code>Allure Eyewear</code>, again, the reviews are good. And one comments over a review article mentioned the official website of <code>Allure Eyewear</code> sell <code>Call Of Duty Ghosts</code> cheaper than this older <code>Call of Duty Black Ops II</code>. That&rsquo;s good information before I place order.</p>
-
-<p>So I visited <code>Allure Eyewear</code> website, and indeed, the new type is cheaper, only sell at US$24.99. And there international shipping is only US$20, much cheaper than Amazon. Without further waiting, I placed order. It will take 5-7 business days for the shipping. I will write one review after I receive it.</p>
 ]]></content>
   </entry>
   

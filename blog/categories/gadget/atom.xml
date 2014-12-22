@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gadget | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/gadget/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-12-16T21:44:39+08:00</updated>
+  <updated>2014-12-23T07:36:12+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Upgraded My HP DV6-6144TX to SSD + HDD]]></title>
+    <link href="http://zhuyong.me/blog/2014/12/22/upgraded-my-hp-dv6-6144tx-to-ssd-plus-hdd/"/>
+    <updated>2014-12-22T22:18:37+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/12/22/upgraded-my-hp-dv6-6144tx-to-ssd-plus-hdd</id>
+    <content type="html"><![CDATA[<p>I received my Sandisk Extreme Pro 480GB SSD on 17 Dec, on that night, immediately after my kids slept, I went to study room and replaced the internal Toshiba SATA II HDD to this SSD. Next I partitioned the drive and installed Windows 7 Ultimate, the waiting time for Windows booting was significantly reduced.</p>
+
+<p>Next on 18 Dec night, after I installed all drivers for Windows 7, I tried to install a Debian 7.7 system to another partition to make the computer dual boot. But I failed on first try, because non-free firmware required for the WIFI hardware, but the installer can&rsquo;t load firmware from the bootable USB drive. So I prepared another USB thumbdrive dedicated for the non-free firmware on 19 Dec night, this time the installation process went smoothly and I have Debian 7.7 and Windows 7 dual booting..</p>
+
+<p>On 20 Dec, my shopping packages from Taobao were delivered, one of those packages is the SATA adapter to replace the DVD drive, this adapter only costed my RMB 27, which is very very cheap. On that night, I took out the DVD drive and replaced it with that adapter and the original Toshiba SATA II hard drive. So now my laptop has over 1TB hard drive capacity.</p>
+
+<p>This is the image of Sandisk Extreme Pro 480GB SSD
+<img src="/images/blogimg/2014-12-22-ChangeDrive/sandisk.jpg"></p>
+
+<p>The SATA adapter with Toshiba SATA II drive mounted
+<img src="/images/blogimg/2014-12-22-ChangeDrive/toshiba.jpg"></p>
+
+<p>SSD and SATA adapter installed on the system. The adapter doesn&rsquo;t have the hole to mount screw at location 1, and its size is smaller than the original DVD drive, so it left some part un-covered at location 2. Considering the very cheap price, I am OK with the two not perfect point.
+<img src="/images/blogimg/2014-12-22-ChangeDrive/all.jpg"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[DIY Cut My Sim Card to Micro-Sim]]></title>
@@ -126,27 +148,6 @@
 <img src="/images/blogimg/2014-11-25-HHKB/HHKB-004.jpg" title="&ldquo;HHKB Connected To Chromebook&rdquo;" ></p>
 
 <p>I will write another blog later about how I feel it.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Google Released Chromecast SDK : Countless Apps Coming]]></title>
-    <link href="http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk/"/>
-    <updated>2014-02-04T09:39:48+08:00</updated>
-    <id>http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk</id>
-    <content type="html"><![CDATA[<p>After <a href="http://10.36.134.34:4000/blog/2014/01/25/i-received-my-chromecast/">received my Chromecast</a> for 10 days, I received good news from Google. Google finally <a href="http://chrome.blogspot.sg/2014/02/chromecast-is-now-open-to-developers.html">opened chromecast SDK to all developers</a>. This is what Chromecast users and developers waiting for long time. Developers now must be busy coding to integrate the SDK into their apps, so countless Chromecast-compatible apps would show-up any day now.</p>
-
-<p>Media player apps will be the first batch to support Chromecast, especially for local media streaming. I think this is the most desired feature for most of Chromecast users including me. I use MX Player a lot, I can&rsquo;t wait to see it with Chromecast support.</p>
-
-<p>I don&rsquo;t play games on phone, but I think there will be plenty of games with Chromecast support. People likes to play games on large screen, supporting for Chromecast would be a must have feature for any android games from now on.</p>
-
-<p>For developers, check the two links below to start your development.</p>
-
-<ul>
-<li><a href="https://developers.google.com/cast/docs/downloads">Chromecast SDK Download</a></li>
-<li><a href="https://developers.google.com/cast/docs/developers">Chromecast Developer Guide</a></li>
-</ul>
-
 ]]></content>
   </entry>
   

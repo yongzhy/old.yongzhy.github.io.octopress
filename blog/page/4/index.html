@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="I haven&rsquo;t updated my old blog for long time, one of the reason is because it&rsquo;s not easy to post a blog with code snippets on blospot. Few &hellip;">
+  <meta name="description" content="Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&rsquo;t have the guide on how &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,79 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/01/08/blog-using-octopress-on-multiple-computer/">Blog Using Octopress on Multiple Computer</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-08T14:29:20+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&rsquo;t have the guide on how to setup Octopress on multiple computer. After search online, there are quite a lot people have seen the same problem. And I did found a very nice guide by Robert Anderson at <a href="http://blog.zerosharp.com/clone-your-octopress-to-blog-from-two-places/">here</a>. Here I will just list down the steps for my later on reference.</p>
+
+<p>clone <code>source</code> branch to local folder</p>
+
+<pre><code>$ git clone -b source https://github.com/yongzhy/yongzhy.github.io octopress
+</code></pre>
+
+<p>clone <code>master</code> branch to <em>_deploy</em> subfolder</p>
+
+<pre><code>$ cd octopress
+$ git clone https://github.com/yongzhy/yongzhy.github.io _deploy
+</code></pre>
+
+<p>configuration</p>
+
+<pre><code>$ gem install bundler
+$ bundle install
+$ rake setup_github_pages
+</code></pre>
+
+<h3>To push changes from two different computers</h3>
+
+<p>Push everything on working computer before switch computer, using commands below:</p>
+
+<pre><code>$ rake generate
+$ git add .
+$ git commit -am "commit message"
+$ git push origin source
+$ rake deploy
+</code></pre>
+
+<p>Then on the new computer, run commands below to sync.</p>
+
+<pre><code>$ cd octopress
+$ git pull origin source
+$ cd ./_deploy
+$ git pull origin master
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2013/12/11/shift-my-personal-blog-to-github/">Shift My Personal Blog to Github</a></h1>
     
     
@@ -146,6 +219,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/12/22/upgraded-my-hp-dv6-6144tx-to-ssd-plus-hdd/">Upgraded My HP DV6-6144TX to SSD + HDD</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/">ARM RVCT Tips: Armcc &amp;&amp; Fromelf</a>
       </li>
     
@@ -161,15 +238,11 @@
         <a href="/blog/2014/11/27/crazy-shopping-month/">Crazy Shopping Month</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/11/26/hhkb-pro-2-type-s-after-one-week/">HHKB Pro 2 Type-S After One Week</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (8)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (2)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (1)</a></li><li><a href='/blog/categories/misc/'>misc (1)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li><li><a href='/blog/categories/vim/'>vim (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (2)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (1)</a></li><li><a href='/blog/categories/misc/'>misc (1)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li><li><a href='/blog/categories/vim/'>vim (1)</a></li></ul>
 </section>
 
 <section class="googleplus">

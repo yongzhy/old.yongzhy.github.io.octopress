@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="For embedded system C projects that share same code base, one common practice is to use various feature flags to encapsulate related code. This &hellip;">
+  <meta name="description" content="I received my Sandisk Extreme Pro 480GB SSD on 17 Dec, on that night, immediately after my kids slept, I went to study room and replaced the internal &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,55 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/12/22/upgraded-my-hp-dv6-6144tx-to-ssd-plus-hdd/">Upgraded My HP DV6-6144TX to SSD + HDD</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-22T22:18:37+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I received my Sandisk Extreme Pro 480GB SSD on 17 Dec, on that night, immediately after my kids slept, I went to study room and replaced the internal Toshiba SATA II HDD to this SSD. Next I partitioned the drive and installed Windows 7 Ultimate, the waiting time for Windows booting was significantly reduced.</p>
+
+<p>Next on 18 Dec night, after I installed all drivers for Windows 7, I tried to install a Debian 7.7 system to another partition to make the computer dual boot. But I failed on first try, because non-free firmware required for the WIFI hardware, but the installer can&rsquo;t load firmware from the bootable USB drive. So I prepared another USB thumbdrive dedicated for the non-free firmware on 19 Dec night, this time the installation process went smoothly and I have Debian 7.7 and Windows 7 dual booting..</p>
+
+<p>On 20 Dec, my shopping packages from Taobao were delivered, one of those packages is the SATA adapter to replace the DVD drive, this adapter only costed my RMB 27, which is very very cheap. On that night, I took out the DVD drive and replaced it with that adapter and the original Toshiba SATA II hard drive. So now my laptop has over 1TB hard drive capacity.</p>
+
+<p>This is the image of Sandisk Extreme Pro 480GB SSD
+<img src="/images/blogimg/2014-12-22-ChangeDrive/sandisk.jpg"></p>
+
+<p>The SATA adapter with Toshiba SATA II drive mounted
+<img src="/images/blogimg/2014-12-22-ChangeDrive/toshiba.jpg"></p>
+
+<p>SSD and SATA adapter installed on the system. The adapter doesn&rsquo;t have the hole to mount screw at location 1, and its size is smaller than the original DVD drive, so it left some part un-covered at location 2. Considering the very cheap price, I am OK with the two not perfect point.
+<img src="/images/blogimg/2014-12-22-ChangeDrive/all.jpg"></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -616,96 +665,6 @@ cmocka.c:8: error: Failure!
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">Hack YouCompleteMe and Libclang for Lamely Structured Project</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-20T17:23:59+08:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>On 13 Feb 2014 I asked a question on <a href="http://stackoverflow.com/questions/21746668/configure-vim-youcompleteme-for-special-project-structure">StackOverflow</a> on how to configure / modify vim plugin <code>YouCompleteMe</code> to fit special project structure. I guess my project structure is really lame, after two days waiting, some comments were given, but my problem not realy addressed. So I think I have to <strong>DO IT MYSELF</strong>. Then I read the source code for <code>YouComeplteMe</code> as well as <code>libclang</code>, because I only need the code completion function, lucky the related code are not much. Then I done  experiments with different approaches, and today, finally, I had my hacking works. Then I think I should record this nice experience, that&rsquo;s the purpose of this blog post.</p>
-
-<h3>My Question On StackOverflow</h3>
-
-<p>My C project has following structures. This is the structure for a large project, I can&rsquo;t change the structure. I want to use YouCompleteMe for semantic code completion for this project.</p>
-
-<pre><code>main/                     // folder for C file to be compiled
-  |- module1.c            // module main C file.
-  |- module2.c
-  |- .....
-module1/
-  |- mod1_func1.c         // function file to be included in main module C file.
-  |- mod1_func2.c
-  |- mod2_func3.c
-module2/
-  |- mod2_func1.c
-  |- mod2_func2.c
-  |- mod2_func3.c
-</code></pre>
-
-<p>Content for <code>moduleX.c</code>, this will include all related header files and module related C files.</p>
-
-<pre><code>#include "header1.h"
-#include "header2.h"
-...
-#include "modX_func1.c"
-#include "modX_func2.c"
-</code></pre>
-
-<p>Content for <code>modX_funcX.c</code> has one or few function definitions. Doesn&rsquo;t have header included</p>
-
-<pre><code>// no header file included here
-int modX_funcX(void) {.....}
-</code></pre>
-
-<p>Because there is not related header included, <code>clang</code> must parse <code>moduleX.c</code> in order to do code completion on <code>modX_funcX.c</code>,  I have tried <code>clang</code> code completion from command line. Command below works</p>
-
-<pre><code>clang -cc1 -x c -fsyntax-only -code-completion-at mod1_func1.c:4:11 module1.c 
-</code></pre>
-
-<p>So my question: how to configure YouCompleteMe to do code completion when I edit the <code>modX_funcX.c</code> file?</p>
-
-<p>I guess modification to YouCompleteMe source might required to do this job. My current idea is to add a file mapping database with format:</p>
-
-<pre><code>path_of_file_to_complete:path_of_file_for_clang_to_parse
-</code></pre>
-
-<p>So before send the code completion request, get <code>path_of_file_for_clang_to_parse</code> from database based on current buffer name, pass this file name to <code>libclang</code>.</p>
-
-<p>Is my idea workable? If Yes, where is exactly place to add this file mapping function?</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">Continue &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -726,6 +685,10 @@ int modX_funcX(void) {.....}
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/12/22/upgraded-my-hp-dv6-6144tx-to-ssd-plus-hdd/">Upgraded My HP DV6-6144TX to SSD + HDD</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/">ARM RVCT Tips: Armcc &amp;&amp; Fromelf</a>
       </li>
     
@@ -741,15 +704,11 @@ int modX_funcX(void) {.....}
         <a href="/blog/2014/11/27/crazy-shopping-month/">Crazy Shopping Month</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/11/26/hhkb-pro-2-type-s-after-one-week/">HHKB Pro 2 Type-S After One Week</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (8)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (2)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (1)</a></li><li><a href='/blog/categories/misc/'>misc (1)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li><li><a href='/blog/categories/vim/'>vim (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (2)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (1)</a></li><li><a href='/blog/categories/misc/'>misc (1)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li><li><a href='/blog/categories/vim/'>vim (1)</a></li></ul>
 </section>
 
 <section class="googleplus">
