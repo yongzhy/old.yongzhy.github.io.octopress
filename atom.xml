@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://zhuyong.me/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-12-23T07:36:12+08:00</updated>
+  <updated>2014-12-24T15:08:43+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[HHKB Palm Rest Arrived]]></title>
+    <link href="http://zhuyong.me/blog/2014/12/24/hhkb-palm-rest-arrived/"/>
+    <updated>2014-12-24T09:18:53+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/12/24/hhkb-palm-rest-arrived</id>
+    <content type="html"><![CDATA[<p>My HHKB palm rest from Taobao arrived last Saturday, and I brought it to office on Monday. After use if for two days, I am totally satisfied with it. The build quality is good, size is just nice for HHKB, well polished, and no strange smell. The logo was customized very good, exactly same as my requirement.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2014-12-24-HHKB-Palm-Rest/palm-rest.jpg"></p>
+
+<p>Maybe I should do a free advertisement for this Taobao shop: <a href="http://item.taobao.com/item.htm?spm=a1z10.1.w4004-5284025914.3.hP74Q9&amp;id=40499617063">Taobao Shop</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Upgraded My HP DV6-6144TX to SSD + HDD]]></title>
@@ -829,20 +842,6 @@ $ sudo gem install gsl
 <p>But, there are only limited android apps that have Chromecast support, and most of the supported apps can&rsquo;t be used in Singapore. The function I want most is to cast the photos and video on my phone to TV. I took a lot of pictures and video for my two boys, I want to let them see themselves on photo and video, and the phone screen is way too small.</p>
 
 <p>Google, please release the full power of Chromecast!!!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Intel's Recommended Reading List]]></title>
-    <link href="http://zhuyong.me/blog/2014/01/23/intels-recommended-reading-list/"/>
-    <updated>2014-01-23T21:49:38+08:00</updated>
-    <id>http://zhuyong.me/blog/2014/01/23/intels-recommended-reading-list</id>
-    <content type="html"><![CDATA[<p>Intel published a 10 pages recommanded reading list for 1st half year of 2014, you can go to <a href="https://noggin.intel.com/recommended-reading">here</a> for details or directly download the list in <a href="https://noggin.intel.com/sites/default/files/Intel-Recommended-Reading-List_1H14_0.pdf">PDF</a></p>
-
-<blockquote><p>The Recommended Reading List is a valuable resource for technical professionals who want to thoroughly explore topics such as multi-core programming, embedded security, and more. These books are produced by leading publishers around the world.</p></blockquote>
-
-
-<p>This is a very good reference list for developers who want to expand their knowledges. In the list, Intel also gives retailer hyperlink for each book item.</p>
 ]]></content>
   </entry>
   
