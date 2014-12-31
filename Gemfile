@@ -18,5 +18,5 @@ group :development do
 end
 
 gem 'sinatra', '~> 1.4.2'
-gem 'gsl', '~>1.14.7'
+gem 'gsl', '~>1.15.3'
 
