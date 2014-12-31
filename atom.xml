@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://zhuyong.me/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-12-29T22:30:09+08:00</updated>
+  <updated>2014-12-31T15:49:40+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[T32Hook: Utility to Auto Hook Trace32]]></title>
+    <link href="http://zhuyong.me/blog/2014/12/31/t32hook-utility-to-auto-hook-trace32/"/>
+    <updated>2014-12-31T15:12:54+08:00</updated>
+    <id>http://zhuyong.me/blog/2014/12/31/t32hook-utility-to-auto-hook-trace32</id>
+    <content type="html"><![CDATA[<p>Today is last day of 2014. I will use this 2014 last blog to write about the utility I recently developed.</p>
+
+<p>On my latest project, firmware code failed during test with power cycle on target. And the Lauterbach emulator can&rsquo;t detect the <code>power on</code> event on this target, so we can&rsquo;t use the <code>power on</code> event to automate initial script running. The failure only happens after power cycle, so I must let Trace32 run the setup script to enable the trace in order to capture the code running history.</p>
+
+<p>Because previously I already did a utility to automate failure replay using Trace32 simulation, I know Trace32 has remote API to control the script running. So I come out with the idea to detect target power cycle from the message on serial port (target firmware will print some message on serial port), upon power cycle event happen, use remote API to command Trace32 to execute the setup script.</p>
+
+<p>QT already has the <code>The Simple Terminal</code> example, so my development leverage on this example code and added Trace32 remote API code.</p>
+
+<p>This is the image of the main window for the final working product.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2014-12-31-t32hook/t32hook-001.png"></p>
+
+<p>This the serial setting dialog, I didn&rsquo;t change this part from the example code.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2014-12-31-t32hook/t32hook-002.png"></p>
+
+<p>This is the Trace32 remote setting dialog. Added options to specify the remote host, port, packet size, the setup script to run as well as text line to trigger setup script re-run.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2014-12-31-t32hook/t32hook-003.png"></p>
+
+<p>The whole development take me few night time at home. My initial working version with everything hard coded, because we must solve the firmware issue ASAP. I use my spare time to make it configurable, so my colleagues with same need can use it as well.</p>
+
+<p>This is not my first utility written using QT, when I need to write GUI utility, I will always turn to QT, sometime use PyQT, sometime use the native C++ version. The latest version of QT already have support for Android and iOS, I may test water with the Android version some time later.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[2014 Year End Summary]]></title>
@@ -845,35 +876,6 @@ $ sudo gem install gsl
 <p>Basically, this product worth the US$25 price, I would suggest this for anyone who work on computer for long hours. Of course, if you already wear glass and have the budget, I strongly suggest go to the <code>gunnar</code> customization option.</p>
 
 <p><code>Update 2014-02-04</code> : I contacted <code>Allure</code> on 28 Jan, and they processed another shipment for the 3rd eyewear at U.S locat time <code>01/29/2014  5:19 P.M</code>. I must say their action and response was really fast. For this reason, I would recommend <code>Allure</code> to anyone that interested to buy eyeware to protect their eyes.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How I Use Google Keep to Manage Todo List]]></title>
-    <link href="http://zhuyong.me/blog/2014/01/25/how-i-use-google-keep-to-manage-todo-list/"/>
-    <updated>2014-01-25T10:18:34+08:00</updated>
-    <id>http://zhuyong.me/blog/2014/01/25/how-i-use-google-keep-to-manage-todo-list</id>
-    <content type="html"><![CDATA[<p>I use <a href="http://pomodorotechnique.com">Pomodoro Technique</a> at office, although I don&rsquo;t follow it strictly, the technique did improve my productivity, and it&rsquo;s very effective. I use <a href="http://www.tomighty.org/">Tomighty</a> desktop timer, it&rsquo;s free and opensource. Then for the todo list, I use Google Keep, I don&rsquo;t really record down how many <code>pomodori</code> I spend on a task. The main reason for me to apply <code>Pomodoro Technique</code> is to make me stay focus and concentrate. Google Keep is not dedicated application for todo list, its capability to support todo list simply enought for my requirements.</p>
-
-<p>Just as other Google product, Google Keep interface is clean and minimal, they have Chrome App and Android App. And the best part of Google Keep is its sync function, you can modify your Google Keep on multiple devices and they all sync to your Google account.</p>
-
-<p>Below is my practice to use Google Keep as my todo list.</p>
-
-<!-- more -->
-
-
-<ul>
-<li>For everyday todo list, I create a Googe Keep entry, titled with the date.</li>
-<li>I only keep recent few days&#8217; todo list, older entries will be archived</li>
-<li>Every night, I will review today&rsquo;s todo list, copy those items that not finished and need to continue tomorrow to a new Keep entry, titled as tomorrow&rsquo;s date. Then add new list items if there are.</li>
-<li>Then I will arrange those items in priority order</li>
-<li>Next day, I will try to follow the order to finish the tasks.</li>
-<li>Once a task is done, after marking as done, I will move it to the bottom of the list, then start work on the next item.</li>
-<li>There is also a special Keep entry function as the pool to keep <code>Todo Items Later</code>. I constantly review and upate items in this entry.</li>
-</ul>
-
-
-<p>There are many note taking or todo list softwares, I also use <code>Evernote</code> and <code>Microsoft OneNote</code> for other purpose. So far, I am quite happy with the way I use Google Keep. You may use any note takeing software in whatever style, as long as it helps for your life or work.</p>
 ]]></content>
   </entry>
   
