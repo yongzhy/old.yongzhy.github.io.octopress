@@ -19,6 +19,8 @@ This is the image of the main window for the final working product.
 
 {% img /images/blogimg/2014-12-31-t32hook/t32hook-001.png %}
 
+<!-- more -->
+
 This the serial setting dialog, I didn't change this part from the example code.
 
 {% img /images/blogimg/2014-12-31-t32hook/t32hook-002.png %}
