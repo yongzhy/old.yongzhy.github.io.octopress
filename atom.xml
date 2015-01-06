@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://zhuyong.me/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2014-12-31T15:49:40+08:00</updated>
+  <updated>2015-01-06T21:10:14+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,72 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[HDB BTO Home Network DIY]]></title>
+    <link href="http://zhuyong.me/blog/2015/01/06/hdb-bto-home-network-diy/"/>
+    <updated>2015-01-06T12:20:40+08:00</updated>
+    <id>http://zhuyong.me/blog/2015/01/06/hdb-bto-home-network-diy</id>
+    <content type="html"><![CDATA[<p>Inspired by <a href="https://absolutehonesty.wordpress.com/2014/05/31/hougang-parkview-i-want-my-internet/">this blog</a>, I decided to DIY the network thing for my new HDB flat when I was shopping on Taobao in Nov. Followed the suggestion in that blog, I bought all necessary items from Taobao, but the network modules I bought are Cat 6 module, not 5E.</p>
+
+<p>On Jan 03, my contractor went to my new HDB flat to install the lights we bought from Taobao, while they doing the lights installation, I was doing DIY job to change all RJ11 phone jacks to network RJ45 jacks.</p>
+
+<p>Below are the tools I used for this DIY job.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-01-06-network/network-000.jpg"></p>
+
+<p>Start from bedrooms, change the RJ11 to RJ45 one by one.</p>
+
+<!-- more -->
+
+
+<p></p>
+
+<p>This picture is the original RJ11 panel.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-01-06-network/network-001.jpg"></p>
+
+<p>Take off the cover from the panel.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-01-06-network/network-002.jpg"></p>
+
+<p>Loosen the screws on the panel. The cable inside is already Cat 6 network cable. So I just need to change the modules and panels.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-01-06-network/network-003.jpg"></p>
+
+<p>Put the color wires into each slot on the network module. Use pattern B</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-01-06-network/network-004.jpg"></p>
+
+<p>Cut off the extra wires, put on the back cover.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-01-06-network/network-005.jpg"></p>
+
+<p>Insert module into the panel.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-01-06-network/network-006.jpg"></p>
+
+<p>Use back the origin screws to fasten the panel.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-01-06-network/network-007.jpg"></p>
+
+<p>After all three bedrooms and the bomb shelter (Yes, I changed the module and panel in bomb shelter as well). The next job is tougher, I need to do add modules to all terminal in the power box behind the main gate.</p>
+
+<p>This is the original lines.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-01-06-network/network-008.jpg"></p>
+
+<p>After I connect the modules to all lines.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-01-06-network/network-009.jpg"></p>
+
+<p>This is the final work.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-01-06-network/network-010.jpg"></p>
+
+<p>The whole process was not difficult, just need to be careful to match the color lines with the pattern on the modules.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[T32Hook: Utility to Auto Hook Trace32]]></title>
@@ -29,6 +95,9 @@
 <p>This is the image of the main window for the final working product.</p>
 
 <p><img src="http://zhuyong.me/images/blogimg/2014-12-31-t32hook/t32hook-001.png"></p>
+
+<!-- more -->
+
 
 <p>This the serial setting dialog, I didn&rsquo;t change this part from the example code.</p>
 
@@ -848,34 +917,6 @@ $ sudo gem install gsl
 <li><a href="https://developers.google.com/cast/docs/developers">Chromecast Developer Guide</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Half Day With Allure Eyewear "Call of Duty : Ghost"]]></title>
-    <link href="http://zhuyong.me/blog/2014/01/28/half-day-with-allure-eyewear-call-of-duty-ghost/"/>
-    <updated>2014-01-28T17:42:29+08:00</updated>
-    <id>http://zhuyong.me/blog/2014/01/28/half-day-with-allure-eyewear-call-of-duty-ghost</id>
-    <content type="html"><![CDATA[<p>Just before lunch time, security guard at reception desk called me to collect my parcel. I knew my 3 pieces of <code>Call Of Duty : Ghost</code> have arrived. I placed order on 23 Jan and it only takes 5 days for international shipping, the speed is fast enough for a US$20 delivery.</p>
-
-<p>My excutement and happiness didn&rsquo;t last long until I opened the box and only see two pieces of eyeware inside. I immediately opened my order online and checked carefully, yes, the invoice stated clearly that I ordered 3 pieces of eyewear, but I only got 2 of them shipped. And there is only 1 shipment number, so I guess there won&rsquo;t be a second package on the way. Next I immediately sent an email through the online contact form, but I think it will take some hours before I got response due to the different timezone. Let&rsquo;s wait and see how <code>Allure</code> reply.</p>
-
-<p>After lunch time, I clipped the eyewear onto my glass and used it for the whole afternoon. So here is how I feel about this eyewear with one afternoon experience:</p>
-
-<!-- more -->
-
-
-<ul>
-<li>I felt a little giddy at first, guess is due to the 0.2 diopter. But my eyes soon get used to it.</li>
-<li>It&rsquo;s a little bit heavy for this clip-on eyewear + my glass</li>
-<li>When the time I left company, my eyes didn&rsquo;t have strong dry feeling as usual. I can confirm this is not due to phychological factor. I can really feel it. Tomorrow I will use it for whole day, I think the feel will be clearer.</li>
-<li>It&rsquo;s troublesome to take off the eyewear when I left my cubicle to pantry or toilet, then put on again.</li>
-</ul>
-
-
-<p>Basically, this product worth the US$25 price, I would suggest this for anyone who work on computer for long hours. Of course, if you already wear glass and have the budget, I strongly suggest go to the <code>gunnar</code> customization option.</p>
-
-<p><code>Update 2014-02-04</code> : I contacted <code>Allure</code> on 28 Jan, and they processed another shipment for the 3rd eyewear at U.S locat time <code>01/29/2014  5:19 P.M</code>. I must say their action and response was really fast. For this reason, I would recommend <code>Allure</code> to anyone that interested to buy eyeware to protect their eyes.</p>
 ]]></content>
   </entry>
   

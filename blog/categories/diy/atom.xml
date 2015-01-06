@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: DIY | Zhu Yong]]></title>
+  <link href="http://zhuyong.me/blog/categories/diy/atom.xml" rel="self"/>
+  <link href="http://zhuyong.me/"/>
+  <updated>2015-01-06T21:10:14+08:00</updated>
+  <id>http://zhuyong.me/</id>
+  <author>
+    <name><![CDATA[Zhu Yong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[HDB BTO Home Network DIY]]></title>
+    <link href="http://zhuyong.me/blog/2015/01/06/hdb-bto-home-network-diy/"/>
+    <updated>2015-01-06T12:20:40+08:00</updated>
+    <id>http://zhuyong.me/blog/2015/01/06/hdb-bto-home-network-diy</id>
+    <content type="html"><![CDATA[<p>Inspired by <a href="https://absolutehonesty.wordpress.com/2014/05/31/hougang-parkview-i-want-my-internet/">this blog</a>, I decided to DIY the network thing for my new HDB flat when I was shopping on Taobao in Nov. Followed the suggestion in that blog, I bought all necessary items from Taobao, but the network modules I bought are Cat 6 module, not 5E.</p>
+
+<p>On Jan 03, my contractor went to my new HDB flat to install the lights we bought from Taobao, while they doing the lights installation, I was doing DIY job to change all RJ11 phone jacks to network RJ45 jacks.</p>
+
+<p>Below are the tools I used for this DIY job.</p>
+
+<p><img src="/images/blogimg/2015-01-06-network/network-000.jpg"></p>
+
+<p>Start from bedrooms, change the RJ11 to RJ45 one by one.</p>
+
+<!-- more -->
+
+
+<p></p>
+
+<p>This picture is the original RJ11 panel.</p>
+
+<p><img src="/images/blogimg/2015-01-06-network/network-001.jpg"></p>
+
+<p>Take off the cover from the panel.</p>
+
+<p><img src="/images/blogimg/2015-01-06-network/network-002.jpg"></p>
+
+<p>Loosen the screws on the panel. The cable inside is already Cat 6 network cable. So I just need to change the modules and panels.</p>
+
+<p><img src="/images/blogimg/2015-01-06-network/network-003.jpg"></p>
+
+<p>Put the color wires into each slot on the network module. Use pattern B</p>
+
+<p><img src="/images/blogimg/2015-01-06-network/network-004.jpg"></p>
+
+<p>Cut off the extra wires, put on the back cover.</p>
+
+<p><img src="/images/blogimg/2015-01-06-network/network-005.jpg"></p>
+
+<p>Insert module into the panel.</p>
+
+<p><img src="/images/blogimg/2015-01-06-network/network-006.jpg"></p>
+
+<p>Use back the origin screws to fasten the panel.</p>
+
+<p><img src="/images/blogimg/2015-01-06-network/network-007.jpg"></p>
+
+<p>After all three bedrooms and the bomb shelter (Yes, I changed the module and panel in bomb shelter as well). The next job is tougher, I need to do add modules to all terminal in the power box behind the main gate.</p>
+
+<p>This is the original lines.</p>
+
+<p><img src="/images/blogimg/2015-01-06-network/network-008.jpg"></p>
+
+<p>After I connect the modules to all lines.</p>
+
+<p><img src="/images/blogimg/2015-01-06-network/network-009.jpg"></p>
+
+<p>This is the final work.</p>
+
+<p><img src="/images/blogimg/2015-01-06-network/network-010.jpg"></p>
+
+<p>The whole process was not difficult, just need to be careful to match the color lines with the pattern on the modules.</p>
+]]></content>
+  </entry>
+  
+</feed>
