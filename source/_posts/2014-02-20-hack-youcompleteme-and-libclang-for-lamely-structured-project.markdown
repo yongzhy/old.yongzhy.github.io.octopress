@@ -160,3 +160,7 @@ After failed previous two attempts, I only have the option to do dirty hacking b
 ### Conclusion 
 
 To solve my problem, I was forced to read source code of `YouCompleteMe` and `clang`. The hacking process takes time because of code reading, compilation and debugging, and it's disappointed to find out my attempt didn't work as expected. But I really enjoy the moment when the code worked after some days' struggling. This whole hacking process is just another proof that open source is really good, you can do any hacking to fit your own need.
+
+### Update 2015-02-01
+
+I have tried another hacking, a better hacking, click [here](/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/) for more info.
