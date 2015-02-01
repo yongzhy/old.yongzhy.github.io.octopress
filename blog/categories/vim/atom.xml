@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Vim | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2015-01-06T21:10:14+08:00</updated>
+  <updated>2015-02-01T17:53:21+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Re-Hacked YouCompleteMe to Support Lamely Structured Projects]]></title>
+    <link href="http://zhuyong.me/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/"/>
+    <updated>2015-02-01T09:05:06+08:00</updated>
+    <id>http://zhuyong.me/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects</id>
+    <content type="html"><![CDATA[<p>Nearly 1 Year ago, I attempted to hack <code>YouCompleteMe</code> for clang code completion for a lamely structured project, that hacking worked, but the hacking was dirty. For background information, <a href="http://stackoverflow.com/questions/21746668/configure-vim-youcompleteme-for-special-project-structure">here</a> is my origin question on StackOverflow and <a href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">here</a> is the detail about my first dirty hack.</p>
+
+<p>Recently when I looked at this hacking again, I thought there should be a better way, especially after I found <a href="https://gist.github.com/Rip-Rip/758615">this code snippet</a> from GitHub Gist. At the moment I saw the code, I had a strong feeling that I have found the solution, I just need to verify it. To make code completion success for <code>clang -cc1 -fsyntack-only -code-complete-at a.c:4:11 main.c</code>, the source file to create <code>CXTranslationUnit</code> should be <code>main.c</code> and the source file to do <code>clang_codeCompleteAt</code> should be <code>a.c</code>. So I modified the code to pass one additional command line argument to be the file to create <code>TransicationUnit</code>, then compile and run command:</p>
+
+<pre><code>$ ./complete a.c 11 4 main.c
+</code></pre>
+
+<p>When I saw the output, I confirmed this was a better way to hack <code>YouCompleteMe</code> for my need.</p>
+
+<p>Now I found the correct direction, the rest was just spend time to code, test and debug, here is a summary for what I have modified:</p>
+
+<ul>
+<li>File <code>cpp/ycm/ClangCompleter/TransicationUnit.cpp</code>, function <code>TranslationUnit::CandidatesForLocation</code>, take additional parameter <code>compfile</code> to pass to <code>clang_codeCompleteAt</code></li>
+<li>File <code>cpp/ycm/ClangCompleter/CodeCompleter.cpp</code>, function <code>ClangCompleter::CandidatesForLocationInFile</code>, take additional parameter <code>compfile</code> and pass this newly added parameter to <code>unit-&gt;CandidatesForLocation</code></li>
+<li>File <code>ycmd/completers/cpp/clang_completer.py</code>, function <code>ComputeCandidatesInner</code>, follow the way <code>_FlagsForRequest</code> is implemented, add new function to get the <code>parent</code> source file to create <code>TransicationUnit</code> and pass that result to <code>CandidatesForLocationInFile</code></li>
+<li>File <code>ycmd/completers/cpp/flags.py</code>, add the new function to get <code>parent</code> source file</li>
+<li>File <code>.ycm_extra_conf.py</code> under project source directory, add function <code>ParentForFile</code>, this function read input <code>.clang_input_file</code>, which is the mapping for <strong>code-complete-at-file</strong> to <strong>TransicationUnit-file</strong></li>
+<li>Created a python script to generate the mapping file for <strong>code-complete-at-file</strong> to <strong>TransicationUnit-file</strong></li>
+</ul>
+
+
+<p>Comparing to my first hacking, this round is very clean, only clang related part on <code>ycmd</code> is modified, the client side remain untouched.</p>
+
+<p>I have checked in the modifications to <a href="https://github.com/yongzhy/ycmd">my fork of <code>ycmd</code></a> at branch <code>lamely</code>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hack YouCompleteMe and Libclang for Lamely Structured Project]]></title>
@@ -183,6 +215,10 @@ $4 = {FileName = {static npos = &lt;optimized out&gt;, _M_dataplus = {&lt;std::a
 <h3>Conclusion</h3>
 
 <p>To solve my problem, I was forced to read source code of <code>YouCompleteMe</code> and <code>clang</code>. The hacking process takes time because of code reading, compilation and debugging, and it&rsquo;s disappointed to find out my attempt didn&rsquo;t work as expected. But I really enjoy the moment when the code worked after some days' struggling. This whole hacking process is just another proof that open source is really good, you can do any hacking to fit your own need.</p>
+
+<h3>Update 2015-02-01</h3>
+
+<p>I have tried another hacking, a better hacking, click <a href="/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/">here</a> for more info.</p>
 ]]></content>
   </entry>
   
