@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://zhuyong.me/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2015-02-01T17:53:21+08:00</updated>
+  <updated>2015-11-05T14:12:26+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Config Logitech Performance MX Zoom Button in Ubuntu]]></title>
+    <link href="http://zhuyong.me/blog/2015/11/05/config-logitech-performance-mx-zoom-button-in-ubuntu/"/>
+    <updated>2015-11-05T13:42:07+08:00</updated>
+    <id>http://zhuyong.me/blog/2015/11/05/config-logitech-performance-mx-zoom-button-in-ubuntu</id>
+    <content type="html"><![CDATA[<p>The middle button (click wheel) on Logitech Performance MX is very very difficult to press. So I changed the <code>Zoom</code> button to middle button on windows system. To do same setting under Ubuntu, follow the instructions below:</p>
+
+<ul>
+<li>Install necessary software packages</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>   sudo apt-get install xbindkeys xautomation xev</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Next, use <code>xev</code> to find the button number for <code>Zoom</code> button. Just run <code>xev</code> from command line, then click <code>Zoom</code> button when your cursor is in the small white window. You will see somthing like below:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ButtonPress event, serial 45, synthetic NO, window 0x2400001,
+</span><span class='line'>    root 0x24d, subw 0x0, time 3735892633, (75,111), root:(301,192),
+</span><span class='line'>    state 0x0, button 2, same_screen YES
+</span><span class='line'>
+</span><span class='line'>ButtonRelease event, serial 45, synthetic NO, window 0x2400001,
+</span><span class='line'>    root 0x24d, subw 0x0, time 3735892633, (75,111), root:(301,192),
+</span><span class='line'>    state 0x200, button 2, same_screen YES</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Create default <code>xbindkeys</code> config file with command:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>   xbindkeys --defaults &gt; ~/.xbindkeysrc</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open file <code>~/.xbindkeysrc</code> to add the following lines at end of the file:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>"xte 'mouseclick 2'"
+</span><span class='line'>b:13+Release</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Re-Hacked YouCompleteMe to Support Lamely Structured Projects]]></title>
@@ -842,96 +903,6 @@ $4 = {FileName = {static npos = &lt;optimized out&gt;, _M_dataplus = {&lt;std::a
 <p>I am applying the tactics in this book to change some of my &ldquo;bad&rdquo; habits, and I already see progress. That&rsquo;s wonderful to see the progress, the happiness and satisfaction is also <code>reward</code> for me.</p>
 
 <p><strong>Be Patient, Be Persistent</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Add "Related Posts" Section to Octopress]]></title>
-    <link href="http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress/"/>
-    <updated>2014-02-05T12:39:53+08:00</updated>
-    <id>http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress</id>
-    <content type="html"><![CDATA[<p>When reading someone&rsquo;s article, it&rsquo;s good to have a section to show the releated posts. Today I searched online and found to add <code>Related Posts</code> section to Octopress is quite easy.</p>
-
-<p>First, edit config file <code>_config.yml</code> to add line</p>
-
-<pre><code>lsi: true
-</code></pre>
-
-<p>Second, create file <code>source/_includes/post/related_posts.html</code> with content below</p>
-
-<pre><code>{% if site.related_posts %}
-  &lt;h3&gt;Related posts&lt;/h3&gt;
-  &lt;ul class="posts"&gt;
-  {% for post in site.related_posts limit:3 %}
-    &lt;li class="related"&gt;
-      &lt;a href="{{ root_url }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
-    &lt;/li&gt;
-  {% endfor %}
-  &lt;/ul&gt;
-{% endif %}
-</code></pre>
-
-<!-- more -->
-
-
-<p>Next, add this footer section to the post. modify <code>source/_layouts/post.html</code> to add line</p>
-
-<pre><code>{% include post/related_posts.html %}
-</code></pre>
-
-<p>under</p>
-
-<pre><code>{% include post/author.html %}
-{% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-{% include post/categories.html %}
-</code></pre>
-
-<p>OK. Now you can run <code>rake generate</code> and <code>rake preview</code> to see the effects.</p>
-
-<p>There is one problem with the solution above, it&rsquo;s slow to run <code>rake generate</code> when your have lots of articles. To speed up the process, you need to install <code>rb-gsl</code>. If you directly issue <code>gem install gsl</code>, your most probablly will see error message</p>
-
-<pre><code>Building native extensions.  This could take a while...
-ERROR:  Error installing gsl:
-    ERROR: Failed to build gem native extension.
-
-...
-</code></pre>
-
-<p>It&rsquo;s because <code>gsl</code> gem requires <code>gsl 1.14</code>. Follow the steps below to install <code>gsl 1.14</code> and <code>rb-gsl</code>:</p>
-
-<pre><code>$ curl -O http://mirror.aarnet.edu.au/pub/gnu/gsl/gsl-1.14.tar.gz
-$ tar xfz gsl-1.14.tar.gz
-$ cd gsl-1.14
-$ ./configure
-$ make clean
-$ make                              # can take a while, be patient
-$ sudo make install
-$ sudo gem install gsl
-</code></pre>
-
-<p>Now run <code>rake generate</code> again and feel the acceleration for the classification process. If you are unlucky and see the message below:</p>
-
-<pre><code>Notice: for 10x faster LSI support, please install http://rb-gsl.rubyforge.org/
-</code></pre>
-
-<p>This means your <code>rb-gsl</code> installation got problem. To resolve that, first uninstall <code>gsl</code> by</p>
-
-<pre><code>$ sudo gem uninstall gsl
-</code></pre>
-
-<p>Then edit file <code>Gemfile</code> in your Octopress folder to add line</p>
-
-<pre><code>gem 'gsl', '~&gt;1.14.7'
-</code></pre>
-
-<p>Then use <code>bundle</code> to install <code>gsl</code></p>
-
-<pre><code>$ sudo bundle install
-</code></pre>
-
-<p>Again, run <code>rake generate</code> to feel the fly speed. :)</p>
-
-<p>Good Luck!!!</p>
 ]]></content>
   </entry>
   

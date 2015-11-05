@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="Nearly 1 Year ago, I attempted to hack YouCompleteMe for clang code completion for a lamely structured project, that hacking worked, but the hacking &hellip;">
+  <meta name="description" content="The middle button (click wheel) on Logitech Performance MX is very very difficult to press. So I changed the Zoom button to middle button on windows &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,94 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/11/05/config-logitech-performance-mx-zoom-button-in-ubuntu/">Config Logitech Performance MX Zoom Button in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-05T13:42:07+08:00" pubdate data-updated="true">Nov 5<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The middle button (click wheel) on Logitech Performance MX is very very difficult to press. So I changed the <code>Zoom</code> button to middle button on windows system. To do same setting under Ubuntu, follow the instructions below:</p>
+
+<ul>
+<li>Install necessary software packages</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>   sudo apt-get install xbindkeys xautomation xev</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Next, use <code>xev</code> to find the button number for <code>Zoom</code> button. Just run <code>xev</code> from command line, then click <code>Zoom</code> button when your cursor is in the small white window. You will see somthing like below:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ButtonPress event, serial 45, synthetic NO, window 0x2400001,
+</span><span class='line'>    root 0x24d, subw 0x0, time 3735892633, (75,111), root:(301,192),
+</span><span class='line'>    state 0x0, button 2, same_screen YES
+</span><span class='line'>
+</span><span class='line'>ButtonRelease event, serial 45, synthetic NO, window 0x2400001,
+</span><span class='line'>    root 0x24d, subw 0x0, time 3735892633, (75,111), root:(301,192),
+</span><span class='line'>    state 0x200, button 2, same_screen YES</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Create default <code>xbindkeys</code> config file with command:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>   xbindkeys --defaults &gt; ~/.xbindkeysrc</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open file <code>~/.xbindkeysrc</code> to add the following lines at end of the file:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>"xte 'mouseclick 2'"
+</span><span class='line'>b:13+Release</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -549,62 +637,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/11/27/crazy-shopping-month/">Crazy Shopping Month</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-11-27T22:41:50+08:00" pubdate data-updated="true">Nov 27<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This afternoon, I ordered another gadget from Amazon:
-<a href="http://www.amazon.com/gp/product/B00KHRYRLY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00KHRYRLY&linkCode=as2&tag=zhuyong.me-20&linkId=5VFWEDLJIRJOG7TM">SanDisk Extreme PRO 480GB SATA 6.0GB/s 2.5-Inch 7mm Height Solid State Drive (SSD) With 10-Year Warranty- SDSSDXPS-480G-G25</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=zhuyong.me-20&l=as2&o=1&a=B00KHRYRLY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
-
-<p><a href="http://www.amazon.com/gp/product/B00KHRYRLY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00KHRYRLY&linkCode=as2&tag=zhuyong.me-20&linkId=5VFWEDLJIRJOG7TM"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00KHRYRLY&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=zhuyong.me-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=zhuyong.me-20&l=as2&o=1&a=B00KHRYRLY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
-
-<p>When I start sourcing good SSD deal on Amazon, I was initially looking at Intel 730 480GB, few days back, it was on discount price of US$199.99. Intel SSD has 5 Years international warranty, then I found this SandDisk SSD was selling with 10 Years warranty, someone online said the warranty was international, but I can&rsquo;t find clear statement. So I contacted Amazon customer service, after confirmed the warranty is international, I asked the customer service can Amazon match the price with other online store. At the time I contact customer service, this 480GB SSD was listed around US$250, the other online store has discount of US$204. The customer service told me Amazon won&rsquo;t honor any price match. So I think I&rsquo;d better wait till Friday to see if got big discount. Then to my surprise, 3 minutes later, when I refresh the page, Amazon changed the price to US$204. So I immediately placed the order, and 2 of my colleagues also placed order on this same item.</p>
-
-<p>This month for me is really a crazy shopping month. I have spend a lot on several different online stores:</p>
-
-<ul>
-<li>Ordered over S$2000 products from TaoBao, most of the items are for my new BTO HDB house renovation. Some package has not been shipped. I think all those items can only be delivered to my new house around end of Dec.</li>
-<li>Ordered HHKB from Amazon Japan</li>
-<li>Ordered LG G Pro 2 at Singapore</li>
-<li>Ordered new house kitchen sink tap from Amazon. My purchase was US$206, when 25 Nov I received the product, I found Amazon has dropped the price to US$158, so I contacted customer service to refund the price difference. They granted the refund on the spot.</li>
-<li>Ordered this SanDisk 480GB SSD</li>
-<li>Ordered XiaoMi Power Bank, still on the way</li>
-<li>Ordered backup battery for my old LG HD 4x from Aliexpress. Still on the way</li>
-</ul>
-
-
-<p>Ordered so many items, spending so much in one month just for online shopping. I never done this before, so worth mark it here. :)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -625,6 +657,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/11/05/config-logitech-performance-mx-zoom-button-in-ubuntu/">Config Logitech Performance MX Zoom Button in Ubuntu</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/">Re-Hacked YouCompleteMe to Support Lamely Structured Projects</a>
       </li>
     
@@ -640,15 +676,11 @@
         <a href="/blog/2014/12/29/2014-year-end-summary/">2014 Year End Summary</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/12/24/hhkb-palm-rest-arrived/">HHKB Palm Rest Arrived</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (1)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
 </section>
 
 <section class="googleplus">

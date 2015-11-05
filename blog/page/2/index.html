@@ -9,7 +9,8 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="My HHKB Pro 2 Type-S was delivered to my house on 19 Nov, so till today, I have officially owned it one week. So I think it&rsquo;s time to write &hellip;">
+  <meta name="description" content="This afternoon, I ordered another gadget from Amazon:
+SanDisk Extreme PRO 480GB SATA 6.0GB/s 2.5-Inch 7mm Height Solid State Drive (SSD) With 10-Year &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +78,62 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/11/27/crazy-shopping-month/">Crazy Shopping Month</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-27T22:41:50+08:00" pubdate data-updated="true">Nov 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This afternoon, I ordered another gadget from Amazon:
+<a href="http://www.amazon.com/gp/product/B00KHRYRLY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00KHRYRLY&linkCode=as2&tag=zhuyong.me-20&linkId=5VFWEDLJIRJOG7TM">SanDisk Extreme PRO 480GB SATA 6.0GB/s 2.5-Inch 7mm Height Solid State Drive (SSD) With 10-Year Warranty- SDSSDXPS-480G-G25</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=zhuyong.me-20&l=as2&o=1&a=B00KHRYRLY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<p><a href="http://www.amazon.com/gp/product/B00KHRYRLY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00KHRYRLY&linkCode=as2&tag=zhuyong.me-20&linkId=5VFWEDLJIRJOG7TM"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00KHRYRLY&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=zhuyong.me-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=zhuyong.me-20&l=as2&o=1&a=B00KHRYRLY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<p>When I start sourcing good SSD deal on Amazon, I was initially looking at Intel 730 480GB, few days back, it was on discount price of US$199.99. Intel SSD has 5 Years international warranty, then I found this SandDisk SSD was selling with 10 Years warranty, someone online said the warranty was international, but I can&rsquo;t find clear statement. So I contacted Amazon customer service, after confirmed the warranty is international, I asked the customer service can Amazon match the price with other online store. At the time I contact customer service, this 480GB SSD was listed around US$250, the other online store has discount of US$204. The customer service told me Amazon won&rsquo;t honor any price match. So I think I&rsquo;d better wait till Friday to see if got big discount. Then to my surprise, 3 minutes later, when I refresh the page, Amazon changed the price to US$204. So I immediately placed the order, and 2 of my colleagues also placed order on this same item.</p>
+
+<p>This month for me is really a crazy shopping month. I have spend a lot on several different online stores:</p>
+
+<ul>
+<li>Ordered over S$2000 products from TaoBao, most of the items are for my new BTO HDB house renovation. Some package has not been shipped. I think all those items can only be delivered to my new house around end of Dec.</li>
+<li>Ordered HHKB from Amazon Japan</li>
+<li>Ordered LG G Pro 2 at Singapore</li>
+<li>Ordered new house kitchen sink tap from Amazon. My purchase was US$206, when 25 Nov I received the product, I found Amazon has dropped the price to US$158, so I contacted customer service to refund the price difference. They granted the refund on the spot.</li>
+<li>Ordered this SanDisk 480GB SSD</li>
+<li>Ordered XiaoMi Power Bank, still on the way</li>
+<li>Ordered backup battery for my old LG HD 4x from Aliexpress. Still on the way</li>
+</ul>
+
+
+<p>Ordered so many items, spending so much in one month just for online shopping. I never done this before, so worth mark it here. :)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -663,66 +720,6 @@ int modX_funcX(void) {.....}
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/02/05/add-related-posts-section-to-octopress/">Add &#8220;Related Posts&#8221; Section to Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-05T12:39:53+08:00" pubdate data-updated="true">Feb 5<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When reading someone&rsquo;s article, it&rsquo;s good to have a section to show the releated posts. Today I searched online and found to add <code>Related Posts</code> section to Octopress is quite easy.</p>
-
-<p>First, edit config file <code>_config.yml</code> to add line</p>
-
-<pre><code>lsi: true
-</code></pre>
-
-<p>Second, create file <code>source/_includes/post/related_posts.html</code> with content below</p>
-
-<pre><code>{% if site.related_posts %}
-  &lt;h3&gt;Related posts&lt;/h3&gt;
-  &lt;ul class="posts"&gt;
-  {% for post in site.related_posts limit:3 %}
-    &lt;li class="related"&gt;
-      &lt;a href="{{ root_url }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
-    &lt;/li&gt;
-  {% endfor %}
-  &lt;/ul&gt;
-{% endif %}
-</code></pre>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/02/05/add-related-posts-section-to-octopress/">Continue &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -745,6 +742,10 @@ int modX_funcX(void) {.....}
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/11/05/config-logitech-performance-mx-zoom-button-in-ubuntu/">Config Logitech Performance MX Zoom Button in Ubuntu</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/">Re-Hacked YouCompleteMe to Support Lamely Structured Projects</a>
       </li>
     
@@ -760,15 +761,11 @@ int modX_funcX(void) {.....}
         <a href="/blog/2014/12/29/2014-year-end-summary/">2014 Year End Summary</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/12/24/hhkb-palm-rest-arrived/">HHKB Palm Rest Arrived</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (1)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (2)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
 </section>
 
 <section class="googleplus">
