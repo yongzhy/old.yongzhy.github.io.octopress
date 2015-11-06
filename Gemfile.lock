@@ -12,7 +12,7 @@ GEM
     directory_watcher (1.4.1)
     fast-stemmer (1.0.2)
     fssm (0.2.10)
-    gsl (1.15.3)
+    gsl (1.14.7)
       narray (>= 0.5.9)
     haml (3.1.8)
     jekyll (0.12.1)
@@ -55,7 +55,7 @@ DEPENDENCIES
   RedCloth (~> 4.2.9)
   compass (~> 0.12.2)
   directory_watcher (= 1.4.1)
-  gsl (~> 1.15.3)
+  gsl (~> 1.14.7)
   haml (~> 3.1.7)
   jekyll (~> 0.12)
   liquid (~> 2.3.0)
@@ -68,3 +68,6 @@ DEPENDENCIES
   sass-globbing (~> 1.0.0)
   sinatra (~> 1.4.2)
   stringex (~> 1.4.0)
+
+BUNDLED WITH
+   1.10.6
