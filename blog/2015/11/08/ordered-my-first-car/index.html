@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My First Google App Engine in Golang : Hello World! - Zhu Yong</title>
+  <title>Ordered My First Car - Zhu Yong</title>
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="Long time ago, I was thinking to build something using Google App Engine. But I didn&rsquo;t start coding after created the app in GAE. So the apps &hellip;">
+  <meta name="description" content="This weekend, just after I received my official driving license, I ordered my first car &ndash; Citroen Grand C4 Picasso. The reasons I chose Grand &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world">
+  <link rel="canonical" href="http://zhuyong.me/blog/2015/11/08/ordered-my-first-car">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Zhu Yong" type="application/atom+xml">
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">My First Google App Engine in Golang : Hello World!</h1>
+      <h1 class="entry-title">Ordered My First Car</h1>
     
     
       <p class="meta">
@@ -96,32 +96,26 @@
   
 
 
-<time datetime="2014-01-22T17:34:05+08:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
+<time datetime="2015-11-08T17:47:12+08:00" pubdate data-updated="true">Nov 8<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Long time ago, I was thinking to build something using Google App Engine. But I didn&rsquo;t start coding after created the app in GAE. So the apps remain there with a <code>None Deployed</code> status.</p>
+<div class="entry-content"><p>This weekend, just after I received my official driving license, I ordered my first car &ndash; Citroen Grand C4 Picasso.</p>
 
-<p>Yesterday I downloaded the GAE Golang SDK, the reason for choosing experimental golang SDK is that, I want to be more familar with Golang though the process of GAE development.</p>
+<p>The reasons I chose Grand C4 Picasso are simple:</p>
 
-<p>So the process started with the the <a href="https://developers.google.com/appengine/docs/go/gettingstarted/helloworld"><code>Hello World</code></a> example. I created the folder and files, then when I issue <code>goapp serve</code> command, I saw error about the <code>app.yaml</code> file. It&rsquo;s because the indent of line</p>
-
-<pre><code>- url: /.*
-</code></pre>
-
-<!-- more -->
+<ol>
+<li><p>I need MPV car, we have 6 family members, 5 seaters car not enough.</p></li>
+<li><p>For MPV, I shortlisted Honda Stream, Toyota Wish and this Grand C4 Picasso. In Singapore Honda and Toyota cars are people&rsquo;s Number 1 choice because the high reliability and relatively low maintenance cost. If the car dealer still carry Honda Stream, I might go for that car. As for Toyota Wish, it&rsquo;s a quite old model, no change since 2009. As for Grand C4 Picasso, this is a new model, fuel efficient, and the dealer provide 5 years warranty + 5 years free service. Most importantly, I like both the interior and exterior of this car.</p></li>
+</ol>
 
 
-<p>After corrected the indent problem, the server started successfully. I need to mention that I ssh remote login my Ubuntu server to do the development. So after the <code>HelloWorld</code> app server started, I tested on my laptop with <code>http://1.2.3.4:8080</code> (assume my Ubuntu server IP is <code>1.2.3.4</code>). Chrome reported page can&rsquo;t found. That&rsquo;s strange, there is no error message from GAE, but there must be something wrong.</p>
+<p><img src="/images/blogimg/2015-11-08-Car/GC4P.jpg" title="&#34;Citroen Grand C4 Picasso&#34;" alt="&#34;Citroen Grand C4 Picasso&#34;"></p>
 
-<p>So I use <code>goapp help serve</code>, then I found there is a <code>--host=</code> option, then I tried to set the host to ip <code>1.2.3.4</code>, bingo, I saw <code>hello world!</code>.</p>
-
-<p>After that I still wondering why I can&rsquo;t access the server using IP if I didn&rsquo;t append the <code>--host=</code> options. Then I found someone asked the same question on <a href="http://stackoverflow.com/questions/7534967/is-there-any-way-to-access-gae-dev-app-server-in-the-local-network">StackOverflow</a> in Year 2011. I confirmed the answer of <code>--host=0.0.0.0</code> works same as <code>--host=1.2.3.4</code>.</p>
-
-<p>Next step I will finish the app I should finish long time ago.</p>
+<p>Now I just need to wait for the deal to big the COE, settle car loan and inssurance, then I can collect my car. Sadly, that&rsquo;s at least 2-3 weeks waiting time.</p>
 </div>
 
 
@@ -144,12 +138,12 @@
   
 
 
-<time datetime="2014-01-22T17:34:05+08:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
+<time datetime="2015-11-08T17:47:12+08:00" pubdate data-updated="true">Nov 8<span>th</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/gae/'>GAE</a>, <a class='category' href='/blog/categories/golang/'>golang</a>
+    <a class='category' href='/blog/categories/car/'>car</a>, <a class='category' href='/blog/categories/life/'>life</a>
   
 </span>
 
@@ -159,15 +153,15 @@
 <ul class="posts">
     
     <li class="related">
-    <a href="/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/">My First Google App Engine In Golang : Hello World!</a>
+    <a href="/blog/2014/12/29/2014-year-end-summary/">2014 Year End Summary</a>
     </li>
     
     <li class="related">
-    <a href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">Hack YouCompleteMe And libclang For Lamely Structured Project</a>
+    <a href="/blog/2015/11/06/got-my-sg50-driving-license/">Got My SG50 Driving License</a>
     </li>
     
     <li class="related">
-    <a href="/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/">Turn C720 Into Development Machine: Step By Step Guide</a>
+    <a href="/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear/">I Ordered "Call Of Duty: Ghosts Eyewear"</a>
     </li>
     
 </ul>
@@ -177,7 +171,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/" data-via="" data-counturl="http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://zhuyong.me/blog/2015/11/08/ordered-my-first-car/" data-via="" data-counturl="http://zhuyong.me/blog/2015/11/08/ordered-my-first-car/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -190,10 +184,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/01/20/beginning-of-book-reading-the-power-of-habits/" title="Previous Post: Beginning Of Book Reading: The Power Of Habits">&laquo; Beginning Of Book Reading: The Power Of Habits</a>
+        <a class="basic-alignment left" href="/blog/2015/11/06/got-my-sg50-driving-license/" title="Previous Post: Got My SG50 Driving License">&laquo; Got My SG50 Driving License</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/" title="Next Post: Turn C720 Into Development Machine: Step By Step Guide">Turn C720 Into Development Machine: Step By Step Guide &raquo;</a>
       
     </p>
   </footer>
@@ -293,8 +285,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/';
-        var disqus_url = 'http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/';
+        var disqus_identifier = 'http://zhuyong.me/blog/2015/11/08/ordered-my-first-car/';
+        var disqus_url = 'http://zhuyong.me/blog/2015/11/08/ordered-my-first-car/';
         var disqus_script = 'embed.js';
       
     (function () {
