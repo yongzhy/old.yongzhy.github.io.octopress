@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://zhuyong.me/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2015-11-08T18:09:02+08:00</updated>
+  <updated>2015-11-09T16:41:38+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Repair Honeywell 50250-S After Plug Into 220V Power Supply]]></title>
+    <link href="http://zhuyong.me/blog/2015/11/09/repair-honeywell-50250-s-after-plug-into-220v-power-supply/"/>
+    <updated>2015-11-09T14:21:10+08:00</updated>
+    <id>http://zhuyong.me/blog/2015/11/09/repair-honeywell-50250-s-after-plug-into-220v-power-supply</id>
+    <content type="html"><![CDATA[<p>Because of forest fire from neighbour Indonesia, air quality for 2015 Augest and September in Singapore reached hazardous level for many days.</p>
+
+<p>In all past hazardous day, it&rsquo;s my job to move Honeywell 50250-S air purifier around, then one day, while I was having my dinner, my wife volunteered to do the job. And that&rsquo;s it, she plugged the plug into 220V output from the transformer, and both the transfer and purifier burnt. As the result, we suffer the haze for long time until I repair it, and by that time, haze almost gone.</p>
+
+<p>To fix the transformer is simple, just replace the fuse.</p>
+
+<p>To fix the purifier is little bit difficult, first I can&rsquo;t find online anything regarding disassemble 50250-S, I can only try to disassemble any parts that can be taken out, and finally figured out where the PCB is.</p>
+
+<p>Just when I saw the PCB, I feel that I can fix it, because only one component was burnt. After search around online, I figured out that&rsquo;s a veristor, but there is no part number printed, bad luck. Next I took the PCB to Simlim Tower, visited different shops and asked around if they have the replacement for that veristor, luckily I found one from a shop at basement, the replacement component is 10D271K (standard veristor for 110V). By the way, the cost for two transformer fuse + one 10D271K is S$2.</p>
+
+<p>The repair process is simple, just use solder iron take out old versiter and replace with this new one, connect back the PCB, turn on the purifier,</p>
+
+<p>Image of the burn veristor (in red circle)</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-11-09-Honeywell/honeywell_01.jpg" title="&#34;Honeywell 50250-S Repair&#34;" alt="&#34;Honeywell 50250-S Repair&#34;"></p>
+
+<p>Image after change the veristor to 10D271K (the blue color one).</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-11-09-Honeywell/honeywell_02.jpg" title="&#34;Honeywell 50250-S Repair&#34;" alt="&#34;Honeywell 50250-S Repair&#34;"></p>
+
+<p>Image of the fixed Honeywell 50250-S, everything back to normal:</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-11-09-Honeywell/honeywell_03.jpg" title="&#34;Honeywell 50250-S Repair&#34;" alt="&#34;Honeywell 50250-S Repair&#34;"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ordered My First Car]]></title>
@@ -813,25 +844,6 @@ $4 = {FileName = {static npos = &lt;optimized out&gt;, _M_dataplus = {&lt;std::a
 <h3>Update 2015-02-01</h3>
 
 <p>I have tried another hacking, a better hacking, click <a href="http://zhuyong.me/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/">here</a> for more info.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[DARPA Published Over 60 Projects Source Code in One Place]]></title>
-    <link href="http://zhuyong.me/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place/"/>
-    <updated>2014-02-12T17:29:59+08:00</updated>
-    <id>http://zhuyong.me/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place</id>
-    <content type="html"><![CDATA[<p>The Defense Advanced Research Projects Agency, or DARPA, sponsors a lot of technology through grants to universities and private lab, has published <a href="http://www.darpa.mil/OpenCatalog/index.html">DARPA Open Catalog</a> which listed over 60 opensource projects. Chris White, the DARPA program manager behind the effort, said</p>
-
-<blockquote><p>&ldquo;Making our open source catalog available increases the number of experts who can help quickly develop relevant software for the government. Our hope is that the computer science community will test and evaluate elements of our software and afterward adopt them as either standalone offerings or as components of their products.&rdquo;</p></blockquote>
-
-<p>The DARPA Open Catalog contains two tables:</p>
-
-<ul>
-<li>The Software Table lists performers with one row per piece of software. Each piece of software has a link to an external project page, as well as a link to the code repository for the project. The software categories are listed; in the case of XDATA, they are Analytics, Visualization and Infrastructure. A description of the project is followed by the applicable software license. Finally, each entry has a link to the publications from each team&rsquo;s software entry.</li>
-<li>The Publications Table contains author(s), title, and links to peer-reviewed articles related to specific DARPA programs.</li>
-</ul>
-
 ]]></content>
   </entry>
   

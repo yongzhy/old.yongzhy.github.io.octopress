@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gadget | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/gadget/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2015-11-08T18:09:02+08:00</updated>
+  <updated>2015-11-09T16:43:01+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -25,13 +25,13 @@
 <p>On 20 Dec, my shopping packages from Taobao were delivered, one of those packages is the SATA adapter to replace the DVD drive, this adapter only costed my RMB 27, which is very very cheap. On that night, I took out the DVD drive and replaced it with that adapter and the original Toshiba SATA II hard drive. So now my laptop has over 1TB hard drive capacity.</p>
 
 <p>This is the image of Sandisk Extreme Pro 480GB SSD
-<img src="/images/blogimg/2014-12-22-ChangeDrive/sandisk.jpg"></p>
+{% img /images/blogimg/2014-12-22-ChangeDrive/sandisk.jpg %}</p>
 
 <p>The SATA adapter with Toshiba SATA II drive mounted
-<img src="/images/blogimg/2014-12-22-ChangeDrive/toshiba.jpg"></p>
+{% img /images/blogimg/2014-12-22-ChangeDrive/toshiba.jpg %}</p>
 
 <p>SSD and SATA adapter installed on the system. The adapter doesn&rsquo;t have the hole to mount screw at location 1, and its size is smaller than the original DVD drive, so it left some part un-covered at location 2. Considering the very cheap price, I am OK with the two not perfect point.
-<img src="/images/blogimg/2014-12-22-ChangeDrive/all.jpg"></p>
+{% img /images/blogimg/2014-12-22-ChangeDrive/all.jpg %}</p>
 ]]></content>
   </entry>
   
@@ -44,7 +44,7 @@
 
 <p>Last week during one day lunch time, I asked my coleagues where can I find sim card cutting service, one of my colleagues said he has a cutter but never used it before, so I asked him to bring the cutter to office. And he did it today, so I cut my sim card to micro-sim. With the cutter, the task was simple and easy. Attached a picture for the cutter and frame left from origin sim card.</p>
 
-<p><img src="/images/blogimg/2014-12-08-Simcard/2014-12-08-simcard.jpg" title="&ldquo;Cutter and remainning of normal sim card&rdquo;" ></p>
+<p>{% img /images/blogimg/2014-12-08-Simcard/2014-12-08-simcard.jpg &ldquo;Cutter and remainning of normal sim card&rdquo; %}</p>
 ]]></content>
   </entry>
   
@@ -109,7 +109,7 @@
 
 <p>Here is a picture of my two beloved keyboards.</p>
 
-<p><img src="/images/blogimg/2014-11-26-HHKB/HHKB-001.jpg" title="&ldquo;HHKB and IBM Model M SSK&rdquo;" ></p>
+<p>{% img /images/blogimg/2014-11-26-HHKB/HHKB-001.jpg &ldquo;HHKB and IBM Model M SSK&rdquo; %}</p>
 ]]></content>
   </entry>
   
@@ -136,16 +136,16 @@
 <p>The waiting time for this forward service is long, because they are seeing large amount of package recently. My packaged delivered to JShoppers on 10 Nov, only been processed on 15 Nov, and notify me to pay forwarding fee on 17 Nov, after that, the speed was fast: shipment was on 18 Nov and delivered to me on 19 Nov.</p>
 
 <p>Ok, let&rsquo;s forget about JShoppers, here comes the exciting part, the HHKB. Amazon use a big box for the relatively small keyboard.
-<img src="/images/blogimg/2014-11-25-HHKB/HHKB-001.jpg" title="&ldquo;HHKB In Amazon&rsquo;s Huge Box&rdquo;" ></p>
+{% img /images/blogimg/2014-11-25-HHKB/HHKB-001.jpg &ldquo;HHKB In Amazon&rsquo;s Huge Box&rdquo; %}</p>
 
 <p>HHKB box
-<img src="/images/blogimg/2014-11-25-HHKB/HHKB-002.jpg" title="&ldquo;HHKB In Box&rdquo;" ></p>
+{% img /images/blogimg/2014-11-25-HHKB/HHKB-002.jpg &ldquo;HHKB In Box&rdquo; %}</p>
 
 <p>HHKB box opened
-<img src="/images/blogimg/2014-11-25-HHKB/HHKB-003.jpg" title="&ldquo;HHKB In Box&rdquo;" ></p>
+{% img /images/blogimg/2014-11-25-HHKB/HHKB-003.jpg &ldquo;HHKB In Box&rdquo; %}</p>
 
 <p>HHKB connected to my chromebook.
-<img src="/images/blogimg/2014-11-25-HHKB/HHKB-004.jpg" title="&ldquo;HHKB Connected To Chromebook&rdquo;" ></p>
+{% img /images/blogimg/2014-11-25-HHKB/HHKB-004.jpg &ldquo;HHKB Connected To Chromebook&rdquo; %}</p>
 
 <p>I will write another blog later about how I feel it.</p>
 ]]></content>

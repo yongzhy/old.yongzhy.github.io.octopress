@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="It has been weeks since I purchased my LG G Pro 2, but I haven&rsquo;t insert sim card into it yet. The reason is because my current sim card is the &hellip;">
+  <meta name="description" content="For embedded system C projects that share same code base, one common practice is to use various feature flags to encapsulate related code. This &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,62 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/">ARM RVCT Tips: Armcc &amp;&amp; Fromelf</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-12T15:54:19+08:00" pubdate data-updated="true">Dec 12<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For embedded system C projects that share same code base, one common practice is to use various feature flags to encapsulate related code. This results difficulty in code reading, especially when you have huge amounts of feature flags, especially when flags&#8217; value depend on value of other flags. This is what I am dealing with in current project. And I found <code>armcc</code> and <code>fromelf</code> have some useful feature to help developer in such situation.</p>
+
+<p>First, <code>armcc</code>, the compiler from ARM RVCT. Command line options are <code>--debug --debug_macros -E</code>, this will generate raw C file with all preprocessors been parsed, you can see how is a macro been defined.</p>
+
+<ul>
+<li><code>--debug</code> is to enable generate debug information</li>
+<li><code>--debug_macros</code> is generate debug entry for macros. You can see the expanded macro in the generated C source code. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHHDEAA.html">doc here</a></li>
+<li><code>-E</code> is to tell compiler not compile the C file, just excute the preprocess step. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHIDBBG.html">doc here</a></li>
+</ul>
+
+
+<p>Second, <code>fromelf</code>, imaging you have a complicated data structure defined, of which, some elements depends on some feature flags, to find out the difference between two different configurations, instead of load into debugger and compare, you can just use <code>fromelf</code> to dump the structure and use a diff tool to compare.</p>
+
+<p>The command line is <code>fromelf --fieldoffsets --select=the_structure.* --output=the_structure.txt final.axf</code></p>
+
+<ul>
+<li><code>--fieldoffsets</code> produce offset for each structure elements. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0477i/BABJBGBH.html">doc here</a></li>
+<li><code>--select=the_structure.*</code> to select the data structure to output</li>
+<li><code>--output</code> to specify output file contain the listing</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -650,52 +706,6 @@ int modX_funcX(void) {.....}
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place/">DARPA Published Over 60 Projects Source Code in One Place</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-12T17:29:59+08:00" pubdate data-updated="true">Feb 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The Defense Advanced Research Projects Agency, or DARPA, sponsors a lot of technology through grants to universities and private lab, has published <a href="http://www.darpa.mil/OpenCatalog/index.html">DARPA Open Catalog</a> which listed over 60 opensource projects. Chris White, the DARPA program manager behind the effort, said</p>
-
-<blockquote><p>&ldquo;Making our open source catalog available increases the number of experts who can help quickly develop relevant software for the government. Our hope is that the computer science community will test and evaluate elements of our software and afterward adopt them as either standalone offerings or as components of their products.&rdquo;</p></blockquote>
-
-<p>The DARPA Open Catalog contains two tables:</p>
-
-<ul>
-<li>The Software Table lists performers with one row per piece of software. Each piece of software has a link to an external project page, as well as a link to the code repository for the project. The software categories are listed; in the case of XDATA, they are Analytics, Visualization and Infrastructure. A description of the project is followed by the applicable software license. Finally, each entry has a link to the publications from each team&rsquo;s software entry.</li>
-<li>The Publications Table contains author(s), title, and links to peer-reviewed articles related to specific DARPA programs.</li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -718,6 +728,10 @@ int modX_funcX(void) {.....}
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/11/09/repair-honeywell-50250-s-after-plug-into-220v-power-supply/">Repair Honeywell 50250-S After Plug Into 220V Power Supply</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/11/08/ordered-my-first-car/">Ordered My First Car</a>
       </li>
     
@@ -733,15 +747,11 @@ int modX_funcX(void) {.....}
         <a href="/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/">Re-Hacked YouCompleteMe to Support Lamely Structured Projects</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2015/01/06/hdb-bto-home-network-diy/">HDB BTO Home Network DIY</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/car/'>car (1)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (4)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/car/'>car (1)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/diy/'>diy (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (5)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
 </section>
 
 <section class="googleplus">

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Coding | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/coding/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2015-11-08T18:09:02+08:00</updated>
+  <updated>2015-11-09T16:43:01+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -28,18 +28,18 @@
 
 <p>This is the image of the main window for the final working product.</p>
 
-<p><img src="/images/blogimg/2014-12-31-t32hook/t32hook-001.png"></p>
+<p>{% img /images/blogimg/2014-12-31-t32hook/t32hook-001.png %}</p>
 
 <!-- more -->
 
 
 <p>This the serial setting dialog, I didn&rsquo;t change this part from the example code.</p>
 
-<p><img src="/images/blogimg/2014-12-31-t32hook/t32hook-002.png"></p>
+<p>{% img /images/blogimg/2014-12-31-t32hook/t32hook-002.png %}</p>
 
 <p>This is the Trace32 remote setting dialog. Added options to specify the remote host, port, packet size, the setup script to run as well as text line to trigger setup script re-run.</p>
 
-<p><img src="/images/blogimg/2014-12-31-t32hook/t32hook-003.png"></p>
+<p>{% img /images/blogimg/2014-12-31-t32hook/t32hook-003.png %}</p>
 
 <p>The whole development take me few night time at home. My initial working version with everything hard coded, because we must solve the firmware issue ASAP. I use my spare time to make it configurable, so my colleagues with same need can use it as well.</p>
 

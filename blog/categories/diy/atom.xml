@@ -4,7 +4,7 @@
   <title><![CDATA[Category: DIY | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/diy/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2015-11-08T18:09:02+08:00</updated>
+  <updated>2015-11-09T16:43:01+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -24,7 +24,7 @@
 
 <p>Below are the tools I used for this DIY job.</p>
 
-<p><img src="/images/blogimg/2015-01-06-network/network-000.jpg"></p>
+<p>{% img /images/blogimg/2015-01-06-network/network-000.jpg %}</p>
 
 <p>Start from bedrooms, change the RJ11 to RJ45 one by one.</p>
 
@@ -35,45 +35,45 @@
 
 <p>This picture is the original RJ11 panel.</p>
 
-<p><img src="/images/blogimg/2015-01-06-network/network-001.jpg"></p>
+<p>{% img /images/blogimg/2015-01-06-network/network-001.jpg %}</p>
 
 <p>Take off the cover from the panel.</p>
 
-<p><img src="/images/blogimg/2015-01-06-network/network-002.jpg"></p>
+<p>{% img /images/blogimg/2015-01-06-network/network-002.jpg %}</p>
 
 <p>Loosen the screws on the panel. The cable inside is already Cat 6 network cable. So I just need to change the modules and panels.</p>
 
-<p><img src="/images/blogimg/2015-01-06-network/network-003.jpg"></p>
+<p>{% img /images/blogimg/2015-01-06-network/network-003.jpg %}</p>
 
 <p>Put the color wires into each slot on the network module. Use pattern B</p>
 
-<p><img src="/images/blogimg/2015-01-06-network/network-004.jpg"></p>
+<p>{% img /images/blogimg/2015-01-06-network/network-004.jpg %}</p>
 
 <p>Cut off the extra wires, put on the back cover.</p>
 
-<p><img src="/images/blogimg/2015-01-06-network/network-005.jpg"></p>
+<p>{% img /images/blogimg/2015-01-06-network/network-005.jpg %}</p>
 
 <p>Insert module into the panel.</p>
 
-<p><img src="/images/blogimg/2015-01-06-network/network-006.jpg"></p>
+<p>{% img /images/blogimg/2015-01-06-network/network-006.jpg %}</p>
 
 <p>Use back the origin screws to fasten the panel.</p>
 
-<p><img src="/images/blogimg/2015-01-06-network/network-007.jpg"></p>
+<p>{% img /images/blogimg/2015-01-06-network/network-007.jpg %}</p>
 
 <p>After all three bedrooms and the bomb shelter (Yes, I changed the module and panel in bomb shelter as well). The next job is tougher, I need to do add modules to all terminal in the power box behind the main gate.</p>
 
 <p>This is the original lines.</p>
 
-<p><img src="/images/blogimg/2015-01-06-network/network-008.jpg"></p>
+<p>{% img /images/blogimg/2015-01-06-network/network-008.jpg %}</p>
 
 <p>After I connect the modules to all lines.</p>
 
-<p><img src="/images/blogimg/2015-01-06-network/network-009.jpg"></p>
+<p>{% img /images/blogimg/2015-01-06-network/network-009.jpg %}</p>
 
 <p>This is the final work.</p>
 
-<p><img src="/images/blogimg/2015-01-06-network/network-010.jpg"></p>
+<p>{% img /images/blogimg/2015-01-06-network/network-010.jpg %}</p>
 
 <p>The whole process was not difficult, just need to be careful to match the color lines with the pattern on the modules.</p>
 ]]></content>

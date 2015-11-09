@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2015-11-08T18:09:02+08:00</updated>
+  <updated>2015-11-09T16:43:01+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -27,7 +27,7 @@
 
 <p>Second, create file <code>source/_includes/post/related_posts.html</code> with content below</p>
 
-<p></p>
+<p>{% raw %}</p>
 
 <pre><code>{% if site.related_posts %}
   &lt;h3&gt;Related posts&lt;/h3&gt;
@@ -41,30 +41,30 @@
 {% endif %}
 </code></pre>
 
-<p></p>
+<p>{% endraw %}</p>
 
 <!-- more -->
 
 
 <p>Next, add this footer section to the post. modify <code>source/_layouts/post.html</code> to add line</p>
 
-<p></p>
+<p>{% raw %}</p>
 
 <pre><code>{% include post/related_posts.html %}
 </code></pre>
 
-<p></p>
+<p>{% endraw %}</p>
 
 <p>under</p>
 
-<p></p>
+<p>{% raw %}</p>
 
 <pre><code>{% include post/author.html %}
 {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
 {% include post/categories.html %}
 </code></pre>
 
-<p></p>
+<p>{% endraw %}</p>
 
 <p>OK. Now you can run <code>rake generate</code> and <code>rake preview</code> to see the effects.</p>
 
@@ -127,7 +127,7 @@ text color to <code>#CCCCCC</code>, and the font I chose bold <code>Redressed</c
 
 <p>Below is the screen when I created my favicon.</p>
 
-<p><img src="/images/blogimg/2014-01-16_125346_favicon.png" width="612" height="347" title="&lsquo;Screen to create favicon&rsquo;" ></p>
+<p>{% img /images/blogimg/2014-01-16_125346_favicon.png 612 347 &lsquo;Screen to create favicon&rsquo; %}</p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="This weekend, just after I received my official driving license, I ordered my first car &ndash; Citroen Grand C4 Picasso. The reasons I chose Grand &hellip;">
+  <meta name="description" content="Because of forest fire from neighbour Indonesia, air quality for 2015 Augest and September in Singapore reached hazardous level for many days. In all &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,64 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/11/09/repair-honeywell-50250-s-after-plug-into-220v-power-supply/">Repair Honeywell 50250-S After Plug Into 220V Power Supply</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-09T14:21:10+08:00" pubdate data-updated="true">Nov 9<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Because of forest fire from neighbour Indonesia, air quality for 2015 Augest and September in Singapore reached hazardous level for many days.</p>
+
+<p>In all past hazardous day, it&rsquo;s my job to move Honeywell 50250-S air purifier around, then one day, while I was having my dinner, my wife volunteered to do the job. And that&rsquo;s it, she plugged the plug into 220V output from the transformer, and both the transfer and purifier burnt. As the result, we suffer the haze for long time until I repair it, and by that time, haze almost gone.</p>
+
+<p>To fix the transformer is simple, just replace the fuse.</p>
+
+<p>To fix the purifier is little bit difficult, first I can&rsquo;t find online anything regarding disassemble 50250-S, I can only try to disassemble any parts that can be taken out, and finally figured out where the PCB is.</p>
+
+<p>Just when I saw the PCB, I feel that I can fix it, because only one component was burnt. After search around online, I figured out that&rsquo;s a veristor, but there is no part number printed, bad luck. Next I took the PCB to Simlim Tower, visited different shops and asked around if they have the replacement for that veristor, luckily I found one from a shop at basement, the replacement component is 10D271K (standard veristor for 110V). By the way, the cost for two transformer fuse + one 10D271K is S$2.</p>
+
+<p>The repair process is simple, just use solder iron take out old versiter and replace with this new one, connect back the PCB, turn on the purifier,</p>
+
+<p>Image of the burn veristor (in red circle)</p>
+
+<p><img src="/images/blogimg/2015-11-09-Honeywell/honeywell_01.jpg" title="&#34;Honeywell 50250-S Repair&#34;" alt="&#34;Honeywell 50250-S Repair&#34;"></p>
+
+<p>Image after change the veristor to 10D271K (the blue color one).</p>
+
+<p><img src="/images/blogimg/2015-11-09-Honeywell/honeywell_02.jpg" title="&#34;Honeywell 50250-S Repair&#34;" alt="&#34;Honeywell 50250-S Repair&#34;"></p>
+
+<p>Image of the fixed Honeywell 50250-S, everything back to normal:</p>
+
+<p><img src="/images/blogimg/2015-11-09-Honeywell/honeywell_03.jpg" title="&#34;Honeywell 50250-S Repair&#34;" alt="&#34;Honeywell 50250-S Repair&#34;"></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -598,62 +656,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/">ARM RVCT Tips: Armcc &amp;&amp; Fromelf</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-12T15:54:19+08:00" pubdate data-updated="true">Dec 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For embedded system C projects that share same code base, one common practice is to use various feature flags to encapsulate related code. This results difficulty in code reading, especially when you have huge amounts of feature flags, especially when flags&#8217; value depend on value of other flags. This is what I am dealing with in current project. And I found <code>armcc</code> and <code>fromelf</code> have some useful feature to help developer in such situation.</p>
-
-<p>First, <code>armcc</code>, the compiler from ARM RVCT. Command line options are <code>--debug --debug_macros -E</code>, this will generate raw C file with all preprocessors been parsed, you can see how is a macro been defined.</p>
-
-<ul>
-<li><code>--debug</code> is to enable generate debug information</li>
-<li><code>--debug_macros</code> is generate debug entry for macros. You can see the expanded macro in the generated C source code. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHHDEAA.html">doc here</a></li>
-<li><code>-E</code> is to tell compiler not compile the C file, just excute the preprocess step. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHIDBBG.html">doc here</a></li>
-</ul>
-
-
-<p>Second, <code>fromelf</code>, imaging you have a complicated data structure defined, of which, some elements depends on some feature flags, to find out the difference between two different configurations, instead of load into debugger and compare, you can just use <code>fromelf</code> to dump the structure and use a diff tool to compare.</p>
-
-<p>The command line is <code>fromelf --fieldoffsets --select=the_structure.* --output=the_structure.txt final.axf</code></p>
-
-<ul>
-<li><code>--fieldoffsets</code> produce offset for each structure elements. <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0477i/BABJBGBH.html">doc here</a></li>
-<li><code>--select=the_structure.*</code> to select the data structure to output</li>
-<li><code>--output</code> to specify output file contain the listing</li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -674,6 +676,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/11/09/repair-honeywell-50250-s-after-plug-into-220v-power-supply/">Repair Honeywell 50250-S After Plug Into 220V Power Supply</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/11/08/ordered-my-first-car/">Ordered My First Car</a>
       </li>
     
@@ -689,15 +695,11 @@
         <a href="/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/">Re-Hacked YouCompleteMe to Support Lamely Structured Projects</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2015/01/06/hdb-bto-home-network-diy/">HDB BTO Home Network DIY</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/car/'>car (1)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (4)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/car/'>car (1)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/diy/'>diy (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (5)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
 </section>
 
 <section class="googleplus">
