@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HHKB | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/hhkb/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2015-11-09T16:43:01+08:00</updated>
+  <updated>2015-11-19T22:01:54+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -20,7 +20,7 @@
     <id>http://zhuyong.me/blog/2014/12/24/hhkb-palm-rest-arrived</id>
     <content type="html"><![CDATA[<p>My HHKB palm rest from Taobao arrived last Saturday, and I brought it to office on Monday. After use if for two days, I am totally satisfied with it. The build quality is good, size is just nice for HHKB, well polished, and no strange smell. The logo was customized very good, exactly same as my requirement.</p>
 
-<p>{% img /images/blogimg/2014-12-24-HHKB-Palm-Rest/palm-rest.jpg %}</p>
+<p><img src="/images/blogimg/2014-12-24-HHKB-Palm-Rest/palm-rest.jpg"></p>
 
 <p>Maybe I should do a free advertisement for this Taobao shop: <a href="http://item.taobao.com/item.htm?spm=a1z10.1.w4004-5284025914.3.hP74Q9&amp;id=40499617063">Taobao Shop</a></p>
 ]]></content>
@@ -58,7 +58,7 @@
 
 <p>Here is a picture of my two beloved keyboards.</p>
 
-<p>{% img /images/blogimg/2014-11-26-HHKB/HHKB-001.jpg &ldquo;HHKB and IBM Model M SSK&rdquo; %}</p>
+<p><img src="/images/blogimg/2014-11-26-HHKB/HHKB-001.jpg" title="&ldquo;HHKB and IBM Model M SSK&rdquo;" ></p>
 ]]></content>
   </entry>
   
@@ -85,16 +85,16 @@
 <p>The waiting time for this forward service is long, because they are seeing large amount of package recently. My packaged delivered to JShoppers on 10 Nov, only been processed on 15 Nov, and notify me to pay forwarding fee on 17 Nov, after that, the speed was fast: shipment was on 18 Nov and delivered to me on 19 Nov.</p>
 
 <p>Ok, let&rsquo;s forget about JShoppers, here comes the exciting part, the HHKB. Amazon use a big box for the relatively small keyboard.
-{% img /images/blogimg/2014-11-25-HHKB/HHKB-001.jpg &ldquo;HHKB In Amazon&rsquo;s Huge Box&rdquo; %}</p>
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-001.jpg" title="&ldquo;HHKB In Amazon&rsquo;s Huge Box&rdquo;" ></p>
 
 <p>HHKB box
-{% img /images/blogimg/2014-11-25-HHKB/HHKB-002.jpg &ldquo;HHKB In Box&rdquo; %}</p>
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-002.jpg" title="&ldquo;HHKB In Box&rdquo;" ></p>
 
 <p>HHKB box opened
-{% img /images/blogimg/2014-11-25-HHKB/HHKB-003.jpg &ldquo;HHKB In Box&rdquo; %}</p>
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-003.jpg" title="&ldquo;HHKB In Box&rdquo;" ></p>
 
 <p>HHKB connected to my chromebook.
-{% img /images/blogimg/2014-11-25-HHKB/HHKB-004.jpg &ldquo;HHKB Connected To Chromebook&rdquo; %}</p>
+<img src="/images/blogimg/2014-11-25-HHKB/HHKB-004.jpg" title="&ldquo;HHKB Connected To Chromebook&rdquo;" ></p>
 
 <p>I will write another blog later about how I feel it.</p>
 ]]></content>

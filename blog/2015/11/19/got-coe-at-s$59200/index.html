@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>C Code Unit Testing Using Cmocka - Zhu Yong</title>
+  <title>Got COE at S$59200 - Zhu Yong</title>
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="cmocka is a unit testing framework for C, it is developed based on Google&rsquo;s project cmockery. It was easy to use, and the author corrected some &hellip;">
+  <meta name="description" content="Yesterday was the 2nd round of COE bid in Nov, thanks to the good sale result in 7 &ndash; 8 Nov car show @ Singpaore Expo, dealer were willing to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka">
+  <link rel="canonical" href="http://zhuyong.me/blog/2015/11/19/got-coe-at-s%2459200">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Zhu Yong" type="application/atom+xml">
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">C Code Unit Testing Using Cmocka</h1>
+      <h1 class="entry-title">Got COE at S$59200</h1>
     
     
       <p class="meta">
@@ -96,77 +96,31 @@
   
 
 
-<time datetime="2014-03-19T16:22:53+08:00" pubdate data-updated="true">Mar 19<span>th</span>, 2014</time>
+<time datetime="2015-11-19T21:46:29+08:00" pubdate data-updated="true">Nov 19<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p><a href="http://cmocka.org/">cmocka</a> is a unit testing framework for C, it is developed based on Google&rsquo;s project <a href="https://code.google.com/p/cmockery/">cmockery</a>. It was easy to use, and the author corrected some bugs from <code>cmockery</code>.</p>
+<div class="entry-content"><p>Yesterday was the 2nd round of COE bid in Nov, thanks to the good sale result in 7 &ndash; 8 Nov car show @ Singpaore Expo, dealer were willing to bid COE at higher price. At around 3pm, the price was already exceed 4th Nov final price.</p>
 
-<h3>Install cmocka</h3>
+<p>I kept refreshing the web page to get the status. C &amp; C put reserve price of S$59999 at 10:30am, then at around 3:50pm when the price going to hit S$59000, they revised the bid to S$60999, then I know I guaranteed to get one COE this time.</p>
 
-<p>First download source code for latest version of <code>cmocka</code> from <a href="https://open.cryptomilk.org/projects/cmocka/files">https://open.cryptomilk.org/projects/cmocka/files</a>. Current latest version is 0.3.2, and the source file is <code>cmocka-0.3.2.tar.xz</code>. <code>cmake</code> is required to build <code>cmocka</code>.</p>
+<p>After COE,  C &amp; C still need few days to settle :</p>
 
-<pre><code>$ cd ~/Downloads
-$ xz -d cmocka-0.3.2.tar.xz
-$ tar vxf cmocka-0.3.2.tar
-$ cd cmocka-0.3.2
-$ mkdir build
-$ cd build
-$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
-$ make
-$ sudo make install
-</code></pre>
+<ol>
+<li>I need to pay the remainning of down payment,</li>
+<li>Settle loan from bank</li>
+<li>Settle car insurance, I must say, the insurance premium is super high for new driver like me. Too bad I must take the appointed insurance from AIG.</li>
+<li>Install the front &amp; rear camera, solar film and etc</li>
+<li>Register the car under my name</li>
+</ol>
 
-<h3>Use cmocka</h3>
 
-<p>Create source file with test cases. Simple example would be like:</p>
+<p>Then, they will call me to collect the car. :)</p>
 
-<pre><code>#include &lt;stdarg.h&gt;
-#include &lt;stddef.h&gt;
-#include &lt;setjmp.h&gt;
-#include &lt;cmocka.h&gt;
-static void test(void **state)
-{
-    assert_int_equal(3, 3);
-    assert_int_not_equal(3, 3);
-}
-int main(void) 
-{
-    const UnitTest tests[] = 
-    {
-        unit_test(test),
-    };
-    return run_tests(tests);
-}
-</code></pre>
-
-<p>save file as `cmockatest.c</p>
-
-<pre><code>$ gcc cmockatest.c -lcmocka -o cmockatest
-$ ./cmockatest
-
-[==========] Running 1 test(s).
-[ RUN      ] test
-3 == 3
-cmocka.c:8: error: Failure!
-[  FAILED  ] test
-[==========] 1 test(s) run.
-[  PASSED  ] 0 test(s).
-[  FAILED  ] 1 test(s), listed below:
-[  FAILED  ] test
-</code></pre>
-
-<h3>Reference</h3>
-
-<ul>
-<li><a href="https://blog.cryptomilk.org/2013/01/14/cmocka-a-unit-testing-framework-for-c/">cmocka author&rsquo;s blog post</a></li>
-<li><a href="https://lwn.net/Articles/558106/">Unit testing with mock objects in C</a></li>
-<li><a href="http://www.cmocka.org/api/">cmocka API Documents</a></li>
-</ul>
-
+<p>Can&rsquo;t wait for the day to come!</p>
 </div>
 
 
@@ -189,12 +143,12 @@ cmocka.c:8: error: Failure!
   
 
 
-<time datetime="2014-03-19T16:22:53+08:00" pubdate data-updated="true">Mar 19<span>th</span>, 2014</time>
+<time datetime="2015-11-19T21:46:29+08:00" pubdate data-updated="true">Nov 19<span>th</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/c/'>c</a>, <a class='category' href='/blog/categories/testing/'>testing</a>
+    <a class='category' href='/blog/categories/car/'>car</a>
   
 </span>
 
@@ -204,15 +158,15 @@ cmocka.c:8: error: Failure!
 <ul class="posts">
     
     <li class="related">
-    <a href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">Hack YouCompleteMe And libclang For Lamely Structured Project</a>
+    <a href="/blog/2015/11/08/ordered-my-first-car/">Ordered My First Car</a>
     </li>
     
     <li class="related">
-    <a href="/blog/2014/02/10/windows-data-backup-using-freefilesync-step-by-step/">Windows Data Backup Using FreeFileSync Step By Step</a>
+    <a href="/blog/2014/11/25/finally-hhkb-professional-type-s/">Finally, I Bought a HHKB Professional 2 Type-S</a>
     </li>
     
     <li class="related">
-    <a href="/blog/2014/02/05/add-related-posts-section-to-octopress/">Add "Related Posts" Section To Octopress</a>
+    <a href="/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear/">I Ordered "Call Of Duty: Ghosts Eyewear"</a>
     </li>
     
 </ul>
@@ -222,7 +176,7 @@ cmocka.c:8: error: Failure!
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka/" data-via="" data-counturl="http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://zhuyong.me/blog/2015/11/19/got-coe-at-s%2459200/" data-via="" data-counturl="http://zhuyong.me/blog/2015/11/19/got-coe-at-s%2459200/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -235,10 +189,8 @@ cmocka.c:8: error: Failure!
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/" title="Previous Post: Hack YouCompleteMe And libclang For Lamely Structured Project">&laquo; Hack YouCompleteMe And libclang For Lamely Structured Project</a>
+        <a class="basic-alignment left" href="/blog/2015/11/09/repair-honeywell-50250-s-after-plug-into-220v-power-supply/" title="Previous Post: Repair Honeywell 50250-S After Plug Into 220V Power Supply">&laquo; Repair Honeywell 50250-S After Plug Into 220V Power Supply</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/06/26/fix-git-connection-problem-over-https-in-mobaxterm/" title="Next Post: Fix git connection problem over HTTPS in MobaXterm">Fix git connection problem over HTTPS in MobaXterm &raquo;</a>
       
     </p>
   </footer>
@@ -338,8 +290,8 @@ cmocka.c:8: error: Failure!
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka/';
-        var disqus_url = 'http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka/';
+        var disqus_identifier = 'http://zhuyong.me/blog/2015/11/19/got-coe-at-s%2459200/';
+        var disqus_url = 'http://zhuyong.me/blog/2015/11/19/got-coe-at-s%2459200/';
         var disqus_script = 'embed.js';
       
     (function () {

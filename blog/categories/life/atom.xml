@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Life | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/life/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2015-11-09T16:43:01+08:00</updated>
+  <updated>2015-11-19T22:01:54+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -32,15 +32,15 @@
 
 <p>Image of the burn veristor (in red circle)</p>
 
-<p>{% img /images/blogimg/2015-11-09-Honeywell/honeywell_01.jpg &ldquo;Honeywell 50250-S Repair&rdquo; %}</p>
+<p><img src="/images/blogimg/2015-11-09-Honeywell/honeywell_01.jpg" title="&ldquo;Honeywell 50250-S Repair&rdquo;" ></p>
 
 <p>Image after change the veristor to 10D271K (the blue color one).</p>
 
-<p>{% img /images/blogimg/2015-11-09-Honeywell/honeywell_02.jpg &ldquo;Honeywell 50250-S Repair&rdquo; %}</p>
+<p><img src="/images/blogimg/2015-11-09-Honeywell/honeywell_02.jpg" title="&ldquo;Honeywell 50250-S Repair&rdquo;" ></p>
 
 <p>Image of the fixed Honeywell 50250-S, everything back to normal:</p>
 
-<p>{% img /images/blogimg/2015-11-09-Honeywell/honeywell_03.jpg &ldquo;Honeywell 50250-S Repair&rdquo; %}</p>
+<p><img src="/images/blogimg/2015-11-09-Honeywell/honeywell_03.jpg" title="&ldquo;Honeywell 50250-S Repair&rdquo;" ></p>
 ]]></content>
   </entry>
   
@@ -59,9 +59,9 @@
 </ol>
 
 
-<p>{% img /images/blogimg/2015-11-08-Car/GC4P.jpg &ldquo;Citroen Grand C4 Picasso&rdquo; %}</p>
+<p><img src="/images/blogimg/2015-11-08-Car/GC4P.jpg" title="&ldquo;Citroen Grand C4 Picasso&rdquo;" ></p>
 
-<p>Now I just need to wait for the deal to big the COE, settle car loan and inssurance, then I can collect my car. Sadly, that&rsquo;s at least 2-3 weeks waiting time.</p>
+<p>Now I just need to wait for the AD to bid the COE, settle car loan and insurance, then I can collect my car. Sadly, that&rsquo;s at least 2-3 weeks waiting time.</p>
 ]]></content>
   </entry>
   
@@ -80,8 +80,8 @@
 
 <p>Second, be familiar with the road and the circuit. You can find CDC circuit with Google search. For the road, I use Google <a href="https://play.google.com/store/apps/details?id=com.google.android.maps.mytracks&amp;hl=en"><code>My Tracks</code></a> app to track my learning session, then use Google Street View to go through the road whenever I need. Below is screen capture from my handphone.</p>
 
-<p>{% img /images/blogimg/2015-11-06-Driving/mytrack_01.png &ldquo;Google My Track&rdquo; %}
-{% img /images/blogimg/2015-11-06-Driving/mytrack_02.png &ldquo;Google My Track&rdquo; %}</p>
+<p><img src="/images/blogimg/2015-11-06-Driving/mytrack_01.png" title="&ldquo;Google My Track&rdquo;" >
+<img src="/images/blogimg/2015-11-06-Driving/mytrack_02.png" title="&ldquo;Google My Track&rdquo;" ></p>
 
 <p>Third, try to book your test at off-peak time to avoid heavy traffic.</p>
 

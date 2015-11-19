@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="The Defense Advanced Research Projects Agency, or DARPA, sponsors a lot of technology through grants to universities and private lab, has published &hellip;">
+  <meta name="description" content="On 13 Feb 2014 I asked a question on StackOverflow on how to configure / modify vim plugin YouCompleteMe to fit special project structure. I guess my &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,96 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">Hack YouCompleteMe and Libclang for Lamely Structured Project</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-20T17:23:59+08:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>On 13 Feb 2014 I asked a question on <a href="http://stackoverflow.com/questions/21746668/configure-vim-youcompleteme-for-special-project-structure">StackOverflow</a> on how to configure / modify vim plugin <code>YouCompleteMe</code> to fit special project structure. I guess my project structure is really lame, after two days waiting, some comments were given, but my problem not realy addressed. So I think I have to <strong>DO IT MYSELF</strong>. Then I read the source code for <code>YouComeplteMe</code> as well as <code>libclang</code>, because I only need the code completion function, lucky the related code are not much. Then I done  experiments with different approaches, and today, finally, I had my hacking works. Then I think I should record this nice experience, that&rsquo;s the purpose of this blog post.</p>
+
+<h3>My Question On StackOverflow</h3>
+
+<p>My C project has following structures. This is the structure for a large project, I can&rsquo;t change the structure. I want to use YouCompleteMe for semantic code completion for this project.</p>
+
+<pre><code>main/                     // folder for C file to be compiled
+  |- module1.c            // module main C file.
+  |- module2.c
+  |- .....
+module1/
+  |- mod1_func1.c         // function file to be included in main module C file.
+  |- mod1_func2.c
+  |- mod2_func3.c
+module2/
+  |- mod2_func1.c
+  |- mod2_func2.c
+  |- mod2_func3.c
+</code></pre>
+
+<p>Content for <code>moduleX.c</code>, this will include all related header files and module related C files.</p>
+
+<pre><code>#include "header1.h"
+#include "header2.h"
+...
+#include "modX_func1.c"
+#include "modX_func2.c"
+</code></pre>
+
+<p>Content for <code>modX_funcX.c</code> has one or few function definitions. Doesn&rsquo;t have header included</p>
+
+<pre><code>// no header file included here
+int modX_funcX(void) {.....}
+</code></pre>
+
+<p>Because there is not related header included, <code>clang</code> must parse <code>moduleX.c</code> in order to do code completion on <code>modX_funcX.c</code>,  I have tried <code>clang</code> code completion from command line. Command below works</p>
+
+<pre><code>clang -cc1 -x c -fsyntax-only -code-completion-at mod1_func1.c:4:11 module1.c 
+</code></pre>
+
+<p>So my question: how to configure YouCompleteMe to do code completion when I edit the <code>modX_funcX.c</code> file?</p>
+
+<p>I guess modification to YouCompleteMe source might required to do this job. My current idea is to add a file mapping database with format:</p>
+
+<pre><code>path_of_file_to_complete:path_of_file_for_clang_to_parse
+</code></pre>
+
+<p>So before send the code completion request, get <code>path_of_file_for_clang_to_parse</code> from database based on current buffer name, pass this file name to <code>libclang</code>.</p>
+
+<p>Is my idea workable? If Yes, where is exactly place to add this file mapping function?</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">Continue &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -517,51 +607,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear/">I Ordered &#8220;Call of Duty: Ghosts Eyewear&#8221;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-23T15:54:29+08:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This afternoon I placed an order for 3 pieces of <a href="http://call-of-duty-ghosts.allure-eyewear.com/">Call Of Duty Ghosts By Allure Eyewear</a>. One for myself and the other two for my colleagues.</p>
-
-<p><img src="/images/blogimg/2014-01-23-codg5-k.jpeg" title="&#34;Call Of Duy Ghosts By Allure Eyewear&#34;" alt="&#34;Call Of Duy Ghosts By Allure Eyewear&#34;"></p>
-
-<p>One week ago, I didn&rsquo;t even know there are glasses specially designed for heavy computer user and gamers. One day, one of my colleagues said he was going to buy a glass from Amazon, ask me to search word <code>gunnar</code> to have a look. Then he said the glass can give eyes some relief for full day computer user like us, almost all professional gamer wear this kind of glass to protect their eyes. So I did some google about this eyewear. From reviews on various websites, the feedbacks are quite possitive and effective. So I decided to invest one to protect my precious eyes.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear/">Continue &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -584,6 +629,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/11/19/got-coe-at-s%2459200/">Got COE at S$59200</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/11/09/repair-honeywell-50250-s-after-plug-into-220v-power-supply/">Repair Honeywell 50250-S After Plug Into 220V Power Supply</a>
       </li>
     
@@ -599,15 +648,11 @@
         <a href="/blog/2015/11/05/config-logitech-performance-mx-zoom-button-in-ubuntu/">Config Logitech Performance MX Zoom Button in Ubuntu</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/">Re-Hacked YouCompleteMe to Support Lamely Structured Projects</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/car/'>car (1)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/diy/'>diy (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (5)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/car/'>car (2)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/diy/'>diy (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (5)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
 </section>
 
 <section class="googleplus">

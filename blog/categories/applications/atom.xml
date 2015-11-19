@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Applications | Zhu Yong]]></title>
   <link href="http://zhuyong.me/blog/categories/applications/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2015-11-09T16:43:01+08:00</updated>
+  <updated>2015-11-19T22:01:54+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -59,20 +59,20 @@
 
 <p>From menu, select <strong>Tools</strong>, then <strong>Global Settings</strong>. Maily to set <code>Retry count</code> and <code>Delay</code>. Recommended setting as shown below:</p>
 
-<p>{% img /images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_globalsetting.jpg &ldquo;FreeFileSync Setup&rdquo; %}</p>
+<p><img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_globalsetting.jpg" title="&ldquo;FreeFileSync Setup&rdquo;" ></p>
 
 <h4>Backup Setting</h4>
 
-<p>{% img /images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_folders.jpg &ldquo;FreeFileSync Setup&rdquo; %}</p>
+<p><img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_folders.jpg" title="&ldquo;FreeFileSync Setup&rdquo;" ></p>
 
 <ol>
-<li><p>Use {% img /images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_add_button.jpg &ldquo;Add Button&rdquo; %} to add folder pair or {% img /images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_del_button.jpg &ldquo;Delete Button&rdquo; %} to delete folder pair.</p></li>
-<li><p>Use {% img /images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_filter_button.jpg &ldquo;Local Filter&rdquo; %} to set what file to include or exclude. Example screen as shown below:</p>
+<li><p>Use <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_add_button.jpg" title="&ldquo;Add Button&rdquo;" > to add folder pair or <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_del_button.jpg" title="&ldquo;Delete Button&rdquo;" > to delete folder pair.</p></li>
+<li><p>Use <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_filter_button.jpg" title="&ldquo;Local Filter&rdquo;" > to set what file to include or exclude. Example screen as shown below:</p>
 
-<p> {% img /images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_filter.jpg  &ldquo;Filter Screen&rdquo; %}</p></li>
-<li><p>use {% img /images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_sync_setting_button.jpg &ldquo;Local Sync Setting&rdquo; %} to set synchronization setting for that folder pair. Example setting screen as shown below.</p>
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_filter.jpg" title="&ldquo;Filter Screen&rdquo;" ></p></li>
+<li><p>use <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_sync_setting_button.jpg" title="&ldquo;Local Sync Setting&rdquo;" > to set synchronization setting for that folder pair. Example setting screen as shown below.</p>
 
-<p> {% img /images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_sync_setting.jpg &ldquo;Filter Screen&rdquo; %}</p>
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_sync_setting.jpg" title="&ldquo;Filter Screen&rdquo;" ></p>
 
 <p> Recommened setting:</p>
 
@@ -80,9 +80,9 @@
  Deleted Files : <code>Versioning</code><br />
  Deleted File Name Convension : <code>Replace</code> <br />
  Deleted File Location : <code>\\\\backup\\location\\**\_old\_\\Path\\to\\backup\\folder\\%timestamp%**</code></p></li>
-<li><p>After done folder pair setting. Click {% img /images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_batch_button.jpg &ldquo;Save Batch&rdquo; %} to save whole backup as batch job. Set the log file location and set a limit on the log entries. Then <code>Save as</code> file with extension <code>.ffs_batch</code></p>
+<li><p>After done folder pair setting. Click <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_batch_button.jpg" title="&ldquo;Save Batch&rdquo;" > to save whole backup as batch job. Set the log file location and set a limit on the log entries. Then <code>Save as</code> file with extension <code>.ffs_batch</code></p>
 
-<p> {% img /images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_batchjob.jpg &ldquo;Batch Job&rdquo; %}</p></li>
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/FreeFileSync_batchjob.jpg" title="&ldquo;Batch Job&rdquo;" ></p></li>
 <li><p>Schedule the batch job. Follow the next section to schedule task step by step.</p></li>
 <li><p>(Optional) Schedule another task to delete backup folder/file that older than 30 days. A script is required, I haven&rsquo;t finished this script yet. When I finish it, I will update this blog to post the script.</p></li>
 </ol>
@@ -92,21 +92,21 @@
 
 <p>Press <code>Win</code> + <code>R</code> key, then run <code>taskschd.msc</code> to start <code>Windows 7 Task Scheduler</code>. Then follow images below to schedule the backup step by step.</p>
 
-<p> {% img /images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_001.jpg &ldquo;Task Schedule Step 1&rdquo; %}</p>
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_001.jpg" title="&ldquo;Task Schedule Step 1&rdquo;" ></p>
 
-<p> {% img /images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_002.jpg &ldquo;Task Schedule Step 2&rdquo; %}</p>
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_002.jpg" title="&ldquo;Task Schedule Step 2&rdquo;" ></p>
 
-<p> {% img /images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_003.jpg &ldquo;Task Schedule Step 3&rdquo; %}</p>
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_003.jpg" title="&ldquo;Task Schedule Step 3&rdquo;" ></p>
 
-<p> {% img /images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_004.jpg &ldquo;Task Schedule Step 4&rdquo; %}</p>
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_004.jpg" title="&ldquo;Task Schedule Step 4&rdquo;" ></p>
 
-<p> {% img /images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_005.jpg &ldquo;Task Schedule Step 5&rdquo; %}</p>
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_005.jpg" title="&ldquo;Task Schedule Step 5&rdquo;" ></p>
 
-<p> {% img /images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_006.jpg &ldquo;Task Schedule Step 6&rdquo; %}</p>
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_006.jpg" title="&ldquo;Task Schedule Step 6&rdquo;" ></p>
 
-<p> {% img /images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_007.jpg &ldquo;Task Schedule Step 7&rdquo; %}</p>
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_007.jpg" title="&ldquo;Task Schedule Step 7&rdquo;" ></p>
 
-<p> {% img /images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_008.jpg &ldquo;Task Schedule Step 8&rdquo; %}</p>
+<p> <img src="/images/blogimg/2014-02-10-FreeFileSync/TaskScheduler_008.jpg" title="&ldquo;Task Schedule Step 8&rdquo;" ></p>
 ]]></content>
   </entry>
   
