@@ -19,5 +19,5 @@ The reasons I chose Grand C4 Picasso are simple:
 {% img /images/blogimg/2015-11-08-Car/GC4P.jpg "Citroen Grand C4 Picasso" %} 
 
 
-Now I just need to wait for the deal to big the COE, settle car loan and inssurance, then I can collect my car. Sadly, that's at least 2-3 weeks waiting time. 
+Now I just need to wait for the AD to bid the COE, settle car loan and insurance, then I can collect my car. Sadly, that's at least 2-3 weeks waiting time. 
  
