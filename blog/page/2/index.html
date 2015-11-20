@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="I received my Sandisk Extreme Pro 480GB SSD on 17 Dec, on that night, immediately after my kids slept, I went to study room and replaced the internal &hellip;">
+  <meta name="description" content="My HHKB palm rest from Taobao arrived last Saturday, and I brought it to office on Monday. After use if for two days, I am totally satisfied with it &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,46 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/12/24/hhkb-palm-rest-arrived/">HHKB Palm Rest Arrived</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-24T09:18:53+08:00" pubdate data-updated="true">Dec 24<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My HHKB palm rest from Taobao arrived last Saturday, and I brought it to office on Monday. After use if for two days, I am totally satisfied with it. The build quality is good, size is just nice for HHKB, well polished, and no strange smell. The logo was customized very good, exactly same as my requirement.</p>
+
+<p><img src="/images/blogimg/2014-12-24-HHKB-Palm-Rest/palm-rest.jpg"></p>
+
+<p>Maybe I should do a free advertisement for this Taobao shop: <a href="http://item.taobao.com/item.htm?spm=a1z10.1.w4004-5284025914.3.hP74Q9&amp;id=40499617063">Taobao Shop</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -566,105 +606,6 @@ error: The requested URL returned error: 403 Forbidden while accessing
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/19/c-code-unit-testing-using-cmocka/">C Code Unit Testing Using Cmocka</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-19T16:22:53+08:00" pubdate data-updated="true">Mar 19<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://cmocka.org/">cmocka</a> is a unit testing framework for C, it is developed based on Google&rsquo;s project <a href="https://code.google.com/p/cmockery/">cmockery</a>. It was easy to use, and the author corrected some bugs from <code>cmockery</code>.</p>
-
-<h3>Install cmocka</h3>
-
-<p>First download source code for latest version of <code>cmocka</code> from <a href="https://open.cryptomilk.org/projects/cmocka/files">https://open.cryptomilk.org/projects/cmocka/files</a>. Current latest version is 0.3.2, and the source file is <code>cmocka-0.3.2.tar.xz</code>. <code>cmake</code> is required to build <code>cmocka</code>.</p>
-
-<pre><code>$ cd ~/Downloads
-$ xz -d cmocka-0.3.2.tar.xz
-$ tar vxf cmocka-0.3.2.tar
-$ cd cmocka-0.3.2
-$ mkdir build
-$ cd build
-$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
-$ make
-$ sudo make install
-</code></pre>
-
-<h3>Use cmocka</h3>
-
-<p>Create source file with test cases. Simple example would be like:</p>
-
-<pre><code>#include &lt;stdarg.h&gt;
-#include &lt;stddef.h&gt;
-#include &lt;setjmp.h&gt;
-#include &lt;cmocka.h&gt;
-static void test(void **state)
-{
-    assert_int_equal(3, 3);
-    assert_int_not_equal(3, 3);
-}
-int main(void) 
-{
-    const UnitTest tests[] = 
-    {
-        unit_test(test),
-    };
-    return run_tests(tests);
-}
-</code></pre>
-
-<p>save file as `cmockatest.c</p>
-
-<pre><code>$ gcc cmockatest.c -lcmocka -o cmockatest
-$ ./cmockatest
-
-[==========] Running 1 test(s).
-[ RUN      ] test
-3 == 3
-cmocka.c:8: error: Failure!
-[  FAILED  ] test
-[==========] 1 test(s) run.
-[  PASSED  ] 0 test(s).
-[  FAILED  ] 1 test(s), listed below:
-[  FAILED  ] test
-</code></pre>
-
-<h3>Reference</h3>
-
-<ul>
-<li><a href="https://blog.cryptomilk.org/2013/01/14/cmocka-a-unit-testing-framework-for-c/">cmocka author&rsquo;s blog post</a></li>
-<li><a href="https://lwn.net/Articles/558106/">Unit testing with mock objects in C</a></li>
-<li><a href="http://www.cmocka.org/api/">cmocka API Documents</a></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -687,6 +628,10 @@ cmocka.c:8: error: Failure!
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/11/20/new-toy-microsoft-sculpt-ergonomic-desktop/">New Toy: Microsoft Sculpt Ergonomic Desktop</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/11/19/got-coe-at-s%2459200/">Got COE at S$59200</a>
       </li>
     
@@ -702,15 +647,11 @@ cmocka.c:8: error: Failure!
         <a href="/blog/2015/11/06/got-my-sg50-driving-license/">Got My SG50 Driving License</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2015/11/05/config-logitech-performance-mx-zoom-button-in-ubuntu/">Config Logitech Performance MX Zoom Button in Ubuntu</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/car/'>car (2)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/diy/'>diy (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (9)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (5)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/car/'>car (2)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/diy/'>diy (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (10)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (5)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
 </section>
 
 <section class="googleplus">

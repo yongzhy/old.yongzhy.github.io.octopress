@@ -4,7 +4,7 @@
   <title><![CDATA[Zhu Yong]]></title>
   <link href="http://zhuyong.me/atom.xml" rel="self"/>
   <link href="http://zhuyong.me/"/>
-  <updated>2015-11-19T22:01:54+08:00</updated>
+  <updated>2015-11-20T22:20:12+08:00</updated>
   <id>http://zhuyong.me/</id>
   <author>
     <name><![CDATA[Zhu Yong]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[New Toy: Microsoft Sculpt Ergonomic Desktop]]></title>
+    <link href="http://zhuyong.me/blog/2015/11/20/new-toy-microsoft-sculpt-ergonomic-desktop/"/>
+    <updated>2015-11-20T22:05:18+08:00</updated>
+    <id>http://zhuyong.me/blog/2015/11/20/new-toy-microsoft-sculpt-ergonomic-desktop</id>
+    <content type="html"><![CDATA[<p>This afternoon received my new toy: the Microsoft Sculpt Ergonomic Desktop set.</p>
+
+<p><img src="http://zhuyong.me/images/blogimg/2015-11-20-Keyboard/microsoft.jpg" title="&#34;microsoft sculpt ergonomic desktop&#34;" alt="&#34;microsoft sculpt ergonomic desktop&#34;"></p>
+
+<p>After using old IBM Model M keyboard for long time, it took me a while to get used to this new layout and feeling. Comparing to IBM Model M, the key travel distance is really short. This keyboard would be perfect if it&rsquo;s mechanical switch keyboard. :) ( Yeah, the price might double as well ).</p>
+
+<p>The bad thing for this keyboard is the very strong plastic odor, it made me sick only after one hour usage. Hope the smell will disappear when I return to office next Monday.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Got COE at S$59200]]></title>
@@ -621,78 +636,6 @@ error: The requested URL returned error: 403 Forbidden while accessing
 </code></pre>
 
 <p>Now it&rsquo;s DONE.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[C Code Unit Testing Using Cmocka]]></title>
-    <link href="http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka/"/>
-    <updated>2014-03-19T16:22:53+08:00</updated>
-    <id>http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka</id>
-    <content type="html"><![CDATA[<p><a href="http://cmocka.org/">cmocka</a> is a unit testing framework for C, it is developed based on Google&rsquo;s project <a href="https://code.google.com/p/cmockery/">cmockery</a>. It was easy to use, and the author corrected some bugs from <code>cmockery</code>.</p>
-
-<h3>Install cmocka</h3>
-
-<p>First download source code for latest version of <code>cmocka</code> from <a href="https://open.cryptomilk.org/projects/cmocka/files">https://open.cryptomilk.org/projects/cmocka/files</a>. Current latest version is 0.3.2, and the source file is <code>cmocka-0.3.2.tar.xz</code>. <code>cmake</code> is required to build <code>cmocka</code>.</p>
-
-<pre><code>$ cd ~/Downloads
-$ xz -d cmocka-0.3.2.tar.xz
-$ tar vxf cmocka-0.3.2.tar
-$ cd cmocka-0.3.2
-$ mkdir build
-$ cd build
-$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
-$ make
-$ sudo make install
-</code></pre>
-
-<h3>Use cmocka</h3>
-
-<p>Create source file with test cases. Simple example would be like:</p>
-
-<pre><code>#include &lt;stdarg.h&gt;
-#include &lt;stddef.h&gt;
-#include &lt;setjmp.h&gt;
-#include &lt;cmocka.h&gt;
-static void test(void **state)
-{
-    assert_int_equal(3, 3);
-    assert_int_not_equal(3, 3);
-}
-int main(void) 
-{
-    const UnitTest tests[] = 
-    {
-        unit_test(test),
-    };
-    return run_tests(tests);
-}
-</code></pre>
-
-<p>save file as `cmockatest.c</p>
-
-<pre><code>$ gcc cmockatest.c -lcmocka -o cmockatest
-$ ./cmockatest
-
-[==========] Running 1 test(s).
-[ RUN      ] test
-3 == 3
-cmocka.c:8: error: Failure!
-[  FAILED  ] test
-[==========] 1 test(s) run.
-[  PASSED  ] 0 test(s).
-[  FAILED  ] 1 test(s), listed below:
-[  FAILED  ] test
-</code></pre>
-
-<h3>Reference</h3>
-
-<ul>
-<li><a href="https://blog.cryptomilk.org/2013/01/14/cmocka-a-unit-testing-framework-for-c/">cmocka author&rsquo;s blog post</a></li>
-<li><a href="https://lwn.net/Articles/558106/">Unit testing with mock objects in C</a></li>
-<li><a href="http://www.cmocka.org/api/">cmocka API Documents</a></li>
-</ul>
-
 ]]></content>
   </entry>
   

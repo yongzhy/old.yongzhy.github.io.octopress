@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Re-Hacked YouCompleteMe to Support Lamely Structured Projects - Zhu Yong</title>
+  <title>New Toy: Microsoft Sculpt Ergonomic Desktop - Zhu Yong</title>
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="Nearly 1 Year ago, I attempted to hack YouCompleteMe for clang code completion for a lamely structured project, that hacking worked, but the hacking &hellip;">
+  <meta name="description" content="This afternoon received my new toy: the Microsoft Sculpt Ergonomic Desktop set. After using old IBM Model M keyboard for long time, it took me a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://zhuyong.me/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects">
+  <link rel="canonical" href="http://zhuyong.me/blog/2015/11/20/new-toy-microsoft-sculpt-ergonomic-desktop">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Zhu Yong" type="application/atom+xml">
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Re-Hacked YouCompleteMe to Support Lamely Structured Projects</h1>
+      <h1 class="entry-title">New Toy: Microsoft Sculpt Ergonomic Desktop</h1>
     
     
       <p class="meta">
@@ -96,37 +96,20 @@
   
 
 
-<time datetime="2015-02-01T09:05:06+08:00" pubdate data-updated="true">Feb 1<span>st</span>, 2015</time>
+<time datetime="2015-11-20T22:05:18+08:00" pubdate data-updated="true">Nov 20<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Nearly 1 Year ago, I attempted to hack <code>YouCompleteMe</code> for clang code completion for a lamely structured project, that hacking worked, but the hacking was dirty. For background information, <a href="http://stackoverflow.com/questions/21746668/configure-vim-youcompleteme-for-special-project-structure">here</a> is my origin question on StackOverflow and <a href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">here</a> is the detail about my first dirty hack.</p>
+<div class="entry-content"><p>This afternoon received my new toy: the Microsoft Sculpt Ergonomic Desktop set.</p>
 
-<p>Recently when I looked at this hacking again, I thought there should be a better way, especially after I found <a href="https://gist.github.com/Rip-Rip/758615">this code snippet</a> from GitHub Gist. At the moment I saw the code, I had a strong feeling that I have found the solution, I just need to verify it. To make code completion success for <code>clang -cc1 -fsyntack-only -code-complete-at a.c:4:11 main.c</code>, the source file to create <code>CXTranslationUnit</code> should be <code>main.c</code> and the source file to do <code>clang_codeCompleteAt</code> should be <code>a.c</code>. So I modified the code to pass one additional command line argument to be the file to create <code>TransicationUnit</code>, then compile and run command:</p>
+<p><img src="/images/blogimg/2015-11-20-Keyboard/microsoft.jpg" title="&#34;microsoft sculpt ergonomic desktop&#34;" alt="&#34;microsoft sculpt ergonomic desktop&#34;"></p>
 
-<pre><code>$ ./complete a.c 11 4 main.c
-</code></pre>
+<p>After using old IBM Model M keyboard for long time, it took me a while to get used to this new layout and feeling. Comparing to IBM Model M, the key travel distance is really short. This keyboard would be perfect if it&rsquo;s mechanical switch keyboard. :) ( Yeah, the price might double as well ).</p>
 
-<p>When I saw the output, I confirmed this was a better way to hack <code>YouCompleteMe</code> for my need.</p>
-
-<p>Now I found the correct direction, the rest was just spend time to code, test and debug, here is a summary for what I have modified:</p>
-
-<ul>
-<li>File <code>cpp/ycm/ClangCompleter/TransicationUnit.cpp</code>, function <code>TranslationUnit::CandidatesForLocation</code>, take additional parameter <code>compfile</code> to pass to <code>clang_codeCompleteAt</code></li>
-<li>File <code>cpp/ycm/ClangCompleter/CodeCompleter.cpp</code>, function <code>ClangCompleter::CandidatesForLocationInFile</code>, take additional parameter <code>compfile</code> and pass this newly added parameter to <code>unit-&gt;CandidatesForLocation</code></li>
-<li>File <code>ycmd/completers/cpp/clang_completer.py</code>, function <code>ComputeCandidatesInner</code>, follow the way <code>_FlagsForRequest</code> is implemented, add new function to get the <code>parent</code> source file to create <code>TransicationUnit</code> and pass that result to <code>CandidatesForLocationInFile</code></li>
-<li>File <code>ycmd/completers/cpp/flags.py</code>, add the new function to get <code>parent</code> source file</li>
-<li>File <code>.ycm_extra_conf.py</code> under project source directory, add function <code>ParentForFile</code>, this function read input <code>.clang_input_file</code>, which is the mapping for <strong>code-complete-at-file</strong> to <strong>TransicationUnit-file</strong></li>
-<li>Created a python script to generate the mapping file for <strong>code-complete-at-file</strong> to <strong>TransicationUnit-file</strong></li>
-</ul>
-
-
-<p>Comparing to my first hacking, this round is very clean, only clang related part on <code>ycmd</code> is modified, the client side remain untouched.</p>
-
-<p>I have checked in the modifications to <a href="https://github.com/yongzhy/ycmd">my fork of <code>ycmd</code></a> at branch <code>lamely</code>.</p>
+<p>The bad thing for this keyboard is the very strong plastic odor, it made me sick only after one hour usage. Hope the smell will disappear when I return to office next Monday.</p>
 </div>
 
 
@@ -149,12 +132,12 @@
   
 
 
-<time datetime="2015-02-01T09:05:06+08:00" pubdate data-updated="true">Feb 1<span>st</span>, 2015</time>
+<time datetime="2015-11-20T22:05:18+08:00" pubdate data-updated="true">Nov 20<span>th</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/clang/'>clang</a>, <a class='category' href='/blog/categories/vim/'>vim</a>
+    <a class='category' href='/blog/categories/gadget/'>gadget</a>
   
 </span>
 
@@ -164,15 +147,15 @@
 <ul class="posts">
     
     <li class="related">
-    <a href="/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/">Re-Hacked YouCompleteMe to Support Lamely Structured Projects</a>
+    <a href="/blog/2014/11/26/hhkb-pro-2-type-s-after-one-week/">HHKB Pro 2 Type-S After One Week</a>
     </li>
     
     <li class="related">
-    <a href="/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/">Hack YouCompleteMe And libclang For Lamely Structured Project</a>
+    <a href="/blog/2014/11/25/finally-hhkb-professional-type-s/">Finally, I Bought a HHKB Professional 2 Type-S</a>
     </li>
     
     <li class="related">
-    <a href="/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/">ARM RVCT tips: armcc &amp;&amp; fromelf</a>
+    <a href="/blog/2014/12/29/2014-year-end-summary/">2014 Year End Summary</a>
     </li>
     
 </ul>
@@ -182,7 +165,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://zhuyong.me/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/" data-via="" data-counturl="http://zhuyong.me/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://zhuyong.me/blog/2015/11/20/new-toy-microsoft-sculpt-ergonomic-desktop/" data-via="" data-counturl="http://zhuyong.me/blog/2015/11/20/new-toy-microsoft-sculpt-ergonomic-desktop/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -195,10 +178,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2015/01/06/hdb-bto-home-network-diy/" title="Previous Post: HDB BTO Home Network DIY">&laquo; HDB BTO Home Network DIY</a>
+        <a class="basic-alignment left" href="/blog/2015/11/19/got-coe-at-s%2459200/" title="Previous Post: Got COE at S$59200">&laquo; Got COE at S$59200</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/11/05/config-logitech-performance-mx-zoom-button-in-ubuntu/" title="Next Post: Config Logitech Performance MX Zoom Button In Ubuntu">Config Logitech Performance MX Zoom Button In Ubuntu &raquo;</a>
       
     </p>
   </footer>
@@ -298,8 +279,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://zhuyong.me/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/';
-        var disqus_url = 'http://zhuyong.me/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/';
+        var disqus_identifier = 'http://zhuyong.me/blog/2015/11/20/new-toy-microsoft-sculpt-ergonomic-desktop/';
+        var disqus_url = 'http://zhuyong.me/blog/2015/11/20/new-toy-microsoft-sculpt-ergonomic-desktop/';
         var disqus_script = 'embed.js';
       
     (function () {
