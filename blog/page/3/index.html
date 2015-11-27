@@ -9,7 +9,7 @@
   <meta name="author" content="Zhu Yong">
 
   
-  <meta name="description" content="cmocka is a unit testing framework for C, it is developed based on Google&rsquo;s project cmockery. It was easy to use, and the author corrected some &hellip;">
+  <meta name="description" content="MobaXterm is a very nice portable ssh client as well as UNIX environment on Windows system. It has a lot of useful utilities including Xserver &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,75 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/06/26/fix-git-connection-problem-over-https-in-mobaxterm/">Fix Git Connection Problem Over HTTPS in MobaXterm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-26T11:12:10+08:00" pubdate data-updated="true">Jun 26<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://mobaxterm.mobatek.net/">MobaXterm</a> is a very nice portable ssh client as well as UNIX environment on Windows system. It has a lot of useful utilities including Xserver bundled into one single exe file. Recently I use it as my primary terminal on Windows system. But when I use the git plugin to clone / push my github repository, it first give me error of cert file not found, so I follow online instruction to set the root cert file in <code>~/.gitconfig</code> file to add following lines:</p>
+
+<pre><code>[http]
+    sslcainfo = c:/msysgit/mingw/bin/curl-ca-bundle.crt
+</code></pre>
+
+<p>This tells <code>git</code> to use the root cert file from <code>msysgit</code>, but next I saw new error messages:</p>
+
+<pre><code>*   CAfile: c:/msysgit/mingw/bin/curl-ca-bundle.crt
+CApath: none
+
+***
+
+error: The requested URL returned error: 403 Forbidden while accessing 
+</code></pre>
+
+<p>After tried with several solutions from Google search results, I found the solution provided by <a href="https://help.github.com/articles/generating-ssh-keys">GitHub</a> solved my problem. The solution is simple, use SSH to replace the HTTPS connection. Below are the steps:</p>
+
+<p>First, generate SSH key:</p>
+
+<pre><code>$ ssh-keygen -t rsa -b 2048 -N ""
+</code></pre>
+
+<p>Next copy content from <code>~/.ssh/id_rsa.pub</code>, cdd public key to github account,</p>
+
+<pre><code>$ cat ~/.ssh/id_rsa.pub
+</code></pre>
+
+<p>Next, change the repository remote:</p>
+
+<pre><code>$ git remote set-url origin git@github.com:yongzhy/vimconfig.git
+</code></pre>
+
+<p>Now it&rsquo;s DONE.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -616,55 +685,6 @@ int modX_funcX(void) {.....}
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/25/i-received-my-chromecast/">I Received My Chromecast</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-25T10:13:48+08:00" pubdate data-updated="true">Jan 25<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_il?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DR0PDNE&amp;linkCode=as2&amp;tag=zhuyong.me-20"><img class="left" src="/images/blogimg/2014-01-25-Chromecast.jpg" title="&#34;Chromecast On Amazon&#34;" alt="&#34;Chromecast On Amazon&#34;"></a></p>
-
-<p>I ordered Chromecast from <a href="http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DR0PDNE&amp;linkCode=as2&amp;tag=zhuyong.me-20" title="">Amazon</a> one week back when it has promotional price of US$29.99 only.</p>
-
-<p>I want to buy Chromecast even before I got my C720 Chromebook, but Chromecast is not selling in Singapore and it is not eligible for the free international shipping to Singapore for over US$125 spending, I don&rsquo;t want to spend over US$20 shipping fee to buy a product only cost US$29.99, so I wait.</p>
-
-<p>One week earlier, I saw my colleage shopping on Amazon, and he always use Comegateway service to ship product from US to Singapore. So I ask if he can buy the Chromecast and ship together with his purchases. He happily agreed.</p>
-
-<p>Yesterday afternoon, DHL delivered to our office, I pay my colleague total S$46 (S$40 for the Chromecast and S$6 for the shared shipping fee), that&rsquo;s very cheap.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/01/25/i-received-my-chromecast/">Continue &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -687,6 +707,10 @@ int modX_funcX(void) {.....}
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/11/27/collected-my-new-car/">Collected My New Car</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/11/20/new-toy-microsoft-sculpt-ergonomic-desktop/">New Toy: Microsoft Sculpt Ergonomic Desktop</a>
       </li>
     
@@ -702,15 +726,11 @@ int modX_funcX(void) {.....}
         <a href="/blog/2015/11/08/ordered-my-first-car/">Ordered My First Car</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2015/11/06/got-my-sg50-driving-license/">Got My SG50 Driving License</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/car/'>car (2)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/diy/'>diy (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (10)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (5)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/amazon/'>Amazon (1)</a></li><li><a href='/blog/categories/applications/'>applications (2)</a></li><li><a href='/blog/categories/armcc/'>armcc (1)</a></li><li><a href='/blog/categories/c/'>c (3)</a></li><li><a href='/blog/categories/car/'>car (3)</a></li><li><a href='/blog/categories/chromebook/'>chromebook (3)</a></li><li><a href='/blog/categories/chromecast/'>chromecast (2)</a></li><li><a href='/blog/categories/clang/'>clang (2)</a></li><li><a href='/blog/categories/coding/'>coding (1)</a></li><li><a href='/blog/categories/crouton/'>crouton (2)</a></li><li><a href='/blog/categories/diy/'>DIY (1)</a></li><li><a href='/blog/categories/diy/'>diy (1)</a></li><li><a href='/blog/categories/fromelf/'>fromelf (1)</a></li><li><a href='/blog/categories/gadget/'>gadget (10)</a></li><li><a href='/blog/categories/gae/'>GAE (1)</a></li><li><a href='/blog/categories/gcc/'>gcc (1)</a></li><li><a href='/blog/categories/git/'>git (1)</a></li><li><a href='/blog/categories/golang/'>golang (1)</a></li><li><a href='/blog/categories/hhkb/'>HHKB (3)</a></li><li><a href='/blog/categories/life/'>life (5)</a></li><li><a href='/blog/categories/linux/'>linux (2)</a></li><li><a href='/blog/categories/misc/'>misc (2)</a></li><li><a href='/blog/categories/mobaxterm/'>MobaXterm (2)</a></li><li><a href='/blog/categories/octopress/'>Octopress (4)</a></li><li><a href='/blog/categories/opensource/'>opensource (1)</a></li><li><a href='/blog/categories/reading/'>reading (2)</a></li><li><a href='/blog/categories/testing/'>testing (1)</a></li><li><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li><li><a href='/blog/categories/vim/'>vim (2)</a></li></ul>
 </section>
 
 <section class="googleplus">
