@@ -1,0 +1,13 @@
+# Script for first time setup hugo on github page. 
+# later one no need to do on new computer
+
+git checkout source
+
+# Remove the public folder to make room for the gh-pages subtree
+rm -rf public
+
+# Add the gh-pages branch of the repository. It will look like a folder named public
+git subtree add --prefix=public https://github.com/yongzhy/yongzhy.github.io.git master --squash
+
+# Pull down the file we just committed. This helps avoid merge conflicts
+git subtree pull --prefix=public https://github.com/yongzhy/yongzhy.github.io.git master
