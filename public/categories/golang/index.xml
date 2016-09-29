@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/golang/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My First Google App Engine In Golang : Hello World!</title>
+      <link>http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/</link>
+      <pubDate>Wed, 22 Jan 2014 17:34:05 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/22/my-first-google-app-engine-in-golang-hello-world/</guid>
+      <description>&lt;p&gt;Long time ago, I was thinking to build something using Google App Engine. But I didn&amp;rsquo;t start coding after created the app in GAE. So the apps remain there with a &lt;code&gt;None Deployed&lt;/code&gt; status.&lt;/p&gt;
+
+&lt;p&gt;Yesterday I downloaded the GAE Golang SDK, the reason for choosing experimental golang SDK is that, I want to be more familar with Golang though the process of GAE development.&lt;/p&gt;
+
+&lt;p&gt;So the process started with the the &lt;a href=&#34;https://developers.google.com/appengine/docs/go/gettingstarted/helloworld&#34;&gt;&lt;code&gt;Hello World&lt;/code&gt;&lt;/a&gt; example. I created the folder and files, then when I issue &lt;code&gt;goapp serve&lt;/code&gt; command, I saw error about the &lt;code&gt;app.yaml&lt;/code&gt; file. It&amp;rsquo;s because the indent of line&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- url: /.*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;After corrected the indent problem, the server started successfully. I need to mention that I ssh remote login my Ubuntu server to do the development. So after the &lt;code&gt;HelloWorld&lt;/code&gt; app server started, I tested on my laptop with &lt;code&gt;http://1.2.3.4:8080&lt;/code&gt; (assume my Ubuntu server IP is &lt;code&gt;1.2.3.4&lt;/code&gt;). Chrome reported page can&amp;rsquo;t found. That&amp;rsquo;s strange, there is no error message from GAE, but there must be something wrong.&lt;/p&gt;
+
+&lt;p&gt;So I use &lt;code&gt;goapp help serve&lt;/code&gt;, then I found there is a &lt;code&gt;--host=&lt;/code&gt; option, then I tried to set the host to ip &lt;code&gt;1.2.3.4&lt;/code&gt;, bingo, I saw &lt;code&gt;hello world!&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;After that I still wondering why I can&amp;rsquo;t access the server using IP if I didn&amp;rsquo;t append the &lt;code&gt;--host=&lt;/code&gt; options. Then I found someone asked the same question on &lt;a href=&#34;http://stackoverflow.com/questions/7534967/is-there-any-way-to-access-gae-dev-app-server-in-the-local-network&#34;&gt;StackOverflow&lt;/a&gt; in Year 2011. I confirmed the answer of &lt;code&gt;--host=0.0.0.0&lt;/code&gt; works same as &lt;code&gt;--host=1.2.3.4&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next step I will finish the app I should finish long time ago.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

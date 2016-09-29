@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/life/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Repair Honeywell 50250-S After Plug Into 220V Power Supply</title>
+      <link>http://zhuyong.me/blog/2015/11/09/repair-honeywell-50250-s-after-plug-into-220v-power-supply/</link>
+      <pubDate>Mon, 09 Nov 2015 14:21:10 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2015/11/09/repair-honeywell-50250-s-after-plug-into-220v-power-supply/</guid>
+      <description>&lt;p&gt;Because of forest fire from neighbour Indonesia, air quality for 2015 Augest and September in Singapore reached hazardous level for many days.&lt;/p&gt;
+
+&lt;p&gt;In all past hazardous day, it&amp;rsquo;s my job to move Honeywell 50250-S air purifier around, then one day, while I was having my dinner, my wife volunteered to do the job. And that&amp;rsquo;s it, she plugged the plug into 220V output from the transformer, and both the transfer and purifier burnt. As the result, we suffer the haze for long time until I repair it, and by that time, haze almost gone.&lt;/p&gt;
+
+&lt;p&gt;To fix the transformer is simple, just replace the fuse.&lt;/p&gt;
+
+&lt;p&gt;To fix the purifier is little bit difficult, first I can&amp;rsquo;t find online anything regarding disassemble 50250-S, I can only try to disassemble any parts that can be taken out, and finally figured out where the PCB is.&lt;/p&gt;
+
+&lt;p&gt;Just when I saw the PCB, I feel that I can fix it, because only one component was burnt. After search around online, I figured out that&amp;rsquo;s a veristor, but there is no part number printed, bad luck. Next I took the PCB to Simlim Tower, visited different shops and asked around if they have the replacement for that veristor, luckily I found one from a shop at basement, the replacement component is 10D271K (standard veristor for 110V). By the way, the cost for two transformer fuse + one 10D271K is S$2.&lt;/p&gt;
+
+&lt;p&gt;The repair process is simple, just use solder iron take out old versiter and replace with this new one, connect back the PCB, turn on the purifier,&lt;/p&gt;
+
+&lt;p&gt;Image of the burn veristor (in red circle)&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-11-09-Honeywell/honeywell_01.jpg&#34; alt=&#34;Honeywell 50250-S Repair&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Image after change the veristor to 10D271K (the blue color one).&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-11-09-Honeywell/honeywell_02.jpg&#34; alt=&#34;Honeywell 50250-S Repair&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Image of the fixed Honeywell 50250-S, everything back to normal:&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-11-09-Honeywell/honeywell_03.jpg&#34; alt=&#34;Honeywell 50250-S Repair&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Ordered My First Car</title>
+      <link>http://zhuyong.me/blog/2015/11/08/ordered-my-first-car/</link>
+      <pubDate>Sun, 08 Nov 2015 17:47:12 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2015/11/08/ordered-my-first-car/</guid>
+      <description>&lt;p&gt;This weekend, just after I received my official driving license, I ordered my first car - Citroen Grand C4 Picasso.&lt;/p&gt;
+
+&lt;p&gt;The reasons I chose Grand C4 Picasso are simple:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;I need MPV car, we have 6 family members, 5 seaters car not enough.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;For MPV, I shortlisted Honda Stream, Toyota Wish and this Grand C4 Picasso. In Singapore Honda and Toyota cars are people&amp;rsquo;s Number 1 choice because the high reliability and relatively low maintenance cost. If the car dealer still carry Honda Stream, I might go for that car. As for Toyota Wish, it&amp;rsquo;s a quite old model, no change since 2009. As for Grand C4 Picasso, this is a new model, fuel efficient, and the dealer provide 5 years warranty + 5 years free service. Most importantly, I like both the interior and exterior of this car.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-11-08-Car/GC4P.jpg&#34; alt=&#34;Citroen Grand C4 Picasso&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Now I just need to wait for the AD to bid the COE, settle car loan and insurance, then I can collect my car. Sadly, that&amp;rsquo;s at least 2-3 weeks waiting time.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Got My SG50 Driving License</title>
+      <link>http://zhuyong.me/blog/2015/11/06/got-my-sg50-driving-license/</link>
+      <pubDate>Fri, 06 Nov 2015 21:46:06 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2015/11/06/got-my-sg50-driving-license/</guid>
+      <description>&lt;p&gt;I passed my driving test at ComfortDelGro Driving Center on 29 Oct 2015 with only 1 attempt. And I received my offcial driving license card delivered on 5 Nov 2015, I didn&amp;rsquo;t expect to get the card so fast, with only 1 week waiting time.&lt;/p&gt;
+
+&lt;p&gt;UBI driving center is the one with lowest passing rate among all 3 driving school in Singapore. I engaged a private driving instructor because of its flexibility and the relatively lower cost.&lt;/p&gt;
+
+&lt;p&gt;To pass the driving test, here are some tips based on my experience:&lt;/p&gt;
+
+&lt;p&gt;First, for each learning session on road, try to train yourself the judgement for speed and distance, especially those car coming from behind on the lane you are going to change to. Don&amp;rsquo;t be rush or panic for lane change fail, it&amp;rsquo;s learning session, safety is alway first.&lt;/p&gt;
+
+&lt;p&gt;Second, be familiar with the road and the circuit. You can find CDC circuit with Google search. For the road, I use Google &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.android.maps.mytracks&amp;amp;hl=en&#34;&gt;&lt;code&gt;My Tracks&lt;/code&gt;&lt;/a&gt; app to track my learning session, then use Google Street View to go through the road whenever I need. Below is screen capture from my handphone.&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-11-06-Driving/mytrack_01.png&#34; alt=&#34;Google My Track&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-11-06-Driving/mytrack_02.png&#34; alt=&#34;Google My Track&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Third, try to book your test at off-peak time to avoid heavy traffic.&lt;/p&gt;
+
+&lt;p&gt;Forth, on actual test day, must must be confident, be calm, treat it same as normal learn session.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Beginning Of Book Reading: The Power Of Habits</title>
+      <link>http://zhuyong.me/blog/2014/01/20/beginning-of-book-reading-the-power-of-habits/</link>
+      <pubDate>Mon, 20 Jan 2014 22:56:26 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/20/beginning-of-book-reading-the-power-of-habits/</guid>
+      <description>&lt;p&gt;Today I read someone&amp;rsquo;s article about how the book &lt;a href=&#34;http://www.amazon.com/gp/product/081298160X/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=081298160X&amp;amp;linkCode=as2&amp;amp;tag=zhuyong.me-20&#34;&gt;&amp;ldquo;The Power Of Habit&amp;rdquo;&lt;/a&gt; changed his life in the past one year. After read the article, I was thinking that maybe I should read it also. Long time ago, I already bought the kindle edition of &lt;a href=&#34;http://www.amazon.com/gp/product/1455892823/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1455892823&amp;amp;linkCode=as2&amp;amp;tag=zhuyong.me-20&#34;&gt;&amp;ldquo;The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change&amp;rdquo;&lt;/a&gt; from Amazon, but I didn&amp;rsquo;t actually finished it. Both of the two books are very good book about self improvement; both of them have excellent customer reviews from thousands of customers on Amazon.&lt;/p&gt;
+
+&lt;p&gt;So after dinner when I carried my son to national library to return his books, I searched the library catalogs. Although the records shown that both the book and the audio CDs are available, I only managed to find the audio CDs at the end. That&amp;rsquo;s good enough.&lt;/p&gt;
+
+&lt;p&gt;At the beginning of &lt;code&gt;The Power Of Habit&lt;/code&gt; book, the author mentioned that people will change when they focus on one particular change for long time and that change could be the keystone habit; this keystone habit will radially change other habits. This perspective is interesting, and I totally agree on that.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;By the time I decided to start my new blog in pure English on Github Pages, I haven&amp;rsquo;t read this book yet, but I think my initiative goal was to make achievement through the process of writing blog. By written purely in English, I can improve my English; by written some technique stuff, I would and can learn some new tech or programming skills; by written blog, attract some audiences, build my reputation. :)&lt;/p&gt;
+
+&lt;p&gt;So far, almost one month passed since I seriously start blogging using Octpress on Github page, I did gain something. First, very obversious, my skills with git and Markdown improved a lot; second, I knew more about Chromebook. I didn&amp;rsquo;t tried Chromebook before, even as virtual machine. But after use Chromebook for few days, I feel I love it.&lt;/p&gt;
+
+&lt;p&gt;I know it&amp;rsquo;s tough to keep updating blog, I was afraid I will quit somedays later. That&amp;rsquo;s why I named my blog &lt;code&gt;Be Persistent, Be Patient&lt;/code&gt; to encourage myself. So here today, this article mark as the beginning my book reading on &lt;code&gt;The Power Of Habits&lt;/code&gt; and &lt;code&gt;The 7 Habits&lt;/code&gt; is my next book to read. This is my short term goal for life change, and this time, I will finish them.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sold My Old P4 Computer For S$2</title>
+      <link>http://zhuyong.me/blog/2014/01/19/sold-my-old-p4-computer-for-s/</link>
+      <pubDate>Sun, 19 Jan 2014 15:53:50 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/19/sold-my-old-p4-computer-for-s/</guid>
+      <description>&lt;p&gt;I just sold my very old desktop computer bought in 2003 to &lt;a href=&#34;http://en.wikipedia.org/wiki/Karung_guni&#34;&gt;Karung Guni&lt;/a&gt; for S$2. It&amp;rsquo;s a Pentium 4 computer I assembled by myself when I studied my 3rd year in university after my even old desktop bought in 1999 stopped working.&lt;/p&gt;
+
+&lt;p&gt;This 11 years old computer is till functional, unbelievable hah! I can&amp;rsquo;t remember in which year I retired this computer, maybe 2007 or 2008. Since then, it was my father-in-law&amp;rsquo;s computer during the time he occasionally visit Singapore. He uses it primarily for online novel reading. This old computer is still sufficient for his tasks.&lt;/p&gt;
+
+&lt;p&gt;The old computer still works, but too noisy, and occupy large space. So one month ago, I bought him a 2nd hand T410 laptop.&lt;/p&gt;
+
+&lt;p&gt;After I erased the whole hard disk, I was waiting for Karung Guni to come to my door at weekend. And finally, this afternoon, one uncle came, and his best offer was S$2. I just want to get rid of it, so I took the offer.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

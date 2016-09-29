@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/mobaxterm/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/mobaxterm/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>MobaXterm Install Package To Persistent Root Direcotry</title>
+      <link>http://zhuyong.me/blog/2014/11/24/mobaxterm-install-package-to-persistent-root-direcotry/</link>
+      <pubDate>Mon, 24 Nov 2014 13:51:51 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/11/24/mobaxterm-install-package-to-persistent-root-direcotry/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://mobaxterm.mobatek.net&#34;&gt;MobaXterm&lt;/a&gt; is a very good SSH and X-Windows client. I have being use the free portable personal version for quite a while. Its built-in X-Server is very handy and convenient for people like me to run remote GUI applications occasionally. From version 7.2, they added the &lt;code&gt;apt-get&lt;/code&gt; like package manager: &lt;code&gt;MobApt Package Manager&lt;/code&gt;, and added the option to set &lt;code&gt;persistent root&lt;/code&gt; directory, so user can install their own cygwin package to this persistent root directory. This should be the most desirable feature for all personal edition users, with this feature, package upgrading and installation is within one&amp;rsquo;s fingertips.&lt;/p&gt;
+
+&lt;p&gt;But at Version 7.2, when I tried use this &lt;code&gt;MobApt&lt;/code&gt; to install &lt;code&gt;git&lt;/code&gt;, after installation done, &lt;code&gt;git&lt;/code&gt; command not recognized when I typed in shell. After checked the installation process, I found a lot of link to &lt;code&gt;git.exe&lt;/code&gt; were not created successfully, so I manually created those links, and &lt;code&gt;git&lt;/code&gt; command works, but this is a painful process.&lt;/p&gt;
+
+&lt;p&gt;Today, when I setup &lt;code&gt;MobaXterm&lt;/code&gt; Vesion 7.3 on my laptop, I suddenly realized that maybe I should run &lt;code&gt;MobaXterm&lt;/code&gt; as Administrator for it to create those links successfully. And when I did that, result shown that I was correct, everything installed nicely. Next, I went back to my desktop PC, the process didn&amp;rsquo;t succeed, I think I need a fresh installation, so I deleted the whole persistent root folder and persistent home folder on my desktop PC and went through the whole process again. Bingo, &lt;code&gt;git&lt;/code&gt; works like a charm. Why I didn&amp;rsquo;t realized this when I use Version 7.2??&lt;/p&gt;
+
+&lt;p&gt;When I remove the persistent root folder in Windows 7, I say message that some file / folder can&amp;rsquo;t be removed because of &lt;code&gt;Permission Denined&lt;/code&gt;. After few seconds Google, solution is simple:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;takeown /r /f DRIVE:\PATH
+icacls DRIVE:\PATH /grant USERNAME:F /T
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To conclude, next time, I must run &lt;code&gt;MobaXterm&lt;/code&gt; as Administrator to install any new package or upgrade existing packages.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fix git connection problem over HTTPS in MobaXterm</title>
+      <link>http://zhuyong.me/blog/2014/06/26/fix-git-connection-problem-over-https-in-mobaxterm/</link>
+      <pubDate>Thu, 26 Jun 2014 11:12:10 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/06/26/fix-git-connection-problem-over-https-in-mobaxterm/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://mobaxterm.mobatek.net/&#34;&gt;MobaXterm&lt;/a&gt; is a very nice portable ssh client as well as UNIX environment on Windows system. It has a lot of useful utilities including Xserver bundled into one single exe file. Recently I use it as my primary terminal on Windows system. But when I use the git plugin to clone / push my github repository, it first give me error of cert file not found, so I follow online instruction to set the root cert file in &lt;code&gt;~/.gitconfig&lt;/code&gt; file to add following lines:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[http]
+    sslcainfo = c:/msysgit/mingw/bin/curl-ca-bundle.crt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This tells &lt;code&gt;git&lt;/code&gt; to use the root cert file from &lt;code&gt;msysgit&lt;/code&gt;, but next I saw new error messages:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;*   CAfile: c:/msysgit/mingw/bin/curl-ca-bundle.crt
+CApath: none
+
+***
+
+error: The requested URL returned error: 403 Forbidden while accessing 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After tried with several solutions from Google search results, I found the solution provided by &lt;a href=&#34;https://help.github.com/articles/generating-ssh-keys&#34;&gt;GitHub&lt;/a&gt; solved my problem. The solution is simple, use SSH to replace the HTTPS connection. Below are the steps:&lt;/p&gt;
+
+&lt;p&gt;First, generate SSH key:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ssh-keygen -t rsa -b 2048 -N &amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next copy content from &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;, cdd public key to github account,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cat ~/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, change the repository remote:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote set-url origin git@github.com:yongzhy/vimconfig.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now it&amp;rsquo;s DONE.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

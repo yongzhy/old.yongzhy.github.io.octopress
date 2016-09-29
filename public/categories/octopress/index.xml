@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/octopress/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/octopress/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Add &#34;Related Posts&#34; Section To Octopress</title>
+      <link>http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress/</link>
+      <pubDate>Wed, 05 Feb 2014 12:39:53 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress/</guid>
+      <description>&lt;p&gt;When reading someone&amp;rsquo;s article, it&amp;rsquo;s good to have a section to show the releated posts. Today I searched online and found to add &lt;code&gt;Related Posts&lt;/code&gt; section to Octopress is quite easy.&lt;/p&gt;
+
+&lt;p&gt;First, edit config file &lt;code&gt;_config.yml&lt;/code&gt; to add line&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;lsi: true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Second, create file &lt;code&gt;source/_includes/post/related_posts.html&lt;/code&gt; with content below&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% raw %}
+    {% if site.related_posts %}
+      &amp;lt;h3&amp;gt;Related posts&amp;lt;/h3&amp;gt;
+      &amp;lt;ul class=&amp;quot;posts&amp;quot;&amp;gt;
+      {% for post in site.related_posts limit:3 %}
+        &amp;lt;li class=&amp;quot;related&amp;quot;&amp;gt;
+          &amp;lt;a href=&amp;quot;{{ root_url }}{{ post.url }}&amp;quot;&amp;gt;{{ post.title }}&amp;lt;/a&amp;gt;
+        &amp;lt;/li&amp;gt;
+      {% endfor %}
+      &amp;lt;/ul&amp;gt;
+    {% endif %}
+{% endraw %}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, add this footer section to the post. modify &lt;code&gt;source/_layouts/post.html&lt;/code&gt; to add line&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% include post/related_posts.html %}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;under&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% raw %}
+    {% include post/author.html %}
+    {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+    {% include post/categories.html %}
+{% endraw %}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;OK. Now you can run &lt;code&gt;rake generate&lt;/code&gt; and &lt;code&gt;rake preview&lt;/code&gt; to see the effects.&lt;/p&gt;
+
+&lt;p&gt;There is one problem with the solution above, it&amp;rsquo;s slow to run &lt;code&gt;rake generate&lt;/code&gt; when your have lots of articles. To speed up the process, you need to install &lt;code&gt;rb-gsl&lt;/code&gt;. If you directly issue &lt;code&gt;gem install gsl&lt;/code&gt;, your most probablly will see error message&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Building native extensions.  This could take a while...
+ERROR:  Error installing gsl:
+    ERROR: Failed to build gem native extension.
+
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&amp;rsquo;s because &lt;code&gt;gsl&lt;/code&gt; gem requires &lt;code&gt;gsl 1.14&lt;/code&gt;. Follow the steps below to install &lt;code&gt;gsl 1.14&lt;/code&gt; and &lt;code&gt;rb-gsl&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ curl -O http://mirror.aarnet.edu.au/pub/gnu/gsl/gsl-1.14.tar.gz
+$ tar xfz gsl-1.14.tar.gz
+$ cd gsl-1.14
+$ ./configure
+$ make clean
+$ make                              # can take a while, be patient
+$ sudo make install
+$ sudo gem install gsl
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now run &lt;code&gt;rake generate&lt;/code&gt; again and feel the acceleration for the classification process. If you are unlucky and see the message below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Notice: for 10x faster LSI support, please install http://rb-gsl.rubyforge.org/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This means your &lt;code&gt;rb-gsl&lt;/code&gt; installation got problem. To resolve that, first uninstall &lt;code&gt;gsl&lt;/code&gt; by&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo gem uninstall gsl
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then edit file &lt;code&gt;Gemfile&lt;/code&gt; in your Octopress folder to add line&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem &#39;gsl&#39;, &#39;~&amp;gt;1.14.7&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then use &lt;code&gt;bundle&lt;/code&gt; to install &lt;code&gt;gsl&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo bundle install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Again, run &lt;code&gt;rake generate&lt;/code&gt; to feel the fly speed. :)&lt;/p&gt;
+
+&lt;p&gt;Good Luck!!!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Create favicon For My Blog</title>
+      <link>http://zhuyong.me/blog/2014/01/16/create-favicon-for-my-blog/</link>
+      <pubDate>Thu, 16 Jan 2014 12:52:37 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/16/create-favicon-for-my-blog/</guid>
+      <description>&lt;p&gt;Last night I was thinking to create a favicon for this octopress blog. Just now, after lunch, I spent some time search on google and finally created my own favicon.&lt;/p&gt;
+
+&lt;p&gt;My first idea was to create a icon using my own face cropped from picture, but the result of 16x16 pixel image was just too small to hold the details. Then I decided to go a simple wway, do a favicon just with text &lt;code&gt;zy&lt;/code&gt;. Then I come cross this website called &lt;a href=&#34;http://faviconist.com&#34;&gt;faviconist&lt;/a&gt;. This website make the process to create text favicon so easy. I set the background color same as &lt;code&gt;base03&lt;/code&gt; in the famous &lt;a href=&#34;http://ethanschoonover.com/solarized&#34;&gt;solarized color theme&lt;/a&gt;, the
+text color to &lt;code&gt;#CCCCCC&lt;/code&gt;, and the font I chose bold &lt;code&gt;Redressed&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Below is the screen when I created my favicon.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-01-16_125346_favicon.png&#34; alt=&#34;Screen to create favicon&#34; width=&#34;612&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Bought Domain For My Github Pages</title>
+      <link>http://zhuyong.me/blog/2014/01/09/bought-domain-for-my-github-pages/</link>
+      <pubDate>Thu, 09 Jan 2014 14:18:26 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/09/bought-domain-for-my-github-pages/</guid>
+      <description>&lt;p&gt;Today I bought my first personal domain &lt;a href=&#34;http://zhuyong.me&#34;&gt;zhuyong.me&lt;/a&gt; and pointed to &lt;a href=&#34;http://yongzhy.github.io&#34;&gt;my github pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The reason why I bought domain is to push myself, to encourage myself to continously update this blog. Plus, the domain + 1 year pravacy protection only cost US$8.99 under current promotion.&lt;/p&gt;
+
+&lt;p&gt;The setup is pretty easy:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;create &lt;code&gt;CNAME&lt;/code&gt; file under &lt;code&gt;source/&lt;/code&gt; folder. In this file, just input my newly bought domain: &lt;strong&gt;zhuyong.me&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;rake generate&lt;/code&gt; to put &lt;code&gt;CNAME&lt;/code&gt; in &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;setup DNS, I bought my domain from &lt;a href=&#34;http://www.namecheap.com&#34;&gt;namecheap&lt;/a&gt;. So just point &lt;code&gt;zhuyong.me&lt;/code&gt; to &lt;code&gt;192.30.252.153&lt;/code&gt;, and &lt;code&gt;192.30.252.154&lt;/code&gt;, then point &lt;code&gt;www.zhuyong.me&lt;/code&gt; to &lt;code&gt;yongzhy.github.io.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;that&amp;rsquo;s all, just wait for less than 30mins, the domain is updated and I have &lt;code&gt;zhuyong.me&lt;/code&gt; now pointed to my github pages.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Blog Using Octopress On Multiple Computer</title>
+      <link>http://zhuyong.me/blog/2014/01/08/blog-using-octopress-on-multiple-computer/</link>
+      <pubDate>Wed, 08 Jan 2014 14:29:20 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/08/blog-using-octopress-on-multiple-computer/</guid>
+      <description>
+
+&lt;p&gt;Last night when I tried to setup Octopress on my new bought Acer C720 chromebook, I found that Octopress website doesn&amp;rsquo;t have the guide on how to setup Octopress on multiple computer. After search online, there are quite a lot people have seen the same problem. And I did found a very nice guide by Robert Anderson at &lt;a href=&#34;http://blog.zerosharp.com/clone-your-octopress-to-blog-from-two-places/&#34;&gt;here&lt;/a&gt;. Here I will just list down the steps for my later on reference.&lt;/p&gt;
+
+&lt;p&gt;clone &lt;code&gt;source&lt;/code&gt; branch to local folder&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone -b source https://github.com/yongzhy/yongzhy.github.io octopress
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;clone &lt;code&gt;master&lt;/code&gt; branch to &lt;em&gt;_deploy&lt;/em&gt; subfolder&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd octopress
+$ git clone https://github.com/yongzhy/yongzhy.github.io _deploy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;configuration&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem install bundler
+$ bundle install
+$ rake setup_github_pages
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;to-push-changes-from-two-different-computers&#34;&gt;To push changes from two different computers&lt;/h3&gt;
+
+&lt;p&gt;Push everything on working computer before switch computer, using commands below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ rake generate
+$ git add .
+$ git commit -am &amp;quot;commit message&amp;quot;
+$ git push origin source
+$ rake deploy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then on the new computer, run commands below to sync.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd octopress
+$ git pull origin source
+$ cd ./_deploy
+$ git pull origin master
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
