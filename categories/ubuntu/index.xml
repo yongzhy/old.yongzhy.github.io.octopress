@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/ubuntu/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Config Logitech Performance MX Zoom Button In Ubuntu</title>
+      <link>http://zhuyong.me/blog/2015/11/05/config-logitech-performance-mx-zoom-button-in-ubuntu/</link>
+      <pubDate>Thu, 05 Nov 2015 13:42:07 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2015/11/05/config-logitech-performance-mx-zoom-button-in-ubuntu/</guid>
+      <description>&lt;p&gt;The middle button (click wheel) on Logitech Performance MX is very very difficult to press. So I changed the &lt;code&gt;Zoom&lt;/code&gt; button to middle button on windows system. To do same setting under Ubuntu, follow the instructions below:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install necessary software packages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;   sudo apt-get install xbindkeys xautomation xev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Next, use &lt;code&gt;xev&lt;/code&gt; to find the button number for &lt;code&gt;Zoom&lt;/code&gt; button. Just run &lt;code&gt;xev&lt;/code&gt; from command line, then click &lt;code&gt;Zoom&lt;/code&gt; button when your cursor is in the small white window. You will see somthing like below:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    ButtonPress event, serial 45, synthetic NO, window 0x2400001,
+        root 0x24d, subw 0x0, time 3735892633, (75,111), root:(301,192),
+        state 0x0, button 2, same_screen YES
+    
+    ButtonRelease event, serial 45, synthetic NO, window 0x2400001,
+        root 0x24d, subw 0x0, time 3735892633, (75,111), root:(301,192),
+        state 0x200, button 2, same_screen YES
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create default &lt;code&gt;xbindkeys&lt;/code&gt; config file with command:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;   xbindkeys --defaults &amp;gt; ~/.xbindkeysrc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open file &lt;code&gt;~/.xbindkeysrc&lt;/code&gt; to add the following lines at end of the file:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;quot;xte &#39;mouseclick 2&#39;&amp;quot;
+    b:13+Release
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turn C720 Into Development Machine: Step By Step Guide</title>
+      <link>http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/</link>
+      <pubDate>Wed, 22 Jan 2014 22:52:54 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/</guid>
+      <description>&lt;p&gt;From Google Analytic report of my blog,  I saw there are two visitors, one from Germany and the other from US. Both of them viewed my blog post about &lt;a href=&#34;http://zhuyong.me/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/&#34;&gt;setup C720 development environment&lt;/a&gt;.  But in that post, I didn&amp;rsquo;t record down step by step how to setup the development environment. Since people are interested in this topic, I think I should write a formal and detail post about this. So, here come this step by step guide of turn your C720 as development machine by install Ubuntu using &lt;a href=&#34;https://github.com/dnschneid/crouton&#34;&gt;crouton&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The reason I choose &lt;code&gt;crouton&lt;/code&gt; over &lt;code&gt;chrubuntu&lt;/code&gt; is because of the super convenient way to switch between ChromeOS and Ubuntu with &lt;code&gt;Ctrl + Alt + Shift + Back&lt;/code&gt; keys. There is no need to reboot machine to switch between the OSs.&lt;/p&gt;
+
+&lt;h4 id=&#34;step-1-enable-developer-mode&#34;&gt;Step 1: Enable Developer Mode&lt;/h4&gt;
+
+&lt;p&gt;Enable the developer mode will wipe all your data, so backup any important data before enable developer mode.&lt;/p&gt;
+
+&lt;p&gt;To enable developer mode:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Press &lt;code&gt;Esc + Refresh (F3)&lt;/code&gt; keys then press &lt;code&gt;Power&lt;/code&gt; button&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;Ctrl + D&lt;/code&gt;, ignore the warning/error message on screen.&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;Ctrl + D&lt;/code&gt; again, you entered the developer mode.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After enable developer mode, evertime you cold start your computer, you need to press &lt;code&gt;Ctr + D&lt;/code&gt; or just wait for 30 second.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;step-2-install-ubuntu-13-10-using-crouton&#34;&gt;Step 2: Install Ubuntu 13.10 Using crouton&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;crouton&lt;/code&gt; is a powerful script that will do all the download and installation job for you. Download latest version of &lt;code&gt;crouton&lt;/code&gt; from &lt;a href=&#34;http://goo.gl/fd3zc&#34;&gt;http://goo.gl/fd3zc&lt;/a&gt;. For details of crouton usage, refer to it&amp;rsquo;s &lt;a href=&#34;https://github.com/dnschneid/crouton&#34;&gt;github repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I use &lt;code&gt;crouton&lt;/code&gt; to install Ubuntu 13.10, and I choose &lt;code&gt;xfce4&lt;/code&gt; as the windows manager. Below are the steps I prerformed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Download &lt;code&gt;crouton&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Open shell by &lt;code&gt;Ctrl + Alt + T&lt;/code&gt;, then type &lt;code&gt;shell&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;sudo sh -e ~/Downloads/crouton -r saucy -t xfce&lt;/code&gt;. This will start the downloading and installation process for Ubuntu 13.10&lt;/li&gt;
+&lt;li&gt;Wait untill the installation done.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;sudo startxfce4&lt;/code&gt; to start the &lt;code&gt;Xfce&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Anytime you want to switch between ChromeOs and Ubuntu, just use &lt;code&gt;Ctrl + Alt + Shift + Back&lt;/code&gt; or &lt;code&gt;Ctrl + Alt + Shift + Forward&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;log out &lt;code&gt;xfce&lt;/code&gt; will end the &lt;code&gt;xfce&lt;/code&gt; session&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;step-3-install-development-tools&#34;&gt;Step 3: Install Development Tools&lt;/h4&gt;
+
+&lt;p&gt;There is no much to talk about this step, it&amp;rsquo;s the same as install development tools in Ubuntu. Just run &lt;code&gt;sudo apt-get update&lt;/code&gt;, &lt;code&gt;sudo apt-get install&lt;/code&gt; to install whatever tools you needed.&lt;/p&gt;
+
+&lt;p&gt;For me, I installed &lt;code&gt;git&lt;/code&gt;, &lt;code&gt;vim&lt;/code&gt;, &lt;code&gt;build_essential&lt;/code&gt;, &lt;code&gt;cmake&lt;/code&gt;, &lt;code&gt;golang1.2&lt;/code&gt;, &lt;code&gt;llvm3.4&lt;/code&gt;, &lt;code&gt;the_silver_searcher&lt;/code&gt; as well as &lt;code&gt;ruby&lt;/code&gt; and necessory packages for &lt;code&gt;Octopress&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you followed all the steps above, your C720 will become a nice Linux development machine. I haven&amp;rsquo;t tried to run any IDE like &lt;code&gt;eclipse&lt;/code&gt; or &lt;code&gt;android studio&lt;/code&gt;, I think my 2GB RAM may not sufficient for RAM hunger tools like that. If you have the 4GB version of C720, I think there is no problem to run those IDEs.&lt;/p&gt;
+
+&lt;h4 id=&#34;step-4-key-map-modification-optional&#34;&gt;Step 4: Key Map Modification (Optional)&lt;/h4&gt;
+
+&lt;p&gt;If you are like me, always use &lt;code&gt;CapLock&lt;/code&gt; as &lt;code&gt;Ctrl&lt;/code&gt;, you can follow the instruction in my another &lt;a href=&#34;http://zhuyong.me/blog/2014/01/15/map-search-key-to-control-key-on-acer-c720-chromebook/&#34;&gt;post&lt;/a&gt; to map the search key to ctrl.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Next&lt;/strong&gt;, I will write another post to talk about development on C720 using cloud based development environment. If you are interested, please stay tuned.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

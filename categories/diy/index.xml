@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/diy/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/diy/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Repair Honeywell 50250-S After Plug Into 220V Power Supply</title>
+      <link>http://zhuyong.me/blog/2015/11/09/repair-honeywell-50250-s-after-plug-into-220v-power-supply/</link>
+      <pubDate>Mon, 09 Nov 2015 14:21:10 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2015/11/09/repair-honeywell-50250-s-after-plug-into-220v-power-supply/</guid>
+      <description>&lt;p&gt;Because of forest fire from neighbour Indonesia, air quality for 2015 Augest and September in Singapore reached hazardous level for many days.&lt;/p&gt;
+
+&lt;p&gt;In all past hazardous day, it&amp;rsquo;s my job to move Honeywell 50250-S air purifier around, then one day, while I was having my dinner, my wife volunteered to do the job. And that&amp;rsquo;s it, she plugged the plug into 220V output from the transformer, and both the transfer and purifier burnt. As the result, we suffer the haze for long time until I repair it, and by that time, haze almost gone.&lt;/p&gt;
+
+&lt;p&gt;To fix the transformer is simple, just replace the fuse.&lt;/p&gt;
+
+&lt;p&gt;To fix the purifier is little bit difficult, first I can&amp;rsquo;t find online anything regarding disassemble 50250-S, I can only try to disassemble any parts that can be taken out, and finally figured out where the PCB is.&lt;/p&gt;
+
+&lt;p&gt;Just when I saw the PCB, I feel that I can fix it, because only one component was burnt. After search around online, I figured out that&amp;rsquo;s a veristor, but there is no part number printed, bad luck. Next I took the PCB to Simlim Tower, visited different shops and asked around if they have the replacement for that veristor, luckily I found one from a shop at basement, the replacement component is 10D271K (standard veristor for 110V). By the way, the cost for two transformer fuse + one 10D271K is S$2.&lt;/p&gt;
+
+&lt;p&gt;The repair process is simple, just use solder iron take out old versiter and replace with this new one, connect back the PCB, turn on the purifier,&lt;/p&gt;
+
+&lt;p&gt;Image of the burn veristor (in red circle)&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-11-09-Honeywell/honeywell_01.jpg&#34; alt=&#34;Honeywell 50250-S Repair&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Image after change the veristor to 10D271K (the blue color one).&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-11-09-Honeywell/honeywell_02.jpg&#34; alt=&#34;Honeywell 50250-S Repair&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Image of the fixed Honeywell 50250-S, everything back to normal:&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-11-09-Honeywell/honeywell_03.jpg&#34; alt=&#34;Honeywell 50250-S Repair&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>HDB BTO Home Network DIY</title>
+      <link>http://zhuyong.me/blog/2015/01/06/hdb-bto-home-network-diy/</link>
+      <pubDate>Tue, 06 Jan 2015 12:20:40 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2015/01/06/hdb-bto-home-network-diy/</guid>
+      <description>&lt;p&gt;Inspired by &lt;a href=&#34;https://absolutehonesty.wordpress.com/2014/05/31/hougang-parkview-i-want-my-internet/&#34;&gt;this blog&lt;/a&gt;, I decided to DIY the network thing for my new HDB flat when I was shopping on Taobao in Nov. Followed the suggestion in that blog, I bought all necessary items from Taobao, but the network modules I bought are Cat 6 module, not 5E.&lt;/p&gt;
+
+&lt;p&gt;On Jan 03, my contractor went to my new HDB flat to install the lights we bought from Taobao, while they doing the lights installation, I was doing DIY job to change all RJ11 phone jacks to network RJ45 jacks.&lt;/p&gt;
+
+&lt;p&gt;Below are the tools I used for this DIY job.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-01-06-network/network-000.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Start from bedrooms, change the RJ11 to RJ45 one by one.&lt;/p&gt;
+
+&lt;p&gt;This picture is the original RJ11 panel.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-01-06-network/network-001.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Take off the cover from the panel.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-01-06-network/network-002.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Loosen the screws on the panel. The cable inside is already Cat 6 network cable. So I just need to change the modules and panels.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-01-06-network/network-003.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Put the color wires into each slot on the network module. Use pattern B&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-01-06-network/network-004.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Cut off the extra wires, put on the back cover.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-01-06-network/network-005.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Insert module into the panel.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-01-06-network/network-006.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Use back the origin screws to fasten the panel.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-01-06-network/network-007.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;After all three bedrooms and the bomb shelter (Yes, I changed the module and panel in bomb shelter as well). The next job is tougher, I need to do add modules to all terminal in the power box behind the main gate.&lt;/p&gt;
+
+&lt;p&gt;This is the original lines.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-01-06-network/network-008.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;After I connect the modules to all lines.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-01-06-network/network-009.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;This is the final work.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-01-06-network/network-010.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;The whole process was not difficult, just need to be careful to match the color lines with the pattern on the modules.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

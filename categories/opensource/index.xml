@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/opensource/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/opensource/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>DARPA Published Over 60 Projects Source Code In One Place</title>
+      <link>http://zhuyong.me/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place/</link>
+      <pubDate>Wed, 12 Feb 2014 17:29:59 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/02/12/darpa-published-over-60-projects-source-code-in-one-place/</guid>
+      <description>&lt;p&gt;The Defense Advanced Research Projects Agency, or DARPA, sponsors a lot of technology through grants to universities and private lab, has published &lt;a href=&#34;http://www.darpa.mil/OpenCatalog/index.html&#34;&gt;DARPA Open Catalog&lt;/a&gt; which listed over 60 opensource projects. Chris White, the DARPA program manager behind the effort, said&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Making our open source catalog available increases the number of experts who can help quickly develop relevant software for the government. Our hope is that the computer science community will test and evaluate elements of our software and afterward adopt them as either standalone offerings or as components of their products.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The DARPA Open Catalog contains two tables:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Software Table lists performers with one row per piece of software. Each piece of software has a link to an external project page, as well as a link to the code repository for the project. The software categories are listed; in the case of XDATA, they are Analytics, Visualization and Infrastructure. A description of the project is followed by the applicable software license. Finally, each entry has a link to the publications from each team&amp;rsquo;s software entry.&lt;/li&gt;
+&lt;li&gt;The Publications Table contains author(s), title, and links to peer-reviewed articles related to specific DARPA programs.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

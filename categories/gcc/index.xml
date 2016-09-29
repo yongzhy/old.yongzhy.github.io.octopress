@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/gcc/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/gcc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Linux Is Always The Number 1?</title>
+      <link>http://zhuyong.me/blog/2014/01/17/linux-is-always-the-number-1/</link>
+      <pubDate>Fri, 17 Jan 2014 13:59:00 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/17/linux-is-always-the-number-1/</guid>
+      <description>
+
+&lt;p&gt;Yesterday I read an article &lt;a href=&#34;http://arjunsreedharan.org/post/71403510912/c-language-and-the-linux-macro-proof-that-linux-is&#34;&gt;C language and the linux macro - proof that linux is always Number 1&lt;/a&gt;. It shows a simple C code which just define variable &lt;code&gt;linux&lt;/code&gt; and assign with a value, but &lt;code&gt;gcc&lt;/code&gt; produce error when compile it.&lt;/p&gt;
+
+&lt;p&gt;Code of the simple program:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main() {
+    int linux = 701;
+    printf(&amp;quot;%d&amp;quot;, linux);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Error message from &lt;code&gt;gcc&lt;/code&gt; :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;code.c: In function ‘main’:
+code.c:4:6: error: expected identifier or ‘(’ before numeric constant
+int linux = 701;
+    ^
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If preprocess the program using &lt;code&gt;gcc -E code.c&lt;/code&gt;, the output programe code is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int main() {
+    int 1 = 701;
+    printf(&amp;quot;%d\n&amp;quot;, 1);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&amp;rsquo;s very obvious that &lt;code&gt;linux&lt;/code&gt; is &lt;code&gt;#define&lt;/code&gt; somewhere with value &lt;code&gt;1&lt;/code&gt;. But the code only included &lt;code&gt;stdio.h&lt;/code&gt; file and there is no such define in this header file. After search Google, I have found the explanantion from stackoverflow.&lt;/p&gt;
+
+&lt;p&gt;Word such as &lt;code&gt;unix&lt;/code&gt; or &lt;code&gt;vax&lt;/code&gt; was defined in the pre-ANSI days to detect the system at compile time. To make the compile process pass, just pass parameter &lt;code&gt;-std=c89&lt;/code&gt; or &lt;code&gt;-std=c99&lt;/code&gt; to &lt;code&gt;gcc&lt;/code&gt; will do.&lt;/p&gt;
+
+&lt;h4 id=&#34;related-questions-from-stackoverflow&#34;&gt;Related Questions From Stackoverflow:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/19210935/why-does-the-c-preprocessor-interpret-the-word-linux-as-the-constant-1&#34;&gt;Stackoverflow Question 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/3770322/is-unix-restricted-keyword-in-c&#34;&gt;Stackoverflow Question 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/coding/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>T32Hook: Utility To Auto Hook Trace32</title>
+      <link>http://zhuyong.me/blog/2014/12/31/t32hook-utility-to-auto-hook-trace32/</link>
+      <pubDate>Wed, 31 Dec 2014 15:12:54 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/12/31/t32hook-utility-to-auto-hook-trace32/</guid>
+      <description>&lt;p&gt;Today is last day of 2014. I will use this 2014 last blog to write about the utility I recently developed.&lt;/p&gt;
+
+&lt;p&gt;On my latest project, firmware code failed during test with power cycle on target. And the Lauterbach emulator can&amp;rsquo;t detect the &lt;code&gt;power on&lt;/code&gt; event on this target, so we can&amp;rsquo;t use the &lt;code&gt;power on&lt;/code&gt; event to automate initial script running. The failure only happens after power cycle, so I must let Trace32 run the setup script to enable the trace in order to capture the code running history.&lt;/p&gt;
+
+&lt;p&gt;Because previously I already did a utility to automate failure replay using Trace32 simulation, I know Trace32 has remote API to control the script running. So I come out with the idea to detect target power cycle from the message on serial port (target firmware will print some message on serial port), upon power cycle event happen, use remote API to command Trace32 to execute the setup script.&lt;/p&gt;
+
+&lt;p&gt;QT already has the &lt;code&gt;The Simple Terminal&lt;/code&gt; example, so my development leverage on this example code and added Trace32 remote API code.&lt;/p&gt;
+
+&lt;p&gt;This is the image of the main window for the final working product.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-12-31-t32hook/t32hook-001.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;This the serial setting dialog, I didn&amp;rsquo;t change this part from the example code.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-12-31-t32hook/t32hook-002.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;This is the Trace32 remote setting dialog. Added options to specify the remote host, port, packet size, the setup script to run as well as text line to trigger setup script re-run.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-12-31-t32hook/t32hook-003.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;The whole development take me few night time at home. My initial working version with everything hard coded, because we must solve the firmware issue ASAP. I use my spare time to make it configurable, so my colleagues with same need can use it as well.&lt;/p&gt;
+
+&lt;p&gt;This is not my first utility written using QT, when I need to write GUI utility, I will always turn to QT, sometime use PyQT, sometime use the native C++ version. The latest version of QT already have support for Android and iOS, I may test water with the Android version some time later.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

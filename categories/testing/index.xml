@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/testing/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>C Code Unit Testing Using cmocka</title>
+      <link>http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka/</link>
+      <pubDate>Wed, 19 Mar 2014 16:22:53 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/03/19/c-code-unit-testing-using-cmocka/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://cmocka.org/&#34;&gt;cmocka&lt;/a&gt; is a unit testing framework for C, it is developed based on Google&amp;rsquo;s project &lt;a href=&#34;https://code.google.com/p/cmockery/&#34;&gt;cmockery&lt;/a&gt;. It was easy to use, and the author corrected some bugs from &lt;code&gt;cmockery&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;install-cmocka&#34;&gt;Install cmocka&lt;/h3&gt;
+
+&lt;p&gt;First download source code for latest version of &lt;code&gt;cmocka&lt;/code&gt; from &lt;a href=&#34;https://open.cryptomilk.org/projects/cmocka/files&#34;&gt;https://open.cryptomilk.org/projects/cmocka/files&lt;/a&gt;. Current latest version is 0.3.2, and the source file is &lt;code&gt;cmocka-0.3.2.tar.xz&lt;/code&gt;. &lt;code&gt;cmake&lt;/code&gt; is required to build &lt;code&gt;cmocka&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd ~/Downloads
+$ xz -d cmocka-0.3.2.tar.xz
+$ tar vxf cmocka-0.3.2.tar
+$ cd cmocka-0.3.2
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
+$ make
+$ sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;use-cmocka&#34;&gt;Use cmocka&lt;/h3&gt;
+
+&lt;p&gt;Create source file with test cases. Simple example would be like:&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color: #75715e&#34;&gt;&amp;lt;stdarg.h&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color: #75715e&#34;&gt;&amp;lt;stddef.h&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color: #75715e&#34;&gt;&amp;lt;setjmp.h&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color: #75715e&#34;&gt;&amp;lt;cmocka.h&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;test&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;**&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;state)&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;assert_int_equal(&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;assert_int_not_equal(&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;void&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; 
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;UnitTest&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;tests[]&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; 
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color: #f8f8f2&#34;&gt;unit_test(test),&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;};&lt;/span&gt;
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;run_tests(tests);&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;save file as `cmockatest.c&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gcc cmockatest.c -lcmocka -o cmockatest
+$ ./cmockatest
+
+[==========] Running 1 test(s).
+[ RUN      ] test
+3 == 3
+cmocka.c:8: error: Failure!
+[  FAILED  ] test
+[==========] 1 test(s) run.
+[  PASSED  ] 0 test(s).
+[  FAILED  ] 1 test(s), listed below:
+[  FAILED  ] test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.cryptomilk.org/2013/01/14/cmocka-a-unit-testing-framework-for-c/&#34;&gt;cmocka author&amp;rsquo;s blog post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lwn.net/Articles/558106/&#34;&gt;Unit testing with mock objects in C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cmocka.org/api/&#34;&gt;cmocka API Documents&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

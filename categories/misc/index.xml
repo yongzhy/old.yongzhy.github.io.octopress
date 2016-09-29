@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/misc/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Last Day Of 2015</title>
+      <link>http://zhuyong.me/blog/2015/12/31/last-day-of-2015/</link>
+      <pubDate>Thu, 31 Dec 2015 22:02:12 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2015/12/31/last-day-of-2015/</guid>
+      <description>&lt;p&gt;In less than 2 hours, it will be brand new Year 2016. It&amp;rsquo;s annual summary time!&lt;/p&gt;
+
+&lt;p&gt;Here is the summary list:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In April, whole family moved from very west to very east. We want to give the 2 boys better environment and it seems the decision is correct. Kids enjoyed to live in east because of so many fun places to go within short travel distance.&lt;/li&gt;
+&lt;li&gt;In Aug, whole family fly back to China for whole month, it&amp;rsquo;s a wonderful journey for the two boys.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;In Oct, passed my driving test and got my driving license.&lt;/li&gt;
+&lt;li&gt;In Nov, bought my first car. I would say, it&amp;rsquo;s really expensive to own a car in Singapore, but the life will be much easier with a car, especially when we bring the two boys out. And the time spend on road between home and office is reduced by at least half.&lt;/li&gt;
+&lt;li&gt;In Dec, 2nd son started his childcare school life and not get used to it yet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For work, there is one failure attempt for job change, not worth to mention, failed at the 1st culture phone call. Too bad! Other than that, it&amp;rsquo;s really a busy year, I was &amp;ldquo;outsourced&amp;rdquo; to another team to help product development, different working style and most importantly, the always tight schedule. I spent a lot of nights at home remote to company network to work.&lt;/p&gt;
+
+&lt;p&gt;For 2016, I want myself to always be prepared, so when opportunity comes, I am ready!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2014 Year End Summary</title>
+      <link>http://zhuyong.me/blog/2014/12/29/2014-year-end-summary/</link>
+      <pubDate>Mon, 29 Dec 2014 17:39:25 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/12/29/2014-year-end-summary/</guid>
+      <description>
+
+&lt;p&gt;It&amp;rsquo;s end of Year 2014 and it&amp;rsquo;s the time to write summary for this year. Year 2014 is just an ordinary year same as previous few years, the main reason is there were no much excited things happen. There were several good opportunities for me to change, but unfortunately, I didn&amp;rsquo;t prepare myself well and I missed all those opportunities. I really think developer should be already be ready for opportunities, you never know when will an opportunity appears.&lt;/p&gt;
+
+&lt;p&gt;Anyway, to summarize my Year 2014, I grouped those things that worth mention here into few categories:&lt;/p&gt;
+
+&lt;h3 id=&#34;big-change&#34;&gt;Big Change&lt;/h3&gt;
+
+&lt;p&gt;There is only one thing can fit this category in 2014. On 31 July, I received email from HDB to inform us that we got queue No. 1 in HDB May 2014 sale of balance flats exercise. So I chose a new HDB 5 room flat from Costa Ris @ Pasir Ris, the location is good, very near to MRT station. My current flat location is also very good, 5 minutes walking distance to Boon Lay MRT, we decided to move to east side for better air quality and more places for kids to play. In the past two months, I was busy with new flat renovation. Every weekend I travel from very west of Singapore to very east of Singapore to monitor the renovation progress. The renovation is still in progress and we plan to move in after Chinese New Year 2015.&lt;/p&gt;
+
+&lt;h3 id=&#34;gadgets-bought-in-year-2014&#34;&gt;Gadgets Bought In Year 2014&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Acer C720 ChromeBook : I have install Ubuntu on this Chromebook through crouton, for the whole year, this notebook was my main computer. I use ChromeOS to surf web and use Ubuntu to do development and blog writing. I really love this machine.&lt;/li&gt;
+&lt;li&gt;Chromecast from Google : Mainly used to play videos from YouTube for my kids.&lt;/li&gt;
+&lt;li&gt;Allure Eyewear: Call Of Duty Ghost : No use much after few months&lt;/li&gt;
+&lt;li&gt;HHKB Pro 2 Type-S : To me, the key feeling not so good as my old IBM Model S&lt;/li&gt;
+&lt;li&gt;LG G Pro 2 : Good Phablet, nice battery life&lt;/li&gt;
+&lt;li&gt;SandDisk Extreme Pro 480GB SSD : Good deal from Amazon and very good performance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;continuous-ongoing-efforts&#34;&gt;Continuous / Ongoing Efforts&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Answered some StackOverflow questions and earned few hundreds reputation points.&lt;/li&gt;
+&lt;li&gt;Bought a domain and start writing blog on GitHub page. The first blog post was on 11 Dec 2013 and total of 34 blog posts have been published. From &lt;code&gt;Google Analytics&lt;/code&gt; report, now the blog has 800 page view per month, the number is not much, but I am glad that some of the posts did helped the readers.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;Google Keep&lt;/code&gt; as my daily &lt;code&gt;ToDoList&lt;/code&gt; since 21 Jan 2014, so far it works well for my needs. Every morning I create a new task list with the date in title, then copy previous day&amp;rsquo;s incomplete task to this new list, and also add new tasks. Tasks may not be completed in sequence, or been listed for quite few days, but it&amp;rsquo;s OK, as long as I know there is this task need to be done.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;Google Calendar&lt;/code&gt; as my diary to record my two boys&amp;rsquo; remarkable event since 06 Dec 2013. I create one calendar for each boy, then share the calendars to my wife, both of us tried to update the calendars daily, so we won&amp;rsquo;t miss any valuable moment with the two boys.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;books-i-have-read-in-2014&#34;&gt;Books I Have Read in 2014&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Power of Habit: Why We Do What We Do in Life and Business&lt;/li&gt;
+&lt;li&gt;Steve Jobs (Chinese Version)&lt;/li&gt;
+&lt;li&gt;Just for Fun - Linus Torvalds (Chinese Version)&lt;/li&gt;
+&lt;li&gt;Among Thieves&lt;/li&gt;
+&lt;li&gt;Hunger Game I, II and III&lt;/li&gt;
+&lt;li&gt;Ender&amp;rsquo;s Game&lt;/li&gt;
+&lt;li&gt;Harry Potter (All 7 Books, Chinese Version)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;development&#34;&gt;Development&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Developed a simple 2048 clone in Golang, console version. &lt;a href=&#34;https://github.com/yongzhy/2048-console&#34;&gt;code here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Developed a QT GUI tool to re-init Trace32 after detected target power cycle from the messages printed on serial port.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Shift My Personal Blog To Github</title>
+      <link>http://zhuyong.me/blog/2013/12/11/shift-my-personal-blog-to-github/</link>
+      <pubDate>Wed, 11 Dec 2013 12:35:42 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2013/12/11/shift-my-personal-blog-to-github/</guid>
+      <description>&lt;p&gt;I haven&amp;rsquo;t updated &lt;a href=&#34;http://yongzhy.blogspot.com&#34;&gt;my old blog&lt;/a&gt; for long time, one of the reason is because it&amp;rsquo;s not easy to post a blog with code snippets on blospot. Few days back, I came by an article mentioned blogging on Github; after read through the article, I felt that&amp;rsquo;s the blog engine I really want. My blog is all about programming stuff, so static pages would fulfill my requriements. Blogging on Github require some initial setup, but with &lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt;, the task becomes simple. Just follow the documents on Octopress website, you can have your personal blog on Github in few minutes.&lt;/p&gt;
+
+&lt;p&gt;To me, I think blogging on Github has following benefits you might also want:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Version control with git, not only your post been version controlled, but also, you make yourself familiar with git&lt;/li&gt;
+&lt;li&gt;Very nich code snippets sharing&lt;/li&gt;
+&lt;li&gt;Writting in Markdown, no need to care much about formatting and stylem. Just follow Markdown syntax, and it is easy&lt;/li&gt;
+&lt;li&gt;Unlimited space to store your contents.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Anyway, this marks my first blog on Github.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

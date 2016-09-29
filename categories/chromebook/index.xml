@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/chromebook/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/chromebook/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Turn C720 Into Development Machine: Step By Step Guide</title>
+      <link>http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/</link>
+      <pubDate>Wed, 22 Jan 2014 22:52:54 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/</guid>
+      <description>&lt;p&gt;From Google Analytic report of my blog,  I saw there are two visitors, one from Germany and the other from US. Both of them viewed my blog post about &lt;a href=&#34;http://zhuyong.me/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/&#34;&gt;setup C720 development environment&lt;/a&gt;.  But in that post, I didn&amp;rsquo;t record down step by step how to setup the development environment. Since people are interested in this topic, I think I should write a formal and detail post about this. So, here come this step by step guide of turn your C720 as development machine by install Ubuntu using &lt;a href=&#34;https://github.com/dnschneid/crouton&#34;&gt;crouton&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The reason I choose &lt;code&gt;crouton&lt;/code&gt; over &lt;code&gt;chrubuntu&lt;/code&gt; is because of the super convenient way to switch between ChromeOS and Ubuntu with &lt;code&gt;Ctrl + Alt + Shift + Back&lt;/code&gt; keys. There is no need to reboot machine to switch between the OSs.&lt;/p&gt;
+
+&lt;h4 id=&#34;step-1-enable-developer-mode&#34;&gt;Step 1: Enable Developer Mode&lt;/h4&gt;
+
+&lt;p&gt;Enable the developer mode will wipe all your data, so backup any important data before enable developer mode.&lt;/p&gt;
+
+&lt;p&gt;To enable developer mode:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Press &lt;code&gt;Esc + Refresh (F3)&lt;/code&gt; keys then press &lt;code&gt;Power&lt;/code&gt; button&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;Ctrl + D&lt;/code&gt;, ignore the warning/error message on screen.&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;Ctrl + D&lt;/code&gt; again, you entered the developer mode.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After enable developer mode, evertime you cold start your computer, you need to press &lt;code&gt;Ctr + D&lt;/code&gt; or just wait for 30 second.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;step-2-install-ubuntu-13-10-using-crouton&#34;&gt;Step 2: Install Ubuntu 13.10 Using crouton&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;crouton&lt;/code&gt; is a powerful script that will do all the download and installation job for you. Download latest version of &lt;code&gt;crouton&lt;/code&gt; from &lt;a href=&#34;http://goo.gl/fd3zc&#34;&gt;http://goo.gl/fd3zc&lt;/a&gt;. For details of crouton usage, refer to it&amp;rsquo;s &lt;a href=&#34;https://github.com/dnschneid/crouton&#34;&gt;github repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I use &lt;code&gt;crouton&lt;/code&gt; to install Ubuntu 13.10, and I choose &lt;code&gt;xfce4&lt;/code&gt; as the windows manager. Below are the steps I prerformed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Download &lt;code&gt;crouton&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Open shell by &lt;code&gt;Ctrl + Alt + T&lt;/code&gt;, then type &lt;code&gt;shell&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;sudo sh -e ~/Downloads/crouton -r saucy -t xfce&lt;/code&gt;. This will start the downloading and installation process for Ubuntu 13.10&lt;/li&gt;
+&lt;li&gt;Wait untill the installation done.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;sudo startxfce4&lt;/code&gt; to start the &lt;code&gt;Xfce&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Anytime you want to switch between ChromeOs and Ubuntu, just use &lt;code&gt;Ctrl + Alt + Shift + Back&lt;/code&gt; or &lt;code&gt;Ctrl + Alt + Shift + Forward&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;log out &lt;code&gt;xfce&lt;/code&gt; will end the &lt;code&gt;xfce&lt;/code&gt; session&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;step-3-install-development-tools&#34;&gt;Step 3: Install Development Tools&lt;/h4&gt;
+
+&lt;p&gt;There is no much to talk about this step, it&amp;rsquo;s the same as install development tools in Ubuntu. Just run &lt;code&gt;sudo apt-get update&lt;/code&gt;, &lt;code&gt;sudo apt-get install&lt;/code&gt; to install whatever tools you needed.&lt;/p&gt;
+
+&lt;p&gt;For me, I installed &lt;code&gt;git&lt;/code&gt;, &lt;code&gt;vim&lt;/code&gt;, &lt;code&gt;build_essential&lt;/code&gt;, &lt;code&gt;cmake&lt;/code&gt;, &lt;code&gt;golang1.2&lt;/code&gt;, &lt;code&gt;llvm3.4&lt;/code&gt;, &lt;code&gt;the_silver_searcher&lt;/code&gt; as well as &lt;code&gt;ruby&lt;/code&gt; and necessory packages for &lt;code&gt;Octopress&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you followed all the steps above, your C720 will become a nice Linux development machine. I haven&amp;rsquo;t tried to run any IDE like &lt;code&gt;eclipse&lt;/code&gt; or &lt;code&gt;android studio&lt;/code&gt;, I think my 2GB RAM may not sufficient for RAM hunger tools like that. If you have the 4GB version of C720, I think there is no problem to run those IDEs.&lt;/p&gt;
+
+&lt;h4 id=&#34;step-4-key-map-modification-optional&#34;&gt;Step 4: Key Map Modification (Optional)&lt;/h4&gt;
+
+&lt;p&gt;If you are like me, always use &lt;code&gt;CapLock&lt;/code&gt; as &lt;code&gt;Ctrl&lt;/code&gt;, you can follow the instruction in my another &lt;a href=&#34;http://zhuyong.me/blog/2014/01/15/map-search-key-to-control-key-on-acer-c720-chromebook/&#34;&gt;post&lt;/a&gt; to map the search key to ctrl.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Next&lt;/strong&gt;, I will write another post to talk about development on C720 using cloud based development environment. If you are interested, please stay tuned.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Map Search Key To Control Key On Acer C720 Chromebook</title>
+      <link>http://zhuyong.me/blog/2014/01/15/map-search-key-to-control-key-on-acer-c720-chromebook/</link>
+      <pubDate>Wed, 15 Jan 2014 20:00:46 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/15/map-search-key-to-control-key-on-acer-c720-chromebook/</guid>
+      <description>
+
+&lt;p&gt;I am a vim user, and for all my home and office computers, I map the CapLock key to Ctrl key. So after installed Ubuntu 13.10 using crouton on my new Acer C720 Chromebook, I was thinking to map the search key to control key. I did some search online as well as some experiments and finally found the solution.&lt;/p&gt;
+
+&lt;p&gt;I choosed xfce4 as my window manager because of the rather low 2GB RAM. By default, the search key is mapped to Super_L after install Ubuntu using crouton. If you want to know the keycode for each key on the keyboard, you can use &lt;code&gt;xev&lt;/code&gt; to check.&lt;/p&gt;
+
+&lt;p&gt;I use &lt;code&gt;xmodmap&lt;/code&gt; to do the key mapping.&lt;/p&gt;
+
+&lt;p&gt;First, create file &lt;code&gt;.Xmodmap&lt;/code&gt; at your &lt;code&gt;$HOME&lt;/code&gt; directory with content below&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;clear control
+clear mod4
+keycode 133 = Super_L
+add control  = Control_L Control_R Super_L
+add mod4 = Hyper_L Super_R
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, need to make sure &lt;code&gt;xmodmap&lt;/code&gt; load &lt;code&gt;~/.Xmodmap&lt;/code&gt; file when you start you linux using &lt;code&gt;sudo startxfce4&lt;/code&gt; in chromebook terminal. Create file &lt;code&gt;~/.xinitrc&lt;/code&gt; with content below&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if [-s ~/.Xmodmap]; then
+    xmodmap ~/.Xmodmap
+fi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Last step is to logout your xfce environment and restart it from chromebook terminal.&lt;/p&gt;
+
+&lt;h4 id=&#34;references-websites&#34;&gt;References Websites&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs.gmu.edu/~sean/stuff/n800/keyboard/old.html&#34;&gt;http://cs.gmu.edu/~sean/stuff/n800/keyboard/old.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/index.php/Xmodmap&#34;&gt;https://wiki.archlinux.org/index.php/Xmodmap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dnschneid/crouton/wiki/Keyboard&#34;&gt;https://github.com/dnschneid/crouton/wiki/Keyboard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setup Acer C720 Chromebook As Development Computer</title>
+      <link>http://zhuyong.me/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/</link>
+      <pubDate>Wed, 08 Jan 2014 22:27:33 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/08/setup-acer-c720-chromebook-as-development-computer/</guid>
+      <description>&lt;p&gt;Today is my second day with Acer C720 chromebook. After two days usage, my impression on chromebook is totally impressive. My initial intension was to buy a Macbook Pro 13 retina display. But while waiting for the Apple &amp;ldquo;Red Friday&amp;rdquo; discount before Chinese New Year, I was thinking again and again &amp;ldquo;do I really need to buy a powerful Macbook Pro that cost over S$2000?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I have a powerful laptop at home now, but because of its bad battery life, everytime I use it, I need to plug in the power adapter. I can only use laptop after the two kids went to sleep, and I want to use it when on the bed.  The requirement to connect to power adapter just keep me away from use that laptop. What I need is a device with very good battery life and meet the requirements below:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Battery must be last at least 5-7 hours&lt;/li&gt;
+&lt;li&gt;Must have keyboard, one of the main task of this device is for me to write blog or code on bed before sleep.&lt;/li&gt;
+&lt;li&gt;Can run vim, I use it as my primary code editor&lt;/li&gt;
+&lt;li&gt;x86 CPU, no need to be very powerful&lt;/li&gt;
+&lt;li&gt;Hard disc space no hard requirement, as long as there are few GB left for me to install some development tools&lt;/li&gt;
+&lt;li&gt;Memory at least 4GB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Acer C720 meet all requirement except the 4GB RAM, it&amp;rsquo;s because 4GB version is out of stock on Amazon. And because of Singapore telco Starthub promotion, someone was selling cheap of C720 after they got this as free when sign broadband contract with Starhub. So I just contact one guy in a forum and offer S$300 for this 2GB version C720.&lt;/p&gt;
+
+&lt;p&gt;I got it yesterday after work. After dinner, I started the process to install Ubuntu 13.10 using crouton. The process was very smooth. Below are what I have done to setup my chromebook.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;enable developer mode&lt;/li&gt;
+&lt;li&gt;install Ubuntu 13.10 using crouton&lt;/li&gt;
+&lt;li&gt;install vim, git, build_essential, cmake, golang1.2, llvm3.4&lt;/li&gt;
+&lt;li&gt;build the_silver_searcher, YouCompletme for vim&lt;/li&gt;
+&lt;li&gt;install ruby and necessary setup for blog system Octopress&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After all of those setup, I still have over 7GB space left, that&amp;rsquo;s far better than my expection. My overall experience on this chromebook is excellet. But if there are other choices of chrombook available, I would want a configuration with 4GB RAM, 32GB SSD. Current 2GB RAM is just not enough for serious development.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Update 2014-02-04&lt;/code&gt; : For step to step guide, please refer to my new post &lt;a href=&#34;http://zhuyong.me/blog/2014/01/22/turn-c720-into-development-machine-step-by-step-guide/&#34;&gt;&lt;strong&gt;Turn C720 Into Development Machine: Step By Step Guide&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
