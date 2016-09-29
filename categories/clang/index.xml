@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/clang/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/clang/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Re-Hacked YouCompleteMe to Support Lamely Structured Projects</title>
+      <link>http://zhuyong.me/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/</link>
+      <pubDate>Sun, 01 Feb 2015 09:05:06 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/</guid>
+      <description>&lt;p&gt;Nearly 1 Year ago, I attempted to hack &lt;code&gt;YouCompleteMe&lt;/code&gt; for clang code completion for a lamely structured project, that hacking worked, but the hacking was dirty. For background information, &lt;a href=&#34;http://stackoverflow.com/questions/21746668/configure-vim-youcompleteme-for-special-project-structure&#34;&gt;here&lt;/a&gt; is my origin question on StackOverflow and &lt;a href=&#34;http://zhuyong.me/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/&#34;&gt;here&lt;/a&gt; is the detail about my first dirty hack.&lt;/p&gt;
+
+&lt;p&gt;Recently when I looked at this hacking again, I thought there should be a better way, especially after I found &lt;a href=&#34;https://gist.github.com/Rip-Rip/758615&#34;&gt;this code snippet&lt;/a&gt; from GitHub Gist. At the moment I saw the code, I had a strong feeling that I have found the solution, I just need to verify it. To make code completion success for &lt;code&gt;clang -cc1 -fsyntack-only -code-complete-at a.c:4:11 main.c&lt;/code&gt;, the source file to create &lt;code&gt;CXTranslationUnit&lt;/code&gt; should be &lt;code&gt;main.c&lt;/code&gt; and the source file to do &lt;code&gt;clang_codeCompleteAt&lt;/code&gt; should be &lt;code&gt;a.c&lt;/code&gt;. So I modified the code to pass one additional command line argument to be the file to create &lt;code&gt;TransicationUnit&lt;/code&gt;, then compile and run command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ./complete a.c 11 4 main.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When I saw the output, I confirmed this was a better way to hack &lt;code&gt;YouCompleteMe&lt;/code&gt; for my need.&lt;/p&gt;
+
+&lt;p&gt;Now I found the correct direction, the rest was just spend time to code, test and debug, here is a summary for what I have modified:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;File &lt;code&gt;cpp/ycm/ClangCompleter/TransicationUnit.cpp&lt;/code&gt;, function &lt;code&gt;TranslationUnit::CandidatesForLocation&lt;/code&gt;, take additional parameter &lt;code&gt;compfile&lt;/code&gt; to pass to &lt;code&gt;clang_codeCompleteAt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;File &lt;code&gt;cpp/ycm/ClangCompleter/CodeCompleter.cpp&lt;/code&gt;, function &lt;code&gt;ClangCompleter::CandidatesForLocationInFile&lt;/code&gt;, take additional parameter &lt;code&gt;compfile&lt;/code&gt; and pass this newly added parameter to &lt;code&gt;unit-&amp;gt;CandidatesForLocation&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;File &lt;code&gt;ycmd/completers/cpp/clang_completer.py&lt;/code&gt;, function &lt;code&gt;ComputeCandidatesInner&lt;/code&gt;, follow the way &lt;code&gt;_FlagsForRequest&lt;/code&gt; is implemented, add new function to get the &lt;code&gt;parent&lt;/code&gt; source file to create &lt;code&gt;TransicationUnit&lt;/code&gt; and pass that result to &lt;code&gt;CandidatesForLocationInFile&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;File &lt;code&gt;ycmd/completers/cpp/flags.py&lt;/code&gt;, add the new function to get &lt;code&gt;parent&lt;/code&gt; source file&lt;/li&gt;
+&lt;li&gt;File &lt;code&gt;.ycm_extra_conf.py&lt;/code&gt; under project source directory, add function &lt;code&gt;ParentForFile&lt;/code&gt;, this function read input &lt;code&gt;.clang_input_file&lt;/code&gt;, which is the mapping for &lt;strong&gt;code-complete-at-file&lt;/strong&gt; to &lt;strong&gt;TransicationUnit-file&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Created a python script to generate the mapping file for &lt;strong&gt;code-complete-at-file&lt;/strong&gt; to &lt;strong&gt;TransicationUnit-file&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Comparing to my first hacking, this round is very clean, only clang related part on &lt;code&gt;ycmd&lt;/code&gt; is modified, the client side remain untouched.&lt;/p&gt;
+
+&lt;p&gt;I have checked in the modifications to &lt;a href=&#34;https://github.com/yongzhy/ycmd&#34;&gt;my fork of &lt;code&gt;ycmd&lt;/code&gt;&lt;/a&gt; at branch &lt;code&gt;lamely&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hack YouCompleteMe And libclang For Lamely Structured Project</title>
+      <link>http://zhuyong.me/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/</link>
+      <pubDate>Thu, 20 Feb 2014 17:23:59 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/02/20/hack-youcompleteme-and-libclang-for-lamely-structured-project/</guid>
+      <description>&lt;p&gt;On 13 Feb 2014 I asked a question on &lt;a href=&#34;http://stackoverflow.com/questions/21746668/configure-vim-youcompleteme-for-special-project-structure&#34;&gt;StackOverflow&lt;/a&gt; on how to configure / modify vim plugin &lt;code&gt;YouCompleteMe&lt;/code&gt; to fit special project structure. I guess my project structure is really lame, after two days waiting, some comments were given, but my problem not realy addressed. So I think I have to &lt;strong&gt;DO IT MYSELF&lt;/strong&gt;. Then I read the source code for &lt;code&gt;YouComeplteMe&lt;/code&gt; as well as &lt;code&gt;libclang&lt;/code&gt;, because I only need the code completion function, lucky the related code are not much. Then I done  experiments with different approaches, and today, finally, I had my hacking works. Then I think I should record this nice experience, that&amp;rsquo;s the purpose of this blog post.&lt;/p&gt;
+
+&lt;h3 id=&#34;my-question-on-stackoverflow&#34;&gt;My Question On StackOverflow&lt;/h3&gt;
+
+&lt;p&gt;My C project has following structures. This is the structure for a large project, I can&amp;rsquo;t change the structure. I want to use YouCompleteMe for semantic code completion for this project.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;main/                     // folder for C file to be compiled
+  |- module1.c            // module main C file.
+  |- module2.c
+  |- .....
+module1/
+  |- mod1_func1.c         // function file to be included in main module C file.
+  |- mod1_func2.c
+  |- mod2_func3.c
+module2/
+  |- mod2_func1.c
+  |- mod2_func2.c
+  |- mod2_func3.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Content for &lt;code&gt;moduleX.c&lt;/code&gt;, this will include all related header files and module related C files.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;quot;header1.h&amp;quot;
+#include &amp;quot;header2.h&amp;quot;
+...
+#include &amp;quot;modX_func1.c&amp;quot;
+#include &amp;quot;modX_func2.c&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Content for &lt;code&gt;modX_funcX.c&lt;/code&gt; has one or few function definitions. Doesn&amp;rsquo;t have header included&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// no header file included here
+int modX_funcX(void) {.....}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Because there is not related header included, &lt;code&gt;clang&lt;/code&gt; must parse &lt;code&gt;moduleX.c&lt;/code&gt; in order to do code completion on &lt;code&gt;modX_funcX.c&lt;/code&gt;,  I have tried &lt;code&gt;clang&lt;/code&gt; code completion from command line. Command below works&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;clang -cc1 -x c -fsyntax-only -code-completion-at mod1_func1.c:4:11 module1.c 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So my question: how to configure YouCompleteMe to do code completion when I edit the &lt;code&gt;modX_funcX.c&lt;/code&gt; file?&lt;/p&gt;
+
+&lt;p&gt;I guess modification to YouCompleteMe source might required to do this job. My current idea is to add a file mapping database with format:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;path_of_file_to_complete:path_of_file_for_clang_to_parse
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So before send the code completion request, get &lt;code&gt;path_of_file_for_clang_to_parse&lt;/code&gt; from database based on current buffer name, pass this file name to &lt;code&gt;libclang&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Is my idea workable? If Yes, where is exactly place to add this file mapping function?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;my-analysis&#34;&gt;My Analysis&lt;/h3&gt;
+
+&lt;p&gt;To make job easy, I make a simple project structure to simulate my rare project structure.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd ~/dev/c/clang
+$ ls
+a.c  a.h  b.c  b.h  c.c  c.h  main.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;content for &lt;code&gt;a.h&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;typedef struct A {
+    struct A * next;
+    unsigned int data;
+}A;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;content for &lt;code&gt;a.c&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int test(void)
+{
+    A *list;
+    list-&amp;gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;content for &lt;code&gt;main.c&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;quot;a.h&amp;quot;
+#include &amp;quot;b.h&amp;quot;
+#include &amp;quot;c.h&amp;quot;
+
+#include &amp;quot;a.c&amp;quot;
+#include &amp;quot;b.c&amp;quot;
+#include &amp;quot;c.c&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;My ultimate goal is to let &lt;code&gt;YouCompleteMe&lt;/code&gt; to do code completion when I type &lt;code&gt;-&amp;gt;&lt;/code&gt; at line 4 of file &lt;code&gt;a.c&lt;/code&gt;. To test with &lt;code&gt;clang&lt;/code&gt; from command line&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ clang -cc1 -x c -fsyntax-only -code-completion-at a.c:4:11 main.c
+COMPLETION: data : [#unsigned int#]data
+COMPLETION: next : [#struct A *#]next
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;analyze-clang-command-line&#34;&gt;Analyze clang Command Line&lt;/h4&gt;
+
+&lt;p&gt;So command line code completion works for this simulation structure. To understand why &lt;code&gt;clang&lt;/code&gt; CLI works while &lt;code&gt;YouCompleteMe&lt;/code&gt; doesn&amp;rsquo;t, I need to find the difference at the point of code completetion for CLI and &lt;code&gt;libclang&lt;/code&gt;. So I need a debug version of &lt;code&gt;clang&lt;/code&gt;. Below are the steps to download and build debug version of &lt;code&gt;clang&lt;/code&gt; version 3.3.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mkdir -p /data/sourcecode
+$ svn co http://llvm.org/svn/llvm-project/llvm/tags/RELEASE_33/final llvm3.3
+$ cd llvm3.3/tools
+$ svn co http://llvm.org/svn/llvm-project/cfe/tags/RELEASE_33/final clang
+$ cd ../projects
+$ svn co http://llvm.org/svn/llvm-project/compiler-rt/tags/RELEASE_33/final compiler-rt
+$ cd /data/build
+$ mkdir llvm3.3-linux
+$ cd llvm3.3-linux
+$ /data/sourcecode/llvm3.3/configure --prefix=/data/software/C-C++/llvm3.3-hack/ CC=/usr/bin/gcc CXX=/usr/bin/g++
+$ make -j4
+$ make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next step is to load debug version of &lt;code&gt;clang&lt;/code&gt; with the working arguments. I want to break at function &lt;code&gt;ASTFrontendAction::ExecuteAction()&lt;/code&gt; to check some variables.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gdb --args /data/software/C-C++/llvm3.3-hack/bin/clang -cc1 -x c -fsyntax-only -code-completion-at a.c:4:11 main.c
+
+(gdb) break z:\sourcecode\llvm3.3\tools\clang\lib\frontend\frontendaction.cpp:457
+
+Breakpoint 1 at 0xd775d3: file /data/sourcecode/llvm3.3/tools/clang/lib/Frontend/FrontendAction.cpp, line 457.
+
+(gdb) run
+
+Starting program: /data/software/C-C++/llvm3.3-hack/bin/clang -cc1 -x c -fsyntax-only -code-completion-at a.c:4:11 main.c
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library &amp;quot;/lib/x86_64-linux-gnu/libthread_db.so.1&amp;quot;.
+Breakpoint 1, clang::ASTFrontendAction::ExecuteAction (this=0x513a5d0) at /data/sourcecode/llvm3.3/tools/clang/lib/Frontend/FrontendAction.cpp:457
+457       if (hasCodeCompletionSupport() &amp;amp;&amp;amp;
+
+(gdb) print CI.getFrontendOpts().Inputs[0]
+
+$3 = (clang::FrontendInputFile &amp;amp;) @0x513b600: {File = {static npos = &amp;lt;optimized out&amp;gt;, _M_dataplus = {&amp;lt;std::allocator&amp;lt;char&amp;gt;&amp;gt; = {&amp;lt;__gnu_cxx::new_allocator&amp;lt;char&amp;gt;&amp;gt; = {&amp;lt;No data fields&amp;gt;}, &amp;lt;No data fields&amp;gt;}, _M_p = 0x513b5e8 &amp;quot;main.c&amp;quot;}},
+Buffer = 0x0, Kind = clang::IK_C, IsSystem = false}
+
+(gdb) print CI.getFrontendOpts().CodeCompletionAt
+
+$4 = {FileName = {static npos = &amp;lt;optimized out&amp;gt;, _M_dataplus = {&amp;lt;std::allocator&amp;lt;char&amp;gt;&amp;gt; = {&amp;lt;__gnu_cxx::new_allocator&amp;lt;char&amp;gt;&amp;gt; = {&amp;lt;No data fields&amp;gt;}, &amp;lt;No data fields&amp;gt;}, _M_p = 0x513b568 &amp;quot;a.c&amp;quot;}}, Line = 4, Column = 11}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From &lt;code&gt;gdb&lt;/code&gt; output, I know &lt;code&gt;a.c&lt;/code&gt; is stored in &lt;code&gt;CI.getFrontendOpts().CodeCompletionAt&lt;/code&gt; while &lt;code&gt;main.c&lt;/code&gt; is stored in &lt;code&gt;CI.getFrontendOpts().Inputs[0]&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;analyze-youcompleteme-with-libclang&#34;&gt;Analyze YouCompleteMe with libclang&lt;/h4&gt;
+
+&lt;p&gt;Entry point for code completion from &lt;code&gt;libclang&lt;/code&gt; is &lt;code&gt;clang_codeCompleteAt&lt;/code&gt; and eventually it call to &lt;code&gt;ASTUnit::CodeComplete()&lt;/code&gt;. And at end of this function, it also call &lt;code&gt;ASTFrontendAction::ExecuteAction()&lt;/code&gt; same as &lt;code&gt;clang&lt;/code&gt; from command line. It also has input file defined by &lt;code&gt;Clang-&amp;gt;getFrontendOpts().Inputs[0]&lt;/code&gt;. Up to this point, my thought become clear, my target is how to make &lt;code&gt;Clang-&amp;gt;getFrontendOpts().Inputs[0]&lt;/code&gt; set to &lt;code&gt;main.c&lt;/code&gt; with all the passed in parameters.&lt;/p&gt;
+
+&lt;h3 id=&#34;my-hacking&#34;&gt;My Hacking&lt;/h3&gt;
+
+&lt;h4 id=&#34;the-first-fail-hack&#34;&gt;The First Fail Hack&lt;/h4&gt;
+
+&lt;p&gt;My first attemp is rather simple, as I stated in my &lt;a href=&#34;http://stackoverflow.com/questions/21746668/configure-vim-youcompleteme-for-special-project-structure&#34;&gt;StackOverflow question&lt;/a&gt;. When call &lt;code&gt;clang_codeCompleteAt()&lt;/code&gt;, pass &lt;code&gt;complete_filename&lt;/code&gt; in form of &lt;code&gt;path_of_file_to_complete:path_of_file_for_clang_to_parse&lt;/code&gt;. This attempt failed because it won&amp;rsquo;t even run to the point of &lt;code&gt;ASTUnit::CodeComplete()&lt;/code&gt;. Along the calling path, there are other function check and parse the input file, my hacking filename format is an invalid filename for those functions.&lt;/p&gt;
+
+&lt;h4 id=&#34;the-second-fail-hack&#34;&gt;The Second Fail Hack&lt;/h4&gt;
+
+&lt;p&gt;I understand that &lt;code&gt;Clang-&amp;gt;getFrontendOpts()&lt;/code&gt; is parsed from the passed flags, so my second attempt of hacking is to pass &lt;code&gt;main.c&lt;/code&gt; together with flags. So I hardcode &lt;code&gt;.ycm_extra_conf.py&lt;/code&gt; to append absolute path of &lt;code&gt;main.c&lt;/code&gt; in &lt;code&gt;flags&lt;/code&gt;, but &lt;code&gt;Clang-&amp;gt;getFrontendOpts().Inputs[0]&lt;/code&gt; was not set to &lt;code&gt;main.c&lt;/code&gt; when I check at &lt;code&gt;ASTUnit::CodeComplete()&lt;/code&gt;. So this attempt failed.&lt;/p&gt;
+
+&lt;h4 id=&#34;the-third-successful-but-dirty-hack&#34;&gt;The Third Successful But Dirty Hack&lt;/h4&gt;
+
+&lt;p&gt;After failed previous two attempts, I only have the option to do dirty hacking by change &lt;code&gt;libclang&lt;/code&gt; API and related functions, as well as related parts in &lt;code&gt;YouComplteMe&lt;/code&gt;. The idea was to pass in additional &lt;code&gt;input_filename&lt;/code&gt; together with &lt;code&gt;complete_filename&lt;/code&gt;. And at &lt;code&gt;ASTUnit::CodeComplete()&lt;/code&gt;, if this &lt;code&gt;input_filename&lt;/code&gt; is valid, use it to replace &lt;code&gt;Clang-&amp;gt;getFrontendOpts().Inputs[0]&lt;/code&gt;. This attempt works!!!&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;To solve my problem, I was forced to read source code of &lt;code&gt;YouCompleteMe&lt;/code&gt; and &lt;code&gt;clang&lt;/code&gt;. The hacking process takes time because of code reading, compilation and debugging, and it&amp;rsquo;s disappointed to find out my attempt didn&amp;rsquo;t work as expected. But I really enjoy the moment when the code worked after some days&amp;rsquo; struggling. This whole hacking process is just another proof that open source is really good, you can do any hacking to fit your own need.&lt;/p&gt;
+
+&lt;h3 id=&#34;update-2015-02-01&#34;&gt;Update 2015-02-01&lt;/h3&gt;
+
+&lt;p&gt;I have tried another hacking, a better hacking, click &lt;a href=&#34;http://zhuyong.me/blog/2015/02/01/hacked-youcompleteme-to-support-lamely-structured-pojects/&#34;&gt;here&lt;/a&gt; for more info.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

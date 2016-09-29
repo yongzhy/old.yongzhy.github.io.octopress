@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhu Yong</title>
+    <link>http://zhuyong.me/categories/gadget/index.xml</link>
+    <description>Recent content on Zhu Yong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://zhuyong.me/categories/gadget/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>New Toy: microsoft sculpt ergonomic desktop</title>
+      <link>http://zhuyong.me/blog/2015/11/20/new-toy-microsoft-sculpt-ergonomic-desktop/</link>
+      <pubDate>Fri, 20 Nov 2015 22:05:18 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2015/11/20/new-toy-microsoft-sculpt-ergonomic-desktop/</guid>
+      <description>&lt;p&gt;This afternoon received my new toy: the Microsoft Sculpt Ergonomic Desktop set.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2015-11-20-Keyboard/microsoft.jpg&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;microsoft sculpt ergonomic desktop&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;After using old IBM Model M keyboard for long time, it took me a while to get used to this new layout and feeling. Comparing to IBM Model M, the key travel distance is really short. This keyboard would be perfect if it&amp;rsquo;s mechanical switch keyboard. :) ( Yeah, the price might double as well ).&lt;/p&gt;
+
+&lt;p&gt;The bad thing for this keyboard is the very strong plastic odor, it made me sick only after one hour usage. Hope the smell will disappear when I return to office next Monday.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Upgraded My HP DV6-6144TX To SSD &#43; HDD</title>
+      <link>http://zhuyong.me/blog/2014/12/22/upgraded-my-hp-dv6-6144tx-to-ssd-plus-hdd/</link>
+      <pubDate>Mon, 22 Dec 2014 22:18:37 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/12/22/upgraded-my-hp-dv6-6144tx-to-ssd-plus-hdd/</guid>
+      <description>&lt;p&gt;I received my Sandisk Extreme Pro 480GB SSD on 17 Dec, on that night, immediately after my kids slept, I went to study room and replaced the internal Toshiba SATA II HDD to this SSD. Next I partitioned the drive and installed Windows 7 Ultimate, the waiting time for Windows booting was significantly reduced.&lt;/p&gt;
+
+&lt;p&gt;Next on 18 Dec night, after I installed all drivers for Windows 7, I tried to install a Debian 7.7 system to another partition to make the computer dual boot. But I failed on first try, because non-free firmware required for the WIFI hardware, but the installer can&amp;rsquo;t load firmware from the bootable USB drive. So I prepared another USB thumbdrive dedicated for the non-free firmware on 19 Dec night, this time the installation process went smoothly and I have Debian 7.7 and Windows 7 dual booting..&lt;/p&gt;
+
+&lt;p&gt;On 20 Dec, my shopping packages from Taobao were delivered, one of those packages is the SATA adapter to replace the DVD drive, this adapter only costed my RMB 27, which is very very cheap. On that night, I took out the DVD drive and replaced it with that adapter and the original Toshiba SATA II hard drive. So now my laptop has over 1TB hard drive capacity.&lt;/p&gt;
+
+&lt;p&gt;This is the image of Sandisk Extreme Pro 480GB SSD
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-12-22-ChangeDrive/sandisk.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The SATA adapter with Toshiba SATA II drive mounted
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-12-22-ChangeDrive/toshiba.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;SSD and SATA adapter installed on the system. The adapter doesn&amp;rsquo;t have the hole to mount screw at location 1, and its size is smaller than the original DVD drive, so it left some part un-covered at location 2. Considering the very cheap price, I am OK with the two not perfect point.
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-12-22-ChangeDrive/all.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DIY Cut My Sim Card To Micro-Sim</title>
+      <link>http://zhuyong.me/blog/2014/12/08/diy-cut-my-sim-card-to-micro-sim/</link>
+      <pubDate>Mon, 08 Dec 2014 16:31:49 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/12/08/diy-cut-my-sim-card-to-micro-sim/</guid>
+      <description>&lt;p&gt;It has been weeks since I purchased my LG G Pro 2, but I haven&amp;rsquo;t insert sim card into it yet. The reason is because my current sim card is the normal size sim card, but LG G Pro 2 needs micro-sim card. I checked with my Telco M1 customer service, they said they don&amp;rsquo;t provide sim card cutting service, I must pay S$37 to get a micro-sim card. To me, this S$37 is too expensive, so I didn&amp;rsquo;t buy from M1 and just use the new phone as a Tablet to surf net.&lt;/p&gt;
+
+&lt;p&gt;Last week during one day lunch time, I asked my coleagues where can I find sim card cutting service, one of my colleagues said he has a cutter but never used it before, so I asked him to bring the cutter to office. And he did it today, so I cut my sim card to micro-sim. With the cutter, the task was simple and easy. Attached a picture for the cutter and frame left from origin sim card.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-12-08-Simcard/2014-12-08-simcard.jpg&#34; alt=&#34;Cutter and remainning of normal sim card&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Crazy Shopping Month</title>
+      <link>http://zhuyong.me/blog/2014/11/27/crazy-shopping-month/</link>
+      <pubDate>Thu, 27 Nov 2014 22:41:50 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/11/27/crazy-shopping-month/</guid>
+      <description>&lt;p&gt;This afternoon, I ordered another gadget from Amazon:
+&lt;a href=&#34;http://www.amazon.com/gp/product/B00KHRYRLY/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00KHRYRLY&amp;linkCode=as2&amp;tag=zhuyong.me-20&amp;linkId=5VFWEDLJIRJOG7TM&#34;&gt;SanDisk Extreme PRO 480GB SATA 6.0GB/s 2.5-Inch 7mm Height Solid State Drive (SSD) With 10-Year Warranty- SDSSDXPS-480G-G25&lt;/a&gt;&lt;img src=&#34;http://ir-na.amazon-adsystem.com/e/ir?t=zhuyong.me-20&amp;l=as2&amp;o=1&amp;a=B00KHRYRLY&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/gp/product/B00KHRYRLY/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00KHRYRLY&amp;linkCode=as2&amp;tag=zhuyong.me-20&amp;linkId=5VFWEDLJIRJOG7TM&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00KHRYRLY&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=zhuyong.me-20&#34; &gt;&lt;/a&gt;&lt;img src=&#34;http://ir-na.amazon-adsystem.com/e/ir?t=zhuyong.me-20&amp;l=as2&amp;o=1&amp;a=B00KHRYRLY&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When I start sourcing good SSD deal on Amazon, I was initially looking at Intel 730 480GB, few days back, it was on discount price of US$199.99. Intel SSD has 5 Years international warranty, then I found this SandDisk SSD was selling with 10 Years warranty, someone online said the warranty was international, but I can&amp;rsquo;t find clear statement. So I contacted Amazon customer service, after confirmed the warranty is international, I asked the customer service can Amazon match the price with other online store. At the time I contact customer service, this 480GB SSD was listed around US$250, the other online store has discount of US$204. The customer service told me Amazon won&amp;rsquo;t honor any price match. So I think I&amp;rsquo;d better wait till Friday to see if got big discount. Then to my surprise, 3 minutes later, when I refresh the page, Amazon changed the price to US$204. So I immediately placed the order, and 2 of my colleagues also placed order on this same item.&lt;/p&gt;
+
+&lt;p&gt;This month for me is really a crazy shopping month. I have spend a lot on several different online stores:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ordered over S$2000 products from TaoBao, most of the items are for my new BTO HDB house renovation. Some package has not been shipped. I think all those items can only be delivered to my new house around end of Dec.&lt;/li&gt;
+&lt;li&gt;Ordered HHKB from Amazon Japan&lt;/li&gt;
+&lt;li&gt;Ordered LG G Pro 2 at Singapore&lt;/li&gt;
+&lt;li&gt;Ordered new house kitchen sink tap from Amazon. My purchase was US$206, when 25 Nov I received the product, I found Amazon has dropped the price to US$158, so I contacted customer service to refund the price difference. They granted the refund on the spot.&lt;/li&gt;
+&lt;li&gt;Ordered this SanDisk 480GB SSD&lt;/li&gt;
+&lt;li&gt;Ordered XiaoMi Power Bank, still on the way&lt;/li&gt;
+&lt;li&gt;Ordered backup battery for my old LG HD 4x from Aliexpress. Still on the way&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ordered so many items, spending so much in one month just for online shopping. I never done this before, so worth mark it here. :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HHKB Pro 2 Type-S After One Week</title>
+      <link>http://zhuyong.me/blog/2014/11/26/hhkb-pro-2-type-s-after-one-week/</link>
+      <pubDate>Wed, 26 Nov 2014 14:33:34 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/11/26/hhkb-pro-2-type-s-after-one-week/</guid>
+      <description>
+
+&lt;p&gt;My HHKB Pro 2 Type-S was delivered to my house on 19 Nov, so till today, I have officially owned it one week. So I think it&amp;rsquo;s time to write down my feeling about this well designed keyboard.&lt;/p&gt;
+
+&lt;p&gt;Before I purchase HHKB, I have being using old IBM Model M SSK for two years, the feel for IBM Model M is superb, it&amp;rsquo;s just too noisy. I should say sorry to colleagues whose seats near me. My work platform is Windows, and I use  Total Commander as my primary file manager. So my short review for HHKB would based on my daily usage scenario, with comparison to Model M.&lt;/p&gt;
+
+&lt;h3 id=&#34;pros&#34;&gt;Pros:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Size, the super compact size, I love it&lt;/li&gt;
+&lt;li&gt;Key layout, for people use Emacs and VIM as their editor. Now on every computer I own, I will map &lt;code&gt;Caps Lock&lt;/code&gt; to &lt;code&gt;Ctrl&lt;/code&gt;, I just feel it&amp;rsquo;s so convenient compare to &lt;code&gt;Ctrl&lt;/code&gt; at left bottom corner.&lt;/li&gt;
+&lt;li&gt;Quite, compare to my old IBM Model M, it&amp;rsquo;s so quite.&lt;/li&gt;
+&lt;li&gt;USB Hub, I put my Logitech Performance MX receiver on one of the two USB port.&lt;/li&gt;
+&lt;li&gt;Configurable, and have &lt;code&gt;Windows&lt;/code&gt; key, of course, this is advantage compare to old Model M.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;cons&#34;&gt;Cons:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;USB cable location. If the USB was at left or right side of HHKB, it could be much better.&lt;/li&gt;
+&lt;li&gt;No dedicated function key, and arrow key, not convenient for Windows user with Total Commander like me.&lt;/li&gt;
+&lt;li&gt;Key press feeling not good as IBM Model M, no &amp;lsquo;Click&amp;rsquo; feeling&lt;/li&gt;
+&lt;li&gt;Key layout, unless you have HHKB connected to all your desktop / laptop, you will keep press &lt;code&gt;\&lt;/code&gt; on computer without HHKB.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here is a picture of my two beloved keyboards.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-11-26-HHKB/HHKB-001.jpg&#34; alt=&#34;HHKB and IBM Model M SSK&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Finally, I Bought a HHKB Professional 2 Type-S</title>
+      <link>http://zhuyong.me/blog/2014/11/25/finally-hhkb-professional-type-s/</link>
+      <pubDate>Tue, 25 Nov 2014 08:49:10 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/11/25/finally-hhkb-professional-type-s/</guid>
+      <description>&lt;p&gt;Same as many programmers using Emaces or VIM, I want to own a HHKB professional for real long time, and for the same reason not many people buy it: the price. This keyboard is really expensive when compare to other mechanical keyboard. But deep in my heart, I always want to own one. So this month when I want to replace my IBM model M SSK from workplace, I decided to buy a HHKB Professional 2 Type-s. Japanese Yen has being drop for a long period, so I think it&amp;rsquo;s a good time to buy products from Japan.&lt;/p&gt;
+
+&lt;p&gt;I decided to buy from Japan &lt;a href=&#34;http://www.amazon.co.jp/gp/product/B008GXT6SK?ref_=pe_492632_169829912_TE_M3T1_dp_1&#34;&gt;Amazon&lt;/a&gt;, then use &lt;a href=&#34;http://www.jshoppers.com/forward/&#34;&gt;JShoppers&lt;/a&gt; to forward the package to Singapore. The process is straight forward. The reason I choose JShoppers is because of its cheaper price. The whole process is same as all other forwarding service company:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Register at JShopers, you will get a unique shipping address.&lt;/li&gt;
+&lt;li&gt;Shopping on Amazon, shipping address use the address provided by JShoppers.&lt;/li&gt;
+&lt;li&gt;Wait for package to be delivered to JShoppers and they will send you an email to ask you to pay the forwarding fee.&lt;/li&gt;
+&lt;li&gt;Pay forwarding fee.&lt;/li&gt;
+&lt;li&gt;Wait for your package to be delivered to your door.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;My experience with JShopper this time was not very good, mainly because of the verification process. Only after my HHKB was shipped by Amazon then I realized JShoppers requires ID verification. But they didn&amp;rsquo;t mention this in the registration page and the email after registration. Somehow, my account password was sent in plain text in the email. Which makes me think they store customers&amp;rsquo; password in plain text in database. This is a really bad practice, and I did express my concern about their online system security and possible leakage of my private information (including the uploaded verification document). Customer support told me I can upload verification documents with some parts covered, only name, date of birth and address must be shown, but the ID verification department rejected my uploaded document. So I forwarded the email from customer support to the ID verification department, then they passed my ID verification. Funny! There is one more detail make me more concern about my private information. The first email from the ID verification department was written in Simplified Chinese to inform me about failed verification, this make me think JShoppers outsourced the ID verification to China company. Anyway, I wrote so much, just to say JShoppers is not doing good to make customers feel safe about their private information.&lt;/p&gt;
+
+&lt;p&gt;The waiting time for this forward service is long, because they are seeing large amount of package recently. My packaged delivered to JShoppers on 10 Nov, only been processed on 15 Nov, and notify me to pay forwarding fee on 17 Nov, after that, the speed was fast: shipment was on 18 Nov and delivered to me on 19 Nov.&lt;/p&gt;
+
+&lt;p&gt;Ok, let&amp;rsquo;s forget about JShoppers, here comes the exciting part, the HHKB. Amazon use a big box for the relatively small keyboard.
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-11-25-HHKB/HHKB-001.jpg&#34; alt=&#34;HHKB In Amazon&amp;#39;s Huge Box&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;HHKB box
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-11-25-HHKB/HHKB-002.jpg&#34; alt=&#34;HHKB In Box&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;HHKB box opened
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-11-25-HHKB/HHKB-003.jpg&#34; alt=&#34;HHKB In Box&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;HHKB connected to my chromebook.
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-11-25-HHKB/HHKB-004.jpg&#34; alt=&#34;HHKB Connected To Chromebook&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I will write another blog later about how I feel it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Google Released Chromecast SDK : Countless Apps Coming</title>
+      <link>http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk/</link>
+      <pubDate>Tue, 04 Feb 2014 09:39:48 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/02/04/google-released-chromecast-sdk/</guid>
+      <description>&lt;p&gt;After &lt;a href=&#34;http://10.36.134.34:4000/blog/2014/01/25/i-received-my-chromecast/&#34;&gt;received my Chromecast&lt;/a&gt; for 10 days, I received good news from Google. Google finally &lt;a href=&#34;http://chrome.blogspot.sg/2014/02/chromecast-is-now-open-to-developers.html&#34;&gt;opened chromecast SDK to all developers&lt;/a&gt;. This is what Chromecast users and developers waiting for long time. Developers now must be busy coding to integrate the SDK into their apps, so countless Chromecast-compatible apps would show-up any day now.&lt;/p&gt;
+
+&lt;p&gt;Media player apps will be the first batch to support Chromecast, especially for local media streaming. I think this is the most desired feature for most of Chromecast users including me. I use MX Player a lot, I can&amp;rsquo;t wait to see it with Chromecast support.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t play games on phone, but I think there will be plenty of games with Chromecast support. People likes to play games on large screen, supporting for Chromecast would be a must have feature for any android games from now on.&lt;/p&gt;
+
+&lt;p&gt;For developers, check the two links below to start your development.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.google.com/cast/docs/downloads&#34;&gt;Chromecast SDK Download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.google.com/cast/docs/developers&#34;&gt;Chromecast Developer Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Half Day With Allure Eyewear &#34;Call Of Duty : Ghost&#34;</title>
+      <link>http://zhuyong.me/blog/2014/01/28/half-day-with-allure-eyewear-call-of-duty-ghost/</link>
+      <pubDate>Tue, 28 Jan 2014 17:42:29 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/28/half-day-with-allure-eyewear-call-of-duty-ghost/</guid>
+      <description>&lt;p&gt;Just before lunch time, security guard at reception desk called me to collect my parcel. I knew my 3 pieces of &lt;code&gt;Call Of Duty : Ghost&lt;/code&gt; have arrived. I placed order on 23 Jan and it only takes 5 days for international shipping, the speed is fast enough for a US$20 delivery.&lt;/p&gt;
+
+&lt;p&gt;My excutement and happiness didn&amp;rsquo;t last long until I opened the box and only see two pieces of eyeware inside. I immediately opened my order online and checked carefully, yes, the invoice stated clearly that I ordered 3 pieces of eyewear, but I only got 2 of them shipped. And there is only 1 shipment number, so I guess there won&amp;rsquo;t be a second package on the way. Next I immediately sent an email through the online contact form, but I think it will take some hours before I got response due to the different timezone. Let&amp;rsquo;s wait and see how &lt;code&gt;Allure&lt;/code&gt; reply.&lt;/p&gt;
+
+&lt;p&gt;After lunch time, I clipped the eyewear onto my glass and used it for the whole afternoon. So here is how I feel about this eyewear with one afternoon experience:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I felt a little giddy at first, guess is due to the 0.2 diopter. But my eyes soon get used to it.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s a little bit heavy for this clip-on eyewear + my glass&lt;/li&gt;
+&lt;li&gt;When the time I left company, my eyes didn&amp;rsquo;t have strong dry feeling as usual. I can confirm this is not due to phychological factor. I can really feel it. Tomorrow I will use it for whole day, I think the feel will be clearer.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s troublesome to take off the eyewear when I left my cubicle to pantry or toilet, then put on again.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Basically, this product worth the US$25 price, I would suggest this for anyone who work on computer for long hours. Of course, if you already wear glass and have the budget, I strongly suggest go to the &lt;code&gt;gunnar&lt;/code&gt; customization option.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Update 2014-02-04&lt;/code&gt; : I contacted &lt;code&gt;Allure&lt;/code&gt; on 28 Jan, and they processed another shipment for the 3rd eyewear at U.S locat time &lt;code&gt;01/29/2014  5:19 P.M&lt;/code&gt;. I must say their action and response was really fast. For this reason, I would recommend &lt;code&gt;Allure&lt;/code&gt; to anyone that interested to buy eyeware to protect their eyes.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>I Received My Chromecast</title>
+      <link>http://zhuyong.me/blog/2014/01/25/i-received-my-chromecast/</link>
+      <pubDate>Sat, 25 Jan 2014 10:13:48 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/25/i-received-my-chromecast/</guid>
+      <description>&lt;figure &gt;
+    &lt;a href=&#34;http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00DR0PDNE&amp;amp;linkCode=as2&amp;amp;tag=zhuyong.me-20&#34;&gt;
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-01-25-Chromecast.jpg&#34; alt=&#34;Chromecast On Amazon&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;I ordered Chromecast from &lt;a href=&#34;http://www.amazon.com/gp/product/B00DR0PDNE/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00DR0PDNE&amp;amp;linkCode=as2&amp;amp;tag=zhuyong.me-20&#34;&gt;Amazon&lt;/a&gt; one week back when it has promotional price of US$29.99 only.&lt;/p&gt;
+
+&lt;p&gt;I want to buy Chromecast even before I got my C720 Chromebook, but Chromecast is not selling in Singapore and it is not eligible for the free international shipping to Singapore for over US$125 spending, I don&amp;rsquo;t want to spend over US$20 shipping fee to buy a product only cost US$29.99, so I wait.&lt;/p&gt;
+
+&lt;p&gt;One week earlier, I saw my colleage shopping on Amazon, and he always use Comegateway service to ship product from US to Singapore. So I ask if he can buy the Chromecast and ship together with his purchases. He happily agreed.&lt;/p&gt;
+
+&lt;p&gt;Yesterday afternoon, DHL delivered to our office, I pay my colleague total S$46 (S$40 for the Chromecast and S$6 for the shared shipping fee), that&amp;rsquo;s very cheap.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;After went back home, I plugged Chromecast in to the HDMI slot on my TV, connected the USB power, then run &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app&#34;&gt;Chromecast&lt;/a&gt; app from my Android phone, the setup process was very easy, then wait for Chromecast to finish firmware updating. After that, everything was ready, so I run Youtube app from my phone and cast the famous &lt;code&gt;&amp;quot;London Bridge is Falling Down&amp;quot;&lt;/code&gt; animation for my son. The video streaming was very smooth, no legging, not buffering, overall experience was nice.&lt;/p&gt;
+
+&lt;p&gt;But, there are only limited android apps that have Chromecast support, and most of the supported apps can&amp;rsquo;t be used in Singapore. The function I want most is to cast the photos and video on my phone to TV. I took a lot of pictures and video for my two boys, I want to let them see themselves on photo and video, and the phone screen is way too small.&lt;/p&gt;
+
+&lt;p&gt;Google, please release the full power of Chromecast!!!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>I Ordered &#34;Call Of Duty: Ghosts Eyewear&#34;</title>
+      <link>http://zhuyong.me/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear/</link>
+      <pubDate>Thu, 23 Jan 2014 15:54:29 +0000</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2014/01/23/i-ordered-call-of-duty-ghosts-eyewear/</guid>
+      <description>&lt;p&gt;This afternoon I placed an order for 3 pieces of &lt;a href=&#34;http://call-of-duty-ghosts.allure-eyewear.com/&#34;&gt;Call Of Duty Ghosts By Allure Eyewear&lt;/a&gt;. One for myself and the other two for my colleagues.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://zhuyong.me/images/blogimg/2014-01-23-codg5-k.jpeg&#34; alt=&#34;Call Of Duy Ghosts By Allure Eyewear&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;One week ago, I didn&amp;rsquo;t even know there are glasses specially designed for heavy computer user and gamers. One day, one of my colleagues said he was going to buy a glass from Amazon, ask me to search word &lt;code&gt;gunnar&lt;/code&gt; to have a look. Then he said the glass can give eyes some relief for full day computer user like us, almost all professional gamer wear this kind of glass to protect their eyes. So I did some google about this eyewear. From reviews on various websites, the feedbacks are quite possitive and effective. So I decided to invest one to protect my precious eyes.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;I can&amp;rsquo;t buy those widely available eyewear from &lt;code&gt;gunnar&lt;/code&gt; because I am a shortsighted person, and I already wear a pair of glass. I need to find the clip-on type of eyewear, and I only found &lt;a href=&#34;http://www.amazon.com/gp/product/B009OZSMEI/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B009OZSMEI&amp;amp;linkCode=as2&amp;amp;tag=zhuyong.me-20&#34;&gt;this&lt;/a&gt; from Amazon, and it was out of stock, some unknown sellers sell it over US$60 at that time. Then I visited homepage of &lt;code&gt;gunnar&lt;/code&gt;, I can&amp;rsquo;t find the clip-on type, but shortsighted people can order customized glasses with a much higher prices. We haven&amp;rsquo;t tried this kind of glasses before, invest over US$250 for a customized glass without known its effect is kind of risky. So we decided to wait for the stock come back for the clip-on type.&lt;/p&gt;
+
+&lt;p&gt;This afternoon, I visited amazon again and found they got stock and the price is only US$33.99, that&amp;rsquo;s much cheaper compare to US$60. Although we need to pay over S$50 shipping fee for 3 pieces of the eyewear, my colleagues and I decided to place the order. Only by then, I noticed this eyewear is from &lt;code&gt;Allure Eyewear&lt;/code&gt; instead of &lt;code&gt;gunnar&lt;/code&gt;, no wonder I can&amp;rsquo;t find this type from &lt;code&gt;gunnar&lt;/code&gt; official website. So I googled again for reviews on &lt;code&gt;Allure Eyewear&lt;/code&gt;, again, the reviews are good. And one comments over a review article mentioned the official website of &lt;code&gt;Allure Eyewear&lt;/code&gt; sell &lt;code&gt;Call Of Duty Ghosts&lt;/code&gt; cheaper than this older &lt;code&gt;Call of Duty Black Ops II&lt;/code&gt;. That&amp;rsquo;s good information before I place order.&lt;/p&gt;
+
+&lt;p&gt;So I visited &lt;code&gt;Allure Eyewear&lt;/code&gt; website, and indeed, the new type is cheaper, only sell at US$24.99. And there international shipping is only US$20, much cheaper than Amazon. Without further waiting, I placed order. It will take 5-7 business days for the shipping. I will write one review after I receive it.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
