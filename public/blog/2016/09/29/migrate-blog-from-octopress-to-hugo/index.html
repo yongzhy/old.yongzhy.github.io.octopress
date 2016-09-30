@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
@@ -19,7 +16,7 @@
   
 
   
-  <title>Git</title>
+  <title>Migrate Blog From Octopress To Hugo</title>
 
   
   
@@ -38,7 +35,7 @@
   
   
 
-  <link href="http://zhuyong.me/categories/git/index.xml" rel="alternate" type="application/rss+xml" title="Zhu Yong" />
+  
 
   <meta name="description" content="">
   <meta name="keywords" content="[yongzhy Zhu Yong Embedded Software Firmware]">
@@ -105,39 +102,126 @@
 <div id="main">
   <div id="content">
     <div>
-      <article role="article">
-        <header>
-          <h1 class="entry-title">
-            Category: Git
-          </h1>
-        </header>
-        <div id="blog-archives" class="category">
+      <article class="hentry" role="article">
+
+        
+        
+
+<header>
+    <p class="meta">Sep 29, 2016
+         - 2 minute read 
+         - <a href="http://zhuyong.me/blog/2016/09/29/migrate-blog-from-octopress-to-hugo/#disqus_thread">Comments</a>
+
+        
+        
+        
+            - <a class="label" href="http://zhuyong.me/categories/octopress/">octopress </a><a class="label" href="http://zhuyong.me/categories/hugo/">hugo </a>
+        
+    </p>
+    <h1 class="entry-title">
+         Migrate Blog From Octopress To Hugo 
+    </h1>
+</header>
+
+
+        <div class="entry-content">
           
-          <h2>
-            2014
-          </h2>
-          <article>
-            <h1>
-              <a href="http://zhuyong.me/blog/2014/06/26/fix-git-connection-problem-over-https-in-mobaxterm/" title="Fix git connection problem over HTTPS in MobaXterm">Fix git connection problem over HTTPS in MobaXterm</a>
-            </h1>
-            <time>
-              <span class="month">Jun</span>
-              <span class="day">26</span>
-            </time>
-            <footer>
-              <span class="categories"> 
-                tags:
-                
-                
-                
-              </span>
-            </footer>
-          </article>
           
+          
+          <p>It&rsquo;s total 9 months since my last blog post, which was on 31 Dec 2015. It&rsquo;s really a very long time. :(</p>
+
+<p>Today I am proud to announce I am back, and I just migrated the blog  from Octopress to Hugo. Reasons?</p>
+
+<p>First, Octopress no update for very long time, and I feel it&rsquo;s complicated to setup the environment when I switch to new system. Second, Hugo is written in Golang, single executable program, I love it, and I love Golang. Some more reasons??? Still need more? Those two reasons are enough for me to spend last 2 night to migrate from Octopress to Hugo.</p>
+
+<p>Migration is easy, but existing posts might requrie edit if it has image and blockquote. Because I want to keep the Octopress classic theme, I just follow the instructions from <a href="https://parsiya.net/categories/migration-to-hugo/">here</a>. After everything done, the blog pages looks almost same as Octopress version except there is no categories list in sidebar.</p>
+
+<p>I won&rsquo;t write down detail steps here, all steps are in the link above. But I need to mention that I use back my old Octopress repository, which is <a href="https://github.com/yongzhy/yongzhy.github.io">https://github.com/yongzhy/yongzhy.github.io</a>, I backup the original Octopress <code>master</code> branch to <code>octopress_master</code>, original <code>source</code> branch to <code>octopress_source</code>, then replace all contents in <code>master</code> and <code>source</code> branch with content from Hugo.</p>
+
+<p>So to setup the blog environment on new system, I just need to</p>
+
+<ol>
+<li>Download hugo binary file from : <a href="https://github.com/spf13/hugo/releases">https://github.com/spf13/hugo/releases</a></li>
+<li>Install Pygments <code>sudo pip install Pygments</code></li>
+
+<li><p>Install <a href="https://github.com/john2x/solarized-pygment.git">https://github.com/john2x/solarized-pygment.git</a></p>
+
+<pre><code>$ git clone https://github.com/john2x/solarized-pygment.git
+$ cd solarized-pygment
+$ sudo python setup.py install
+</code></pre></li>
+
+<li><p>Clone this repository</p>
+
+<pre><code>$ git clone -b source https://github.com/yongzhy/yongzhy.github.io.git
+$ cd yongzhy.github.io.git
+$ git subtree pull --prefix=public https://github.com/yongzhy/yongzhy.github.io.git master
+</code></pre></li>
+
+<li><p>Add content</p>
+
+<pre><code>$ hugo new post/newpost-title.markdown
+</code></pre></li>
+
+<li><p>Edit post</p></li>
+
+<li><p>Generate And Publish</p>
+
+<pre><code>$ hugo
+$ bash deploy.sh
+</code></pre></li>
+</ol>
+
         </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">Zhu Yong</span></span>
+    
+    <time>Sep 29, 2016</time>
+    
+    </span>
+  </p>
+
+  
+  
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="http://zhuyong.me/blog/2015/12/31/last-day-of-2015/" title="Last Day Of 2015">Last Day Of 2015</a>
+    
+
+    
+  </p>
+  
+    
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'zhuyong';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+  
+</footer>
+
       </article>
     </div>
-
     
 
 <aside class="sidebar thirds">
@@ -245,3 +329,4 @@
 
 </body>
 </html>
+
