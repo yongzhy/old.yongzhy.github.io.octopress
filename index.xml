@@ -6,8 +6,60 @@
     <description>Recent content on Zhu Yong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Dec 2015 22:02:12 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Sep 2016 22:46:33 +0800</lastBuildDate>
     <atom:link href="http://zhuyong.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Migrate Blog From Octopress To Hugo</title>
+      <link>http://zhuyong.me/blog/2016/09/29/migrate-blog-from-octopress-to-hugo/</link>
+      <pubDate>Thu, 29 Sep 2016 22:46:33 +0800</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2016/09/29/migrate-blog-from-octopress-to-hugo/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s total 9 months since my last blog post, which was on 31 Dec 2015. It&amp;rsquo;s really a very long time. :(&lt;/p&gt;
+
+&lt;p&gt;Today I am proud to announce I am back, and I just migrated the blog  from Octopress to Hugo. Reasons?&lt;/p&gt;
+
+&lt;p&gt;First, Octopress no update for very long time, and I feel it&amp;rsquo;s complicated to setup the environment when I switch to new system. Second, Hugo is written in Golang, single executable program, I love it, and I love Golang. Some more reasons??? Still need more? Those two reasons are enough for me to spend last 2 night to migrate from Octopress to Hugo.&lt;/p&gt;
+
+&lt;p&gt;Migration is easy, but existing posts might requrie edit if it has image and blockquote. Because I want to keep the Octopress classic theme, I just follow the instructions from &lt;a href=&#34;https://parsiya.net/categories/migration-to-hugo/&#34;&gt;here&lt;/a&gt;. After everything done, the blog pages looks almost same as Octopress version except there is no categories list in sidebar.&lt;/p&gt;
+
+&lt;p&gt;I won&amp;rsquo;t write down detail steps here, all steps are in the link above. But I need to mention that I use back my old Octopress repository, which is &lt;a href=&#34;https://github.com/yongzhy/yongzhy.github.io&#34;&gt;https://github.com/yongzhy/yongzhy.github.io&lt;/a&gt;, I backup the original Octopress &lt;code&gt;master&lt;/code&gt; branch to &lt;code&gt;octopress_master&lt;/code&gt;, original &lt;code&gt;source&lt;/code&gt; branch to &lt;code&gt;octopress_source&lt;/code&gt;, then replace all contents in &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;source&lt;/code&gt; branch with content from Hugo.&lt;/p&gt;
+
+&lt;p&gt;So to setup the blog environment on new system, I just need to&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download hugo binary file from : &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;https://github.com/spf13/hugo/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install Pygments &lt;code&gt;sudo pip install Pygments&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Install &lt;a href=&#34;https://github.com/john2x/solarized-pygment.git&#34;&gt;https://github.com/john2x/solarized-pygment.git&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/john2x/solarized-pygment.git
+$ cd solarized-pygment
+$ sudo python setup.py install
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Clone this repository&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone -b source https://github.com/yongzhy/yongzhy.github.io.git
+$ cd yongzhy.github.io.git
+$ git subtree pull --prefix=public https://github.com/yongzhy/yongzhy.github.io.git master
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Add content&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new post/newpost-title.markdown
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit post&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Generate And Publish&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo
+$ bash deploy.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>Last Day Of 2015</title>
@@ -614,34 +666,6 @@
     
 &lt;/figure&gt;
 &lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>ARM RVCT tips: armcc &amp;amp;&amp;amp; fromelf</title>
-      <link>http://zhuyong.me/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/</link>
-      <pubDate>Fri, 12 Dec 2014 15:54:19 +0000</pubDate>
-      
-      <guid>http://zhuyong.me/blog/2014/12/12/arm-rvct-tips-armcc-and-and-fromelf/</guid>
-      <description>&lt;p&gt;For embedded system C projects that share same code base, one common practice is to use various feature flags to encapsulate related code. This results difficulty in code reading, especially when you have huge amounts of feature flags, especially when flags&amp;rsquo; value depend on value of other flags. This is what I am dealing with in current project. And I found &lt;code&gt;armcc&lt;/code&gt; and &lt;code&gt;fromelf&lt;/code&gt; have some useful feature to help developer in such situation.&lt;/p&gt;
-
-&lt;p&gt;First, &lt;code&gt;armcc&lt;/code&gt;, the compiler from ARM RVCT. Command line options are &lt;code&gt;--debug --debug_macros -E&lt;/code&gt;, this will generate raw C file with all preprocessors been parsed, you can see how is a macro been defined.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--debug&lt;/code&gt; is to enable generate debug information&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--debug_macros&lt;/code&gt; is generate debug entry for macros. You can see the expanded macro in the generated C source code. &lt;a href=&#34;http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHHDEAA.html&#34;&gt;doc here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-E&lt;/code&gt; is to tell compiler not compile the C file, just excute the preprocess step. &lt;a href=&#34;http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0491h/CIHIDBBG.html&#34;&gt;doc here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Second, &lt;code&gt;fromelf&lt;/code&gt;, imaging you have a complicated data structure defined, of which, some elements depends on some feature flags, to find out the difference between two different configurations, instead of load into debugger and compare, you can just use &lt;code&gt;fromelf&lt;/code&gt; to dump the structure and use a diff tool to compare.&lt;/p&gt;
-
-&lt;p&gt;The command line is &lt;code&gt;fromelf --fieldoffsets --select=the_structure.* --output=the_structure.txt final.axf&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--fieldoffsets&lt;/code&gt; produce offset for each structure elements. &lt;a href=&#34;http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0477i/BABJBGBH.html&#34;&gt;doc here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--select=the_structure.*&lt;/code&gt; to select the data structure to output&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--output&lt;/code&gt; to specify output file contain the listing&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

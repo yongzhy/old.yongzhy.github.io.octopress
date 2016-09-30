@@ -9,6 +9,58 @@
     <atom:link href="http://zhuyong.me/categories/octopress/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Migrate Blog From Octopress To Hugo</title>
+      <link>http://zhuyong.me/blog/2016/09/29/migrate-blog-from-octopress-to-hugo/</link>
+      <pubDate>Thu, 29 Sep 2016 22:46:33 +0800</pubDate>
+      
+      <guid>http://zhuyong.me/blog/2016/09/29/migrate-blog-from-octopress-to-hugo/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s total 9 months since my last blog post, which was on 31 Dec 2015. It&amp;rsquo;s really a very long time. :(&lt;/p&gt;
+
+&lt;p&gt;Today I am proud to announce I am back, and I just migrated the blog  from Octopress to Hugo. Reasons?&lt;/p&gt;
+
+&lt;p&gt;First, Octopress no update for very long time, and I feel it&amp;rsquo;s complicated to setup the environment when I switch to new system. Second, Hugo is written in Golang, single executable program, I love it, and I love Golang. Some more reasons??? Still need more? Those two reasons are enough for me to spend last 2 night to migrate from Octopress to Hugo.&lt;/p&gt;
+
+&lt;p&gt;Migration is easy, but existing posts might requrie edit if it has image and blockquote. Because I want to keep the Octopress classic theme, I just follow the instructions from &lt;a href=&#34;https://parsiya.net/categories/migration-to-hugo/&#34;&gt;here&lt;/a&gt;. After everything done, the blog pages looks almost same as Octopress version except there is no categories list in sidebar.&lt;/p&gt;
+
+&lt;p&gt;I won&amp;rsquo;t write down detail steps here, all steps are in the link above. But I need to mention that I use back my old Octopress repository, which is &lt;a href=&#34;https://github.com/yongzhy/yongzhy.github.io&#34;&gt;https://github.com/yongzhy/yongzhy.github.io&lt;/a&gt;, I backup the original Octopress &lt;code&gt;master&lt;/code&gt; branch to &lt;code&gt;octopress_master&lt;/code&gt;, original &lt;code&gt;source&lt;/code&gt; branch to &lt;code&gt;octopress_source&lt;/code&gt;, then replace all contents in &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;source&lt;/code&gt; branch with content from Hugo.&lt;/p&gt;
+
+&lt;p&gt;So to setup the blog environment on new system, I just need to&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download hugo binary file from : &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;https://github.com/spf13/hugo/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install Pygments &lt;code&gt;sudo pip install Pygments&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Install &lt;a href=&#34;https://github.com/john2x/solarized-pygment.git&#34;&gt;https://github.com/john2x/solarized-pygment.git&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/john2x/solarized-pygment.git
+$ cd solarized-pygment
+$ sudo python setup.py install
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Clone this repository&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone -b source https://github.com/yongzhy/yongzhy.github.io.git
+$ cd yongzhy.github.io.git
+$ git subtree pull --prefix=public https://github.com/yongzhy/yongzhy.github.io.git master
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Add content&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new post/newpost-title.markdown
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit post&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Generate And Publish&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo
+$ bash deploy.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Add &#34;Related Posts&#34; Section To Octopress</title>
       <link>http://zhuyong.me/blog/2014/02/05/add-related-posts-section-to-octopress/</link>
       <pubDate>Wed, 05 Feb 2014 12:39:53 +0000</pubDate>
